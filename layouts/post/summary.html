@@ -1,0 +1,29 @@
+<article class="black card">  
+    <div class="image">	
+ 	 {{ if .Site.Params.enablePost }}
+           <div class="ui top right attached black label">{{ .ReadingTime }} min read</div>          
+          <div class="ui bottom left attached black label">{{ .Date.Format "Jan 2, 2006" }}</div>        
+          {{ end }}  
+    <div class="ui dimmer"> 
+      <div class="content">
+        <div class="center">
+          <a href= {{ if not .Site.Params.enablePost }}{{ .Params.link }}{{ else }}{{ .Permalink }}{{ end }} target="_blank">
+          <h2 class="ui header" style="color: white;padding-top: {{ if .Site.Params.enablePost }}0{{ else }}5{{ end }}em">{{ .Title }}</h2>
+          </a>
+          <p style="padding: 5px;">{{ .Summary | plainify | htmlUnescape }}</p>
+          {{  if .Site.Params.enablePost }}
+          <div class="ui top right attached black label">{{ .ReadingTime }} min read</div>          
+          <div class="ui bottom left attached black label">{{ .Date.Format "Jan 2, 2006" }}</div>                 
+	  <p>@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</p>
+          {{ end }}
+          </div>      
+      </div>
+      </div>  
+
+    {{ if isset .Params "cover" }}
+    <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+    {{ else }}
+    <img src="/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
+    {{ end }}
+  </div>
+</article>

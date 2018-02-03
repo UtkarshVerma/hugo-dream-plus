@@ -1,0 +1,15 @@
+{{ range .Site.Params.customJS }}
+<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+{{ end }}
+
+<script src="{{ $.Site.BaseURL }}/js/twemoji.min.js"></script>
+
+{{ range .Site.Params.customCSS }}
+<link href="{{ $.Site.BaseURL }}{{ . }}" rel="stylesheet">
+{{ end }}
+
+<script type="text/javascript">
+var enabledPost= {{ $.Site.Params.enablePost }} 
+var colourBG={{ $.Site.Params.enableColourBG }} 
+</script>
+
