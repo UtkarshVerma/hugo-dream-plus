@@ -12,3 +12,5 @@ link: //Enter the link to which this card will redirect to
 Cut out summary from your post content here.
 
 <!--more-->
+
+Write the content of your post here.
