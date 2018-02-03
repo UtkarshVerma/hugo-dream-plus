@@ -1,8 +1,8 @@
 {{ range .Site.Params.customJS }}
-<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+<script type="text/javascript" src="{{ $.Site.BaseURL }}{{ . }}"></script>
 {{ end }}
 
-<script src="{{ $.Site.BaseURL }}/js/twemoji.min.js"></script>
+<script type="text/javascript" src="{{ $.Site.BaseURL }}/js/twemoji.min.js"></script>
 
 {{ range .Site.Params.customCSS }}
 <link href="{{ $.Site.BaseURL }}{{ . }}" rel="stylesheet">
