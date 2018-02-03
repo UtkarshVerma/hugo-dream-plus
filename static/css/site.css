@@ -1,0 +1,135 @@
+.flip-container {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: -0.15em !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.flip-container {
+  height: 100vh;
+}
+
+.flip-container.flip-it .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  -webkit-transition: .8s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: .8s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: .8s;
+  -o-transform-style: preserve-3d;
+  transition: .8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container .front,
+.flip-container .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.flip-container .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-container .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.ui.cards .card .image {
+  height: 100%;
+}
+
+.ui.cards .card .image img {
+  height: 100%;
+}
+
+.post-list {
+  overflow-y: scroll;
+}
+
+a.ui.label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .dream-tags,
+  .dream-categories {
+    display: none;
+  }
+
+  #tag-category-pop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #tag-category-pop {
+    display: none;
+  }
+}
+
+.about {
+  height: calc(100vh - 50px - 28px);
+  overflow-y: scroll;
+}
+
+.post-content img {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent
+}
+
+.post-content strong {
+  color: rgba(0, 0, 0, .7);
+}
+
+.post-content blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0.5em 10px;
+}
+
+.post-content blockquote p {
+  display: inline;
+}
+
+.post-content code {
+  background: #ccc;
+  padding: .2em .5em;
+}
+
+.post-content ul li {
+  padding: .2em 0;
+  line-height: 1.2em;
+}

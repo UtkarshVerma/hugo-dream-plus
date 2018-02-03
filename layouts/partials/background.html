@@ -1,0 +1,25 @@
+<script type= "text/javascript">
+
+  var images= {{ .Site.Params.bgList }}
+  var randomNumber = Math.floor(Math.random() * images.length);
+  bgImage = 'url(' + (images[randomNumber]) + ')';       
+  console.log(bgImage);
+  document.getElementsByClassName("bg")[0].style.backgroundImage = bgImage;
+
+</script>
+
+<style>
+
+:root {
+  --blurEff:  {{ .Site.Params.bgBlur }}px;
+}
+
+.bg {        
+    background-size: cover;
+    filter: blur(var(--blurEff));
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+</style>

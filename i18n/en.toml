@@ -1,0 +1,31 @@
+[blogAlias]
+other = "'s Site"
+
+[aboutHeader]
+other = "So, Who Am I?"
+
+[home]
+other = "Home"
+
+[prevPage]
+other = "Previous page"
+
+[nextPage]
+other = "Next page"
+
+[flip]
+other = "Flip it!"
+
+[updateAt]
+other = "Update at"
+
+[noTag]		
+other = "No Tag" 
+		  
+[returnHome]		
+other = "Return home page"
+
+[clickToPopTagsAndCategories]		
+other = "Click this to pop tags and categories"
+
+
