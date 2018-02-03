@@ -1,4 +1,5 @@
 desc = [
   "This is a test",
-  "Welcome to use hugo dream theme"
+  "Welcome to hugo dream-plus theme!  \u0026\u0023\u0078\u0031\u0066\u0036\u0030\u0035\u003B",
+  "To use emoji here, insert it's unicode."
 ]

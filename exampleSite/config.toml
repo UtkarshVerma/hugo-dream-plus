@@ -1,25 +1,60 @@
-baseurl = "https://example.com"
-languageCode = "en"
+baseURL = "https://www.examplesite.com"
+languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Hugo Theme Dream"
-theme = "hugo-theme-dream"
+title = "Author's Blog"
+theme = "hugo-dream-plus"
 
-copyright = "Copyright (c) 2017, g1eny0ung; all rights reserved."
+copyright = "Copyright (C) 2018, UtkarshVerma; All Rights Reserved."
+googleAnalytics = ""
 
-# enableRobotsTXT = true
+disqusShortname = ""
 
-# googleAnalytics = ""
+enableRobotsTXT = true
 
-# disqusShortname = ""
+hasCJKLanguage = false
+
+#Enable Hugo Emoji Conversion
+enableEmoji=true
 
 [params]
-  author = "AuthorTest"
-  motto = "MottoTest"
-  # description = ""
-  # avatar = ""
+  author = "Author"
+  description = ""
+  avatar = "/img/defaultAvatar.jpg"
+  motto = "Author motto."
+  customCSS = [""]
+  customJS  = [""]
+  favicon = "/img/defaultFav.ico"
   
-  # email = ""
-  # github = ""
-  # linkedin = ""
-  # codepen = ""
-  # stackoverflow = ""
+#Background Settings
+  enableColourBG= true
+
+  bgBlur = 0.5
+  bgImage = "/img/bg1.jpeg"
+
+  #List of background images.
+  bgList = ["/img/bg1.jpeg"]
+  
+# Post-displaying Settings  
+  enablePost = true
+  enableTags = true
+  enableCategories = true
+  postsPerPage = 4
+
+#Enable Twitter Emoji
+  twitterEmoji=true
+
+#Link of your blog
+  BlogLink = ""
+
+
+#Social Links. Only insert the username.
+  email = ""
+  github = "UtkarshVerma"
+  linkedin = ""
+  codepen = ""
+  stackoverflow = ""
+  medium = ""
+  reddit = ""
+  twitter = "" 
+  siteStartYear = 2018
+ 
