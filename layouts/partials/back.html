@@ -75,17 +75,18 @@
   <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
 
     <section class="ui stacked segments">
-      <header class="ui inverted segment">
-        <h2 class="ui header">{{- i18n "aboutHeader" -}}</h2>
-      </header>
-
-      <article class="ui inverted segment">
-        <section id="abt">
-	{{ range $.Site.Data.about.desc }}
-          <p>{{ . | safeHTML }}</p>
-        {{ end }}
-	{{ if eq .Site.Params.twitterEmoji  true }}{{ partial "twemoji.html" . }}{{ end }}
-      </article>
+	<header class="ui inverted segment">
+ 	   <h2 class="ui header">{{ .Site.Params.aboutHead }}</h2>
+        </header>
+	<article id = "abt" class="ui inverted segment">
+        	{{ if (fileExists "/content/about/about.md") }}
+        	{{ readFile "/content/about/about.md" | markdownify | emojify }}
+        	{{ else }}
+        	{{ range $.Site.Data.about.desc }}
+          		<p>{{ . | safeHTML | emojify }}</p>
+        	{{ end }}
+        	{{ end }}
+	</article>
 
       {{ if .Site.Copyright }}
       <footer class="ui secondary segment">

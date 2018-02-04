@@ -1,15 +1,15 @@
-{{ range .Site.Params.customJS }}
-<script type="text/javascript" src="{{ $.Site.BaseURL }}{{ . }}"></script>
+{{ range $type, $val:= .Site.Params.customJS }}
+	{{ if and ((gt (len $val) 0) (index $val "")) }}
+		<script src="/{{ index $val }}"></script>
+	{{ end }}
 {{ end }}
 
-<script type="text/javascript" src="{{ $.Site.BaseURL }}/js/twemoji.min.js"></script>
-
-{{ range .Site.Params.customCSS }}
-<link href="{{ $.Site.BaseURL }}{{ . }}" rel="stylesheet">
+{{ range $type, $val:= .Site.Params.customCSS }}
+	{{ if and ((gt (len $val) 0) (index $val "")) }}		 
+		<link href="/{{ index $val }}" rel="stylesheet">
+	{{ end }}
 {{ end }}
-
 <script type="text/javascript">
-var enabledPost= {{ $.Site.Params.enablePost }} 
-var colourBG={{ $.Site.Params.enableColourBG }} 
+	var enabledPost= {{ $.Site.Params.enablePost }} 
+	var colourBG={{ $.Site.Params.enableColourBG }} 
 </script>
-
