@@ -11,16 +11,20 @@
     </a>
   </div>
   {{ end }}
+{{ if .Site.Params.enableTags }}
   <div class="item">
     <a href="/tags">
       <i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
     </a>
   </div>
+{{ end }}
+{{ if .Site.Params.enableCategories }}
   <div class="item">
     <a href="/categories">
       <i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
     </a>
   </div>
+{{ end }}
   <div class="item">
     {{ if $paginator.HasPrev }}
     <a href="{{ $paginator.Prev.URL }}">
