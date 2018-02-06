@@ -17,11 +17,13 @@
     </a>
   </div>
   {{ end }}
+{{ if .Site.Params.enableTags }}
   <div class="item">
     <a href="/tags">
       <i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
     </a>
   </div>
+{{ end }}
 </nav>
 {{ end }}
 
