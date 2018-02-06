@@ -32,6 +32,8 @@ enableEmoji=true
 
   bgBlur = 0.5
   bgImage = "/img/bg1.jpeg"
+# Set the heading for the about page!
+  aboutHeader = ""
 
   #List of background images.
   bgList = ["/img/bg1.jpeg"]
