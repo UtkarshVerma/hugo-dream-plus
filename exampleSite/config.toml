@@ -28,10 +28,14 @@ enableEmoji=true
   favicon = "/img/defaultFav.ico"
   
 #Background Settings
-  enableColourBG= true
+  enableColorBG= true
 
   bgBlur = 0.5
   bgImage = "/img/bg1.jpeg"
+
+# Heading for Error Page
+  error404 = "Error 404: Page Not Found"
+
 # Set the heading for the about page!
   aboutHeader = ""
 

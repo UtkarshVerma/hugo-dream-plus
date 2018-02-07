@@ -5,8 +5,8 @@
     <i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
   </div>
   {{ if gt (len (where .Site.RegularPages "Section" "==" "post")) 0 }}
-  <div class="item">
-    <a href="/post">
+<div class="item">
+    <a title="Archive" href="/post">
       <i class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
     </a>
   </div>

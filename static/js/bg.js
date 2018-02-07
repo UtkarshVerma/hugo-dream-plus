@@ -53,7 +53,7 @@ function getRandomInt(min, max) {
   return random
 }
 function setBackground(target, gradient) {
-  if(colourBG){
+  if(colorBG){
     target.css({
      background: gradient[0]
     })
