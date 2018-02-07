@@ -33,11 +33,11 @@ other = "No Tag"
 other = "Archive"
 
 [tag]
-one = "tag"
+one = "Tag"
 other = "{{ .Count }} tags"
 
 [category]
-one = "category"
+one = "Category"
 other = "{{ .Count }} categories"
 
 [allTags]

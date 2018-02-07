@@ -1,4 +1,6 @@
-{{ define "title" }}Page Not Found{{ end }}
+{{ define "title" }}
+Page Not Found
+{{ end }}
 
 {{ define "frontmenu" }}
 <nav class="ui top secondary menu" style="overflow-x: auto">
@@ -17,7 +19,7 @@
     </a>
   </div>
   {{ end }}
-{{ if .Site.Params.enaleTags }}
+{{ if .Site.Params.enableTags }}
   <div class="item">
     <a href="/tags">
       <i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
