@@ -24,13 +24,13 @@ other = "Click this to pop tags and categories"
 other = "Update at"
 
 [returnHome]
-other = "Return home page"
+other = "Return to Home Page"
 
 [noTag]
 other = "No Tag"
 
 [archives]
-other = "Archives"
+other = "Archive"
 
 [tag]
 one = "tag"

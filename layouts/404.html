@@ -1,13 +1,13 @@
-{{ define "title" }}Page not found{{ end }}
+{{ define "title" }}Page Not Found{{ end }}
 
 {{ define "frontmenu" }}
 <nav class="ui top secondary menu" style="overflow-x: auto">
   <div class="item">
-    <i class="inverted big link bullseye icon dream-flip-toggle" title="翻转一下！"></i>
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
     <a href="/">
-      <i class="inverted big link home icon" title="首页"></i>
+      <i class="inverted big link home icon" title="Home"></i>
     </a>
   </div>
   {{ if gt (len (where .Site.RegularPages "Section" "==" "post")) 0 }}
@@ -17,22 +17,35 @@
     </a>
   </div>
   {{ end }}
+{{ if .Site.Params.enaleTags }}
   <div class="item">
     <a href="/tags">
       <i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
     </a>
   </div>
+{{ end }}
+{{ if .Site.Params.enableCategories }}
   <div class="item">
     <a href="/categories">
       <i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
     </a>
   </div>
+{{ end }}
 </nav>
 {{ end }}
 
 {{ define "main" }}
-<div class="ui basic center aligned segment">
-  <h1 class="ui header">404</h1>
-  <p><a class="ui blue label" href="/">{{ i18n "returnHome" }}</a></p>
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+<section class="ui stacked segments">
+	<header class="ui inverted segment">
+		<h2 class="ui header"><center>{{- .Site.Params.error404 -}}</center></h2>
+        </header>
+	<article id = "error" class="ui inverted segment">        	
+        	{{ readFile "/content/404.md" | markdownify | emojify }}        
+                <p><center><a class="ui blue label" href="/">{{ i18n "returnHome" }}</a></center></p>	 
+	</article>        
+</section>
+</div>
 </div>
 {{ end }}

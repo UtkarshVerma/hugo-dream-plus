@@ -21,12 +21,13 @@ $(document).ready(function () {
   var postList = $('.post-list')
   var pMaxHeight = $(window).height() - $('.ui.menu').outerHeight(true)
   postList.css('max-height', pMaxHeight)
-  
+
+$(".dimmer").css("background-color","rgba(0,0,0,.6)");
 if(!(enabledPost)){
-	$('.ui.cards .image')   
+	$('.ui.cards .image') 
   	.dimmer({    	
-      	 on: 'hover' })
-  	.dimmer('show')
+      	 on: 'hover' })     
+  	.dimmer('show')   
 }
 else{
 	$('.ui.cards .image')
@@ -35,6 +36,7 @@ else{
       closable: false })
 	.dimmer('show')
 }
+
   $('.ui.accordion')
     .accordion()
 

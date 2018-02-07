@@ -85,8 +85,8 @@
         </h2>
         </header>
 	<article id = "abt" class="ui inverted segment">
-        	{{ if (fileExists "/content/about/about.md") }}
-        	{{ readFile "/content/about/about.md" | markdownify | emojify }}
+        	{{ if (fileExists "/content/about.md") }}
+        	{{ readFile "/content/about.md" | markdownify | emojify }}
         	{{ else }}
         	{{ range $.Site.Data.about.desc }}
           		<p>{{ . | safeHTML | emojify }}</p>
