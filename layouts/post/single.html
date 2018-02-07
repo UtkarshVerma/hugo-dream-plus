@@ -39,7 +39,7 @@
     <section class="ui secondary top attached black segment">
       <header>
         <h1 class="ui header">
-          {{ .Page.Title }}
+          {{ .Title }}
           <div class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
         </h1>
       </header>
