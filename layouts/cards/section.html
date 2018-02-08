@@ -33,14 +33,14 @@
   <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
     <div class="ui inverted segment">
       <h2 class="ui header">
-        {{ .Title }}{{ "---" | markdownify }}
+        All Cards{{ "---" | markdownify }}
         <div class="ui grey sub header">{{ .Content }}</div>
       </h2>
 {{ range .Data.Pages.GroupByDate "2006" }}
      <h3 class="ui header">{{ .Key }}</h3>
        <ul>
          {{ range .Pages }}
-         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+         <li><a href="{{ .Params.link }}" target="_blank">{{ .Title }}</a></li>
          {{ end }}
         </ul>
 {{ end }}

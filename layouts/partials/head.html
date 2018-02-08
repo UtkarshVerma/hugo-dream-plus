@@ -10,7 +10,7 @@
 </script>
 {{ end }}
 
-{{ if eq .Type "post" }}
+{{ if eq .Type .Site.Params.contentType }}
   <!-- Page Author & Description -->
   <meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
   <meta name="description" content="{{ .Summary | plainify }}" />
