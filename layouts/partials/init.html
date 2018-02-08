@@ -10,6 +10,6 @@
 	{{ end }}
 {{ end }}
 <script type="text/javascript">
-	var enabledPost= {{ $.Site.Params.enablePost }} 
+	var enabledPost= {{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }} 
 	var colorBG={{ $.Site.Params.enableColorBG }} 
 </script>

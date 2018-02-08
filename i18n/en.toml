@@ -21,7 +21,7 @@ other = "Flip it!"
 other = "Click this to pop tags and categories"
 
 [updateAt]
-other = "Update at"
+other = "Last updated on"
 
 [returnHome]
 other = "Return to Home Page"
