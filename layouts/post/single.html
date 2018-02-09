@@ -1,14 +1,15 @@
 {{ define "title" }}
 {{ .Title }}
 {{ end }}
+
 {{ define "frontmenu" }}
 {{ partial "nav.html" . }}
-{{ end }}
+{{ partial "sidebar.html" . }}
+{{ end }} 
 
 {{ define "main" }}
 <div class="ui centered grid">
   <div class="fifteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-
     <section class="ui secondary top attached black segment">
       <header>
         <h1 class="ui header">
@@ -16,6 +17,13 @@
           <div class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
         </h1>
  	      {{ "---" | markdownify }}
+	{{ if .Site.Params.enableToc }}
+      	{{ if .TableOfContents }}
+          <div id="toc" style="background-color: #ffffff70;border: 1px solid #8a8a8a6b;border-radius: 0.5em; overflow-x: auto;">
+                {{ .TableOfContents }}
+          </div>
+        {{ end }}
+	{{ end }}
       </header>
       <article id="twemoji" class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
   	               {{ .Content }}
@@ -30,6 +38,9 @@
       <span>{{ i18n "noTag" }}</span>
       {{ end }}
     </footer>
+     {{ if .Site.Params.enableShareCard }}
+      {{ partial "share.html" . }}
+     {{ end }}
      {{ if .Site.DisqusShortname }}
     {{ partial "disqus.html" . }}
     {{ end }}
@@ -38,13 +49,6 @@
       {{ .Site.Copyright | safeHTML }}
     </footer>
     {{ end }}
-   
-
-  </div>
-  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
-
-    {{ partial "header.html" . }}
-
   </div>
 </div>
 {{ end }}

@@ -1,3 +1,69 @@
+/* Share Card */
+@media screen and (max-width: 540px) {
+   #post-meta {
+        margin-top: 60px;
+    }
+}
+
+#sharing {
+    float: right;    
+}
+
+#sharing div {
+    font-size: 20px;
+    font-size: 23px;
+    color: #d4d4d4;
+    display: inline-block;
+}
+
+#sharing div:hover {
+    opacity: 0.8;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#post-meta img.avatar {
+    vertical-align: middle;
+    height: 4em;
+    width: 4em;
+    float: left;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-right: 20px;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
+}
+
+#post-meta {
+    background-color:#ececece8;
+    padding: 2em 2em 2em 2em;      
+    color: #444;
+    border: 1px solid #8a8a8a6b
+    width: 100%;
+}
+
+#post-meta div span {
+   display: block;
+   color: #3e3e3e;
+   font-size: 0.9em;
+}
+
+#post-meta div span.dark {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #1E2025;
+
+}
+
+#post-meta div {
+    margin: 0.7em 25px 0 0;
+    float: left;
+}
+
 li > img {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -34,8 +100,12 @@ article.post-content pre>code {
   display:none;
 }
 
-div ::-webkit-scrollbar{
-  display:unset;
+div#toc{
+  margin-top: 2em;
+}
+
+#TableOfContents ul{
+  list-style-type: none;
 }
 
 article.post-content code{
@@ -149,6 +219,11 @@ html {
   overflow-y: auto;
 }
 
+.post-list::-webkit-scrollbar {
+  display: unset;
+}
+
+
 a.ui.label {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -181,7 +256,7 @@ a.ui.label {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  background-color: transparent
+  bsharingackground-color: transparent
 }
 
 .post-content strong {

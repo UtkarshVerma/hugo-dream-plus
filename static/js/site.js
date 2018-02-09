@@ -27,8 +27,9 @@ if(!(enabledPost)){
 	$('.ui.cards .image') 
   	.dimmer({    	
       	 on: 'hover' })     
-  	.dimmer('show')   
+  	.dimmer('show') 
 }
+
 else{
 	$('.ui.cards .image')
 	.dimmer({
