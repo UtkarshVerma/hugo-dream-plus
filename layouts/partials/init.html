@@ -12,4 +12,5 @@
 <script type="text/javascript">
 	var enabledPost= {{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }} 
 	var colorBG={{ $.Site.Params.enableColorBG }} 
+        var enabledDimmer = {{ $.Site.Params.enableDimmer }}
 </script>

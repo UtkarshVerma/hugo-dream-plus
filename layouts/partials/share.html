@@ -1,15 +1,15 @@
 <footer id="post-meta" class="clearfix">
     {{ if isset .Site.Params "twitter" }}
      <a href="https://twitter.com/UtkarshVerma_">
-    <img class="avatar" src= "/images/avatar.jpg">
-    <div>
+        <div>
+	<img class="avatar" src= "/images/avatar.jpg">
         <span class="dark">{{ .Site.Params.author }}</span>
         <span class="sub">{{ .Site.Params.motto }}</span>
     </div>
     </a>
     {{ else }}
+        <div>
 	<img class="avatar" src= "/images/avatar.jpg">
-    <div>
         <span class="dark">{{ .Site.Params.author }}</span>
         <span class="sub">{{ .Site.Params.motto }}</span>
     </div>

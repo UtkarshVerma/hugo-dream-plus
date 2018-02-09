@@ -25,17 +25,34 @@ $(document).ready(function () {
 $(".dimmer").css("background-color","rgba(0,0,0,.6)");
 if(!(enabledPost)){
 	$('.ui.cards .image') 
-  	.dimmer({    	
-      	 on: 'hover' })     
-  	.dimmer('show') 
+   	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        $('.ui.cards .image') .dimmer({    	
+      	 on: 'focus'})
+	}
+ 	else{ 
+	$('.ui.cards .image').dimmer({    	
+      	 on: 'hover'})}    
+  	 $('.ui.cards .image').dimmer('show') 
 }
-
 else{
+	if(enabledDimmer){	
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        $('.ui.cards .image') .dimmer({    	
+      	 on: 'focus'})
+	}
+ 	else{ 
+	$('.ui.cards .image').dimmer({    	
+      	 on: 'hover'})}   
+  	 $('.ui.cards .image').dimmer('show') 
+	}
+
+	else{
 	$('.ui.cards .image')
 	.dimmer({
 	 opacity: .6,
-      closable: false })
-	.dimmer('show')
+         closable: false })
+	 $('.ui.cards .image').dimmer('show')
+	}
 }
 
   $('.ui.accordion')

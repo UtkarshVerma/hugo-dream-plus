@@ -1,8 +1,88 @@
 /* Share Card */
 @media screen and (max-width: 540px) {
-   #post-meta {
-        margin-top: 60px;
-    }
+
+#home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
+  width: 20px;
+}
+
+::-webkit-scrollbar{
+  display:none !important;
+}
+
+nav.ui.top.secondary.menu{
+     height:40px !important;
+     overflow-x:auto;
+}
+
+section.ui.stacked.segments{
+  overflow-y:auto;
+}
+
+.post-content img:not(.emoji) { 
+  max-width:100%;
+}
+
+#TableOfContents ul{
+  padding-left: 0.5em;
+}
+
+#post-head{
+  font-size:20px !important;
+}
+
+#post-subhead{
+  font-size: 15px !important;
+}
+
+.post-content blockquote{
+  margin-right:0px;
+  margin-left:0px;
+}
+}
+@media screen and (max-width: 320px){
+
+#home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
+  width: 10px;
+}
+
+nav.ui.top.secondary.menu{
+     height:40px !important;
+     overflow-x:auto;
+}
+
+section.ui.stacked.segments{
+  overflow-y:auto;
+}
+
+.post-content img:not(.emoji) { 
+  max-width:100%;
+}
+
+#post-head{
+  font-size:20px !important;
+}
+
+#TableOfContents ul{
+  padding-left: 0.5em;
+}
+
+.post-content blockquote{
+  margin-right:0px;
+  margin-left:0px;
+}
+
+#post-subhead{
+  font-size: 15px !important;
+}
+
+::-webkit-scrollbar{
+  display:none !important;
+}
+
+  #post-meta {
+      font-size: 12px;
+}
+
 }
 
 #sharing {
@@ -20,12 +100,6 @@
     opacity: 0.8;
 }
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 #post-meta img.avatar {
     vertical-align: middle;
     height: 4em;
@@ -41,8 +115,7 @@
     background-color:#ececece8;
     padding: 2em 2em 2em 2em;      
     color: #444;
-    border: 1px solid #8a8a8a6b
-    width: 100%;
+    margin: 0 -1px 0 -1px;
 }
 
 #post-meta div span {
@@ -64,16 +137,22 @@
     float: left;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 li > img {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-p > img, li > img {
-    -webkit-box-shadow: 3px 3px 27px -5px rgba(0,0,0,0.62);
-    -moz-box-shadow: 3px 3px 27px -5px rgba(0,0,0,0.62);
-    box-shadow: 3px 3px 27px -5px rgba(0,0,0,0.62);
-    margin-top: 1em;
-    margin-bottom: 1em;
+p > img:not(.emoji), li > img {
+    -webkit-box-shadow: 3px 3px 27px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 3px 3px 27px -5px rgba(0,0,0,1);
+    box-shadow: 3px 3px 27px -5px rgba(0,0,0,1);
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 article.post-content pre {
@@ -143,11 +222,12 @@ html {
 }
 
 .emoji {
-    height: 1em;
-    width: 1em;
+    height: 1em !important;
+    width: 1em !important;
     vertical-align: -0.15em !important;
     margin-top: 0em;
     margin-bottom: 0em;
+    background-color: transparent;
 }
 
 .ui.secondary.menu {
@@ -248,15 +328,18 @@ a.ui.label {
 
 .about {
   height: calc(100vh - 50px - 28px);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
-.post-content img {
+.post-content img:not(.emoji) {
   position: relative;
-  display: inline-block;
+  margin-left: auto;
+  margin-right:auto;
+  max-height: 100%;
+  max-width:90%;
+  display: block;
   vertical-align: middle;
-  max-width: 100%;
-  bsharingackground-color: transparent
+  background-color: transparent
 }
 
 .post-content strong {
@@ -266,7 +349,6 @@ a.ui.label {
 .post-content blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
-  margin: 1.5em 0;
   padding: 0.5em 10px;
 }
 
