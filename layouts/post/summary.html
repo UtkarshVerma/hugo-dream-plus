@@ -17,9 +17,9 @@
       </div>  
 
     {{ if isset .Params "cover" }}
-    <img src="{{ .Site.BaseURL }}{{ .Params.cover }}" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}/{{ .Params.cover }}" alt="{{ .Title }}">
     {{ else }}
-    <img src="{{ .Site.BaseURL }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
     {{ end }}
   </div>
 </article>

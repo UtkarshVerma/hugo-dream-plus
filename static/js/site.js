@@ -25,13 +25,13 @@ $(document).ready(function () {
 $(".dimmer").css("background-color","rgba(0,0,0,.6)");
 if(!(enabledPost)){
 	$('.ui.cards .image').dimmer({    	
-      	 on: 'hover'})}    
+      	 on: 'hover'})
   	 $('.ui.cards .image').dimmer('show') 
 }
 else{
 	if(enabledDimmer){		
 	$('.ui.cards .image').dimmer({    	
-      	 on: 'hover'})}   
+      	 on: 'hover'})
   	 $('.ui.cards .image').dimmer('show') 
 	}
 
