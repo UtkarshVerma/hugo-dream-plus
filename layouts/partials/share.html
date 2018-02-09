@@ -2,14 +2,14 @@
     {{ if isset .Site.Params "twitter" }}
      <a href="https://twitter.com/UtkarshVerma_">
         <div>
-	<img class="avatar" src= "/images/avatar.jpg">
+	<img class="avatar" src= "{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
         <span class="dark">{{ .Site.Params.author }}</span>
         <span class="sub">{{ .Site.Params.motto }}</span>
     </div>
     </a>
     {{ else }}
         <div>
-	<img class="avatar" src= "/images/avatar.jpg">
+	<img class="avatar" src= "{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
         <span class="dark">{{ .Site.Params.author }}</span>
         <span class="sub">{{ .Site.Params.motto }}</span>
     </div>
