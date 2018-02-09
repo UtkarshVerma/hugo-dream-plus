@@ -8,7 +8,7 @@
           <a href= {{ .Permalink }}>
           <h2 class="ui header" style="color: white;padding-top: 0em">{{ .Title }}</h2>
           </a>
-          <p style="padding: 5px;">{{ .Summary | plainify | htmlUnescape }}</p>        
+          <p style="padding: 5px;">{{ .Params.description | emojify  | markdownify }}</p>        
           <div class="ui top right attached black label">{{ .ReadingTime }} min read</div>          
           <div class="ui bottom left attached black label">{{ .Date.Format "Jan 2, 2006" }}</div>                 
 	  <p>@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</p>
@@ -17,9 +17,9 @@
       </div>  
 
     {{ if isset .Params "cover" }}
-    <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}{{ .Params.cover }}" alt="{{ .Title }}">
     {{ else }}
-    <img src="/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
     {{ end }}
   </div>
 </article>

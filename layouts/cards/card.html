@@ -6,15 +6,15 @@
           <a href= {{ .Params.link }} target="_blank">
           <h2 class="ui header" style="color: white;padding-top: 5em">{{ .Title }}</h2>
           </a>
-          <p style="padding: 5px;">{{ .Summary | plainify | htmlUnescape }}</p>          
+          <p style="padding: 5px;">{{ .Params.description | emojify  | markdownify }}</p>          
           </div>      
       </div>
       </div>  
 
     {{ if isset .Params "cover" }}
-    <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}{{ .Params.cover }}" alt="{{ .Title }}">
     {{ else }}
-    <img src="/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
+    <img src="{{ .Site.BaseURL }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
     {{ end }}
   </div>
 </article>

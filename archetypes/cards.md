@@ -6,8 +6,6 @@ cover:
 draft: true
 link: //enter the link to which this card will redirect to
 weight:
+description: 
 ---
 
-Cut out summary from your post content here.
-
-<!--more-->
