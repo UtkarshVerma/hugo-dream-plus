@@ -11,6 +11,12 @@
   height:auto !important;
 }
 
+.sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
+  max-height: unset !important;
+  overflow-y:hidden !important;
+  height:auto !important;
+}
+
 ::-webkit-scrollbar{
   display:none !important;
 }
@@ -47,8 +53,12 @@ section.ui.stacked.segments{
 }
 @media screen and (max-width: 320px){
 
-#home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
+#home-ico, #nextd-ico, #next-ico,#prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
   width: 10px;
+}
+
+#itemico{
+	padding-top:7px;
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
@@ -56,6 +66,13 @@ section.ui.stacked.segments{
   overflow-y:hidden !important;
   height:auto !important;
 }
+
+.sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
+  max-height: unset !important;
+  overflow-y:hidden !important;
+  height:auto !important;
+}
+
 
 nav.ui.top.secondary.menu{
      height:40px !important;
