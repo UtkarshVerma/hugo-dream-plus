@@ -2,17 +2,21 @@
 @media screen and (max-width: 540px) {
 
 #home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
-  width: 20px;
+  width: 1.7em;
+}
+
+#twemoji>h1{
+  font-size: 1.1em;
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
-  max-height: unset !important;
+  max-height: none !important;
   overflow-y:hidden !important;
   height:auto !important;
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
-  max-height: unset !important;
+  max-height: none !important;
   overflow-y:hidden !important;
   height:auto !important;
 }
@@ -53,6 +57,10 @@ section.ui.stacked.segments{
 }
 @media screen and (max-width: 320px){
 
+#twemoji>h1{
+  font-size: 1.1em;
+}
+
 #home-ico, #nextd-ico, #next-ico,#prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
   width: 10px;
 }
@@ -62,14 +70,12 @@ section.ui.stacked.segments{
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
-  max-height: unset !important;
-  overflow-y:hidden !important;
+  max-height: none !important;
   height:auto !important;
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
-  max-height: unset !important;
-  overflow-y:hidden !important;
+  max-height: none !important;
   height:auto !important;
 }
 
@@ -88,7 +94,7 @@ section.ui.stacked.segments{
 }
 
 #post-head{
-  font-size:20px !important;
+  font-size:1.7!important;
 }
 
 #TableOfContents ul{
@@ -145,6 +151,8 @@ section.ui.stacked.segments{
     padding: 2em 2em 2em 2em;      
     color: #444;
     margin: 0 -1px 0 -1px;
+    border-right: 1px solid #d4d4d5;
+    border-left: 1px solid #d4d4d5;
 }
 
 #post-meta div span {
@@ -331,7 +339,6 @@ html {
 .post-list::-webkit-scrollbar {
   display: unset;
 }
-
 
 a.ui.label {
   margin-top: 5px;
