@@ -38,10 +38,6 @@
     {{ if $paginator.HasPrev }}
     <a href="{{ $paginator.Prev.URL }}">
       <i id="prev-ico" class="inverted big arrow circle outline left icon" title="{{ i18n "prevPage" }}"></i>
-    </a><h2>position: static;</h2>
-
-<p>An element with position: static; is not positioned in any special way; it is 
-always positioned according to the normal flow of the page:</p>
     {{ else }}
     <i id="prevd-ico" class="disabled inverted big arrow circle outline left icon" title="{{ i18n "prevPage" }}"></i>
     {{ end }}
