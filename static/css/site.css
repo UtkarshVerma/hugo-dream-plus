@@ -5,6 +5,12 @@
   width: 20px;
 }
 
+.sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
+  max-height: unset !important;
+  overflow-y:hidden !important;
+  height:auto !important;
+}
+
 ::-webkit-scrollbar{
   display:none !important;
 }
@@ -43,6 +49,12 @@ section.ui.stacked.segments{
 
 #home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico{
   width: 10px;
+}
+
+.sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
+  max-height: unset !important;
+  overflow-y:hidden !important;
+  height:auto !important;
 }
 
 nav.ui.top.secondary.menu{
