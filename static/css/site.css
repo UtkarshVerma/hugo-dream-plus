@@ -243,9 +243,9 @@ article.post-content code{
   vertical align: 0.1em;
   border-radius: 0.2em;
   background-color: #ccc6;
-  border: 0.05em solid #00000033;
+  border: 0.05em solid #c9c0c0;
   padding-left: 0.2em;
-  padding right: 0.2em;
+  padding-right: 0.2em;
 }
 
 article.post-content p {
