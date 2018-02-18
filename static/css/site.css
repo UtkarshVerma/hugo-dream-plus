@@ -125,6 +125,19 @@ nav.ui.top.secondary.menu{
 
 }
 
+.sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
+  max-height: unset !important;
+  height: auto !important;
+  padding-right: 2em;
+  overflow-y: hidden;
+}
+
+.sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
+  max-height: unset !important; 
+  height: auto !important;
+  overflow-y: hidden;
+}
+
 #sharing {
     float: right;    
 }
@@ -215,10 +228,6 @@ article.post-content pre>code {
 
 .ui.secondary.segment{
   background-color: #ececece8;
-}
-
-::-webkit-scrollbar{
-  display:none;
 }
 
 div#toc{
