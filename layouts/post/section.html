@@ -1,5 +1,5 @@
 {{ define "title" }}
-{{ .Title }}
+{{ i18n "archives" }}
 {{ end }}
 
 {{ define "frontmenu" }}
@@ -37,7 +37,7 @@
   <div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
     <div class="ui inverted segment">
       <h2 class="ui header">
-        {{ .Title }}{{ "---" | markdownify }}
+        {{ i18n "archives" }}{{ "---" | markdownify }}
         <div class="ui grey sub header">{{ .Content }}</div>
       </h2>
 {{ range .Data.Pages.GroupByDate "2006" }}
