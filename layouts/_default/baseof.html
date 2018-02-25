@@ -23,6 +23,7 @@
   </div>
   {{ partial "footer.html" . }}
   {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
+  {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
 </body>
 </html>
 
