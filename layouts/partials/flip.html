@@ -2,18 +2,18 @@
   <div class="item">
     <i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
   </div>
-{{ partial "social.html" . }}
+  {{ partial "social.html" . }}
 </nav>
 
 <div class="ui centered grid about">
   <div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
     <section class="ui stacked segments">
 	{{ partial "about.html" . }}
-      {{ if .Site.Copyright }}
+    {{ if .Site.Copyright }}
       <footer class="ui secondary segment">
         {{ .Site.Copyright | safeHTML }}
       </footer>
-      {{ end }}
+    {{ end }}
     </section>
   </div>
 </div>
