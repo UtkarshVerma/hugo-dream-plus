@@ -10,7 +10,6 @@
 </head>  
 
 <body>
-  <div class="bg">  {{ partial "background.html" . }}</div>
   <div class="flip-container">
     <div class="flipper">
       <section class="front">
@@ -25,5 +24,6 @@
   {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
 </body>
+{{ partial "background.html" . }}
 </html>
 
