@@ -32,7 +32,7 @@
 	<section class="ui attached inverted segment dream-categories">
   	<div class="ui inverted accordion">
     	{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-    	<div class="title">
+    	<div class="title" style="text-align: initial;">
       	<i class="dropdown icon"></i>
       	<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" class="item" style="color: white;">{{ $name }}</a>
     	</div>

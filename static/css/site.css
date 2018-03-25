@@ -4,6 +4,15 @@
   width: 1.7em;
 }
 
+#sidebarBtn {
+  display:none !important;
+}
+
+#mobile {
+  display: inline !important;
+  margin-top: 2em;
+}
+
 #twemoji>h1{
   font-size: 1.1em;
 }
@@ -17,11 +26,13 @@ nav.ui.secondary.menu > .item{
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
   max-height: none !important;
   height:auto !important;
+  padding-right: 1em !important; 
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
   max-height: none !important;
   height:auto !important;
+  padding-right: 1em !important; 
 }
 
 ::-webkit-scrollbar{
@@ -62,6 +73,15 @@ nav.ui.secondary.menu > .item{
   margin-right: 5px !important;
 }
 
+#sidebarBtn {
+  display:none !important;
+}
+
+#mobile {
+  display: inline !important;
+  margin-top: 2em;
+}
+
 #twemoji>h1{
   font-size: 1.1em;
 }
@@ -82,11 +102,13 @@ nav.ui.secondary.menu > .item{
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
   max-height: none !important;
   height:auto !important;
+  padding-right: 1em !important; 
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.eleven.wide.computer.column.post-list{
   max-height: none !important;
   height:auto !important;
+  padding-right: 1em !important; 
 }
 
 nav.ui.top.secondary.menu{
@@ -119,7 +141,7 @@ nav.ui.top.secondary.menu{
   display:none !important;
 }
 
-  #post-meta {
+#post-meta {
       font-size: 12px;
 }
 
@@ -220,6 +242,7 @@ article.post-content pre {
   overflow-y: auto;
   max-height: 30em;
 }
+
 article.post-content pre>code {
   background-color: #ccc0;
   border: 0px;
