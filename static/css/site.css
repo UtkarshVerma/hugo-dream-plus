@@ -128,7 +128,6 @@ nav.ui.top.secondary.menu{
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{
   max-height: unset !important;
   height: auto !important;
-  padding-right: 2em;
   overflow-y: hidden;
 }
 

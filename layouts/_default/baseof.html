@@ -10,6 +10,8 @@
 </head>  
 
 <body>
+  {{ partial "sidebar.html" . }}
+  <div class="pusher" style="overflow-y:auto; overflow-x: hidden;">
   <div class="flip-container">
     <div class="flipper">
       <section class="front">
@@ -23,7 +25,8 @@
   {{ partial "footer.html" . }}
   {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
+  {{ partial "background.html" . }}
+  </div>
 </body>
-{{ partial "background.html" . }}
 </html>
 
