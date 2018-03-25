@@ -1,0 +1,61 @@
+<body>
+  <div class="ui sidebar inverted vertical menu" style="overflow: hidden !important;">
+<section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    {{ if isset .Site.Params "avatar" }}
+    <img src="{{ .Site.Params.avatar }}">
+    {{ else }}
+   <img src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
+    {{ end }}
+  </div>
+  <h3 class="ui header">
+    {{- .Site.Params.author -}}
+    <div class="sub header" style="color: white;">{{ $.Site.Params.motto }}</div>
+  </h3>
+    {{ if or (.Site.Params.enableCategories)  (.Site.Params.enableTags) }}
+	<a id="tag-category-pop" class="ui red right corner label">		
+	<i class="pointing down icon" title="{{ i18n "clickToPopTagsAndCategories" }}"></i>		
+	</a>
+     {{ end }}
+</section>
+
+{{ if .Site.Params.enableTags }}
+	{{ if .Site.Taxonomies.tags }}
+	<section class="ui attached center aligned inverted segment dream-tags">
+  	{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+  	<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+  	{{ end }}
+	</section>
+	{{ end }}
+{{ end }}
+
+{{ if .Site.Params.enableCategories }}
+	{{ if .Site.Taxonomies.categories }}
+	<section class="ui attached inverted segment dream-categories">
+  	<div class="ui inverted accordion">
+    	{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    	<div class="title" style="color: white; padding-bottom:0.2em;">
+      	<i class="dropdown icon"></i><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" style="color: white;" >{{ $name }}</a>     	
+    	</div>
+    	{{ range $taxonomy.Pages }}
+    	<div class="content" style="padding-left: 1em;">    		
+       	<a class="item" href="{{ .Permalink }}" style="color: white; padding-bottom: 0.3em; padding-top: 0.3em;">{{ .LinkTitle }}</a>
+     	</div>
+     	{{ end }}
+     	{{ end }}
+     </div>
+	</section>
+	{{ end }}
+{{ end }}
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    {{ if .Site.Params.siteStartYear }}
+    <p>© {{ if eq now.Year .Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ .Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ .Site.Title }}</p>
+    {{ else }}
+    <p>© {{ now.Year }} {{ .Site.Title }}</p>
+    {{ end }}    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+</section>
+  </div>
+</body>

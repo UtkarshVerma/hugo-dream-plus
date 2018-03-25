@@ -53,4 +53,9 @@
  {{ end }}
   </div>
 {{ end }}
+{{ if .IsPage }}
+  <div class="item" onClick="$('.ui.sidebar') .sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+      <i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+  </div>
+{{ end }}
 </nav>
