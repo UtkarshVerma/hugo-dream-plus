@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
-  {{ partial "head.html" . }}
   {{ partial "init.html" . }}
-</head>  
+  {{ partial "head.html" . }}
+</head>
 
 <body>
+  {{ if eq ($.Scratch.Get "isMobile") false }}{{ partial "sidebar.html" . }}{{ end }}
   <div class="pusher" style="overflow-y:auto; overflow-x: hidden;">
   <div class="flip-container">
     <div class="flipper">
@@ -21,7 +22,6 @@
       </section>
     </div>
   </div>
-  {{ partial "sidebar.html" . }}
   {{ partial "footer.html" . }}
   {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}

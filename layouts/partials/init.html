@@ -15,4 +15,14 @@
     var enabledDimmer = {{ $.Site.Params.enableDimmer }}
     var shToken={{ .Site.Params.shortestToken }}
     var shDomains={{ .Site.Params.shortestDomains }}
+    
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		{{ $.Scratch.Set "isMobile" true }}
+	}
+	else{
+	{{ $.Scratch.Set "isMobile" false }}
+	}
+	var isMobile = {{ $.Scratch.Get "isMobile" }}
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+	
 </script>
