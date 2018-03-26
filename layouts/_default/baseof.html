@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  {{ if eq ($.Scratch.Get "isMobile") false }}{{ partial "sidebar.html" . }}{{ end }}
   <div class="pusher" style="overflow-y:auto; overflow-x: hidden;">
   <div class="flip-container">
     <div class="flipper">
@@ -27,6 +26,7 @@
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
   {{ partial "background.html" . }}
   </div>
+  {{ partial "sidebar.html" . }}
 </body>
 </html>
 
