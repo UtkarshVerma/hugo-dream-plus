@@ -4,6 +4,11 @@
   width: 1.7em;
 }
 
+.sixteen.wide.mobile.fifteen.wide.tablet.fifteen.wide.computer.column.about{
+  max-height: none !important;
+  height:auto !important;
+}
+
 #sidebarBtn {
   display:none !important;
 }
@@ -145,6 +150,10 @@ nav.ui.top.secondary.menu{
       font-size: 12px;
 }
 
+}
+
+#abt > .ui.stacked.segments{
+  margin-bottom: 4em;
 }
 
 .sixteen.wide.mobile.fifteen.wide.tablet.twelve.wide.computer.column.post-list{

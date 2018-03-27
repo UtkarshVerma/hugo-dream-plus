@@ -6,8 +6,8 @@
 </nav>
 
 <div class="ui centered grid about" style="height: 100vh;">
-  <div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
-    <section class="ui stacked segments" style="margin-bottom: 4em;">
+  <div id="abt" class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+    <section class="ui stacked segments">
 	{{ partial "about.html" . }}
     {{ if .Site.Copyright }}
       <footer class="ui secondary segment">
