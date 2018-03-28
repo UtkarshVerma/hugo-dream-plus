@@ -2,7 +2,7 @@
     {{ if isset .Site.Params "twitter" }}
      <a href="https://twitter.com/UtkarshVerma_">
         <div>
-	<img class="avatar" src= "{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+	<img class="avatar" src= "{{ if isset .Site.Params "avatar" }}{{ .Site.BaseURL }}{{ .Site.Params.avatar }}{{ else }}/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg{{ end }}">
         <span class="dark">{{ .Site.Params.author }}</span>
         <span class="sub">{{ .Site.Params.motto }}</span>
     </div>
