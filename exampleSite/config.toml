@@ -1,10 +1,10 @@
-baseURL = "https://www.examplesite.com"
+baseURL = "https://example.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Author's Blog"
-theme = "hugo-dream-plus"
+title = "Author's Site"
+theme = "dream-plus"
 
-copyright = "Copyright (C) 2018, UtkarshVerma; All Rights Reserved."
+copyright = ""
 googleAnalytics = ""
 
 disqusShortname = ""
@@ -18,55 +18,58 @@ enableEmoji=true
 
 [params]
   author = "Author"
-  description = ""
-  avatar = "/img/defaultAvatar.jpg"
-  motto = "Author motto."
-  #Enable table of contents for posts.
+  description = "Site description"
+  #avatar = ""
+  motto = "Author's motto or short description."
   enableToc = true
-  #Enable Sharing option for posts.
   enableShareCard = true
  
   #Use your external CSS/JS files with this theme by placing the location of the file within the list. For example: "js/twemoji.js" 
   customCSS = [""]
   customJS  = [""]
   favicon = "/img/defaultFav.ico"
+    
+  #Shorte.st Settings
+  enableShortest = false  
   
 #Background Settings
-  enableColorBG= true
-
+  enableColorBG= false
   bgBlur = 0.5
   bgImage = "/img/bg1.jpeg"
-
-# Heading for Error Page
-  error404 = "Error 404: Page Not Found"
-
-# Set the heading for the about page!
-  aboutHeader = ""
-
-  #List of background images.
   bgList = ["/img/bg1.jpeg"]
   
-# Post-displaying Settings  
-  enablePost = true
+# Post-displaying Settings
   enableTags = true
   enableCategories = true
-  postsPerPage = 4
 
-#Enable Twitter Emoji
+# Cards or posts shown per page
+  itemsPerPage = 4
+
+# Set whether you're hosting "cards" or "post"
+  contentType = "post"
+
+# Enable/disable post/card  dimming effect
+  enableDimmer = true
+
+# Heading for 404 Page
+  error404 = "Error 404: Page Not Found"
+
+  #Enable Twitter Emoji
   twitterEmoji=true
 
-#Link of your blog
+#Heading for the About page
+  aboutHeader = "About the Author"
+
+#Link to your blog
   BlogLink = ""
 
-
-#Social Links. Only insert the username.
-  email = ""
+#Social Links
+  email = "utkarshverma@protonmail.com"
   github = "UtkarshVerma"
   linkedin = ""
   codepen = ""
-  stackoverflow = ""
-  medium = ""
-  reddit = ""
-  twitter = "" 
+  stackoverflow = "9271608/utkarsh-verma"
+  medium = "UtkarshVerma_"
+  twitter = "UtkarshVerma_" 
   siteStartYear = 2018
  
