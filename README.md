@@ -39,7 +39,7 @@ Define yourself through the following variables:
 author = "<name of the author>"
 description = "Short description of the site"
 motto = "author's motto or short description"
-avatar = "<absolute path to avatar>"
+avatar = "<absolute path to avatar>"	//Leaving the avatar variable unset displays svg avatars
 ```
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
 * GitHub    - `github = "<username>"`
