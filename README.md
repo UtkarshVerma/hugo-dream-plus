@@ -30,10 +30,10 @@ git submodule update --init --recursive
 ## Getting Started
 Once the theme has been successfully installed, you'll have to do a bit of tuning to the theme to meet your taste.
 
-### The config File
+### The config file
 Within the [`exampleSite`](/exampleSite) folder, you'll find the [`config.toml`](/exampleSite/config.toml) file which can be used to tweak the theme.
 
-### Describe Yourself
+### Describe yourself
 Define yourself through the following variables:
 ```
 author = "<name of the author>"
@@ -65,10 +65,10 @@ You may test them out yourselves by visiting my sites(stated above) which use th
 This theme supports [twemoji](https://github.com/twitter/twemoji) rendering by default. To enable/disable it, you may set the `twitterEmoji` config variable to true or false respectively.
 Regarding the usage, simply use the good 'ol MarkDown syntax for emoji and they'll be rendered as twemoji.
 
-### Enable Table of Contents (Post view only)
+### Table of contents (Post view only)
 This theme is capable of indexing out the headings into a clean table of contents for bettering browsing through long posts. It can be enabled/disabled by modifying the `enableToc` config variable accordingly.
 
-### Image Background
+### Image background
 To enable setting images as background, you'll have to disable **random colour background** first by setting `enableColorBG` to false.
 Also, enabling image background feature requires the modification of two variables, namely `bgImage` and `bgList`. If you prefer a single image background, then simply set the value of `bgImage` as the absolute path of your image. For example,
 ```
@@ -80,10 +80,10 @@ bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 ```
 You may also add blurring effect to the background image using `bgBlur`.
 
-###  Share Card (Post view only)
+###  Share card (Post view only)
 This card appears below your posts to allow sharing of your post on **Facebook** and **Twitter**. Enable/disable it through the `enableShareCard` variable by setting appropriate boolean values.
 
-### Error Page and About Page Headings
+### Error page and about page headings
 The headings for error page and about page are set through the config file via the `aboutHeader` and `error404` variable. Enter the value in string form. For example,
 ```
   error404 = "Error 404: Page Not Found"
@@ -103,10 +103,10 @@ You can also manipulate the theme externally using CSS files and JS files and li
   customJS = ["js/twemoji.js"]
 ```
 
-### Shorte.st Website Script
+### Shorte.st website script
 The [shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll first have to enable this feature by setting `enableShortest` to `true` and then setting the **API Token** you got from Shorte.st to `shortestToken`, and after that, define your domains as a list in the `shortestDomains` config variable.
 
-### Some Other Configurations
+### Some other configurations
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
 
 ## Nearly Finished
