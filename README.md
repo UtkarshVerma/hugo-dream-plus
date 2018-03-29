@@ -1,7 +1,7 @@
 # Dream Plus Theme for Hugo
 
-<center>![Dream Plus Theme](/images/original.png)</center>
-This theme is an upgraded version of [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
+![Dream Plus Theme](/images/original.png)
+This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
 * **Card** and **Post** views for the home page
 * twemoji rendering
 * Table of contents for posts
