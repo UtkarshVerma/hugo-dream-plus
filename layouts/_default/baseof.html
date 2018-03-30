@@ -8,9 +8,8 @@
   {{ partial "init.html" . }}
   {{ partial "head.html" . }}
 </head>
-
 <body>
-  <div class="pusher" style="overflow-y:auto; overflow-x: hidden;">
+  <div class="pusher" style="overflow-y:auto; overflow-x: hidden; background-color: transparent !important">
   <div class="flip-container">
     <div class="flipper">
       <section class="front">
@@ -24,9 +23,9 @@
   {{ partial "footer.html" . }}
   {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
-  {{ partial "background.html" . }}
   </div>
   {{ partial "sidebar.html" . }}
+  {{ partial "background.html" . }}
 </body>
 </html>
 

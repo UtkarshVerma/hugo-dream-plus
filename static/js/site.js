@@ -4,17 +4,19 @@ $(document).ready(function () {
   $('.dream-flip-toggle')
     .click(function () {
       var c = $('.flip-container')
-
-      if (dreamBodyBgSwitchIndex === 0) {
-        c.css('overflow', 'hidden')
-        setBackground(dreamBody, dreamBodyBgSwitch[1])
-        dreamBodyBgSwitchIndex = 1
-      } else {
-        c.removeAttr('style')
-        setBackground(dreamBody, dreamBodyBgSwitch[0])
-        dreamBodyBgSwitchIndex = 0
+	  if(colorBG)
+	  {
+	  	if (dreamBodyBgSwitchIndex === 0) {
+      	    c.css('overflow', 'hidden')
+     	    setBackground(dreamBody, dreamBodyBgSwitch[1])
+     		dreamBodyBgSwitchIndex = 1
+      	}
+       	else {
+        	c.removeAttr('style')
+        	setBackground(dreamBody, dreamBodyBgSwitch[0])
+        	dreamBodyBgSwitchIndex = 0
+      	}
       }
-
       c.toggleClass('flip-it')
     })
 
