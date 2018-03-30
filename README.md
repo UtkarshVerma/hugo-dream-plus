@@ -1,7 +1,8 @@
 # Dream Plus Theme for Hugo
 
-![Dream Plus Theme](/images/original.png)
+![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/images/original.png)
 This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
+
 * **Card** and **Post** views for the home page
 * twemoji rendering
 * Table of contents for posts
@@ -16,6 +17,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * Shorte.st website script, and a lot of other minor improvements.
 
 This theme can be used for two purposes:
+
 1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to **Card** view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
 2. If you're simply making a blog or another website with a bunch of posts, then switch to the **Post** view for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
 
@@ -42,6 +44,7 @@ motto = "author's motto or short description"
 avatar = "<absolute path to avatar>"	//Leaving the avatar variable unset displays svg avatars
 ```
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
+
 * GitHub    - `github = "<username>"`
 * Email     - `email = "<email id>"`
 * Twitter   - `twitter = "<username>"`
