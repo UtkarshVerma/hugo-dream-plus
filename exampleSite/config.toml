@@ -1,13 +1,13 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Author's Site"
+title = "UtkarshVerma's Site"
 theme = "dream-plus"
 
 copyright = ""
 googleAnalytics = ""
 
-disqusShortname = ""
+disqusShortname = "UtkarshVermaBlog"
 
 enableRobotsTXT = true
 
@@ -17,10 +17,10 @@ hasCJKLanguage = false
 enableEmoji=true
 
 [params]
-  author = "Author"
-  description = "Site description"
-  #avatar = ""
-  motto = "Author's motto or short description."
+  author = "UtkarshVerma"
+  description = "Just a blog for hosting random programming stuff."
+  avatar = "/images/avatar.jpg"
+  motto = "A keen maker, programmer and an Instructables author."
   enableToc = true
   enableShareCard = true
  
@@ -33,32 +33,32 @@ enableEmoji=true
   enableShortest = false  
   
 #Background Settings
-  enableColorBG= false
+  enableColorBG = false
   bgBlur = 0.5
   bgImage = "/img/bg1.jpeg"
-  bgList = ["/img/bg1.jpeg"]
+  #bgList = ["/img/bg1.jpeg"]
   
-# Post-displaying Settings
+#Post-displaying Settings
   enableTags = true
   enableCategories = true
 
-# Cards or posts shown per page
+#Cards or posts shown per page
   itemsPerPage = 4
 
-# Set whether you're hosting "cards" or "post"
+#Set whether you're hosting "cards" or "post"
   contentType = "post"
 
-# Enable/disable post/card  dimming effect
+#Enable/disable post/card  dimming effect
   enableDimmer = true
 
-# Heading for 404 Page
+#Heading for 404 Page
   error404 = "Error 404: Page Not Found"
 
   #Enable Twitter Emoji
   twitterEmoji=true
 
 #Heading for the About page
-  aboutHeader = "About the Author"
+  aboutHeader = "So, Who Am I?"
 
 #Link to your blog
   BlogLink = ""
