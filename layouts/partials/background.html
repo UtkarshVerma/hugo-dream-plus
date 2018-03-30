@@ -16,8 +16,8 @@ if(colorBG) {
     var dreamBack = $('.flip-container .back')
     
     var dreamPrevBgIndex = 0
-    var dreamBodyBgSwitch = []
     var dreamBodyBgSwitchIndex = 0
+    var dreamBodyBgSwitch = []
     
     var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
     dreamBodyBgSwitch.push(dreamBg)
@@ -64,16 +64,17 @@ if(colorBG) {
     }
 }
 else {
-    var images = {{ .Site.Params.bgList }}
     var blurEff = {{ .Site.Params.bgBlur }}
-    var randomNumber = Math.floor(Math.random() * images.length);
-    bgImage = 'url(' + images[randomNumber] + ')';
-    console.log("Current background: " + bgImage.substring(12,bgImage.length -1) );
-    $('body').css({
-    	'background': bgImage,
-    	'filter': 'blur(' + blurEff + ')',
-    	'background-size':'cover'    	
-    })
-}
+	if({{ isset .Site.Params "bgList" }})
+	{	
+    	var images = {{ .Site.Params.bgList }}
+    	var randomNumber = Math.floor(Math.random() * images.length)
+    	bgImage = 'url(' + images[randomNumber] + ')'
+    }
+    else
+    	bgImage = 'url(' + {{ .Site.Params.bgImage }} + ')'
+    console.log("Current background: " + bgImage.substring(9,bgImage.length -1) )
+    var target = document.getElementsByTagName('body')[0]
+    target.setAttribute("style", "background:" + bgImage + "!important; filter:" + "blur(" + blurEff + ") !important; background-size:cover !important;")
+}	
 </script>
-
