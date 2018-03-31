@@ -35,7 +35,7 @@ enableEmoji=true
 #Background Settings
   enableColorBG = false
   bgBlur = 0.5
-  bgImage = "/img/bg1.jpeg"
+  bgImage = "https://raw.githubusercontent.com/UtkarshVerma/hugo-dream-plus/master/static/img/bg1.jpeg"     #Absolute path for Hugo example site
   #bgList = ["/img/bg1.jpeg"]
   
 #Post-displaying Settings
