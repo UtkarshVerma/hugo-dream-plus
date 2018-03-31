@@ -65,7 +65,7 @@ if(colorBG) {
 }
 else {
     var blurEff = {{ .Site.Params.bgBlur }}
-	if({{ isset .Site.Params "bgList" }})
+	if({{ isset .Site.Params.bgList 0 }})
 	{	
     	var images = {{ .Site.Params.bgList }}
     	var randomNumber = Math.floor(Math.random() * images.length)
@@ -73,7 +73,7 @@ else {
     }
     else
     	bgImage = 'url(' + {{ .Site.Params.bgImage }} + ')'
-    console.log("Current background: " + bgImage.substring(9,bgImage.length -1) )
+    console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"),bgImage.length -1) )
     var target = document.getElementById('bg')
     target.setAttribute("style", "position:absolute; width:100%; height:100%; background:" + bgImage + "!important; filter:" + "blur(" + blurEff + "px) !important; background-size:cover !important;")
 }	
