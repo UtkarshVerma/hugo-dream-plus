@@ -9,7 +9,8 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <div class="pusher" style="overflow-y:auto; overflow-x: hidden; background-color: transparent !important">
+  <div id="bg">{{ partial "background.html" . }}</div>
+  <div class="pusher" style="position: relative; overflow-y:auto; overflow-x: hidden; background-color: transparent !important">
   <div class="flip-container">
     <div class="flipper">
       <section class="front">
@@ -25,7 +26,6 @@
   {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
   </div>
   {{ partial "sidebar.html" . }}
-  {{ partial "background.html" . }}
 </body>
 </html>
 
