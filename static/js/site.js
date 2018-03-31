@@ -7,12 +7,10 @@ $(document).ready(function () {
 	  if(colorBG)
 	  {
 	  	if (dreamBodyBgSwitchIndex === 0) {
-      	    c.css('overflow', 'hidden')
      	    setBackground(dreamBody, dreamBodyBgSwitch[1])
      		dreamBodyBgSwitchIndex = 1
       	}
        	else {
-        	c.removeAttr('style')
         	setBackground(dreamBody, dreamBodyBgSwitch[0])
         	dreamBodyBgSwitchIndex = 0
       	}
