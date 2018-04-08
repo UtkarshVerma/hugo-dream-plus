@@ -9,20 +9,20 @@ $(document).ready(function () {
         	setBackground(dreamBody, dreamBodyBgSwitch[1])
         dreamBodyBgSwitchIndex = 1
         c.toggleClass('flip-it')
-        $('.back').css('display','unset')    
         setTimeout(function(){
+            $('.back').css('display','block')    
         	$('.front').css('display','none')
-        }, 800)
+        }, 200)
       }
       else {
         if(colorBG)
        		setBackground(dreamBody, dreamBodyBgSwitch[0])
        	dreamBodyBgSwitchIndex = 0
-        c.toggleClass('flip-it')   
-        $('.front').css('display','unset')   
+        c.toggleClass('flip-it')     
         setTimeout(function(){
+            $('.front').css('display','block') 
         	$('.back').css('display','none')
-        }, 800)      
+        }, 200)      
       }
     })
 
