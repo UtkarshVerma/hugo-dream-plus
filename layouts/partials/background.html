@@ -1,4 +1,5 @@
 <script type = "text/javascript">
+var dreamBodyBgSwitchIndex = 0
 if(colorBG) {
     var dreamBGGradients = [
         [],
@@ -16,7 +17,6 @@ if(colorBG) {
     var dreamBack = $('.flip-container .back')
     
     var dreamPrevBgIndex = 0
-	var dreamBodyBgSwitchIndex = 0
     var dreamBodyBgSwitch = []
     
     var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
@@ -75,6 +75,6 @@ else {
     	bgImage = 'url(' + {{ .Site.Params.bgImage }} + ')'
     console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"),bgImage.length -1) )
     var target = document.getElementById('bg')
-    target.setAttribute("style", "position:absolute; width:100%; height:100%; background:" + bgImage + "!important; filter:" + "blur(" + blurEff + "px) !important; background-size:cover !important;")
+    target.setAttribute("style", "background-image:" + bgImage +"; filter:" + "blur(" + blurEff + "px)")
 }	
 </script>
