@@ -14,9 +14,9 @@
   </div>
   </div>
   <div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-    <section class="ui secondary top attached black segment">
+    <section id="post-content" class="ui secondary top attached black segment">
       <header>
-        <h1 id="post-head"class="ui header">
+        <h1 id="post-head" class="ui header">
           {{ .Title }}
           <div id= "post-subhead" class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
         </h1>

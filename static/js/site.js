@@ -3,19 +3,27 @@ var SemanticUIColors = ["red", "orange", "yellow", "olive", "green", "teal", "bl
 $(document).ready(function () {
   $('.dream-flip-toggle')
     .click(function () {
-      var c = $('.flip-container')
-	  if(colorBG)
-	  {
-	  	if (dreamBodyBgSwitchIndex === 0) {
-     	    setBackground(dreamBody, dreamBodyBgSwitch[1])
-     		dreamBodyBgSwitchIndex = 1
-      	}
-       	else {
-        	setBackground(dreamBody, dreamBodyBgSwitch[0])
-        	dreamBodyBgSwitchIndex = 0
-      	}
+      var c = $('.pusher')
+	  if (dreamBodyBgSwitchIndex === 0) {
+        if(colorBG)
+        	setBackground(dreamBody, dreamBodyBgSwitch[1])
+        dreamBodyBgSwitchIndex = 1
+        c.toggleClass('flip-it')
+        $('.back').css('display','unset')    
+        setTimeout(function(){
+        	$('.front').css('display','none')
+        }, 800)
       }
-      c.toggleClass('flip-it')
+      else {
+        if(colorBG)
+       		setBackground(dreamBody, dreamBodyBgSwitch[0])
+       	dreamBodyBgSwitchIndex = 0
+        c.toggleClass('flip-it')   
+        $('.front').css('display','unset')   
+        setTimeout(function(){
+        	$('.back').css('display','none')
+        }, 800)      
+      }
     })
 
   var postList = $('.post-list')
