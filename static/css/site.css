@@ -362,7 +362,6 @@ header.ui.inverted.segment{
   top: 0;
   left: 0;
   width: 100vw;
-  padding-bottom: 1em;
 }
 
 .pusher .front {
@@ -375,6 +374,8 @@ header.ui.inverted.segment{
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  padding-bottom: 1em;
+  display: none;
 }
 
 .ui.cards .card .image {
