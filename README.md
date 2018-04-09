@@ -9,6 +9,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * Random image background
 * Sidebar
 * Share card below posts
+* Device detection, that is whether the client device is a PC or phone.
 * About section can be written in MarkDown
 * Custom 404 pages can be written in MarkDown
 * Custom Favicon
@@ -85,6 +86,9 @@ You may also add blurring effect to the background image using `bgBlur`.
 
 ###  Share card (Post view only)
 This card appears below your posts to allow sharing of your post on **Facebook** and **Twitter**. Enable/disable it through the `enableShareCard` variable by setting appropriate boolean values.
+
+### Device detection
+You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
 ### Error page and about page headings
 The headings for error page and about page are set through the config file via the `aboutHeader` and `error404` variable. Enter the value in string form. For example,
