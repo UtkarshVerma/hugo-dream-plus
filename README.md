@@ -66,11 +66,9 @@ One clear distinction between both the view is that **Card** view doesn't suppor
 You may test them out yourselves by visiting my sites(stated above) which use them.
 Also, post/card creation is done differently for both the views. It is as follows:
 
-```sh
-
+```shell
 hugo new cards/example.md		//Card creation
 hugo new post/example.md		//Post creation
-
 ```
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
