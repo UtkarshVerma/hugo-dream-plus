@@ -1,19 +1,19 @@
 <nav class="ui top secondary menu" style="background-color: #00000066;">
-  <div class="item">
-    <i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
-  </div>
-  {{ partial "social.html" . }}
+	<div class="item">
+		<i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+	</div>
+	{{ partial "social.html" . }}
 </nav>
 
 <div class="ui centered grid about">
-  <div id="abt" class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
-    <section class="ui stacked segments">
-	{{ partial "about.html" . }}
-    {{ if .Site.Copyright }}
-      <footer class="ui secondary segment">
-        {{ .Site.Copyright | safeHTML }}
-      </footer>
-    {{ end }}
-    </section>
-  </div>
+	<div id="abt" class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments">
+			{{ partial "about.html" . }}
+			{{ if .Site.Copyright }}
+			<footer class="ui secondary segment">
+				{{ .Site.Copyright | safeHTML }}
+			</footer>
+    	{{ end }}
+		</section>
+	</div>
 </div>

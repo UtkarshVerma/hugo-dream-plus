@@ -4,13 +4,13 @@
 
 {{ define "main"}}
 <div class="ui centered grid">
-  <div class="sixteen wide mobile fifteen wide tablet four wide computer column">
-    {{ partial "header.html" . }}
-  </div>
-  <div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-    <div class="ui two stackable cards">
-	{{ partial "pagination.html" . }}
-    </div>
-  </div>
+	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
+		{{ partial "header.html" . }}
+	</div>
+	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+		<div class="ui two stackable cards">
+			{{ partial "pagination.html" . }}
+		</div>
+	</div>
 </div>
 {{ end }}

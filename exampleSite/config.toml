@@ -17,59 +17,58 @@ hasCJKLanguage = false
 enableEmoji=true
 
 [params]
-  author = "UtkarshVerma"
-  description = "Just a blog for hosting random programming stuff."
-  avatar = "/images/avatar.jpg"
-  motto = "A keen maker, programmer and an Instructables author."
-  enableToc = true
-  enableShareCard = true
- 
-  #Use your external CSS/JS files with this theme by placing the location of the file within the list. For example: "js/twemoji.js" 
-  customCSS = [""]
-  customJS  = [""]
-  favicon = "/img/defaultFav.ico"
-    
-  #Shorte.st Settings
-  enableShortest = false  
+	author = "UtkarshVerma"
+	description = "Just a blog for hosting random programming stuff."
+	avatar = "/images/avatar.jpg"
+	motto = "A keen maker, programmer and an Instructables author."
+	enableToc = true
+	enableShareCard = true
+
+	#Use your external CSS/JS files with this theme by placing the location of the file within the list. For example: "js/twemoji.js" 
+	customCSS = [""]
+	customJS  = [""]
+	favicon = "/img/defaultFav.ico"
   
-#Background Settings
-  enableColorBG = false
-  bgBlur = 0.5
-  bgImage = "https://raw.githubusercontent.com/UtkarshVerma/hugo-dream-plus/master/static/img/bg1.jpeg"     #Absolute path for Hugo example site
-  #bgList = ["/img/bg1.jpeg"]
+	#Shorte.st Settings
+	enableShortest = false  
   
-#Post-displaying Settings
-  enableTags = true
-  enableCategories = true
+	#Background Settings
+	enableColorBG = false
+	bgBlur = 0.5
+	bgImage = "https://raw.githubusercontent.com/UtkarshVerma/hugo-dream-plus/master/static/img/bg1.jpeg"     #Absolute path for Hugo example site
+	#bgList = ["/img/bg1.jpeg"]
+  
+	#Post-displaying Settings
+	enableTags = true
+	enableCategories = true
 
-#Cards or posts shown per page
-  itemsPerPage = 4
+	#Cards or posts shown per page
+	itemsPerPage = 4
 
-#Set whether you're hosting "cards" or "post"
-  contentType = "post"
+	#Set whether you're hosting "cards" or "post"
+	contentType = "post"
 
-#Enable/disable post/card  dimming effect
-  enableDimmer = true
+	#Enable/disable post/card  dimming effect
+	enableDimmer = true
 
-#Heading for 404 Page
-  error404 = "Error 404: Page Not Found"
+	#Heading for 404 Page
+	error404 = "Error 404: Page Not Found"
 
-  #Enable Twitter Emoji
-  twitterEmoji=true
+	#Enable Twitter Emoji
+	twitterEmoji=true
 
-#Heading for the About page
-  aboutHeader = "So, Who Am I?"
+	#Heading for the About page
+	aboutHeader = "So, Who Am I?"
 
-#Link to your blog
-  BlogLink = ""
+	#Link to your blog
+	BlogLink = ""
 
-#Social Links
-  email = "utkarshverma@protonmail.com"
-  github = "UtkarshVerma"
-  linkedin = ""
-  codepen = ""
-  stackoverflow = "9271608/utkarsh-verma"
-  medium = "UtkarshVerma_"
-  twitter = "UtkarshVerma_" 
-  siteStartYear = 2018
- 
+	#Social Links
+	email = "utkarshverma@protonmail.com"
+	github = "UtkarshVerma"
+	linkedin = ""
+	codepen = ""
+	stackoverflow = "9271608/utkarsh-verma"
+	medium = "UtkarshVerma_"
+	twitter = "UtkarshVerma_" 
+	siteStartYear = 2018
