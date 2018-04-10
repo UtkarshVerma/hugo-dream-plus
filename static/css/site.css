@@ -24,7 +24,7 @@
 
 @media screen and (max-width: 540px) {
 
-	#home-ico, #next-ico,#nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico {
+	#home-ico, #next-ico, #nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico {
 		width: 1.7em;
 	}
 
@@ -37,7 +37,7 @@
  	 	margin-top: 2em;
 	}
 
-	#twemoji>h1 {
+	.post-content h1 {
   		font-size: 1.1em;
 	}
 
@@ -101,7 +101,7 @@
   		margin-top: 2em;
 	}
 
-	#twemoji>h1{
+	.post-content h1{
   		font-size: 1.1em;
 	}
 
@@ -156,10 +156,13 @@
 
 nav.ui.top.secondary.menu {
 	overflow-y: hidden !important;
+	background-color: #00000066;
 }
 
-#bg {
-	position: absolute;
+.bg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
@@ -170,7 +173,12 @@ nav.ui.top.secondary.menu {
 	overflow-y: hidden;
 }
 
-.post-list{
+.post-content {
+	margin-top: 2rem;
+	font-size: 1.4rem;
+}
+
+.post-list {
 	max-height: unset !important;
 	height: auto !important;
 	overflow-y: hidden;
@@ -271,19 +279,23 @@ article.post-content pre>code {
 	border: 0px;
 }
 
-.ui.secondary.segment{
+.ui.secondary.segment {
 	background-color: #ececece8;
 }
 
-div#toc{
+.toc {
+	background-color: #ffffff70;
+	border: 1px solid #8a8a8a6b;
+	border-radius: 0.5em;
+	overflow-x: auto;"
 	margin-top: 2em;
 }
 
-#TableOfContents ul{
+#TableOfContents ul {
 	list-style-type: none;
 }
 
-article.post-content code{
+article.post-content code {
 	font-size: 0.7em;
 	vertical align: 0.1em;
 	border-radius: 0.2em;
@@ -297,12 +309,12 @@ article.post-content p {
 	font-size: 1.1rem;
 }
 
-header.ui.inverted.segment{
+header.ui.inverted.segment {
 	padding-top: 20px !important;
 	padding-bottom: 0px !important;
 }
 
-.ui.inverted.segment{
+.ui.inverted.segment {
 	background-color: #1b1c1ded;
 }
 
@@ -311,25 +323,12 @@ header.ui.inverted.segment{
 	-moz-perspective: 1000px;
 	-o-perspective: 1000px;
 	perspective: 1000px;
-}
-
-.emoji {
-	height: 1em !important;
-	width: 1em !important;
-	vertical-align: -0.15em !important;
-	margin-top: 0em;
-	margin-bottom: 0em;
-	background-color: transparent;
-}
-
-.ui.secondary.menu {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.ui.grid {
-	margin-left: 0;
-	margin-right: 0;
+	z-index: 0;
+	background-color: transparent !important;
+	height: 100vh;
+	width: 100vw;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .pusher.flip-it .flipper {
@@ -357,10 +356,9 @@ header.ui.inverted.segment{
 	-moz-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
+	height: auto;
 	width: 100vw;
+	position: absolute;
 }
 
 .pusher .front {
@@ -374,6 +372,26 @@ header.ui.inverted.segment{
 	-o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 	padding-bottom: 1em;
+}
+
+
+.emoji {
+	height: 1em !important;
+	width: 1em !important;
+	vertical-align: -0.15em !important;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	background-color: transparent;
+}
+
+.ui.secondary.menu {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ui.grid {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .ui.cards .card .image {
@@ -426,4 +444,9 @@ article.post-content ul li {
 .post-content ul li {
 	padding: .21em 0;
 	line-height: 1.2em;
+}
+
+.twitter {
+	margin-right: -0.3em;
+	margin-left: -1em;
 }

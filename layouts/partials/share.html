@@ -1,8 +1,12 @@
 <footer id="post-meta" class="clearfix">
 	{{ if isset .Site.Params "twitter" }}
-		<a href="https://twitter.com/UtkarshVerma_">
+		<a href="https://twitter.com/{{ .Site.Params.twitter }}">
 			<div>
-				<img class="avatar" src= "{{ if isset .Site.Params "avatar" }}{{ .Site.BaseURL }}{{ .Site.Params.avatar }}{{ else }}/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg{{ end }}">
+				{{ if isset .Site.Params "avatar" }}
+				<img class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+				{{ else }}
+				<img class="avatar" src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
+				{{ end }}
 				<span class="dark">{{ .Site.Params.author }}</span>
 				<span class="sub">{{ .Site.Params.motto }}</span>
 			</div>
@@ -16,17 +20,13 @@
 	{{ end }} 
 	<section id="sharing">
 		<div class="facebook" href="#" onclick="window.open(
-			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-			'facebook-share-dialog',
-			'width=626,height=436');
-		return false;">
+				'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+				'facebook-share-dialog',
+				'width=626,height=436'); return false;">
 			<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
 		</div>
-		<div class="twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;{{ .LinkTitle }} {{ with .Site.Params.twitter }}&quot; by @{{ . }}{{ end }} {{ .Permalink }}','_self')" style="margin-right: -0.3em; margin-left: -1em;">
-			<button class="ui twitter button">
-  			<i class="twitter icon"></i>
-  			Tweet
-			</button>
+		<div class="twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;{{ .LinkTitle }} {{ with .Site.Params.twitter }}&quot; by @{{ . }}{{ end }} {{ .Permalink }}','_self')">
+			<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
 		</div>
 	</section>
 </footer>

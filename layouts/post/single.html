@@ -23,13 +23,13 @@
 				{{ "---" | markdownify }}
 				{{ if .Site.Params.enableToc }}
 				{{ if .TableOfContents }}
-				<div id="toc" style="background-color: #ffffff70;border: 1px solid #8a8a8a6b;border-radius: 0.5em; overflow-x: auto;">
+				<div class="toc">
 					{{ .TableOfContents }}
 				</div>
 				{{ end }}
 				{{ end }}
 			</header>
-			<article id="twemoji" class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+			<article id="twemoji" class="post-content">
 				{{ .Content }}
 			</article>
 		</section>

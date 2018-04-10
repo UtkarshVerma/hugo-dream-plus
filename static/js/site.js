@@ -6,16 +6,25 @@ $(document).ready(function () {
 	  if (dreamBodyBgSwitchIndex === 0) {
     	if(colorBG)
     	 	setBackground(dreamBody, dreamBodyBgSwitch[1])
-      dreamBodyBgSwitchIndex = 1
-      target.toggleClass('flip-it')
-    }
+		dreamBodyBgSwitchIndex = 1
+		target.toggleClass('flip-it')
+		setTimeout( function () {
+			$('.front').css('display','none')
+			$('.back').css('display','block')
+		}, 300)
+
+	}
     else {
     	if(colorBG)
     		setBackground(dreamBody, dreamBodyBgSwitch[0])
-     	dreamBodyBgSwitchIndex = 0
-      target.toggleClass('flip-it')        
-    }
-  })
+     	dreamBodyBgSwitchIndex = 0     	
+     	target.toggleClass('flip-it')   
+     	setTimeout( function (){
+     		$('.front').css('display','block')
+				$('.back').css('display','none')
+			}, 300)			
+		}
+	})
   
 	$('.dimmer').css('background-color','rgba(0,0,0,.6)')
 	if(!enabledPost) {
@@ -54,6 +63,31 @@ $(document).ready(function () {
 	setSemanticUIColor()
 })
 
+function connect(arr) {
+	var str = ''
+	for (var i = 0; i < arr.length; i++) {
+		if (i !== arr.length - 1)
+			str += arr[i] + ', '
+		else
+			str += arr[i]
+	}
+	return str
+}
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min)
+	max = Math.floor(max)
+	var random
+	while (true) {
+		random = Math.floor(Math.random() * (max - min)) + min
+		if (random !== dreamPrevBgIndex) {
+			dreamPrevBgIndex = random
+     	break
+     }
+   }
+   return random
+}
+
 function randomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -66,4 +100,9 @@ function setSemanticUIColor() {
   tagsParent.children().map(function() {
     $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
   })  
+}
+
+function setBackground(target, gradient) {
+	target.css({ background: gradient[0]})
+	target.css({ background: 'linear-gradient(to right, ' + connect(gradient) + ')'})
 }
