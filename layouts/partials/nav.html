@@ -40,7 +40,7 @@
 	<div class="item">
 		{{ if $paginator.HasPrev }}
 		<a href="{{ $paginator.Prev.URL }}">
-			<i id="prev-ico" class="inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
+			<i id="prev-ico" class="inverted big link chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
 		</a>
 		{{ else }}
 		<i id="prevd-ico" class="disabled inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
@@ -49,7 +49,7 @@
 	<div class="item">
 		{{ if $paginator.HasNext }}
 		<a href="{{ $paginator.Next.URL }}">
-			<i id="next-ico" class="inverted big chevron circle outline right icon" title="{{ i18n "nextPage" }}"></i>
+			<i id="next-ico" class="inverted big link chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 		</a>
 		{{ else }}	
 		<i id="nextd-ico" class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
