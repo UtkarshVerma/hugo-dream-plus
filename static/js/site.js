@@ -99,7 +99,10 @@ function setSemanticUIColor() {
   var tagsParent = $('.dream-tags')
   tagsParent.children().map(function() {
     $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
-  })  
+  })
+  $('.sidebar-dream-tags').children().map(function() {
+    $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
+  })
 }
 
 function setBackground(target, gradient) {

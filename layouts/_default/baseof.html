@@ -12,6 +12,7 @@
 
 <body>
 	<div class="bg">{{ partial "background.html" . }}</div>
+	{{ partial "sidebar.html" . }}
 	<div class="pusher">
 		<div class="flipper">
 			<div class="front">
@@ -23,7 +24,6 @@
 		</div>
 	</div>
 	</div>
-	{{ partial "sidebar.html" . }}
 	{{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
 	{{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
 </body>
