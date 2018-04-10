@@ -10,23 +10,20 @@
 	{{ partial "head.html" . }}
 </head>
 
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/semantic.min.js"></script>
-
 <body>
 	{{ partial "sidebar.html" . }}
-	<div id="bg">{{ partial "background.html" . }}</div>
-	<div class="pusher" style="position: relative; background-color: transparent !important">
+	<div class="bg">{{ partial "background.html" . }}</div>
+	<div class="pusher">
 	<div class="flipper">
-		<section class="front" style="position: fixed; overflow-x: hidden; height: 100vh">
+		<div class="front">
 			{{ block "frontmenu" . }} {{ end }} {{ block "main" . }} {{ end }}
-		</section>
-		<section class="back" style="position: fixed; overflow-x: hidden; height: 100vh">
+		</div>
+		<div class="back">
 			{{ partial "flip.html" . }}
-		</section>
+		</div>
 	</div>
 	</div>
-	<script type="text/javascript" src="/js/site.js"></script>
+	</div>
 	{{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
 	{{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
 </body>
