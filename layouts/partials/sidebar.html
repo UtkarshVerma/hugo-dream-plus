@@ -1,4 +1,4 @@
-<div class="ui sidebar inverted vertical menu" style="overflow: hidden !important;">
+<div class="ui sidebar inverted vertical menu left" style="overflow: hidden !important; height: auto;">
 	<section class="ui top attached center aligned inverted segment">
 		<div class="ui small circular image">
 			{{ if isset .Site.Params "avatar" }}
@@ -10,17 +10,12 @@
 	<h3 class="ui header">
 		{{- .Site.Params.author -}}
 		<div class="sub header" style="color: white;">{{ $.Site.Params.motto }}</div>
-  </h3>
-	{{ if or (.Site.Params.enableCategories)  (.Site.Params.enableTags) }}
-	<a id="tag-category-pop" class="ui red right corner label">		
-		<i class="pointing down icon" title="{{ i18n "clickToPopTagsAndCategories" }}"></i>		
-	</a>
-	{{ end }}
+	</h3>
 	</section>
 
 	{{ if .Site.Params.enableTags }}
 	{{ if .Site.Taxonomies.tags }}
-	<section class="ui attached center aligned inverted segment dream-tags">
+	<section class="ui attached center aligned inverted segment sidebar-dream-tags">
 		{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
 		<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
 		{{ end }}
@@ -30,7 +25,7 @@
 
 	{{ if .Site.Params.enableCategories }}
 	{{ if .Site.Taxonomies.categories }}
-	<section class="ui attached inverted segment dream-categories">
+	<section class="ui attached inverted segment sidebar-dream-categories">
 		<div class="ui inverted accordion">
 			{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
 			<div class="title" style="color: white; padding-bottom:0.2em;">
