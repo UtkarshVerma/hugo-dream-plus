@@ -324,11 +324,18 @@ header.ui.inverted.segment {
 	-o-perspective: 1000px;
 	perspective: 1000px;
 	z-index: 0;
+}
+
+div.pusher {
+	overflow-y: auto !important;
 	background-color: transparent !important;
 	height: 100vh;
 	width: 100vw;
-	overflow-y: auto;
 	overflow-x: hidden;
+}
+
+div.pusher.dimmed {
+	overflow-y: hidden !important;
 }
 
 .pusher.flip-it .flipper {
