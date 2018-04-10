@@ -64,6 +64,16 @@ As stated earlier, this theme has two views, **Card view** and **Post view**. To
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
 You may test them out yourselves by visiting my sites(stated above) which use them.
+Also, post/card creation is done differently for both the views. It is as follows:
+
+```sh
+
+hugo new cards/example.md		//Card creation
+hugo new post/example.md		//Post creation
+
+```
+
+After this, just open your MarkDown card/post and provide the parameters for the card/post.
 
 ### Twitter emoji
 This theme supports [twemoji](https://github.com/twitter/twemoji) rendering by default. To enable/disable it, you may set the `twitterEmoji` config variable to true or false respectively.
