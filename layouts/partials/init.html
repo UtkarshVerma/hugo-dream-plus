@@ -1,11 +1,10 @@
-<link rel="stylesheet" type="text/css" href="/css/semantic.min.css"/>
-<link rel="stylesheet" type="text/css" href="/css/site.css" />
+<link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="/css/site.css">
 {{ range $type, $val:= .Site.Params.customCSS }}
 	{{ if and ((gt (len $val) 0) (index $val "")) }}		 
 		<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
 	{{ end }}
 {{ end }}
-
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/semantic.min.js"></script>
 <script type="text/javascript" src="/js/site.js"></script>
