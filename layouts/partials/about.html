@@ -1,12 +1,12 @@
 <header class="ui inverted segment">
-    <h2 class="ui header">
-        {{ if .Site.Params.aboutHeader }}
-        {{- .Site.Params.aboutHeader -}}
-        {{ else }}
-        {{- i18n "aboutHeader" -}}
-        {{ end }}
-    </h2>
+	<h2 class="ui header">
+		{{ if .Site.Params.aboutHeader }}
+			{{- .Site.Params.aboutHeader -}}
+		{{ else }}
+			{{- i18n "aboutHeader" -}}
+		{{ end }}
+	</h2>
 </header>
 <article id = "abt" class="ui inverted segment" >
-    {{ readFile "/content/about.md" | markdownify | emojify }}
+	{{ readFile "/content/about.md" | markdownify | emojify }}
 </article>

@@ -8,51 +8,53 @@
 
 {{ define "main" }}
 <div class="ui centered grid" style="margin-bottom: 1em;">
-  <div id="mobile" style="display:none;">
-  <div class="sixteen wide mobile fifteen wide tablet four wide computer column">		
-    {{ partial "header.html" . }}		
-  </div>
-  </div>
-  <div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-    <section id="post-content" class="ui secondary top attached black segment">
-      <header>
-        <h1 id="post-head" class="ui header">
-          {{ .Title }}
-          <div id= "post-subhead" class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
-        </h1>
- 	      {{ "---" | markdownify }}
-	{{ if .Site.Params.enableToc }}
-      	{{ if .TableOfContents }}
-          <div id="toc" style="background-color: #ffffff70;border: 1px solid #8a8a8a6b;border-radius: 0.5em; overflow-x: auto;">
-                {{ .TableOfContents }}
-          </div>
-        {{ end }}
-	{{ end }}
-      </header>
-      <article id="twemoji" class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
-  	               {{ .Content }}
-	</article>
-    </section>
-    <footer class="ui secondary attached segment dream-tags">
-      {{ if isset .Params "tags" }}
-      {{ range $tag := .Params.tags }}
-      <a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a>
-      {{ end }}
-      {{ else }}
-      <span>{{ i18n "noTag" }}</span>
-      {{ end }}
-    </footer>
-     {{ if .Site.Params.enableShareCard }}
-      {{ partial "share.html" . }}
-     {{ end }}
-     {{ if .Site.DisqusShortname }}
-    {{ partial "disqus.html" . }}
-    {{ end }}
-    {{ if .Site.Copyright }}
-    <footer class="ui secondary attached segment">
-      {{ .Site.Copyright | safeHTML }}
-    </footer>
-    {{ end }}
-  </div>
+	<div id="mobile" style="display:none;">
+		<div class="sixteen wide mobile fifteen wide tablet four wide computer column">		
+			{{ partial "header.html" . }}
+		</div>
+	</div>
+	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+		<section id="post-content" class="ui secondary top attached black segment">
+			<header>
+				<h1 id="post-head" class="ui header">
+					{{ .Title }}
+					<div id= "post-subhead" class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
+				</h1>
+				{{ "---" | markdownify }}
+				{{ if .Site.Params.enableToc }}
+				{{ if .TableOfContents }}
+				<div id="toc" style="background-color: #ffffff70;border: 1px solid #8a8a8a6b;border-radius: 0.5em; overflow-x: auto;">
+					{{ .TableOfContents }}
+				</div>
+				{{ end }}
+				{{ end }}
+			</header>
+			<article id="twemoji" class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+				{{ .Content }}
+			</article>
+		</section>
+		<footer class="ui secondary attached segment dream-tags">
+			{{ if isset .Params "tags" }}
+			{{ range $tag := .Params.tags }}
+			<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a>
+			{{ end }}
+			{{ else }}
+			<span>{{ i18n "noTag" }}</span>
+			{{ end }}
+		</footer>
+		{{ if .Site.Params.enableShareCard }}
+		{{ partial "share.html" . }}
+		{{ end }}
+
+		{{ if .Site.DisqusShortname }}
+		{{ partial "disqus.html" . }}
+		{{ end }}
+
+		{{ if .Site.Copyright }}
+		<footer class="ui secondary attached segment">
+			{{ .Site.Copyright | safeHTML }}
+		</footer>
+		{{ end }}
+	</div>
 </div>
 {{ end }}

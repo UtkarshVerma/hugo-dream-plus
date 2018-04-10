@@ -4,57 +4,54 @@
 
 {{ define "frontmenu" }}
 <nav class="ui top secondary menu" style="overflow-x: auto; background-color: #00000066;">
-  <div id="surrico" class="item">
-    <i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
-  </div>
-  <div class="item">
-    <a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
-  </div>
-  {{ if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 }}
-  <div class="item">
-    <a href="/{{ .Site.Params.contentType }}">
-      <i id="ico" class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
-    </a>
-  </div>
-  {{ end }}
-{{ if .Site.Params.enableCategories }}
-  <div class="item">
-    <a href="/categories">
-      <i id="ico" class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
-    </a>
-  </div>
-{{ end }}
+	<div id="surrico" class="item">
+		<i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+	</div>
+	<div class="item">
+		<a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
+	</div>
+
+	{{ if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 }}
+	<div class="item">
+		<a href="/{{ .Site.Params.contentType }}">
+			<i id="ico" class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
+		</a>
+	</div>
+	{{ end }}
+
+	{{ if .Site.Params.enableCategories }}
+	<div class="item">
+		<a href="/categories">
+			<i id="ico" class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
+		</a>
+	</div>
+	{{ end }}
+
 </nav>
 {{ end }}
 
 {{ define "main"}}
 <div class="ui centered grid">
-  <div class="sixteen wide mobile fifteen wide tablet four wide computer column">
-
-    {{ partial "header.html" . }}
-
-  </div>
-  <div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-    <div class="ui inverted segment">
-      <h2 class="ui header">
-        {{ i18n "allTags" }}{{ "---" | markdownify }}   
-      </h2>
-
-      {{ $data := .Data }}
-      {{ range .Data.Terms.Alphabetical }}
-      {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
-      <h3 class="ui header">
-          <a href="{{ $termLink }}">{{ .Term }}</a>
-          -  ({{ i18n "article" .Count }})
-      </h3>
-      <ul>
-        {{ range .Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-      {{ end }}
-
-    </div>
-  </div>
+	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
+		{{ partial "header.html" . }}
+	</div>
+	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+		<div class="ui inverted segment">
+			<h2 class="ui header">{{ i18n "allTags" }}{{ "---" | markdownify }}</h2>
+			{{ $data := .Data }}
+			{{ range .Data.Terms.Alphabetical }}
+			{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+			<h3 class="ui header">
+				<a href="{{ $termLink }}">{{ .Term }}</a>
+				-  ({{ i18n "article" .Count }})
+			</h3>
+			<ul>
+				{{ range .Pages }}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+			{{ end }}
+		</div>
+	</div>
 </div>
 {{ end }}

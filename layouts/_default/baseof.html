@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
-  {{ partial "init.html" . }}
-  {{ partial "head.html" . }}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
+	{{ partial "init.html" . }}
+	{{ partial "head.html" . }}
 </head>
+
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/semantic.min.js"></script>
+
 <body>
-  <div id="bg">{{ partial "background.html" . }}</div>
-  <div class="pusher" style="position: relative; background-color: transparent !important">
-  <div class="flipper">
-    <section class="front" style="position: fixed; overflow-x: hidden; height: 100vh">
-      {{ block "frontmenu" . }} {{ end }} {{ block "main" . }} {{ end }}
-    </section>
-    <section class="back" style="position: fixed; overflow-x: hidden; height: 100vh">
-      {{ partial "flip.html" . }}
-    </section>
-  </div>
-  </div>
-  <script type="text/javascript" src="/js/site.js"></script>
-  {{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
-  {{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
-  {{ partial "sidebar.html" . }}
+	{{ partial "sidebar.html" . }}
+	<div id="bg">{{ partial "background.html" . }}</div>
+	<div class="pusher" style="position: relative; background-color: transparent !important">
+	<div class="flipper">
+		<section class="front" style="position: fixed; overflow-x: hidden; height: 100vh">
+			{{ block "frontmenu" . }} {{ end }} {{ block "main" . }} {{ end }}
+		</section>
+		<section class="back" style="position: fixed; overflow-x: hidden; height: 100vh">
+			{{ partial "flip.html" . }}
+		</section>
+	</div>
+	</div>
+	<script type="text/javascript" src="/js/site.js"></script>
+	{{ if .Site.Params.twitterEmoji }}{{ partial "twemoji.html" . }}{{ end }}
+	{{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
 </body>
+
 </html>

@@ -1,17 +1,16 @@
 <article class="black card">  
-    <div class="image">
-    <div class="ui dimmer"> 
-      <div class="content">
+	<div class="image">
+		<div class="ui dimmer">
+			<div class="content">
         <div class="center">
           <a href= {{ .Params.link }} target="_blank">
-          <h2 class="ui header" style="color: white;padding-top: 5em">{{ .Title }}</h2>
+          	<h2 class="ui header" style="color: white;padding-top: 5em">{{ .Title }}</h2>
           </a>
           <p style="padding: 5px;">{{ .Params.description | markdownify | emojify }}</p>          
-          </div>      
+        </div>      
       </div>
-      </div>  
-
-    {{ if isset .Params "cover" }}
+    </div>  
+  	{{ if isset .Params "cover" }}
     <img src="{{ .Site.BaseURL }}/{{ .Params.cover }}" alt="{{ .Title }}">
     {{ else }}
     <img src="{{ .Site.BaseURL }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg" alt="{{ .Title }}">
