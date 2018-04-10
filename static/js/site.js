@@ -47,17 +47,17 @@ $(document).ready(function () {
 
 	$('#tag-category-pop').click(function () {
 		var dt = $('.dream-tags')
-  	var dc = $('.dream-categories')
-  	var dtDisplay = dt.css('display')
-  	var dcDisplay = dc.css('display')
-  	if (dtDisplay === 'none') {
-    	dt.css('display', 'block')
-    	dc.css('display', 'block')
-  	}
-  	else {
-  		dt.css('display', 'none')
-    	dc.css('display', 'none')
-  	}
+		var dc = $('.dream-categories')
+		var dtDisplay = dt.css('display')
+		var dcDisplay = dc.css('display')
+		if (dtDisplay === 'none') {
+			dt.css('display', 'block')
+			dc.css('display', 'block')
+  		}
+  		else {
+			dt.css('display', 'none')
+			dc.css('display', 'none')
+		}
 	})
 	
 	setSemanticUIColor()
