@@ -99,7 +99,7 @@ You may also add blurring effect to the background image using `bgBlur`.
 Disqus comment system may be used alongside this theme. It is enabled/disabled through the `disqusShortname` config variable. To **disable** Disqus comments, leave this config variable unset. To enable, simply enter your Disqus shortname as a string. For example,
 
 ```toml
-disqusShortname = "disqusShortname = "UtkarshVermaBlog"
+disqusShortname = "UtkarshVermaBlog"
 ``` 
 
 ###  Share card (Post view only)
