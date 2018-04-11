@@ -61,3 +61,8 @@ function setSemanticUIColor() {
 		$(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
 	})
 }
+
+function setBackground(target, gradient) {
+	target.css({ background: gradient[0]})
+	target.css({ background: 'linear-gradient(to right, ' + connect(gradient) + ')'})
+}

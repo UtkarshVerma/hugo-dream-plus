@@ -1,8 +1,8 @@
 {{ define "title" }}
 {{ if eq .Data.Singular "tag" }}
-{{ humanize (i18n "tag") }} | {{ humanize .Data.Term }}
+{{ humanize (i18n "tag") }} | {{ .Data.Term }}
 {{ else if eq .Data.Singular "category" }}
-{{ humanize (i18n "category") }} | {{ humanize .Data.Term }}
+{{ humanize (i18n "category") }} | {{ .Data.Term }}
 {{ else }}{{ end }}
 {{ end }}
 

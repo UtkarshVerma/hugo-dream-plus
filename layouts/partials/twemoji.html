@@ -1,8 +1,9 @@
 <script src="/js/twemoji.min.js"></script>
 <script type="text/javascript">
 (function init(){
-	console.log('Twemoji up and making stuff colourful!');
-	twemoji.parse(document.getElementById('abt'));      
-	twemoji.parse(document.getElementById('twemoji'));                
+	console.log('Twemoji up and making stuff colourful!')
+	var classes = (document.getElementsByClassName('twemoji'))
+	for(var i = 0; i < classes.length; i++)
+		twemoji.parse(classes[i]);                
 })()
 </script>
