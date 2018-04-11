@@ -544,3 +544,11 @@ div.title, div.title.active {
 #tag-category-pop {
 	margin-right: -1px;
 }
+
+#abt section header {
+	padding-bottom: 0px;
+}
+
+article#abt.ui.inverted.segment {
+	padding-top: 2px;
+}
