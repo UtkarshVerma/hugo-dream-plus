@@ -1,4 +1,9 @@
 <script type="text/javascript">
+	function setBackground(target, gradient) {
+		target.css({ background: gradient[0]})
+		target.css({ background: 'linear-gradient(to right, ' + connect(gradient) + ')'})
+	}
+	
 	var dreamBodyBgSwitchIndex = 0
 	if(colorBG) {
 		var dreamBGGradients = [
@@ -35,8 +40,8 @@
 		}
 		else
 			bgImage = 'url(' + {{ .Site.Params.bgImage }} + ')'
-		console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"),bgImage.length -1) )
+		console.log('Current background: ' + bgImage.substring(bgImage.indexOf('bg'),bgImage.length -1) )
 		var target = document.getElementsByClassName('bg')[0]
-		target.setAttribute("style", "background-image:" + bgImage +" !important; filter:" + "blur(" + blurEff + "px)")
+		target.setAttribute('style', 'background-image:' + bgImage +' !important; filter:' + 'blur(' + blurEff + 'px)')
 	}	
 </script>

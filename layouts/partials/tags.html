@@ -1,0 +1,3 @@
+{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ range $name, $taxonomy := .Site.Taxonomies.categories }}	
+<div class="title" style="color: white; padding-bottom:0.2em;">
+	<i class="dropdown icon"></i>
+	<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" style="color: white;" >{{ $name }}</a>     	
+</div>
+{{ range $taxonomy.Pages }}
+<div class="content">    		
+	<a class="item" href="{{ .Permalink }}">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>{{ .LinkTitle }}</p>
+		</div>
+	</a>
+</div>
+{{ end }}
+{{ end }}

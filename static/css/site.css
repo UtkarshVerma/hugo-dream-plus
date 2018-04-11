@@ -10,16 +10,6 @@
 	.dream-categories {
 		display: none;
 	}
-
-	#tag-category-pop {
-		display: block;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	#tag-category-pop {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 540px) {
@@ -309,12 +299,7 @@ article.post-content p {
 	font-size: 1.1rem;
 }
 
-header.ui.inverted.segment {
-	padding-top: 20px !important;
-	padding-bottom: 0px !important;
-}
-
-.ui.inverted.segment {
+.ui.inverted.segment:not(#header) {
 	background-color: #1b1c1ded;
 }
 
@@ -381,6 +366,14 @@ div.pusher.dimmed {
 	padding-bottom: 1em;
 }
 
+div.ui.sidebar.inverted.vertical.menu.left {
+	overflow: hidden;
+	min-height: 100vh !important;
+}
+
+div.ui.sidebar.inverted.vertical.menu.left::-webkit-scrollbar {
+	display: none;
+}
 
 .emoji {
 	height: 1em !important;
@@ -456,4 +449,98 @@ article.post-content ul li {
 .twitter {
 	margin-right: -0.3em;
 	margin-left: -1em;
+}
+
+#tag-category, #tag-category.active {
+	padding-top: 0px !important;
+}
+
+div.title, div.title.active {
+	padding: 0px !important;
+}
+
+#header {
+	padding: 0px;
+	background-color: #1b1c1ded;
+}
+
+#header section {
+	background-color: transparent !important;
+}
+
+#sidebar .content.active, #sidebar .content.animating {
+	padding-top: 0.1em;
+	padding-left: 1.5em !important;
+	padding-bottom: 0.1em;
+}
+
+#sidebar a.item {
+	padding-left: 2em;
+	padding-right: 0px;
+	color: white;
+	padding-bottom: 0.3em;
+	padding-top: 0.3em;"
+}
+
+#sidebar .content a i {
+	position: absolute;
+	left: 0.3em;
+	top: 25%;
+}
+
+#tag-category a.item i {
+	position: absolute;
+	left: 0;
+}
+
+#tag-category div.content, #tag-category div.content.active, #tag-category div.content.animating{
+	padding-left: 1.6em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+}
+
+#tag-category .content a i {
+	position: absolute;
+	left: 0.3em;
+	top: 20%;
+}
+
+#tag-category div a {
+	color: white;
+}
+
+#tag-category div a:hover {
+	color: white !important;
+}
+
+#tag-category a.item div {
+	position: relative;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+#tag-category a.item div:hover {
+	background-color: rgba(255,255,255,.18) !important;
+}
+
+#tag-category a p {
+	padding-left: 2em;
+}
+
+#tag-category {
+	padding-bottom: 0px;
+}
+
+#sidebar section {
+	border-left: none;
+	border-right: none;	
+}
+
+#sidebar section.top {
+	top: 0;
+	border-top: none;
+}
+
+#tag-category-pop {
+	margin-right: -1px;
 }

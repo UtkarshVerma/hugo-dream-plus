@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="/css/site.css">
+<link rel="stylesheet" type="text/css" href="/css/semantic.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/site.css" />
 {{ range $type, $val:= .Site.Params.customCSS }}
 	{{ if and ((gt (len $val) 0) (index $val "")) }}		 
 		<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
@@ -23,4 +23,3 @@
 	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
 </script>
-
