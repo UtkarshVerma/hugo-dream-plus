@@ -35,7 +35,7 @@
 	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 		<div class="ui inverted segment">
 			<h2 class="ui header">
-				{{ i18n "allCategories" }}{{ "---"|markdownify }}  
+				{{ i18n "allCategories" }}<hr>
 			</h2>
 			{{ $data := .Data }}
 			{{ range .Data.Terms.Alphabetical }}
@@ -46,7 +46,7 @@
 			</h3>
 			<ul>
 				{{ range .Pages }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				<li><a class="whitelink" href="{{ .Permalink }}">{{ .Title }}</a></li>
 				{{ end }}
 			</ul>
 			{{ end }}

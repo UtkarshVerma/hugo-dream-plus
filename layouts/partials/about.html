@@ -1,4 +1,4 @@
-<header class="ui inverted segment">
+<div class="ui inverted segment">
 	<h2 class="ui header">
 		{{ if .Site.Params.aboutHeader }}
 			{{- .Site.Params.aboutHeader -}}
@@ -6,7 +6,8 @@
 			{{- i18n "aboutHeader" -}}
 		{{ end }}
 	</h2>
-</header>
-<article id = "abt" class="ui inverted segment" >
-	{{ readFile "/content/about.md" | markdownify | emojify }}
-</article>
+	<hr style="margin-bottom: 1em;">
+	<article class="twemoji">
+		{{ readFile "/content/about.md" | markdownify | emojify }}
+	</article>
+</div>

@@ -509,8 +509,12 @@ div.title, div.title.active {
 	color: white;
 }
 
-#tag-category div a:hover {
-	color: white !important;
+#tag-category div a.link {
+	color: #ffffffd6;
+}
+
+#tag-category div a.link:hover {
+	color: white;
 }
 
 #tag-category a.item div {
@@ -541,14 +545,14 @@ div.title, div.title.active {
 	border-top: none;
 }
 
+#sidebar a.link {
+	color: #ffffffd6;
+}
+
+#sidebar a.link:hover {
+	color: white;
+}
+
 #tag-category-pop {
 	margin-right: -1px;
-}
-
-#abt section header {
-	padding-bottom: 0px;
-}
-
-article#abt.ui.inverted.segment {
-	padding-top: 2px;
 }

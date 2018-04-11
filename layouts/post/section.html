@@ -36,8 +36,7 @@
 	</div>
 	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 		<div class="ui inverted segment">
-			<h2 class="ui header">
-				{{ i18n "archives" }}{{ "---" | markdownify }}
+			<h2 class="ui header">{{ i18n "archives" }}<hr>
 				<div class="ui grey sub header">{{ .Content }}</div>
 			</h2>
 			{{ range .Data.Pages.GroupByDate "2006" }}
