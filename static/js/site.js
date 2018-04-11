@@ -1,31 +1,6 @@
 var SemanticUIColors = ["red", "orange", "yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown"]
 
 $(document).ready(function () {
-  $('.dream-flip-toggle').click(function () {
-  	var target = $('.pusher')
-	  if (dreamBodyBgSwitchIndex === 0) {
-    	if(colorBG)
-    	 	setBackground(dreamBody, dreamBodyBgSwitch[1])
-		dreamBodyBgSwitchIndex = 1
-		target.toggleClass('flip-it')
-		setTimeout( function () {
-			$('.front').css('display','none')
-			$('.back').css('display','block')
-		}, 300)
-
-	}
-    else {
-    	if(colorBG)
-    		setBackground(dreamBody, dreamBodyBgSwitch[0])
-     	dreamBodyBgSwitchIndex = 0     	
-     	target.toggleClass('flip-it')   
-     	setTimeout( function (){
-     		$('.front').css('display','block')
-				$('.back').css('display','none')
-			}, 300)			
-		}
-	})
-  
 	$('.dimmer').css('background-color','rgba(0,0,0,.6)')
 	if(!enabledPost) {
 		$('.ui.cards .image').dimmer({ on: 'hover'})
@@ -42,24 +17,8 @@ $(document).ready(function () {
 	 		$('.ui.cards .image').dimmer('show')
 		}
 	}
-
 	$('.ui.accordion').accordion()
 
-	$('#tag-category-pop').click(function () {
-		var dt = $('.dream-tags')
-		var dc = $('.dream-categories')
-		var dtDisplay = dt.css('display')
-		var dcDisplay = dc.css('display')
-		if (dtDisplay === 'none') {
-			dt.css('display', 'block')
-			dc.css('display', 'block')
-  		}
-  		else {
-			dt.css('display', 'none')
-			dc.css('display', 'none')
-		}
-	})
-	
 	setSemanticUIColor()
 })
 
@@ -96,16 +55,9 @@ function randomInt(min, max) {
 }
 
 function setSemanticUIColor() {
-  var tagsParent = $('.dream-tags')
-  tagsParent.children().map(function() {
-    $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
-  })
-  $('.sidebar-dream-tags').children().map(function() {
-    $(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
-  })
-}
-
-function setBackground(target, gradient) {
-	target.css({ background: gradient[0]})
-	target.css({ background: 'linear-gradient(to right, ' + connect(gradient) + ')'})
+  var tagsParent = [$('.dream-tags'), $('.sidebar-dream-tags')]
+  for (var i = 0; i < tagsParent.length; i++)
+  	tagsParent[i].children().map(function() {
+		$(this).addClass(SemanticUIColors[randomInt(0, SemanticUIColors.length)])
+	})
 }
