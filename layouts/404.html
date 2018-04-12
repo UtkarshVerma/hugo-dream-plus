@@ -11,7 +11,6 @@ Page Not Found
 	<div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
 		<section class="ui stacked segments">
 			<div class="ui inverted segment">
-				<h2 class="ui header center aligned">{{- .Site.Params.error404 -}}</h2><hr style="margin-bottom: 1em;">
 				<article class="twemoji">        	
       				{{ readFile "/content/404.md" | markdownify | emojify }}        
         			<p><center><a class="ui center aligned blue label" href="/">{{ i18n "returnHome" }}</a></center></p>	 

@@ -51,14 +51,8 @@ enableEmoji=true
 	#Enable/disable post/card  dimming effect
 	enableDimmer = true
 
-	#Heading for 404 Page
-	error404 = "Error 404: Page Not Found"
-
 	#Enable Twitter Emoji
 	twitterEmoji=true
-
-	#Heading for the About page
-	aboutHeader = "So, Who Am I?"
 
 	#Link to your blog
 	BlogLink = ""

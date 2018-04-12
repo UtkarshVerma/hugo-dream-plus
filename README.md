@@ -108,12 +108,8 @@ This card appears below your posts to allow sharing of your post on **Facebook**
 ### Device detection
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
-### Error page and about page headings
-The headings for error page and about page are set through the config file via the `aboutHeader` and `error404` variable. Enter the value in string form. For example,
-```
-  error404 = "Error 404: Page Not Found"
-  aboutHeader = "So, Who Am I?"
-```
+### Error page and about page
+This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. Once finished customizing, copy them in the `/content` directory of your Hugo site.
 
 ### Custom favicon
 You may also set a custom favicon for your website using the `favicon` config variable. For example,

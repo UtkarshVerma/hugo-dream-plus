@@ -7,11 +7,9 @@
 {{ end }} 
 
 {{ define "main" }}
-<div class="ui centered grid" style="margin-bottom: 1em;">
-	<div id="mobile" style="display:none;">
-		<div class="sixteen wide mobile fifteen wide tablet four wide computer column">		
-			{{ partial "header.html" . }}
-		</div>
+<div class="ui centered grid">
+	<div id="mobile" class="sixteen wide mobile fifteen wide tablet four wide computer column">		
+		{{ partial "header.html" . }}
 	</div>
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
 		<section id="post-content" class="ui secondary top attached black segment">
@@ -20,7 +18,7 @@
 					{{ .Title }}
 					<div id= "post-subhead" class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
 				</h1>
-				{{ "---" | markdownify }}
+				<hr>
 				{{ if .Site.Params.enableToc }}
 				{{ if .TableOfContents }}
 				<div class="toc">
