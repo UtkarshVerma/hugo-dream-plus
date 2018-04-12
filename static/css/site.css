@@ -5,14 +5,15 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
-	.dream-tags,
-	.dream-categories {
+@media screen and (max-width: 540px) {
+
+	#mobile {
+		display: inline !important;
+	}
+		
+	nav::-webkit-scrollbar {
 		display: none;
 	}
-}
-
-@media screen and (max-width: 540px) {
 
 	#home-ico, #next-ico, #nextd-ico, #prev-ico, #prevd-ico, #flip-ico, #tags-ico, #cat-ico, #archive-ico,#ico {
 		width: 1.7em;
@@ -20,11 +21,6 @@
 
 	#sidebarBtn {
 		display: none !important;
-	}
-
-	#mobile {
-  		display: inline !important;
- 	 	margin-top: 2em;
 	}
 
 	.post-content h1 {
@@ -41,10 +37,6 @@
   		max-height: none !important;
   		height: auto !important;
   		padding-right: 1em !important; 
-	}
-
-	::-webkit-scrollbar {
-  		display: none !important;
 	}
 
 	nav.ui.top.secondary.menu{
@@ -76,19 +68,22 @@
 
 @media screen and (max-width: 320px){
 
+	#mobile {
+		display: inline;
+	}
+
 	nav.ui.secondary.menu > .item{
  		padding-right: 10px !important;
  		padding-left: 10px !important;
   		margin-right: 5px !important;
 	}
+	
+	nav::-webkit-scrollbar {
+		display: none;
+	}
 
 	#sidebarBtn {
   		display: none !important;
-	}
-
-	#mobile {
-  		display: inline !important;
-  		margin-top: 2em;
 	}
 
 	.post-content h1{
@@ -142,6 +137,11 @@
 	#post-meta {
   		font-size: 12px;
 	}
+}
+
+#mobile {
+	margin-top: 1em;
+	display: none;
 }
 
 nav.ui.top.secondary.menu {
@@ -384,6 +384,10 @@ div.ui.sidebar.inverted.vertical.menu.left::-webkit-scrollbar {
 	background-color: transparent;
 }
 
+.ui.centered.grid {
+	margin-bottom: 1em;
+}
+
 .ui.secondary.menu {
 	margin-left: 0;
 	margin-right: 0;
@@ -455,10 +459,6 @@ article.post-content ul li {
 	padding-top: 0px !important;
 }
 
-div.title, div.title.active {
-	padding: 0px !important;
-}
-
 #header {
 	padding: 0px;
 	background-color: #1b1c1ded;
@@ -466,6 +466,10 @@ div.title, div.title.active {
 
 #header section {
 	background-color: transparent !important;
+}
+
+#header .title.header-title, #header .active.title.header-title, #header .title.active.header-title {
+	padding: 0px;
 }
 
 #sidebar .content.active, #sidebar .content.animating {
@@ -555,4 +559,49 @@ div.title, div.title.active {
 
 #tag-category-pop {
 	margin-right: -1px;
+}
+
+#sidebar {
+	display: flex;
+	flex-flow: column;
+}
+
+#author {
+	flex: 0 1 auto;
+}
+
+.sidebar-dream-tags {
+	flex: 0 1 auto;
+}
+
+.sidebar-dream-categories {
+	flex: 1 1 auto;
+}
+
+#footer {
+	flex: 0 1 auto;
+	bottom: 0px;
+}
+
+#header {
+	display: flex;
+	flex-flow: column;
+	max-height: 100vh;
+}
+
+#tag-category {
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1 1 auto;
+}
+
+.dream-tags {
+	height: auto;
+	overflow: hidden;
+}
+
+.dream-categories {
+	height: auto;
+	width: 100%;
+	overflow: hidden;
 }

@@ -1,4 +1,4 @@
-<section class="ui bottom attached center aligned inverted segment">
+<section id="footer" class="ui bottom attached center aligned inverted segment">
 	{{ if .Site.Params.siteStartYear }}
 	<p>© {{ if eq now.Year .Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ .Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ .Site.Title }}</p>
 	{{ else }}
