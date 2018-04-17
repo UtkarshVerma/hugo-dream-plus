@@ -48,10 +48,6 @@
      .post-content img:not(.emoji) {
          max-width: 100%;
     }
-     .post-content blockquote {
-         margin-right: 0;
-         margin-left: 0;
-    }
      .post-head,.dream-tags, .disqus, .copyright {
          padding-top: 1rem;
          padding-left: 1.5rem;
@@ -166,7 +162,7 @@
      background: #f9f9f9;
      border-left: 8px solid #ccc;
      padding: 0.4em 0.8em;
-     margin: auto 0 auto 0;
+     margin: 0.5em 0 0.5em 0;
 }
  .post-content ul + blockquote {
      margin-left: 2.5em;
@@ -188,11 +184,16 @@
      vertical-align: -0.15em;
      background-color: transparent;
 }
- .youtube {
+ .youtube.container {
+     margin: auto auto 1em auto;
      width: 80%;
+     height: auto;
      -webkit-box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
      -moz-box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
      box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
+}
+ .youtube {
+     width: 100%;
 }
 /*Syntax Highlighting*/
  .highlight {
@@ -608,4 +609,4 @@
  .blog-card:hover .color-overlay {
      background: rgba(64, 64, 70,0.8);
 }
-
+ 
