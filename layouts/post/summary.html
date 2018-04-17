@@ -1,6 +1,6 @@
 <article class="blog-card card">
 <div class="image">
-	<img src="{{ .Params.cover }}"></img>
+	<img src="{{ .Site.BaseURL }}{{ .Params.cover }}"></img>
 </div>
 	<div class="title-content twemoji">
 		<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
