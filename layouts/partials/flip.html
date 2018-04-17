@@ -1,24 +1,19 @@
-<nav class="ui top secondary menu">
+<nav class="ui top secondary menu bar">
 	<div class="item">
-		<i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
 	</div>
 	{{ partial "social.html" . }}
 </nav>
 
 <div class="ui centered grid about">
-	<div id="abt" class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
 		<section class="ui stacked segments">
 			{{ partial "about.html" . }}
-			{{ if .Site.Copyright }}
-			<footer class="ui secondary segment">
-				{{ .Site.Copyright | safeHTML }}
-			</footer>
-    	{{ end }}
 		</section>
 	</div>
 </div>
 
-<script type="text/javascript">
+<script>
 	$('.dream-flip-toggle').click(function () {
 		var target = $('.pusher')
 		if (dreamBodyBgSwitchIndex === 0) {

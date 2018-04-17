@@ -1,25 +1,28 @@
 var SemanticUIColors = ["red", "orange", "yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown"]
 
 $(document).ready(function () {
-	$('.dimmer').css('background-color','rgba(0,0,0,.6)')
-	if(!enabledPost) {
-		$('.ui.cards .image').dimmer({ on: 'hover'})
- 		$('.ui.cards .image').dimmer('show') 
+	/*if(!enabledPost) {
+		$('.card.twemoji').dimmer({ on: 'hover'}) 		
 	}
 	else {
-		if(enabledDimmer){		
-			$('.ui.cards .image').dimmer({ on: 'hover'})
-  		$('.ui.cards .image').dimmer('show') 
+		if(enabledDimmer){
+			$('.blog-card').dimmer({ on: 'hover'})
 		}
 		else {
-			$('.ui.cards .image')
+			$('.blog-card')
 			.dimmer({ opacity: .6, closable: false })
-	 		$('.ui.cards .image').dimmer('show')
+	 		$('.blog-card').dimmer('show')
 		}
-	}
+	}*/
 	$('.ui.accordion').accordion()
 	
 	setSemanticUIColor()
+	
+	$('.youtube').height($('.youtube').width() * 0.6)
+	
+	$('#tag-category-pop').click(function() {
+			$('#tag-category-pop i').toggleClass('up down')
+	})
 })
 
 function connect(arr) {
@@ -65,4 +68,11 @@ function setSemanticUIColor() {
 function setBackground(target, gradient) {
 	target.css({ background: gradient[0]})
 	target.css({ background: 'linear-gradient(to right, ' + connect(gradient) + ')'})
+}
+
+function twemojify() {
+	console.log('Twemoji up and making stuff colourful!')
+	var classes = (document.getElementsByClassName('twemoji'))
+	for(var i = 0; i < classes.length; i++)
+		twemoji.parse(classes[i]);                
 }

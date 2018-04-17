@@ -5,53 +5,51 @@
 {{ define "frontmenu" }}
 {{ partial "nav.html" . }}
 {{ end }} 
-
 {{ define "main" }}
 <div class="ui centered grid">
-	<div id="mobile" class="sixteen wide mobile fifteen wide tablet four wide computer column">		
-		{{ partial "header.html" . }}
+	<div class="sixteen wide mobile only column">	
+			{{ partial "header.html" . }}
 	</div>
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-		<section id="post-content" class="ui secondary top attached black segment">
-			<header>
-				<h1 id="post-head" class="ui header">
-					{{ .Title }}
-					<div id= "post-subhead" class="sub header">@ {{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read · {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
-				</h1>
-				<hr>
-				{{ if .Site.Params.enableToc }}
-				{{ if .TableOfContents }}
-				<div class="toc">
-					{{ .TableOfContents }}
-				</div>
-				{{ end }}
-				{{ end }}
-			</header>
+		<section class="ui secondary top attached black segment post-head">
+			<h1 class="post-title">
+				{{ .Title }}
+			</h1>
+			<div class="sub header">
+					<span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
+					<span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread"></a></span>
+					<span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span>
+					<span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span>
+			</div>
+			<hr>
+			{{ if .Site.Params.enableToc }}
+			{{ if .TableOfContents }}
+			<div class="toc">
+				{{ .TableOfContents }}
+			</div>
+			{{ end }}
+			{{ end }}
 			<article class="post-content twemoji">
 				{{ .Content }}
 			</article>
 		</section>
-		<footer class="ui secondary attached segment dream-tags">
+		<section class="ui secondary attached segment dream-tags">
 			{{ if isset .Params "tags" }}
-			{{ range $tag := .Params.tags }}
-			<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}" title="{{ $tag }}">{{ $tag }}</a>
-			{{ end }}
+				{{ partial "tags.html" . }}				
 			{{ else }}
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}
-		</footer>
+		</section>
 		{{ if .Site.Params.enableShareCard }}
-		{{ partial "share.html" . }}
+		<section class="ui secondary attached segment share-card">
+			{{ partial "share.html" . }}
+		</section>
 		{{ end }}
 
 		{{ if .Site.DisqusShortname }}
-		{{ partial "disqus.html" . }}
-		{{ end }}
-
-		{{ if .Site.Copyright }}
-		<footer class="ui secondary attached segment">
-			{{ .Site.Copyright | safeHTML }}
-		</footer>
+		<section class="ui secondary bottom attached stacked segment disqus">
+			{{ partial "disqus.html" . }}
+		</section>
 		{{ end }}
 	</div>
 </div>
