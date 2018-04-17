@@ -1,12 +1,12 @@
-<nav class="ui top secondary menu">
+<nav class="ui top secondary menu bar">
 	<div class="item">
-		<i id="ico"class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
 	</div>
 	
 	{{ if not .IsHome }}
 	<div class="item">
 		<a href="/">
-			<i id="home-ico" class="inverted big link home icon" title="Home"></i>
+			<i class="inverted big link home icon" title="Home"></i>
 		</a>
 	</div>
 	{{ end }}
@@ -14,7 +14,7 @@
 	{{ if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 }}
 	<div class="item">
 		<a href="/{{ .Site.Params.contentType }}">
-			<i id="archive-ico" class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
+			<i class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
 		</a>
 	</div>
 	{{ end }}
@@ -22,7 +22,7 @@
 	{{ if .Site.Params.enableTags }}
 	<div class="item">
 		<a href="/tags">
-			<i id="tags-ico"class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
+			<i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
 		</a>
 	</div>
 	{{ end }}
@@ -30,7 +30,7 @@
 	{{ if .Site.Params.enableCategories }}
 	<div class="item">
 		<a href="/categories">
-			<i id="cat-ico"class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
+			<i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
 		</a>
   </div>
 	{{ end }}
@@ -40,26 +40,28 @@
 	<div class="item">
 		{{ if $paginator.HasPrev }}
 		<a href="{{ $paginator.Prev.URL }}">
-			<i id="prev-ico" class="inverted big link chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
+			<i class="inverted big link chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
 		</a>
 		{{ else }}
-		<i id="prevd-ico" class="disabled inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
+		<i class="disabled inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
   	{{ end }}
   </div>
 	<div class="item">
 		{{ if $paginator.HasNext }}
 		<a href="{{ $paginator.Next.URL }}">
-			<i id="next-ico" class="inverted big link chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
+			<i class="inverted big link chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 		</a>
 		{{ else }}	
-		<i id="nextd-ico" class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
+		<i class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 		{{ end }}
 	</div>
 	{{ end }}
 	
 	{{ if .IsPage }}
-	<div id="sidebarBtn" class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
-		<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+	<div class="ui container tablet computer only grid">
+		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+		</div>
 	</div>
 	{{ end }}
 </nav>

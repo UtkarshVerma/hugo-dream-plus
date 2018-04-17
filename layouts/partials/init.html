@@ -1,20 +1,27 @@
 <link rel="stylesheet" type="text/css" href="/css/semantic.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/site.css" />
+{{ if (fileExists "static/css/highlight.css") }}
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css" />
+{{ end }}
 {{ range $type, $val:= .Site.Params.customCSS }}
 	{{ if and ((gt (len $val) 0) (index $val "")) }}		 
 		<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
 	{{ end }}
 {{ end }}
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/semantic.min.js"></script>
-<script type="text/javascript" src="/js/site.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/anchor.min.js"></script>
+<script src="/js/site.js"></script>
+{{ if .Site.Params.twitterEmoji }}
+<script src="/js/twemoji.min.js"></script>
+{{ end }}
 {{ range $type, $val:= .Site.Params.customJS }}
 	{{ if and ((gt (len $val) 0) (index $val "")) }}
 		<script src="/{{ index $val }}"></script>
 	{{ end }}
 {{ end }}
 
-<script type="text/javascript">
+<script>
 	var enabledPost={{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }} 
 	var colorBG={{ $.Site.Params.enableColorBG }} 
 	var enabledDimmer = {{ $.Site.Params.enableDimmer }}

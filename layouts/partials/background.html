@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
 	var dreamBodyBgSwitchIndex = 0
 	if(colorBG) {
 		var dreamBGGradients = [
@@ -18,7 +18,6 @@
 		var dreamPrevBgIndex = 0
 		var dreamBodyBgSwitch = []
 		var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]	
-
 		dreamBodyBgSwitch.push(dreamBg)
 		setBackground(dreamFront, dreamBg)
 		setBackground(dreamBody, dreamBg)
@@ -28,8 +27,8 @@
 	}
 	else {
 		var blurEff = {{ .Site.Params.bgBlur }}
-		if({{ isset .Site.Params.bgList 0 }}) {	
-			var images = {{ .Site.Params.bgList }}
+		var images = {{ .Site.Params.bgList }}
+		if({{ isset .Site.Params.bgList 0 }}) {			
 			var randomNumber = Math.floor(Math.random() * images.length)
 			bgImage = 'url(' + images[randomNumber] + ')'
 		}
