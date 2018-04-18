@@ -264,6 +264,8 @@
      border-radius: 0.2em;
 }
  .post-content pre code {
+     font-family: 'Inconsolata';
+ 	 font-size: 1.2em;
      background-color: unset;
      padding: initial;
      border: unset;
