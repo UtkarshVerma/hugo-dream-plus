@@ -1,19 +1,6 @@
 var SemanticUIColors = ["red", "orange", "yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown"]
 
 $(document).ready(function () {
-	/*if(!enabledPost) {
-		$('.card.twemoji').dimmer({ on: 'hover'}) 		
-	}
-	else {
-		if(enabledDimmer){
-			$('.blog-card').dimmer({ on: 'hover'})
-		}
-		else {
-			$('.blog-card')
-			.dimmer({ opacity: .6, closable: false })
-	 		$('.blog-card').dimmer('show')
-		}
-	}*/
 	$('.ui.accordion').accordion()
 	
 	setSemanticUIColor()
@@ -21,7 +8,7 @@ $(document).ready(function () {
 	$('.youtube').height($('.youtube').width() * 0.6)
 	
 	$('#tag-category-pop').click(function() {
-			$('#tag-category-pop i').toggleClass('up down')
+		$('.link.hand.point.icon').toggleClass('active')
 	})
 })
 
