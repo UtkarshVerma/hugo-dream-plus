@@ -16,10 +16,10 @@
 				{{ .Title }}
 			</h1>
 			<div class="sub header">
-					<span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
-					<span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread"></a></span>
-					<span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span>
-					<span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span>
+					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread"></a></span></div>
+					<div><span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span></div>
+					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
 			</div>
 			<hr>
 			{{ if .Site.Params.enableToc }}
@@ -41,7 +41,7 @@
 			{{ end }}
 		</section>
 		{{ if .Site.Params.enableShareCard }}
-		<section class="ui secondary attached segment share-card">
+		<section class="ui secondary attached segment share row box">
 			{{ partial "share.html" . }}
 		</section>
 		{{ end }}

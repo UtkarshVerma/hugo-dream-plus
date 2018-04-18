@@ -1,22 +1,22 @@
-<div id="sidebar" class="ui sidebar inverted vertical menu left">
+<div id="sidebar" class="ui sidebar inverted vertical menu left column box">
 	{{ partial "author.html" . }}
 	{{ if .Site.Params.enableTags }}
 	{{ if .Site.Taxonomies.tags }}
-	<section class="ui attached center aligned inverted segment sidebar-dream-tags">
+	<section class="ui attached center aligned inverted segment sidebar-dream-tags shrink flexbox">
 		{{ partial "tags.html" . }}
 	</section>
 	{{ end }}
 	{{ end }}
 	{{ if .Site.Params.enableCategories }}
 	{{ if .Site.Taxonomies.categories }}
-	<section class="ui attached inverted segment sidebar-dream-categories">
+	<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
 		<div class="ui inverted accordion">
 			{{ partial "categories.html" . }}
 		</div>
 	</section>
 	{{ end }}
 	{{ end }}
-	<section id="footer" class="ui bottom attached center aligned inverted segment">
+	<section id="footer" class="ui bottom attached center aligned inverted segment shrink flexbox">
 		{{ partial "footer.html" . }}
 	</section>
 </div>

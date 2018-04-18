@@ -1,5 +1,5 @@
 <div class="ui inverted accordion">
-	<div id="header" class="ui inverted segment">
+	<div id="header" class="ui inverted segment column box">
 		{{ partial "author.html" . }}
 		<div class="{{ if not .IsPage }}active{{ end }} title header-title">
 			{{ if or (.Site.Params.enableCategories)  (.Site.Params.enableTags) }}
@@ -11,14 +11,14 @@
 		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
 			{{ if .Site.Params.enableTags }}
 			{{ if .Site.Taxonomies.tags }}
-			<section class="ui attached center aligned inverted segment dream-tags">
+			<section class="ui attached center aligned inverted segment dream-tags none flexbox">
 				{{ partial "tags.html" . }}
 			</section>
 			{{ end }}
 			{{ end }}
 			{{ if .Site.Params.enableCategories }}
 			{{ if .Site.Taxonomies.categories }}
-			<section class="ui attached inverted segment dream-categories">
+			<section class="ui attached inverted segment dream-categories both flexbox">
 			<div class="inverted accordion">
 				{{ partial "categories.html" . }}
 			</div>
