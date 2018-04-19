@@ -1,3 +1,9 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
+
 {{ if eq .Type .Site.Params.contentType }}
 	<!-- Page Author & Description -->
 	<meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
@@ -17,12 +23,3 @@
 <!-- Permalink & RSSlink -->
 <link rel="canonical" href="{{ .Permalink }}" />
 <link rel="alternative" href="{{ "/index.xml" | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml" />
-
-<!-- Google Analytics -->
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', '{{ if .Site.GoogleAnalytics }}{{ .Site.GoogleAnalytics }}{{ end }}', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<!-- End Google Analytics -->

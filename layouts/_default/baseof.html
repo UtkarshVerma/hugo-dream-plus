@@ -2,12 +2,8 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
-	{{ partial "init.html" . }}
 	{{ partial "head.html" . }}
+	{{ partial "init_head.html" . }}
 </head>
 
 <body>
@@ -24,18 +20,10 @@
 		</div>
 	</div>
 	</div>
-	{{ if .Site.Params.enableShortest }}{{ partial "shortest.html" }}{{ end }}
-	<script>
-		{{ if .Site.Params.twitterEmoji }}
-			twemojify()
-		{{ end }}
-		{{ if .IsPage }}
-			anchors.add('section.ui.secondary.top.black.attached.segment article h1');
-			anchors.add('section.ui.secondary.top.black.attached.segment article h2');
-			anchors.add('section.ui.secondary.top.black.attached.segment article h3');
-		{{ end }}
-	</script>
-	<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
+	{{ partial "init_body.html" . }}
+	{{ partial "shortest.html" . }}
+	{{ partial "twemoji.html" . }}
+	{{ partial "anchor.html" . }}
 </body>
 
 </html>
