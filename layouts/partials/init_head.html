@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="/css/site.css">
-{{ if (fileExists "static/css/highlight.css") }}
+{{ if and (fileExists "static/css/highlight.css") .IsPage }}
 	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
 {{ end }}
 {{ range $type, $val:= .Site.Params.customCSS }}

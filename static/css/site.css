@@ -110,6 +110,7 @@
      display: flex;
      -webkit-box-orient: horizontal;
      -moz-box-orient: horizontal;
+     -ms-box-orient: horizontal;
      -ms-flex-direction: row;
      -webkit-flex-direction: row;
      flex-direction: row;
@@ -122,6 +123,7 @@
      display: flex;
      -webkit-box-orient: vertical;
      -moz-box-orient: vertical;
+     -ms-box-orient: vertical;
      -ms-flex-direction: column;
      -webkit-flex-direction: column;
      flex-direction: column;
@@ -182,7 +184,7 @@
 }
  .ui.secondary.segment {
      background-color: #ececece8;
-     padding: inherit 1.5em 0 1.5em;
+     padding: 0 1.5em 0 1.5em;
 }
  .ui.centered.grid {
      margin-bottom: 1rem;
@@ -281,7 +283,7 @@
  p > img:not(.emoji), li > img {
      -webkit-box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
      -moz-box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
-     box-shadow: 3px 3px 27px -5px -0.5rem rgba(0, 0, 0, 1);
+     box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
      margin: 1em auto 1em auto;
 }
  .emoji {
@@ -495,8 +497,6 @@
  #tag-category .accordion {
      margin-top: 0;
 }
- #tag-category .title, #tag-category .content.active p, #tag-category .content p {
-}
  #tag-category .item i {
      position: absolute;
      left: 0;
@@ -533,8 +533,6 @@
  #tag-category {
      padding-bottom: 0;
 }
- #header {
-}
  #tag-category.active {
      display: -webkit-box;
      display: -moz-box;
@@ -542,6 +540,7 @@
      display: -webkit-flex;
      display: flex;
      -webkit-box-orient: vertical;
+     -ms-box-orient: vertical;
      -moz-box-orient: vertical;
      -ms-flex-direction: column;
      -webkit-flex-direction: column;
