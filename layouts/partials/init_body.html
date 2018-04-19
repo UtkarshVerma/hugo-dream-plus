@@ -1,0 +1,19 @@
+<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+{{ if .Site.Params.twitterEmoji }}
+	<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+{{ end }}
+{{ range $type, $val:= .Site.Params.customJS }}
+	{{ if and ((gt (len $val) 0) (index $val "")) }}
+		<script src="/{{ index $val }}"></script>
+	{{ end }}
+{{ end }}
+
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '{{ if .Site.GoogleAnalytics }}{{ .Site.GoogleAnalytics }}{{ end }}', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>

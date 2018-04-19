@@ -1,41 +1,19 @@
 <script>
-	var dreamBodyBgSwitchIndex = 0
-	if(colorBG) {
-		var dreamBGGradients = [
-			[],
-			['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
-			['#3e5151', '#decba4'], // Sand to Blue
-			['#11998e', '#38ef7d'], // Quepal
-			['#108dc7', '#ef8e38'], // Pun Yeta
-			['#fc5c7d', '#6a82fb'], // Sublime Light
-			['#fc466b', '#3f5efb'], // Sublime Vivid
-			['#c94b4b', '#4b134f'], // Bighead
-			['#23074d', '#cc5333'], // Taran Tado
-		]
-		var dreamBody = $('.bg')
-		var dreamFront = $('.pusher .front')
-		var dreamBack = $('.pusher .back')
-		var dreamPrevBgIndex = 0
-		var dreamBodyBgSwitch = []
-		var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]	
-		dreamBodyBgSwitch.push(dreamBg)
-		setBackground(dreamFront, dreamBg)
-		setBackground(dreamBody, dreamBg)
-		dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
-		dreamBodyBgSwitch.push(dreamBg)
-		setBackground(dreamBack, dreamBg)
+	var dreamBodyBgSwitchIndex = 0;
+	if (colorBG) {
+	  var dreamBGGradients = [[], ["#40e0d0", "#ff8c00", "#ff0080"], ["#3e5151", "#decba4"], ["#11998e", "#38ef7d"], ["#108dc7", "#ef8e38"], ["#fc5c7d", "#6a82fb"], ["#fc466b", "#3f5efb"], ["#c94b4b", "#4b134f"], ["#23074d", "#cc5333"]], dreamBody = $(".bg"), dreamFront = $(".pusher .front"), dreamBack = $(".pusher .back"), dreamPrevBgIndex = 0, dreamBodyBgSwitch = [], dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)];
+	  dreamBodyBgSwitch.push(dreamBg);
+	  setBackground(dreamFront, dreamBg);
+	  setBackground(dreamBody, dreamBg);
+	  dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)];
+	  dreamBodyBgSwitch.push(dreamBg);
+	  setBackground(dreamBack, dreamBg);
+	} else {
+	  var blurEff = {{ .Site.Params.bgBlur }}, images = {{ .Site.Params.bgList }}, randomNumber = Math.floor(Math.random() * images.length);
+	  bgImage = "url(" + images[randomNumber] + ")";
+	  console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length - 1));
+	  var target = document.getElementsByClassName("bg")[0];
+	  target.setAttribute("style", "background-image:" + bgImage + " !important; filter:blur(" + blurEff + "px)");
 	}
-	else {
-		var blurEff = {{ .Site.Params.bgBlur }}
-		var images = {{ .Site.Params.bgList }}
-		if({{ isset .Site.Params.bgList 0 }}) {			
-			var randomNumber = Math.floor(Math.random() * images.length)
-			bgImage = 'url(' + images[randomNumber] + ')'
-		}
-		else
-			bgImage = 'url(' + {{ .Site.Params.bgImage }} + ')'
-		console.log('Current background: ' + bgImage.substring(bgImage.indexOf('bg'),bgImage.length -1) )
-		var target = document.getElementsByClassName('bg')[0]
-		target.setAttribute('style', 'background-image:' + bgImage +' !important; filter:' + 'blur(' + blurEff + 'px)')
-	}	
+	;
 </script>
