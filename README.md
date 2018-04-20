@@ -138,7 +138,7 @@ hugo server
 Your site should now be locally available at [http://localhost:1313](http://localhost:1313) for testing purposes.
 
 ## Contributing
-Found something interesting to add to this theme of rather a bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
+Found something interesting to add to this theme or rather a bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 
 ## License 
 This theme is released under the [**MIT**](/LICENSE.MD) license.
