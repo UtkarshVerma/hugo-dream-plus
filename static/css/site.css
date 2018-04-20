@@ -201,9 +201,12 @@
      margin-bottom: 0.2rem;
 }
 /*About section*/
- .about {
+ .about, .four-o-four {
      height: auto;
      overflow-y: hidden;
+}
+ .four-o-four .twemoji {
+ 	 text-align: center;
 }
 /*Top nav bar*/
  .top.bar {
