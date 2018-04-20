@@ -95,9 +95,6 @@
     }
 }
 /*Site settings*/
- html {
-     font-size: 16px;
-}
  li {
      line-height: 1rem;
 }
@@ -184,7 +181,7 @@
 }
  .ui.secondary.segment {
      background-color: #ececece8;
-     padding: 0 1.5em 0 1.5em;
+     padding: auto 1.5em 0 1.5em;
 }
  .ui.centered.grid {
      margin-bottom: 1rem;
@@ -218,13 +215,12 @@
 /*Post settings*/
  .post-title {
      color: black;
-     letter-spacing: 0.05em;
-     font: bold 2.5rem 'Bebas Neue';
+     font: bold 3rem 'Bebas Neue';
      margin-bottom: 1px;
 }
  .post-head .sub.header {
      letter-spacing: 0.05em;
-     font: 1.1rem 'Bebas Neue';
+     font: 1.4rem 'Bebas Neue';
 }
  .sub.header div {
      display: inline-block;
@@ -274,9 +270,6 @@
      background-color: unset;
      padding: initial;
      border: unset;
-}
- tbody td:first-child .chroma {
-     background-color: #ffffff3b;
 }
  .post-content img:not(.emoji) {
      position: relative;
@@ -426,6 +419,8 @@
 }
 /*Sidebar*/
  #sidebar {
+ 	 display: flex;
+	 flex-flow: column;
      overflow: hidden;
      min-height: 100vh;
 }
@@ -451,18 +446,20 @@
  #sidebar .link:hover {
      color: white;
 }
+ #author {
+ 	border-top: 0;
+ 	border-radius: 0;
+ }
  #sidebar {
      min-height: 100vh;
-}
- #author {
-     align-self: flex-start;
 }
  #author .sub.header {
      color: #fff;
 }
  #footer {
-     align-self: flex-end;
-}
+ 	bottom: 0;
+ 	border-bottom: 0;
+ }
 /*Header*/
  #header {
      padding: 0;

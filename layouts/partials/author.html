@@ -1,13 +1,11 @@
-<section id="author" class="ui top attached center aligned inverted segment shrink flexbox">
-	<div class="ui small circular image">
-		{{ if isset .Site.Params "avatar" }}
-		<img src="{{ .Site.Params.avatar }}">
-		{{ else }}
-		<img src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
-		{{ end }}
-	</div>
-	<h3 class="ui header">
-		{{- .Site.Params.author -}}
-		<div class="sub header">{{ .Site.Params.motto }}</div>
-	</h3>
-</section>
+<div class="ui small circular image">
+	{{ if isset .Site.Params "avatar" }}
+	<img src="{{ .Site.Params.avatar }}">
+	{{ else }}
+	<img src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
+	{{ end }}
+</div>
+<h3 class="ui header">
+	{{- .Site.Params.author -}}
+	<div class="sub header">{{ .Site.Params.motto }}</div>
+</h3>
