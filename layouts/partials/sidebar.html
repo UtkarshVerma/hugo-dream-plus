@@ -1,10 +1,12 @@
-<div id="sidebar" class="ui sidebar inverted vertical menu left column box">
-	{{ partial "author.html" . }}
+<div id="sidebar" class="ui sidebar inverted vertical menu">
+	<section id="author" class="ui top attached center aligned inverted segment">
+		{{ partial "author.html" . }}
+	</section>
 	{{ if .Site.Params.enableTags }}
 	{{ if .Site.Taxonomies.tags }}
-	<section class="ui attached center aligned inverted segment sidebar-dream-tags shrink flexbox">
+	<section class="ui attached center aligned inverted segment sidebar-dream-tags">		
 		{{ partial "tags.html" . }}
-	</section>
+	</section>	
 	{{ end }}
 	{{ end }}
 	{{ if .Site.Params.enableCategories }}
@@ -16,7 +18,7 @@
 	</section>
 	{{ end }}
 	{{ end }}
-	<section id="footer" class="ui bottom attached center aligned inverted segment shrink flexbox">
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
 		{{ partial "footer.html" . }}
 	</section>
 </div>

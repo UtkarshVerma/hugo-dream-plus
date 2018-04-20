@@ -1,6 +1,8 @@
 <div class="ui inverted accordion">
 	<div id="header" class="ui inverted segment column box">
-		{{ partial "author.html" . }}
+		<header id="author" class="ui top attached center aligned inverted segment">
+			{{ partial "author.html" . }}
+		</header>
 		<div class="{{ if not .IsPage }}active{{ end }} title header-title">
 			{{ if or (.Site.Params.enableCategories)  (.Site.Params.enableTags) }}
 			<div id="tag-category-pop" class="ui red right corner label">		
