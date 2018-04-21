@@ -18,7 +18,7 @@
 /*Computer view*/
  @media screen and (min-width: 991px) {
      .blog-card {
-         width: calc(50% - 2em);
+         width: calc(50% - 1rem);
     }
 }
  @media screen and (max-width: 300px) {
@@ -48,7 +48,7 @@
 /*Tablet view*/
  @media screen and (min-width: 768px) and (max-width: 991px) {
      .blog-card {
-         width: calc(50% - 2em);
+         width: calc(50% - 1rem);
     }
      .pusher::-webkit-scrollbar {
          width: 2vw;
@@ -57,7 +57,9 @@
 /*Mobile view*/
  @media screen and (max-width: 767px) {
      .blog-card {
-         width: calc(100% - 2em);
+         width: calc(100% - 20px);
+         margin-right: 10px;
+         margin-left: 10px;
     }
      .top.bar .item {
          margin: 0;
@@ -112,7 +114,7 @@
      -webkit-flex-direction: row;
      flex-direction: row;
 }
- .column.box {
+ .column-box {
      display: -webkit-box;
      display: -moz-box;
      display: -ms-flexbox;
@@ -146,9 +148,9 @@
      flex: 1 0 auto;
 }
  .post-list .cards {
-     margin-left: -1em;
-     margin-right: -1em;
-     flex-wrap: wrap;
+     margin-right: -1rem;
+     margin-left: -1rem;
+     flex-wrap: wrap ;
 }
 /*Background*/
  .bg {
@@ -420,10 +422,18 @@
 }
 /*Sidebar*/
  #sidebar {
- 	 display: flex;
+     display: flex;
 	 flex-flow: column;
      overflow: hidden;
      min-height: 100vh;
+}
+#sidebar #author {
+    border-radius: 0;
+    border-top: 0;
+}
+#sidebar #footer {
+    border-radius: 0;
+    border-bottom: 0;
 }
  #sidebar::-webkit-scrollbar {
      width: 4px;
@@ -553,9 +563,9 @@
 /*Card settings*/
  .blog-card {
      position: relative;
-     margin-bottom: 1em;
-     margin-right: 0.5em;
-     margin-left: 0.5em;
+     margin-bottom: 1rem;
+     margin-right: 0.5rem;
+     margin-left: 0.5rem;
      float: none;
      color: #fff;
      transition: 0.4s;
