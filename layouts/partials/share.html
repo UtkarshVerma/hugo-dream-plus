@@ -1,11 +1,11 @@
-<div class="author shrink flexbox">
+<div class="author">
 	{{ if isset .Site.Params "avatar" }}
 	<img class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
 	{{ else }}
 	<img class="avatar" src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
 	{{ end }}
 </div>
-<div class="info shrink flexbox"> 
+<div class="info grow flexbox"> 
 	{{ if isset .Site.Social "twitter" }}
 	<a href="https://twitter.com/{{ .Site.Social.twitter }}">
 	{{ end }}
@@ -15,8 +15,7 @@
 	{{ end }}
 	<p class="desc">{{ .Site.Params.motto }}</p>		
 </div>
-<div class="spacer both flexbox"></div>
-<section class="buttons row box none flexbox">
+<section class="buttons row box">
 	<div class="facebook none flexbox" href="#" onclick="window.open(
 			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
 			'facebook-share-dialog',
