@@ -277,9 +277,9 @@
      display: block;
 }
  p > img:not(.emoji), li > img {
-     -webkit-box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
-     -moz-box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
-     box-shadow: 3px 3px 27px -5px rgba(0, 0, 0, 1);
+     -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+     -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
+     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
      margin: 1em auto 1em auto;
 }
  .emoji {
@@ -292,9 +292,9 @@
      margin: auto auto 1em auto;
      width: 80%;
      height: auto;
-     -webkit-box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
-     -moz-box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
-     box-shadow: 0.3rem 0.3rem 2.7rem -0.5rem rgba(0, 0, 0, 1);
+     -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+     -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
+     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
 }
  .youtube {
      width: 100%;
@@ -302,8 +302,9 @@
 /*Syntax Highlighting*/
  .highlight {
      border-radius: 5px;
+     margin-bottom: 1rem;
+     margin-top: 1rem;
      border: 1px solid #8a8a8a6b;
-     padding: 0 0 0 0;
 }
  .highlight > div {
      height: auto;
@@ -640,10 +641,10 @@
      z-index: 2;
      text-align: left;
      transition: 0.4s;
-     background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.1) 21%) !important;
+     background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.1) 21%);
 }
  .blog-card:hover .utility-info {
-     background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%) !important;
+     background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
 }
  .utility-info span {
      font-size: 1rem;
