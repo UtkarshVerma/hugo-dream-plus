@@ -6,6 +6,7 @@
 	<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
 
+{{ if .Site.GoogleAnalytics }}
 <!-- Google Analytics -->
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -13,6 +14,8 @@ ga('create', '{{ if .Site.GoogleAnalytics }}{{ .Site.GoogleAnalytics }}{{ end }}
 ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+{{ end }}
+
 {{ if not (eq .Site.Params.contentType "cards") }}
 	<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
 {{ end }}

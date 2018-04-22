@@ -1,18 +1,52 @@
+{{ if .Site.Params.enableColorBG }}
 <script>
-	var dreamBodyBgSwitchIndex = 0;
-	if (colorBG) {
-	  var dreamBGGradients = [[], ["#40e0d0", "#ff8c00", "#ff0080"], ["#3e5151", "#decba4"], ["#11998e", "#38ef7d"], ["#108dc7", "#ef8e38"], ["#fc5c7d", "#6a82fb"], ["#fc466b", "#3f5efb"], ["#c94b4b", "#4b134f"], ["#23074d", "#cc5333"]], dreamBody = $(".bg"), dreamFront = $(".pusher .front"), dreamBack = $(".pusher .back"), dreamPrevBgIndex = 0, dreamBodyBgSwitch = [], dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)];
-	  dreamBodyBgSwitch.push(dreamBg);
-	  setBackground(dreamFront, dreamBg);
-	  setBackground(dreamBody, dreamBg);
-	  dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)];
-	  dreamBodyBgSwitch.push(dreamBg);
-	  setBackground(dreamBack, dreamBg);
-	} else {
-	  var blurEff = {{ .Site.Params.bgBlur }}, images = {{ .Site.Params.bgList }}, randomNumber = getRandomInt(0, images.length);
-	  bgImage = "url(" + images[randomNumber] + ")";
-	  console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length - 1));
-	  var target = document.getElementsByClassName("bg")[0];
-	  target.setAttribute("style", "background-image:" + bgImage + " !important; filter:blur(" + blurEff + "px)");
+	var dreamBGGradients = [
+	  [],
+	  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
+	  ['#3e5151', '#decba4'], // Sand to Blue
+	  ['#11998e', '#38ef7d'], // Quepal
+	  ['#108dc7', '#ef8e38'], // Pun Yeta
+	  ['#fc5c7d', '#6a82fb'], // Sublime Light
+	  ['#fc466b', '#3f5efb'], // Sublime Vivid
+	  ['#c94b4b', '#4b134f'], // Bighead
+	  ['#23074d', '#cc5333'] // Taran Tado
+	]
+
+	var dreamBody = $('body')
+	var dreamFront = $('.pusher .front')
+	var dreamBack = $('.pusher .back')
+
+	var dreamBodyBgSwitch = []
+
+	var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
+	dreamBodyBgSwitch.push(dreamBg)
+	function setColorBG() {
+		setBackground(dreamFront, dreamBg)
+
+		setBackground(dreamBody, dreamBg)
+
+		dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
+		dreamBodyBgSwitch.push(dreamBg)
+		setBackground(dreamBack, dreamBg)
 	}
 </script>
+
+{{ else  }}
+<script>
+	{{ if isset .Site.Params "bgList" }}
+		var images = {{ .Site.Params.bgList }}
+		var randomNumber = getRandomInt(0, images.length)
+		bgImage = "url(" + images[randomNumber] + ")"
+	{{ else }}
+		var bgImage = "url(" + {{ .Site.Params.bgImage }} + ")"
+	{{ end }}
+
+	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
+	
+	function setImgBG() {
+		document.body.style.setProperty('--blurEff',{{ .Site.Params.bgBlur }});
+		document.body.style.setProperty('--bgImage', bgImage);
+	}
+</script>
+
+{{ end }}
