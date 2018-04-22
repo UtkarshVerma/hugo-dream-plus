@@ -117,13 +117,6 @@ You may also set a custom favicon for your website using the `favicon` config va
   favicon = "/images/defaultFav.ico"
 ```
 
-### Importing CSS and JS
-You can also manipulate the theme externally using CSS files and JS files and linking them using the `customCSS` and `customJS` config list variables. The path should be relative for this. For example,
-```
-  customCSS = ["css/blog.css"]
-  customJS = ["js/twemoji.js"]
-```
-
 ### Shorte.st website script
 The [shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll first have to enable this feature by setting `enableShortest` to `true` and then setting the **API Token** you got from Shorte.st to `shortestToken`, and after that, define your domains as a list in the `shortestDomains` config variable.
 

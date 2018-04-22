@@ -5,11 +5,6 @@
 {{ if .Site.Params.twitterEmoji }}
 	<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
-{{ range $type, $val:= .Site.Params.customJS }}
-	{{ if and ((gt (len $val) 0) (index $val "")) }}
-		<script src="/{{ index $val }}"></script>
-	{{ end }}
-{{ end }}
 
 <!-- Google Analytics -->
 <script>
