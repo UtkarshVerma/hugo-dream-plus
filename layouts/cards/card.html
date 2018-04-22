@@ -1,7 +1,7 @@
 <article class="blog-card none flexbox">
 <img class="image" src="{{ .Site.BaseURL }}{{ .Params.cover }}"></img>
 <div class="title-content twemoji">
-	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
+	<h3><a class="title" href={{ .Params.link }} target="_blank">{{ .Title }}</a></h3>
 	<div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
 </div>
 <div class="color-overlay"></div>
