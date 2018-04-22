@@ -4,7 +4,7 @@ $(document).ready(function() {
   setSemanticUIColor();
   $(".youtube").height(0.6 * $(".youtube").width());
   $("#tag-category-pop").click(function() {
-    $(".link.hand.point.icon").toggleClass("active");
+    $(".hand.point.icon").toggleClass("active");
   });
 });
 

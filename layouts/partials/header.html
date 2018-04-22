@@ -6,7 +6,7 @@
 		<div class="{{ if not .IsPage }}active{{ end }} title header-title">
 			{{ if or (.Site.Params.enableCategories)  (.Site.Params.enableTags) }}
 			<div id="tag-category-pop" class="ui red right corner label">		
-				<i class="link hand point icon {{ if not .IsPage }}up{{ else }}down{{ end }}"title="{{ i18n "clickToPopTagsAndCategories" }}"></i>		
+				<i class="hand point icon {{ if not .IsPage }}up{{ else }}down{{ end }}"title="{{ i18n "clickToPopTagsAndCategories" }}"></i>		
 			</div>
 			{{ end }}
 		</div>
@@ -28,8 +28,8 @@
 			{{ end }}
 			{{ end }}
 		</div>
-		<section id="footer" class="ui bottom attached center aligned inverted segment">
+		<footer class="ui bottom attached center aligned inverted segment">
 			{{ partial "footer.html" . }}
-		</section>
+		</footer>
 	</div>
 </div>
