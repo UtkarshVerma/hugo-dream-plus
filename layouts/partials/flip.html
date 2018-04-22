@@ -17,24 +17,26 @@
 	$('.dream-flip-toggle').click(function () {
 		var target = $('.pusher')
 		if (dreamBodyBgSwitchIndex === 0) {
-    	if(colorBG)
-    	 	setBackground(dreamBody, dreamBodyBgSwitch[1])
+    		{{ if .Site.Params.enableColorBG }}
+    	 		setBackground(dreamBody, dreamBodyBgSwitch[1])
+    	 	{{ end }}
 			dreamBodyBgSwitchIndex = 1
 			target.toggleClass('flip-it')
 			setTimeout( function () {
 				$('.front').css('display','none')
 				$('.back').css('display','block')
-			}, 300)
+			}, 300)	
 	 	}
-    else {
-    	if(colorBG)
-    		setBackground(dreamBody, dreamBodyBgSwitch[0])
-     	dreamBodyBgSwitchIndex = 0     	
-     	target.toggleClass('flip-it')   
-     	setTimeout( function (){
-     		$('.front').css('display','block')
+    	else {
+    		{{ if .Site.Params.enableColorBG }}
+    			setBackground(dreamBody, dreamBodyBgSwitch[0])
+    		{{ end }}
+     		dreamBodyBgSwitchIndex = 0     	
+     		target.toggleClass('flip-it')
+     		setTimeout( function (){
+     			$('.front').css('display','block')
 				$('.back').css('display','none')
-			}, 300)			
+			}, 300)
 		}
 	})
 </script>

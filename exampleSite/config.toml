@@ -1,42 +1,34 @@
-baseURL = "https://example.com"
+baseURL = "https://www.example.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "UtkarshVerma's Site"
+title = "UtkarshVerma's Blog"
 theme = "dream-plus"
 
-copyright = ""
-googleAnalytics = ""
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
 
 disqusShortname = "UtkarshVermaBlog"
 
 enableRobotsTXT = true
 
-hasCJKLanguage = false
-
 #Enable Hugo Emoji Conversion
 enableEmoji=true
 
 [params]
-	author = "UtkarshVerma"
-	description = "Just a blog for hosting random programming stuff."
+	author = "Utkarsh Verma"
+	description = "Just a random blog for random stuff, mostly tech-related."
 	avatar = "/images/avatar.jpg"
 	motto = "A keen maker, programmer and an Instructables author."
 	enableToc = true
 	enableShareCard = true
 
-	#Use your external CSS/JS files with this theme by placing the location of the file within the list. For example: "js/twemoji.js" 
-	customCSS = [""]
-	customJS  = [""]
 	favicon = "/img/defaultFav.ico"
-  
-	#Shorte.st Settings
-	enableShortest = false  
-  
-	#Background Settings
-	enableColorBG = false
-	bgBlur = 3
-	bgImage = "https://raw.githubusercontent.com/UtkarshVerma/hugo-dream-plus/master/static/img/bg1.jpeg"     #Absolute path for Hugo example site
-	#bgList = ["/img/bg1.jpeg"]
+  	
+  	#Background settings
+	enableColorBG= false
+	bgBlur = "0px"
+	bgImage = "http://bit.ly/2gPLxZ4"
   
 	#Post-displaying Settings
 	enableTags = true
@@ -48,20 +40,12 @@ enableEmoji=true
 	#Set whether you're hosting "cards" or "post"
 	contentType = "post"
 
-	#Enable/disable post/card  dimming effect
-	enableDimmer = true
-
 	#Enable Twitter Emoji
 	twitterEmoji=true
 
-	#Link to your blog
-	BlogLink = ""
-
-	#Social Links
-	email = "utkarshverma@protonmail.com"
+[social]
+	email = "utkarshverma@pm.me"
 	github = "UtkarshVerma"
-	linkedin = ""
-	codepen = ""
 	stackoverflow = "9271608/utkarsh-verma"
 	medium = "UtkarshVerma_"
 	twitter = "UtkarshVerma_" 

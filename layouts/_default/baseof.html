@@ -5,10 +5,18 @@
 <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
 	{{ partial "head.html" . }}
 	{{ partial "init_head.html" . }}
+	{{ partial "background.html" . }}
 </head>
 
 <body>
-	<div class="bg">{{ partial "background.html" . }}</div>
+	<div class="blur-overlay"></div>
+	<script>
+		{{ if .Site.Params.enableColorBG }}
+			setColorBG();
+		{{ else }}
+			setImgBG();
+		{{ end }}
+	</script>
 	{{ partial "sidebar.html" . }}
 	<div class="pusher">
 		<div class="flipper">
