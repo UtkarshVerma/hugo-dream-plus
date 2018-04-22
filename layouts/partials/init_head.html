@@ -10,6 +10,12 @@
 {{ end }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/site.js"></script>
+{{ range $type, $val:= .Site.Params.customJS }}
+	{{ if and ((gt (len $val) 0) (index $val "")) }}
+		<script src="/{{ index $val }}"></script>
+	{{ end }}
+{{ end }}
+
 <!--JS variable initializations-->
 <script>
 	var enabledPost={{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }} 
