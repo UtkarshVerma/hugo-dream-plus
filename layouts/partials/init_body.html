@@ -1,5 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+{{ if .IsPage }}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+{{ end }}
 {{ if .Site.Params.twitterEmoji }}
 	<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
@@ -16,4 +18,6 @@ ga('create', '{{ if .Site.GoogleAnalytics }}{{ .Site.GoogleAnalytics }}{{ end }}
 ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
+{{ if not (eq .Site.Params.contentType "cards") }}
+	<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
+{{ end }}
