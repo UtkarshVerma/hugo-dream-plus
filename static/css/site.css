@@ -467,8 +467,9 @@
  #header {
      padding: 0;
 }
- #header section {
+ #header section, #header header, #header footer {
      background-color: transparent;
+}
 }
  #header section::-webkit-scrollbar {
      width: 4px;
