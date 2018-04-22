@@ -20,3 +20,24 @@ function setSemanticUIColor() {
     });
   }
 }
+function connect(a) {
+  for (var b = "", c = 0; c < a.length; c++) {
+    b = c !== a.length - 1 ? b + (a[c] + ", ") : b + a[c];
+  }
+  return b;
+}
+function setBackground(a, b) {
+  a.css({background:b[0]});
+  a.css({background:"linear-gradient(to right, " + connect(b) + ")"});
+}
+function getRandomInt(a, b) {
+  a = Math.ceil(a);
+  b = Math.floor(b);
+  for (var c;;) {
+    if (c = Math.floor(Math.random() * (b - a)) + a, c !== dreamPrevBgIndex) {
+      dreamPrevBgIndex = c;
+      break;
+    }
+  }
+  return c;
+}
