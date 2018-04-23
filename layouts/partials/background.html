@@ -12,7 +12,7 @@
 	  ['#23074d', '#cc5333'] // Taran Tado
 	]
 
-	var dreamBody = $('body')
+	var dreamBody = $('.bg')
 	var dreamFront = $('.pusher .front')
 	var dreamBack = $('.pusher .back')
 
@@ -20,15 +20,12 @@
 
 	var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
 	dreamBodyBgSwitch.push(dreamBg)
-	function setColorBG() {
-		setBackground(dreamFront, dreamBg)
+	setBackground(dreamFront, dreamBg)
 
-		setBackground(dreamBody, dreamBg)
-
-		dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
-		dreamBodyBgSwitch.push(dreamBg)
-		setBackground(dreamBack, dreamBg)
-	}
+	setBackground(dreamBody, dreamBg)
+	dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
+	dreamBodyBgSwitch.push(dreamBg)
+	setBackground(dreamBack, dreamBg)
 </script>
 
 {{ else  }}
@@ -42,11 +39,8 @@
 	{{ end }}
 
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
-	
-	function setImgBG() {
-		document.body.style.setProperty('--blurEff',{{ .Site.Params.bgBlur }});
-		document.body.style.setProperty('--bgImage', bgImage);
-	}
+	document.body.style.setProperty('--blurEff',{{ .Site.Params.bgBlur }});
+	document.body.style.setProperty('--bgImage', bgImage);
 </script>
 
 {{ end }}

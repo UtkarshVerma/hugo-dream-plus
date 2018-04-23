@@ -215,6 +215,16 @@ li {
   filter: blur(10px);
 }
 /*Background*/
+.bg {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .blur-overlay {
   z-index: -1;
   top: 0;
@@ -235,7 +245,7 @@ li {
   -moz-perspective: 100rem;
   -o-perspective: 100rem;
   perspective: 100rem;
-  background: none !important;
+  background: transparent !important;
   overflow-y: auto !important;
   height: 100vh;
   width: 100vw;
