@@ -5,7 +5,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 {{ end }}
 {{ if .Site.Params.twitterEmoji }}
-	<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+	<script src="/js/twemoji.min.js"></script>
 {{ end }}
 {{ range $type, $val:= .Site.Params.customJS }}
 	{{ if and ((gt (len $val) 0) (index $val "")) }}
