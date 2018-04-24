@@ -117,6 +117,10 @@
   }
 }
 /*Site settings*/
+body {
+  --frontBG: "#40e0d0, #ff8c00, #ff0080";
+  --backBG: "#11998e, #38ef7d";
+}
 body, body.pushable {
   overflow: hidden;
   background-image: var(--bgImage) !important;
@@ -231,8 +235,8 @@ li {
   -moz-perspective: 100rem;
   -o-perspective: 100rem;
   perspective: 100rem;
-  background: transparent !important;
-  overflow-y: auto !important;
+  background: linear-gradient(to right, var(--frontBG)) !important;
+  overflow-y: overlay !important;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -508,6 +512,7 @@ p > img:not(.emoji), li > img {
 }
 /*Flip settings*/
 .flip-it .flipper {
+  background: linear-gradient(to right, var(--backBG));
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
@@ -528,6 +533,8 @@ p > img:not(.emoji), li > img {
 }
 /*Page sections, front and back*/
 .front, .back {
+  min-height: 100vh;
+  background: inherit;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;

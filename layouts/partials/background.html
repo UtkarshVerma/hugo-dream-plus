@@ -1,6 +1,8 @@
-{{ if .Site.Params.enableColorBG }}
 <script>
-	var dreamBGGradients = [
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;	
+{{ if .Site.Params.enableColorBG }}
+	var gradients = [
 	  [],
 	  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
 	  ['#3e5151', '#decba4'], // Sand to Blue
@@ -12,24 +14,11 @@
 	  ['#23074d', '#cc5333'] // Taran Tado
 	]
 
-	var dreamBody = $('.bg')
-	var dreamFront = $('.pusher .front')
-	var dreamBack = $('.pusher .back')
+	document.body.style.setProperty('--frontBG', connect(gradients[getRandomInt(0, gradients.length)]))
+	document.body.style.setProperty('--backBG', connect(gradients[getRandomInt(0, gradients.length)]))
 
-	var dreamBodyBgSwitch = []
-
-	var dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
-	dreamBodyBgSwitch.push(dreamBg)
-	setBackground(dreamFront, dreamBg)
-
-	setBackground(dreamBody, dreamBg)
-	dreamBg = dreamBGGradients[getRandomInt(0, dreamBGGradients.length)]
-	dreamBodyBgSwitch.push(dreamBg)
-	setBackground(dreamBack, dreamBg)
-</script>
 
 {{ else  }}
-<script>
 	{{ if isset .Site.Params "bgList" }}
 		var images = {{ .Site.Params.bgList }}
 		var randomNumber = getRandomInt(0, images.length)
@@ -39,8 +28,33 @@
 	{{ end }}
 
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
-	document.body.style.setProperty('--blurEff',{{ .Site.Params.bgBlur }});
+	document.body.style.setProperty('--blurEff', {{ .Site.Params.bgBlur }});
 	document.body.style.setProperty('--bgImage', bgImage);
-</script>
 
 {{ end }}
+	function getRandomInt(min, max) {
+	  min = Math.ceil(min)
+	  max = Math.floor(max)
+	  var random
+	  while (1) {
+	    random = Math.floor(Math.random() * (max - min)) + min
+	    if (random !== prevBgIndex) {
+	      prevBgIndex = random
+	      break
+	    }
+	  }
+	  return random
+	}
+
+	function connect(arr) {
+	  var str = ''
+	  for (var i = 0; i < arr.length; i++) {
+	    if (i !== arr.length - 1) {
+	      str += arr[i] + ', '
+	    } else {
+	      str += arr[i]
+	    }
+	  }
+	  return str
+	}
+</script>
