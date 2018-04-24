@@ -8,7 +8,8 @@
 </head>
 
 <body>
-	<div class="bg">{{ partial "background.html" . }}</div>
+	{{ partial "background.html" . }}
+	<div class="bg"></div>
 	<div class="blur-overlay"></div>
 	{{ partial "sidebar.html" . }}
 	<div class="pusher">
@@ -20,7 +21,6 @@
 				{{ partial "flip.html" . }}
 			</div>
 		</div>
-	</div>
 	</div>
 	{{ partial "init_body.html" . }}
 	{{ partial "shortest.html" . }}

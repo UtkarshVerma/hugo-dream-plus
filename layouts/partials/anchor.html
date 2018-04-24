@@ -1,7 +1,7 @@
+{{ if .IsPage }}
 <script>
-	{{ if .IsPage }}
-		anchors.add('section.ui.secondary.top.black.attached.segment article h1');
-		anchors.add('section.ui.secondary.top.black.attached.segment article h2');
-		anchors.add('section.ui.secondary.top.black.attached.segment article h3');
-	{{ end }}
+		anchors.add('.post-content h1');
+		anchors.add('.post-content h2');
+		anchors.add('.post-content h3');
 </script>
+{{ end }}
