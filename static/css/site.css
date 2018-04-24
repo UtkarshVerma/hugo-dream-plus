@@ -189,27 +189,13 @@ li {
 }
 
 .glass {
-  width: 350px;
-  height: 500px;
-  background: inherit;
   position: absolute;
   overflow: hidden;
-  top: 50%;
-  left: 50%;
-  margin-left: -175px;
-  margin-top: -250px;
-  border-radius: 8px;
 }
 
 .glass:before {
-  width: 400px;
-  height: 550px;
   content: "";
   position: absolute;
-  top: -25px;
-  left: -25px;
-  bottom: 0;
-  right: 0;
   background: inherit;
   box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
   filter: blur(10px);
@@ -475,6 +461,8 @@ p > img:not(.emoji), li > img {
   display: block;
   color: #3e3e3e;
   font: bold 1.2em 'Lato';
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -501,6 +489,8 @@ p > img:not(.emoji), li > img {
   align-self: flex-start;
   width: 7.5em;
   margin-right: 0.1em;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -508,6 +498,8 @@ p > img:not(.emoji), li > img {
   align-self: flex-end;
   margin-left: 0.1em;
   width: 7.5em;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -743,6 +735,9 @@ p > img:not(.emoji), li > img {
   -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
   z-index: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blog-card:hover {
@@ -752,6 +747,7 @@ p > img:not(.emoji), li > img {
 }
 
 .blog-card .image {
+  visibility: hidden;
   width: 100%;
   height: 100%;
 }
@@ -759,10 +755,26 @@ p > img:not(.emoji), li > img {
 .title-content {
   position: absolute;
   bottom: 0;
+  margin-bottom: 2rem;
   text-align: center;
   z-index: 2;
   width: 100%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
+}
+ 
+.card.title-content {
+  opacity: 0;
+  bottom: 0;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.blog-card:hover .card.title-content {
+  opacity: 1;
+  bottom: 0;
 }
 
 .blog-card:hover .title-content {
@@ -774,6 +786,8 @@ p > img:not(.emoji), li > img {
   font: 400 2rem 'Abril Fatface';
   letter-spacing: 1px;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -790,6 +804,8 @@ p > img:not(.emoji), li > img {
   border: 0;
   z-index: 2;
   background: #BDA26B;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -815,6 +831,8 @@ p > img:not(.emoji), li > img {
   width: 80%;
   color: #ddd;
   opacity: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
   z-index: 2;
 }
@@ -832,6 +850,8 @@ p > img:not(.emoji), li > img {
   width: 100%;
   z-index: 2;
   text-align: left;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.1) 21%);
 }
@@ -868,7 +888,10 @@ p > img:not(.emoji), li > img {
   left: 0;
   transition: background 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
+.card.color-overlay {
+  background: rgba(0, 0, 0 ,0);
+}
 
 .blog-card:hover .color-overlay {
-  background: rgba(64, 64, 70,0.8);
+  background: rgba(0, 0, 0, 0.6);
 }

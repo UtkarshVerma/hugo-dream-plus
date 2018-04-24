@@ -1,4 +1,4 @@
-<article class="blog-card none flexbox">
+<article class="blog-card none flexbox" style="background-image: url({{ .Site.BaseURL }}{{ .Params.cover }})">
 <img class="image" src="{{ .Site.BaseURL }}{{ .Params.cover }}"></img>
 <div class="title-content twemoji">
 	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
