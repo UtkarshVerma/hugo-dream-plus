@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.0.0
+env:
+  global:
+  - USER="UtkarshVerma"
+  - EMAIL="utkarshverma@pm.me"
+  - REPO="dream-plus-example"
+  - GH_REPO="github.com/${USER}/${REPO}.git"
+script:
+  - ruby test.rb
+after_success:
+  - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+  - git clone git://${GH_REPO}
+  - git clone git://github.com/UtkarshVerma/hugo-dream-plus
+  - cp -r hugo-dream-plus/exampleSite ./${REPO}
+  - cd ${REPO}
+  - git remote
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
+  - git add --all
+  - git commit -m ${MESSAGE}
+  - git push "https://${GITHUB_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
