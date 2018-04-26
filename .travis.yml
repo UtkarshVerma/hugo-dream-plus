@@ -1,6 +1,3 @@
-language: ruby
-rvm:
-  - 2.0.0
 env:
   global:
   - USER="UtkarshVerma"
@@ -18,5 +15,4 @@ script:
   - git config user.name ${USER}
   - git add --all
   - git commit -m ${MESSAGE}
-  - git remote add origin https://github.com/${USER}/${REPO}
   - git push origin master
