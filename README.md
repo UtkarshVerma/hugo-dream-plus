@@ -32,7 +32,7 @@ git submodule update --init --recursive
 ```
 
 ## Getting Started
-Once the theme has been successfully installed, you'll have to do a bit of tuning to the theme to meet your taste.
+Once the theme has been successfully installed, you'll have to do a bit of tuning of the theme to meet your taste.
 
 ### The config file
 Within the [`exampleSite`](/exampleSite) folder, you'll find the [`config.toml`](/exampleSite/config.toml) file which can be used to tweak the theme.
@@ -56,7 +56,7 @@ After that, fill up the social variables at the end of the config file. This the
 * Medium    - `medium = "<username>"`
 * LinkedIn  - `linkedin = "<username>"`
 * StackOverflow - `stackoverflow = "<username with the user number>"`
-* CodePen   - `codepen = "<username>"`
+* CodePen   - `codepenn = "<username>"`
 * Reddit    - `reddit = "<username>"`
 
 ### Toggling the views
@@ -76,10 +76,6 @@ hugo new post/example.md		//Post creation
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
 
-### Twitter emoji
-This theme supports [twemoji](https://github.com/twitter/twemoji) rendering by default. To enable/disable it, you may set the `twitterEmoji` config variable to true or false respectively.
-Regarding the usage, simply use the good 'ol MarkDown syntax for emoji and they'll be rendered as twemoji.
-
 ### Table of contents (Post view only)
 This theme is capable of indexing out the headings into a clean table of contents for bettering browsing through long posts. It can be enabled/disabled by modifying the `enableToc` config variable accordingly.
 
@@ -94,13 +90,6 @@ You can also enable random background feature which switches the background betw
 bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 ```
 You may also add blurring effect to the background image using `bgBlur`.
-
-### Disqus
-Disqus comment system may be used alongside this theme. It is enabled/disabled through the `disqusShortname` config variable. To **disable** Disqus comments, leave this config variable unset. To enable, simply enter your Disqus shortname as a string. For example,
-
-```toml
-disqusShortname = "UtkarshVermaBlog"
-``` 
 
 ###  Share card (Post view only)
 This card appears below your posts to allow sharing of your post on **Facebook** and **Twitter**. Enable/disable it through the `enableShareCard` variable by setting appropriate boolean values.
@@ -123,6 +112,9 @@ The [shorte.st](https://shorte.st) website script has been implemented in this t
 ### Some other configurations
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
 
+## Documentation
+The documentation for this repository is currently under work and is added to this repository's [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
+
 ## Nearly Finished
 After finishing the configurations, you're good to go. So, test your website using:
 ```
@@ -131,9 +123,7 @@ hugo server
 Your site should now be locally available at [http://localhost:1313](http://localhost:1313) for testing purposes.
 
 ## Contributing
-Found something interesting to add to this theme or rather a bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
+Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 
 ## License 
 This theme is released under the [**MIT**](/LICENSE.MD) license.
-
-
