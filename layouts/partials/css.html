@@ -8,12 +8,3 @@
 	<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
 {{ end }}
 {{ end }}
-<style>
-body, body.pushable {	
-{{ if .Site.Params.enableColorBG }}
-	background: linear-gradient(to right, var(--colorBG)) !important;
-{{ else }}
-	background-image: var(--bgImage) !important;
-{{ end }}
-}
-</style>
