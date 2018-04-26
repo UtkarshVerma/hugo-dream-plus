@@ -14,9 +14,7 @@ var bodyBgSwitchIndex = 0;
 	  ['#23074d', '#cc5333'] // Taran Tado
 	]
 
-	document.body.style.setProperty('--frontBG', connect(gradients[getRandomInt(0, gradients.length)]))
-	document.body.style.setProperty('--backBG', connect(gradients[getRandomInt(0, gradients.length)]))
-
+	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]))
 
 {{ else  }}
 	{{ if isset .Site.Params "bgList" }}
@@ -58,3 +56,6 @@ var bodyBgSwitchIndex = 0;
 	  return str
 	}
 </script>
+{{ if not .Site.Params.enableColorBG }}
+<div class="blur-overlay"></div>
+{{ end }}
