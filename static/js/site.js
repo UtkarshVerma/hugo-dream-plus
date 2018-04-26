@@ -15,7 +15,7 @@ $(document).ready(function() {
       setTimeout( function () {
         $('.front').css('display','none')
         $('.back').css('display','block')
-      }, 300) 
+      }, 250) 
     }
       else {
         bodyBgSwitchIndex = 0      
@@ -23,7 +23,7 @@ $(document).ready(function() {
         setTimeout( function (){
           $('.front').css('display','block')
         $('.back').css('display','none')
-      }, 300)
+      }, 250)
     }
   })  
 });

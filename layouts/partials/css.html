@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="/css/site.css">
+{{ if and (fileExists "static/css/highlight.css") .IsPage }}
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+{{ end }}
+{{ range $type, $val:= .Site.Params.customCSS }}
+{{ if and ((gt (len $val) 0) (index $val "")) }}
+	<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
+{{ end }}
+{{ end }}
+<style>
+body, body.pushable {	
+{{ if .Site.Params.enableColorBG }}
+	background: linear-gradient(to right, var(--colorBG)) !important;
+{{ else }}
+	background-image: var(--bgImage) !important;
+{{ end }}
+}
+</style>

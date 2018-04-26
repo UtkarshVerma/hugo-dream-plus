@@ -72,6 +72,9 @@
     margin-left: 10px;
   }
 
+  .pusher::-webkit-scrollbar {
+    width: 5px !important;
+  }
   .top.bar .item {
     margin: 0;
     padding-right: 0;
@@ -117,16 +120,15 @@
   }
 }
 /*Site settings*/
-body {
-  --frontBG: "#40e0d0, #ff8c00, #ff0080";
-  --backBG: "#11998e, #38ef7d";
-}
 body, body.pushable {
   overflow: hidden;
-  background-image: var(--bgImage) !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.loader.container {
+  display: none !important;
 }
 
 li {
@@ -205,37 +207,22 @@ li {
   filter: blur(10px);
 }
 /*Background*/
-.bg {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .blur-overlay {
   z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background: inherit;
   --webkit-filter: blur(var(--blurEff));
   filter: blur(var(--blurEff));
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
 }
 
 .pusher {
+  background-color: transparent !important;
   -webkit-perspective: 100rem;
   -moz-perspective: 100rem;
   -o-perspective: 100rem;
   perspective: 100rem;
-  background: linear-gradient(to right, var(--frontBG)) !important;
   overflow-y: overlay !important;
   height: 100vh;
   width: 100vw;
@@ -349,7 +336,6 @@ ul > li {
   border-left: 8px solid #ccc;
   padding: 0.4em 0.8em;
   margin: 0.5em 0 0.5em 0;
-}
 }
 
 .post-content ul + blockquote {
@@ -512,7 +498,6 @@ p > img:not(.emoji), li > img {
 }
 /*Flip settings*/
 .flip-it .flipper {
-  background: linear-gradient(to right, var(--backBG));
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);

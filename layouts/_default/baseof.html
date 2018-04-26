@@ -5,12 +5,13 @@
 <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
 	{{ partial "head.html" . }}
 	{{ partial "init_head.html" . }}
+	{{ partial "criticalCSS.html" . }}
 </head>
 
 <body>
+	{{ partial "loader.html" . }}
+	{{ partial "css.html" . }}
 	{{ partial "background.html" . }}
-	<div class="bg"></div>
-	<div class="blur-overlay"></div>
 	{{ partial "sidebar.html" . }}
 	<div class="pusher">
 		<div class="flipper">
