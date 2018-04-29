@@ -8,4 +8,3 @@ link: //enter the link to which this card will redirect to
 weight:
 description: 
 ---
-

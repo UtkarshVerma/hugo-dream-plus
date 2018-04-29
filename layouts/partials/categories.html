@@ -1,16 +1,16 @@
-{{ range $name, $taxonomy := .Site.Taxonomies.categories }}	
+{{- range $name, $taxonomy := .Site.Taxonomies.categories }}
 <div class="title">
 	<i class="dropdown icon"></i>
-	<a class="link" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>     	
+	<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name -}}</a>
 </div>
+<div class="content">
 {{ range $taxonomy.Pages }}
-<div class="content">    		
 	<a class="item" href="{{ .Permalink }}">
 		<div>
 			<i class="cocktail icon"></i>
 			<p>{{ .LinkTitle }}</p>
 		</div>
 	</a>
-</div>
 {{ end }}
+</div>
 {{ end }}

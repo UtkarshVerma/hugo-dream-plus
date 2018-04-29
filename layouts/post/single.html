@@ -8,12 +8,12 @@
 {{ define "main" }}
 <div class="ui centered grid">
 	<div class="sixteen wide mobile only column">	
-			{{ partial "header.html" . }}
+			{{- partial "header.html" . -}}
 	</div>
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
 		<section class="ui secondary top attached black segment post-head">
 			<h1 class="post-title">
-				{{ .Title }}
+				{{- .Title -}}
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
@@ -22,10 +22,10 @@
 					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
 			</div>
 			<hr>
-			{{ if .Site.Params.enableToc }}
-			{{ if .TableOfContents }}
+			{{- if .Site.Params.enableToc -}}
+			{{- if .TableOfContents -}}
 			<div class="toc">
-				{{ .TableOfContents }}
+				{{- .TableOfContents -}}
 			</div>
 			{{ end }}
 			{{ end }}
@@ -34,21 +34,20 @@
 			</article>
 		</section>
 		<section class="ui secondary attached segment dream-tags">
-			{{ if isset .Params "tags" }}
-				{{ partial "tags.html" . }}				
+			{{- if isset .Params "tags" -}}
+				{{- partial "tags.html" . -}}				
 			{{ else }}
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}
 		</section>
-		{{ if .Site.Params.enableShareCard }}
-		<section class="ui secondary attached segment share row box">
-			{{ partial "share.html" . }}
+		{{- if .Site.Params.enableShareCard -}}
+		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
+			{{- partial "share.html" . -}}
 		</section>
 		{{ end }}
-
-		{{ if .Site.DisqusShortname }}
+		{{- if .Site.DisqusShortname -}}
 		<section class="ui secondary bottom attached stacked segment disqus">
-			{{ partial "disqus.html" . }}
+			{{- partial "disqus.html" . -}}
 		</section>
 		{{ end }}
 	</div>

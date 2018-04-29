@@ -1,16 +1,17 @@
 <div class="author">
-	{{ if isset .Site.Params "avatar" }}
+	{{- if .Site.Params.avatar -}}
 	<img class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
 	{{ else }}
-	<img class="avatar" src="/img/avatar{{ index (shuffle (seq 1 4)) 0 }}.svg">
+	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
+	<img class="avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
 	{{ end }}
 </div>
 <div class="info grow flexbox"> 
-	{{ if isset .Site.Social "twitter" }}
+	{{- if .Site.Social.twitter -}}
 	<a href="https://twitter.com/{{ .Site.Social.twitter }}">
 	{{ end }}
 	<p class="name">{{ .Site.Params.author }}</p>
-	{{ if isset .Site.Social "twitter" }}
+	{{- if .Site.Social.twitter -}}
 	</a>
 	{{ end }}
 	<p class="desc">{{ .Site.Params.motto }}</p>		

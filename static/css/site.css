@@ -398,12 +398,29 @@ p > img:not(.emoji), li > img {
   right: 0;
   bottom: 0;
 }
+
 /*Syntax Highlighting*/
+.post-content pre {
+  background: #ffffff70;
+  padding-top: 1em;
+  padding-left: 1em;
+  background-color: #ffffff70;
+  border: 1px solid #8a8a8a6b;
+  border-radius: 5px;
+  overflow-x: auto;
+}
 .highlight {
   border-radius: 5px;
   margin-bottom: 1rem;
   margin-top: 1rem;
   border: 1px solid #8a8a8a6b;
+}
+
+.highlight pre {
+  background: initial;
+  padding: initial;
+  border: initial;
+  border-radius: initial;
 }
 
 .highlight > div {
@@ -438,7 +455,7 @@ p > img:not(.emoji), li > img {
   width: 5em;
   margin: auto;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.4rem #eee;
+  box-shadow: 0 0 0 0.1em #fff, 0 0 0 0.4rem #eee;
 }
 
 .info {
@@ -472,6 +489,7 @@ p > img:not(.emoji), li > img {
 
 .share .buttons {
   margin: auto;
+  margin-right: 0;
   flex-wrap: wrap;
 }
 
@@ -572,6 +590,10 @@ p > img:not(.emoji), li > img {
 #sidebar .item {
   padding: 0.3em 0.3em 0.3em 2em;
   color: white;
+}
+
+#sidebar .item:before {
+  background: transparent;
 }
 
 #sidebar .content a i {
