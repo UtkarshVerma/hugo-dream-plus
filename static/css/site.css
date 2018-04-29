@@ -68,8 +68,8 @@
 @media screen and (max-width: 767px) {
   .blog-card {
     width: calc(100% - 2rem);
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: auto !important;
+    margin-left: auto !important;
 
   }
 
@@ -395,7 +395,6 @@ p > img:not(.emoji), li > img {
   right: 0;
   bottom: 0;
 }
-
 /*Syntax Highlighting*/
 .post-content pre {
   background: #ffffff70;
@@ -736,6 +735,8 @@ p > img:not(.emoji), li > img {
 .blog-card {
   position: relative;
   margin-bottom: 1rem;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
   float: none;
   color: #fff;
   transition: 0.4s;
