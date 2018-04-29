@@ -1,9 +1,9 @@
-{{ partial "css.html" . }}
+{{- partial "css.html" . -}}
 <!--JS variable initializations-->
 <script>
 	var colorBG = {{ .Site.Params.enableColorBG }}
 	var enabledPost = {{ if eq .Site.Params.contentType "post" }}true{{ else }}false{{ end }}
-	{{ if .Site.Params.enableShortest }}
+	{{- if .Site.Params.enableShortest -}}
 		var shToken = {{ .Site.Params.shortestToken }}
 		var shDomains = {{ .Site.Params.shortestDomains }}    
 	{{ end }}

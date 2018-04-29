@@ -1,8 +1,8 @@
 <style>
-body, body.pushable {
+body {
 	display: block;
 	--colorBG: "#40e0d0, #ff8c00, #ff0080";
-	{{ if .Site.Params.enableColorBG }}
+	{{- if .Site.Params.enableColorBG -}}
 		background: linear-gradient(to right, var(--colorBG)) !important;
 	{{ else }}
 		background-image: var(--bgImage) !important;

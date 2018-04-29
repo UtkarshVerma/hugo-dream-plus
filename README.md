@@ -56,7 +56,7 @@ After that, fill up the social variables at the end of the config file. This the
 * Medium    - `medium = "<username>"`
 * LinkedIn  - `linkedin = "<username>"`
 * StackOverflow - `stackoverflow = "<username with the user number>"`
-* CodePen   - `codepenn = "<username>"`
+* CodePen   - `codepen = "<username>"`
 * Reddit    - `reddit = "<username>"`
 
 ### Toggling the views
