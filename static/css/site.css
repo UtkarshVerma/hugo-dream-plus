@@ -67,9 +67,10 @@
 /*Mobile view*/
 @media screen and (max-width: 767px) {
   .blog-card {
-    width: calc(100% - 20px);
-    margin-right: 10px;
-    margin-left: 10px;
+    width: calc(100% - 2rem);
+    margin-right: auto;
+    margin-left: auto;
+
   }
 
   .pusher::-webkit-scrollbar {
@@ -244,10 +245,6 @@ li {
 .ui.secondary.segment {
   background-color: #ececece8;
   padding: auto 1.5em 0 1.5em;
-}
-
-.ui.centered.grid {
-  margin-bottom: 1rem;
 }
 
 .ui.grid {
@@ -739,8 +736,6 @@ p > img:not(.emoji), li > img {
 .blog-card {
   position: relative;
   margin-bottom: 1rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   float: none;
   color: #fff;
   transition: 0.4s;
