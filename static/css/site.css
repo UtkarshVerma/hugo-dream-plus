@@ -127,8 +127,8 @@ body, body.pushable {
   background-size: cover;
 }
 
-li {
-  line-height: 1rem;
+li:not('.toc') {
+  line-height: 1.4285em;
 }
 
 .row.box {
@@ -345,10 +345,9 @@ ul > li {
 }
 
 .post-content code {
-  font-size: 0.9em;
+  font-size: 0.8em;
   background-color: #bfbfbf;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  padding: 0.2em;
   border: 1px #7d7d7d solid;
   border-radius: 0.2em;
 }
