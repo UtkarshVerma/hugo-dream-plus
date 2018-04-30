@@ -19,9 +19,9 @@ var bodyBgSwitchIndex = 0;
 		var images = {{- .Site.Params.bgList -}}
 		var randomNumber = getRandomInt(0, images.length)
 		bgImage = "url(" + images[randomNumber] + ")"
-	{{- else -}}
-		var bgImage = "url(" + {{- .Site.Params.bgImage -}} + ")"
-	{{- end -}}
+	{{ else }}
+		var bgImage = "url(" + {{ .Site.Params.bgImage }} + ")"
+	{{ end }}
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
 	document.body.style.setProperty('--blurEff', {{- .Site.Params.bgBlur -}});
 	document.body.style.setProperty('--bgImage', bgImage);
