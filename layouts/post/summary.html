@@ -1,4 +1,4 @@
-<article class="blog-card none flexbox" style="background-image: url({{ .Site.BaseURL }}{{ if .Params.cover }}{{ .Params.cover }}{{ else }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})">
+<article class="blog-card none flexbox" style="background-image: url({{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})">
 <img class="image" src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
 <div class="title-content twemoji">
 	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
