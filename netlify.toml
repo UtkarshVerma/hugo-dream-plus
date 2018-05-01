@@ -1,8 +1,8 @@
 [build]
   publish = "exampleSite/public"
-  command = "cd exampleSite && hugo --theme repo"
-
+  command = "cd exampleSite && hugo
+ 
 [context.production]
   [context.production.environment]
-    HUGO_VERSION = "0.40"
+    HUGO_VERSION = "0.38"
     HUGO_BASEURL = "https://dream-plus.netlify.com/"
