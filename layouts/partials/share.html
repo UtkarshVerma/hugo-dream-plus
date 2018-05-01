@@ -1,6 +1,6 @@
 <div class="author">
 	{{- if .Site.Params.avatar -}}
-	<img class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+	<img class="avatar" src="{{ .Site.Params.avatar }}">
 	{{ else }}
 	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
 	<img class="avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
