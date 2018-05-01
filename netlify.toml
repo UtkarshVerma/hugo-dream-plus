@@ -1,7 +1,7 @@
 [build]
   publish = "exampleSite/public"
-  command = "cd exampleSite && hugo
- 
+  command = "cd exampleSite && hugo"
+
 [context.production]
   [context.production.environment]
     HUGO_VERSION = "0.38"
