@@ -8,7 +8,7 @@ tags:
 categories:
 - programming
 description : "The challenges which I faced while installing and using **django-netjsonconfig**. "
-cover: "images/netjsonconfig/django2.png"
+cover: "https://github.com/UtkarshVerma/blog/blob/source/images/netjsonconfig/django2.png"
 draft: false
 ---
 A task came up in Google Code-in which asked me to install the [django-netjsonconfig](https://github.com/openwisp/django-netjsonconfig) module by [OpenWISP](https://www.openwisp.org). Furthermore, I'm also supposed to share the challenges I faced during the set-up process as a sort of feedback. I'll be trying be concise in this post so, without further ado, I'm beginning with this post.
