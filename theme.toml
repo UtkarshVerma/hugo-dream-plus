@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/LICENSE"
 description = "An upgraded version of the hugo-dream-theme with tons of new features."
 homepage = "https://github.com/UtkarshVerma/hugo-dream-plus"
-tags = ["clean", "blog", "landing page", "responsive"]
+tags = ["clean", "blog", "landing page", "responsive", "google analytics","disqus", "personal", "syntax highlighting", "single page", "material design"]
 features = ["randomBackground","favicon","blurBackground","home cards","flip", "colorful", "imagebackground", "i18n", "copyright", "motto"]
 min_version = "0.38"
 
