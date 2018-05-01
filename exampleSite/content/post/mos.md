@@ -45,7 +45,7 @@ The Mongoose OS website provides an easy-to-use tool for **flashing** and **mana
 The installation instructions have been documented on the official website [here](https://mongoose-os.com/software.html).
 Since I'm using Lubuntu myself, I had to use the following commands:
 
-```shell
+```bash
 sudo add-apt-repository ppa:mongoose-os/mos
 sudo apt-get update
 sudo apt-get install mos
@@ -56,7 +56,7 @@ sudo apt-get install mos
 ![Wiring Diagram](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/wiring.jpg)
 Once the tool is downloaded, wire up your ESPer with any **USB to TTL Converter** since the flashing is to be done via **UART**. 
 
-To keep things applicable to a larger reader-base, I'll be proceeding with my good `ol **Arduino UNO**. It's possible to use an Arduino as a **USB to TTL Converter** since it has an in-built **CH340G Converter** which the Arduino uses for programming the ATmega IC.
+To keep things applicable to a larger reader-base, I'll be proceeding with my good 'ol **Arduino UNO**. It's possible to use an Arduino as a **USB to TTL Converter** since it has an in-built **CH340G Converter** which the Arduino uses for programming the ATmega IC.
 Now wire up **ESPer** according to the wiring diagram posted above. Once done it should look something like this.
 
 ![ESPer Wired Up](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/wiring-real.jpg)
