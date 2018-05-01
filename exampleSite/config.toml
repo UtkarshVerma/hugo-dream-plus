@@ -19,7 +19,7 @@ enableEmoji=true
 [params]
 	author = "Utkarsh Verma"
 	description = "Just a random blog for random stuff, mostly tech-related."
-	avatar = "http://www.gravatar.com/avatar/a11177472cedfbb8f5a2bb64362816a0"
+	avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
 	motto = "A keen maker, programmer and an Instructables author."
 	enableToc = true
 	enableShareCard = true
