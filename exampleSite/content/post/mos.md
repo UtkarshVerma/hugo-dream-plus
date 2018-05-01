@@ -9,7 +9,7 @@ tags:
 categories: 
 - electronics
 description: "A tutorial on how to install Mongoose OS on ESPer."
-cover: "images/mos/intro-small.jpeg"
+cover: "https://github.com/UtkarshVerma/blog/blob/source/images/mos/intro-small.jpeg"
 ---
 ![Intro](https://github.com/UtkarshVerma/blog/blob/source/static/images/mos/intro-small.jpeg)
 
