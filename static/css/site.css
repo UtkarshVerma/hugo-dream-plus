@@ -124,7 +124,7 @@
 body, body.pushable {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .anchor {
