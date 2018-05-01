@@ -1,11 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/site.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
-{{- if .IsPage -}}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
-{{ end }}
 {{- if .Site.Params.twitterEmoji -}}
-	<script src="/js/twemoji.min.js"></script>
+	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
 {{- range $type, $val:= .Site.Params.customJS }}
 	{{- if and ((gt (len $val) 0) (index $val "")) -}}
