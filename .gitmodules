@@ -1,0 +1,3 @@
+[submodule "exampleSite/themes/dream-plus"]
+	path = exampleSite/themes/dream-plus
+	url = https://github.com/UtkarshVerma/hugo-dream-plus
