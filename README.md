@@ -18,6 +18,8 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
 
+#### [Live Demo](http://dream-plus.netlify.com)
+
 This theme can be used for two purposes:
 
 1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to card view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
