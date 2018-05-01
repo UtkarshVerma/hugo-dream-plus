@@ -11,7 +11,7 @@ categories:
 description: "A tutorial on how to install Mongoose OS on ESPer."
 cover: "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/intro-small.jpeg"
 ---
-![Intro](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/intro-small.jpeg)
+![Intro](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/intro-small.jpeg)
 
 Recently I've got my hands on the craved-for IoT **ESP32**, thanks to **[DFRobot](https://www.dfrobot.com)**, and have been tinkering with it ever since. I'm really amazed by it since it packs both **Bluetooth** and **WiFi** in a small yet powerful unit. Since I received the **MCU** rather than the module, so, to use it, I made myself a breakout board named **ESPer**(because, why not? :smile:). Feel free to check out its Instructable over [here](https://www.instructables.com/id/DIY-ESP32-Development-Board-ESPer/).
 
@@ -39,7 +39,7 @@ That's all for the requirements. Once you're sure you've got all the stuff, boos
 ---
 
 # Installing the mos Tool
-![mos ui](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/mos.png)
+![mos ui](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/mos.png)
 The Mongoose OS website provides an easy-to-use tool for **flashing** and **managing** Mongoose OS on devices. This tool also aids in uploading code and in numerous other tasks. 
 
 The installation instructions have been documented on the official website [here](https://mongoose-os.com/software.html).
@@ -53,13 +53,13 @@ sudo apt-get install mos
 ---
 
 # Wiring up ESPer
-![Wiring Diagram](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/wiring.jpg)
+![Wiring Diagram](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/wiring.jpg)
 Once the tool is downloaded, wire up your ESPer with any **USB to TTL Converter** since the flashing is to be done via **UART**. 
 
 To keep things applicable to a larger reader-base, I'll be proceeding with my good `ol **Arduino UNO**. It's possible to use an Arduino as a **USB to TTL Converter** since it has an in-built **CH340G Converter** which the Arduino uses for programming the ATmega IC.
 Now wire up **ESPer** according to the wiring diagram posted above. Once done it should look something like this.
 
-![ESPer Wired Up](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/wiring-real.jpg)
+![ESPer Wired Up](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/wiring-real.jpg)
 
 > Be careful while making the **power connections** because ESP32 MCU is **not 5V tolerable** therefore you might end up burning your MCU if you're not careful.
 
@@ -71,9 +71,9 @@ Once that's done, connect your Arduino to your PC or any other device.
 Now that everything's done, all that's left to do is to flash the firmware onto the ESPer board. To do that:
 
 - Launch the **mos tool**. In my case, that is Linux, it is opened by entering `mos` in the terminal. This will open up the **mos Web UI** in your web browser.
-![Device Configuration](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/device.png)
+![Device Configuration](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/device.png)
 - In the UI, set the **Arduino Serial Port**, device as **esp32** and an app of your choice. Then click on `Flash`.
-![Flashing](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/flash.png)
+![Flashing](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/flash.png)
 - After a few moments, the UI will **attempt to connect** to the device. In this interval, you'll have to get off from your keyboard to the ESPer board. To connect the device to the UI, we'll have to make it enter **Download Mode**. This is done by pressing and holding the **Boot** button, and then the **Reset** button. After a second, release the **Reset** button first and then the **Boot** button. You'll see that the UI will have begun the flashing process by then.
 - Once the message **"All done"** pops up in the console. Close the web browser and terminate the `mos` command by pressing `Ctrl+C` in the terminal.
 
@@ -82,7 +82,7 @@ This concludes the flashing process.
 ---
 
 # Configuring the WiFi Settings
-![WiFi](https://raw.githubusercontent.com/UtkarshVerma/blog/blob/source/static/images/mos/wifi.png)
+![WiFi](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/mos/wifi.png)
 So we have flashed the Mongoose OS firmware in our ESPer board now, but we still haven't configured the **WiFi Settings** which is the most important feature of IoT devices since they have to be connected to the internet. To configure WiFi:
 
 - Press the **Reset** button on the ESPer board. Wait for a minute or so to let the MCU boot up.
