@@ -1,4 +1,4 @@
-baseURL = "https://www.example.com/"
+baseURL = "http://dream-plus.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
