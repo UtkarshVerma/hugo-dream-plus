@@ -78,9 +78,6 @@ hugo new post/example.md		//Post creation
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
 
-### Table of contents (Post view only)
-This theme is capable of indexing out the headings into a clean table of contents for bettering browsing through long posts. It can be enabled/disabled by modifying the `enableToc` config variable accordingly.
-
 ### Image background
 To enable setting images as background, you'll have to disable **random colour background** first by setting `enableColorBG` to false.
 Also, enabling image background feature requires the modification of two variables, namely `bgImage` and `bgList`. If you prefer a single image background, then simply set the value of `bgImage` as the absolute path of your image. For example,
@@ -92,9 +89,6 @@ You can also enable random background feature which switches the background betw
 bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 ```
 You may also add blurring effect to the background image using `bgBlur`.
-
-###  Share card (Post view only)
-This card appears below your posts to allow sharing of your post on **Facebook** and **Twitter**. Enable/disable it through the `enableShareCard` variable by setting appropriate boolean values.
 
 ### Device detection
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
