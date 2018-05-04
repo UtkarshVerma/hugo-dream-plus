@@ -23,7 +23,7 @@ Clearly, the error suggests that **Django v2.0.1** was being downloaded which **
 
 ![setup.py fix](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/netjsonconfig/my-fix.png)
 
-If you're curious about my fix,  this is the [link](https://raw.githubusercontent.com/UtkarshVerma/django-netjsonconfig/commit/1575acbbc719e539cd8ecbffc761d8b9c2023d56).
+If you're curious about my fix,  this is the [link](https://github.com/UtkarshVerma/django-netjsonconfig/commit/1575acbbc719e539cd8ecbffc761d8b9c2023d56).
 
 Here, what's being done is basically:
 
@@ -59,4 +59,4 @@ I could also now visit the server at [http://localhost:8000/admin](http://localh
 ![Logged In](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/netjsonconfig/logged-in.png)
 
 # Conclusion
-So, that's how I installed the **django-netjsonconfig** module. Also, I've commited my fixes to my **forked repo** [here](https://raw.githubusercontent.com/UtkarshVerma/django-netjsonconfig). Here's the [link to my pull request](https://github.com/openwisp/django-netjsonconfig/pull/71). That concludes this post.
+So, that's how I installed the **django-netjsonconfig** module. Also, I've commited my fixes to my **forked repo** [here](https://github.com/UtkarshVerma/django-netjsonconfig). Here's the [link to my pull request](https://github.com/openwisp/django-netjsonconfig/pull/71). That concludes this post.

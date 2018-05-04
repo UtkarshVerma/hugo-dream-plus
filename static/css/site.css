@@ -624,10 +624,6 @@ p > img:not(.emoji), li > img {
   color: white;
 }
 
-#sidebar {
-  min-height: 100vh;
-}
-
 #author .sub.header {
   color: #fff;
 }
