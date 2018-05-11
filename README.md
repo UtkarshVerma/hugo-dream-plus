@@ -110,6 +110,7 @@ There are some other minor configurations as well. You may set them up by referr
 
 ## Documentation
 The documentation for this repository is currently under work and is added to this repository's [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
+Wiki contributions are most welcome. Feel free to ask me about this theme's features for that.
 
 ## Nearly Finished
 After finishing the configurations, you're good to go. So, test your website using:
