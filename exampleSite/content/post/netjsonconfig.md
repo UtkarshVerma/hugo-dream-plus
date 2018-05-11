@@ -14,12 +14,12 @@ draft: false
 A task came up in Google Code-in which asked me to install the [django-netjsonconfig](https://github.com/openwisp/django-netjsonconfig) module by [OpenWISP](https://www.openwisp.org). Furthermore, I'm also supposed to share the challenges I faced during the set-up process as a sort of feedback. I'll be trying be concise in this post so, without further ado, I'm beginning with this post.
 
 # Installing "django-netjsonconfig"
-The installation instructions for this this module have been well-documented on its [GitHub repository](https://github.com/openwisp/django-netjsonconfig#installing-for-development). So I began the installation by creating a **Python 2.7 Virtual Environment** using `python2 -m virtualenv py2` for the sake of cleanliness on my local machine. I chose `python2` for since for this since I was also on the lookout for bugs in the module and most of the bugs seem to be related with it since it's a bit outdated now.  
+The installation instructions for this this module have been well-documented on its [GitHub repository](https://github.com/openwisp/django-netjsonconfig#installing-for-development). So I began the installation by creating a **Python 2.7 Virtual Environment** using `python2 -m virtualenv py2` for the sake of cleanliness on my local machine. I chose `python2` for since for this since I was also on the lookout for bugs in the module and most of the bugs seem to be related with it since it's a bit outdated now.
 I then activated the `virtualenv` and started entering the installation commands according to the instructions in the repository. Everything went on smoothly until the `python setup.py develop` command. I got an error as shown in the below picture.
 
 ![develop failed](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/netjsonconfig/django2.png)
 
-Clearly, the error suggests that **Django v2.0.1** was being downloaded which **isn't supported** by **Python 2.7**. A bit of browsing led me to the conclusion that the `setup.py` needed to be modified to download **older Django versions** for Python 2.7. So, I added a simple `if-else` block to the django installation statement as shown in the picture.  
+Clearly, the error suggests that **Django v2.0.1** was being downloaded which **isn't supported** by **Python 2.7**. A bit of browsing led me to the conclusion that the `setup.py` needed to be modified to download **older Django versions** for Python 2.7. So, I added a simple `if-else` block to the django installation statement as shown in the picture.
 
 ![setup.py fix](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/netjsonconfig/my-fix.png)
 
