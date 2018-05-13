@@ -1,0 +1,26 @@
+{{ if .Site.Params.copyright }}
+	{{ if eq (index .Site.Params.copyright 0) "BY" }}
+	<a class="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Attribution" src="https://licensebuttons.net/l/by/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+	{{ if eq (index .Site.Params.copyright 0) "BY-SA" }}
+	<a class="license" href="https://creativecommons.org/licenses/by-sa/4.0"><img alt="Attribution Share-Alike" src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+	{{ if eq (index .Site.Params.copyright 0) "BY-ND" }}
+	<a class="license" href="https://creativecommons.org/licenses/by-nd/4.0/"><img alt="Attribution No-Derivs" src="https://licensebuttons.net/l/by-nd/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+		{{ if eq (index .Site.Params.copyright 0) "BY-NC" }}
+	<a class="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Attribution Non-Commercial" src="https://licensebuttons.net/l/by-nc/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+	{{ if eq (index .Site.Params.copyright 0) "BY-NC-SA" }}
+	<a class="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Attribution Non-Commercial-Share-Alike" src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+	{{ if eq (index .Site.Params.copyright 0) "BY-NC-ND" }}
+	<a class="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Attribution Non-Commercial-No-Derivs" src="https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png"></img></a>
+	<p>{{ index .Site.Params.copyright 1 }}</p>
+	{{ end }}
+{{ end }}
