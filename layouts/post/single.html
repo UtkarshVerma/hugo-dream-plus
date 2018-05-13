@@ -45,6 +45,9 @@
 		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 			{{- partial "share.html" . -}}
 		</section>
+		<section class="ui secondary attached segment copyright">
+			{{ partial "copyright.html" . }}
+		</section>
 		{{ end }}
 		{{- if .Site.DisqusShortname -}}
 		<div class="ui secondary bottom attached stacked segment disqus">

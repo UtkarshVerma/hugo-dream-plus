@@ -76,6 +76,7 @@
   .pusher::-webkit-scrollbar {
     width: 5px !important;
   }
+
   .top.bar .item {
     margin: 0;
     padding-right: 0;
