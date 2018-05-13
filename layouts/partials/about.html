@@ -2,6 +2,8 @@
 	<article class="twemoji">
 		{{- readFile "/content/about.md" | markdownify | emojify -}}
 	</article>
+	{{- if .Site.Params.copyright -}}
 	<br><hr>
 	{{ partial "copyright.html" . }}
+	{{- end }}
 </div>
