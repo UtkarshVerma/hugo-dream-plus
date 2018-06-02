@@ -1,0 +1,51 @@
+
+[blogAlias]
+other = "El blog de "
+
+[aboutHeader]
+other = "Sobre mi"
+
+[home]
+other = "Inicio"
+
+[prevPage]
+other = "Página anterior"
+
+[nextPage]
+other = "Página siguiente"
+
+[flip]
+other = "Sobre mi"
+
+[clickToPopTagsAndCategories]
+other = "Haz click para poner tags y categorías"
+
+[updateAt]
+other = "Actualizado por última vez"
+
+[returnHome]
+other = "Volver a la página inicial"
+
+[noTag]
+other = "No hay tag"
+
+[archives]
+other = "Archivo"
+
+[tag]
+one = "Tag"
+other = "{{ .Count }} tags"
+
+[category]
+one = "Categoría"
+other = "{{ .Count }} categorías"
+
+[allTags]
+other = "Todos los Tags"
+
+[allCategories]
+other = "Todas las categorías"
+
+[article]
+one = "1 artículo"
+other = "{{ .Count }} artículo"
