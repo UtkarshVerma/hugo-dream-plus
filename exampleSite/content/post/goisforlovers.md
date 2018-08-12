@@ -265,7 +265,7 @@ of some pages to turn off the TOC from being displayed.
 
 Here is the example front matter:
 
-```
+```yaml
 ---
 title: "Permalinks"
 date: "2013-11-18"
@@ -306,7 +306,7 @@ you would declare it to be HTML-safe, so that the HTML entity is not escaped
 again.  This would let you easily update just your top-level config file each
 January 1st, instead of hunting through your templates.
 
-```
+```html
 {{if .Site.Params.CopyrightHTML}}<footer>
 <div class="text-center">{{.Site.Params.CopyrightHTML | safeHtml}}</div>
 </footer>{{end}}
@@ -316,7 +316,7 @@ An alternative way of writing the "if" and then referencing the same value
 is to use "with" instead. With rebinds the context `.` within its scope,
 and skips the block if the variable is absent:
 
-```
+```go
 {{with .Site.Params.TwitterUser}}<span class="twitter">
 <a href="https://twitter.com/{{.}}" rel="author">
 <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}"
@@ -327,7 +327,7 @@ and skips the block if the variable is absent:
 Finally, if you want to pull "magic constants" out of your layouts, you can do
 so, such as in this example:
 
-```
+```html
 <nav class="recent">
   <h1>Recent Posts</h1>
   <ul>{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
