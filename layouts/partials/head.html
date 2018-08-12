@@ -4,7 +4,7 @@
 {{- if eq .Type .Site.Params.contentType -}}
 	<!-- Page Author & Description -->
 	<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
-	<meta name="description" content="{{- .Summary | plainify -}}" />
+	<meta name="description" content="{{- if isset .Params "description" -}}{{- .Params.description -}}{{- else -}}{{- .Summary | plainify -}}{{- end -}}" />
 {{- else -}}
 	<!-- Site Author & Description -->
 	<meta name="author" content="{{- .Site.Params.author -}}" />
