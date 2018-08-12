@@ -27,9 +27,7 @@ enableEmoji=true
 	favicon = "/img/defaultFav.ico"
   	
   	#Background settings
-	enableColorBG= false
-	bgBlur = "0px"
-	bgImage = "http://bit.ly/2gPLxZ4"
+	enableColorBG= true
   
 	#Post-displaying Settings
 	enableTags = true
