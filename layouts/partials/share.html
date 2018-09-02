@@ -3,10 +3,13 @@
 {{ else }}
 	{{- $.Page.Scratch.Set "authorName" $.Site.Params.author -}}
 {{ end }}
+{{- if and ($.Site.Params.avatar) (eq ($.Site.Params.author) ($.Page.Scratch.Get "authorName")) -}}
+	{{- $.Page.Scratch.Set "flag" true -}}
+{{ end }}
 {{- with ($.Param "author.avatar") -}}
 	{{- $.Page.Scratch.Set "authorAvatar" ($.Param "author.avatar") -}}
 {{ else }}
-	{{- with .Site.Params.avatar -}}
+	{{- if $.Page.Scratch.Get "flag" -}}
 		{{- $.Page.Scratch.Set "authorAvatar" ($.Site.Params.avatar) -}}
 	{{ else }}
 		{{- $.Page.Scratch.Set "avatarFlag" true -}}
@@ -21,18 +24,12 @@
 {{- with ($.Param "author.twitter") -}}
 	{{- $.Page.Scratch.Set "twitter" ($.Param "author.twitter") }}
 {{ else }}
-	{{- with .Site.Social.twitter -}}
+	{{- if and $.Site.Social.twitter ($.Page.Scratch.Get "flag") -}}
 		{{- $.Page.Scratch.Set "twitter" $.Site.Social.twitter -}}
 	{{ end }}	
 {{ end }}
-{{- with ($.Param "author.facebook") -}}
-	{{- $.Page.Scratch.Set "facebook" ($.Param "author.facebook") }}
-{{ else }}
-	{{- with .Site.Social.facebook -}}
-		{{- $.Page.Scratch.Set "facebook" $.Site.Social.facebook -}}
-	{{ end }}
-{{ end }}<div class="author">
-	{{- with $.Page.Scratch.Get "avatarFlag" -}}
+<div class="author">
+	{{- if $.Page.Scratch.Get "avatarFlag" -}}
 	<img class="avatar" src="/img/avatar{{ $.Page.Scratch.Get `authorAvatar` }}.svg">
 	{{ else }}
 	<img class="avatar" src="{{ $.Page.Scratch.Get `authorAvatar` }}">
