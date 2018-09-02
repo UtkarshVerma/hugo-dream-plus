@@ -1,5 +1,9 @@
 ---
 title: "Migrating from Jekyll"
+description: "A tutorial on migrating from Jekyll to Hugo."
+author:
+  name: "Anonymous"
+  desc: " "
 date: 2014-03-10
 draft: false
 tags: 

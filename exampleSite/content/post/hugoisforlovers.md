@@ -1,5 +1,9 @@
 ---
 title: "Getting Started with Hugo"
+description: "A quick read on how to get started with Hugo."
+author:
+  name: "Anonymous"
+  desc: " "
 date: 2018-01-28T18:59:43+05:30
 draft: false
 tags:
