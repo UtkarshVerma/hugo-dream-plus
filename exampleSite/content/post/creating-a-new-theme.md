@@ -1,13 +1,13 @@
 ---
 title: "Creating a New Theme"
-author: "Michael Henderson"
+author:
+  name: "Michael Henderson"
 date: 2014-09-28
 draft: false
 categories:
 - tutorials
-description: "Tutorial on creating a Hugo theme."
+description: "Tutorial on how to create a Hugo theme."
 ---
-
 
 # Introduction
 

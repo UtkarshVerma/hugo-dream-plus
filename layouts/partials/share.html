@@ -1,20 +1,52 @@
-<div class="author">
-	{{- if .Site.Params.avatar -}}
-	<img class="avatar" src="{{ .Site.Params.avatar }}">
+{{- with ($.Param "author.name") -}}
+	{{- $.Page.Scratch.Set "authorName" ($.Param "author.name") }}
+{{ else }}
+	{{- $.Page.Scratch.Set "authorName" $.Site.Params.author -}}
+{{ end }}
+{{- with ($.Param "author.avatar") -}}
+	{{- $.Page.Scratch.Set "authorAvatar" ($.Param "author.avatar") -}}
+{{ else }}
+	{{- with .Site.Params.avatar -}}
+		{{- $.Page.Scratch.Set "authorAvatar" ($.Site.Params.avatar) -}}
 	{{ else }}
-	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
-	<img class="avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
+		{{- $.Page.Scratch.Set "avatarFlag" true -}}
+		{{- $.Page.Scratch.Set "authorAvatar" (index (shuffle (seq 1 4)) 0 ) -}}
+	{{ end }}
+{{ end }}
+{{- with ($.Param "author.desc") -}}
+	{{- $.Page.Scratch.Set "authorDesc" ($.Param "author.desc") }}
+{{ else }}
+	{{- $.Page.Scratch.Set "authorDesc" $.Site.Params.motto -}}
+{{ end }}
+{{- with ($.Param "author.twitter") -}}
+	{{- $.Page.Scratch.Set "twitter" ($.Param "author.twitter") }}
+{{ else }}
+	{{- with .Site.Social.twitter -}}
+		{{- $.Page.Scratch.Set "twitter" $.Site.Social.twitter -}}
+	{{ end }}	
+{{ end }}
+{{- with ($.Param "author.facebook") -}}
+	{{- $.Page.Scratch.Set "facebook" ($.Param "author.facebook") }}
+{{ else }}
+	{{- with .Site.Social.facebook -}}
+		{{- $.Page.Scratch.Set "facebook" $.Site.Social.facebook -}}
+	{{ end }}
+{{ end }}<div class="author">
+	{{- with $.Page.Scratch.Get "avatarFlag" -}}
+	<img class="avatar" src="/img/avatar{{ $.Page.Scratch.Get `authorAvatar` }}.svg">
+	{{ else }}
+	<img class="avatar" src="{{ $.Page.Scratch.Get `authorAvatar` }}">
 	{{ end }}
 </div>
 <div class="info grow flexbox"> 
-	{{- if .Site.Social.twitter -}}
-	<a href="https://twitter.com/{{ .Site.Social.twitter }}">
+	{{- with $.Page.Scratch.Get "twitter" -}}
+	<a href="https://twitter.com/{{ $.Page.Scratch.Get `twitter` }}">
 	{{ end }}
-	<p class="name">{{ .Site.Params.author }}</p>
-	{{- if .Site.Social.twitter -}}
+	<p class="name">{{ $.Page.Scratch.Get "authorName" }}</p>
+	{{- with $.Page.Scratch.Get "twitter" -}}
 	</a>
 	{{ end }}
-	<p class="desc">{{ .Site.Params.motto }}</p>		
+	<p class="desc">{{ $.Page.Scratch.Get "authorDesc" }}</p>		
 </div>
 <section class="buttons row box">
 	<div class="facebook none flexbox" href="#" onclick="window.open(
