@@ -7,6 +7,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * twemoji rendering
 * Table of contents for posts
 * Random image background
+* Multiple author support
 * Disqus
 * Sidebar
 * Share card below posts
