@@ -1,5 +1,9 @@
 ---
 title: "(Hu)go Template Primer"
+description: "An introduction to Hugo, a static site generator."
+author:
+  name: "Anonymous"
+  desc: " "
 date: 2014-04-02
 draft: false
 tags:
