@@ -23,12 +23,10 @@
 					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
 			</div>
 			<hr>
-			{{- if $.Site.Params.enableToc -}}
-			{{- if .TableOfContents -}}
+			{{- if $.Site.Params.enableToc and .TableOfContents -}}
 			<div class="toc">
 				{{- .TableOfContents -}}
 			</div>
-			{{ end }}
 			{{ end }}
 			<article class="post-content twemoji">
 				{{ partial "anchor.html" .Content }}
