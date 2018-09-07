@@ -1,5 +1,5 @@
 <div class="ui small circular image">
-	{{- if .Site.Params.avatar }}
+	{{- if $.Site.Params.avatar }}
 		<img src="{{ .Site.Params.avatar }}">
 	{{- else -}}
 		{{- $avatar := (index (shuffle (seq 1 4)) 0 ) -}}
@@ -7,6 +7,6 @@
 	{{- end }}
 </div>
 <h3 class="ui header">
-	{{- .Site.Params.author }}
-	<div class="sub header">{{ .Site.Params.motto }}</div>
+	{{- $.Site.Params.author }}
+	<div class="sub header">{{ $.Site.Params.motto }}</div>
 </h3>

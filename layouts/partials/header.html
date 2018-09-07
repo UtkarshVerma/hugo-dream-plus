@@ -11,21 +11,17 @@
 			{{- end -}}
 		</div>
 		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
-			{{- if $.Site.Params.enableTags -}}
-				{{- if $.Site.Taxonomies.tags -}}
-					<section class="ui attached center aligned inverted segment dream-tags none flexbox">
-						{{- partial "tags.html" . -}}
-					</section>
-				{{- end -}}
+			{{- if and $.Site.Params.enableTags $.Site.Taxonomies.tags -}}
+				<section class="ui attached center aligned inverted segment dream-tags none flexbox">
+					{{- partial "tags.html" . -}}
+				</section>
 			{{- end -}}
-			{{- if $.Site.Params.enableCategories -}}
-				{{- if $.Site.Taxonomies.categories -}}
-					<section class="ui attached inverted segment dream-categories both flexbox">
-						<div class="inverted accordion">
-							{{- partial "categories.html" . -}}
-						</div>
-					</section>
-				{{- end -}}
+			{{- if and $.Site.Params.enableCategories $.Site.Taxonomies.categories -}}
+				<section class="ui attached inverted segment dream-categories both flexbox">
+					<div class="inverted accordion">
+						{{- partial "categories.html" . -}}
+					</div>
+				</section>
 			{{- end -}}
 		</div>
 		<footer class="ui bottom attached center aligned inverted segment">
