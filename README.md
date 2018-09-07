@@ -19,6 +19,8 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
 
+This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.MD). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
+
 #### [Live Demo](http://dream-plus.netlify.com)
 
 This theme can be used for two purposes:
@@ -65,16 +67,16 @@ After that, fill up the social variables at the end of the config file. This the
 ### Toggling the views
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable as follows:
 ```toml
-contentType = "cards"    # Enables the card view.   
-contentType = "post"     # Enables the post view.
+contentType = "cards"    #Enables the card view.   
+contentType = "post"     #Enables the post view.
 ```
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
 You may test them out yourselves by visiting my sites(stated above) which use them.
 Also, post/card creation is done differently for both the views. It is as follows:
 ```shell
-hugo new cards/example.md		//Card creation
-hugo new post/example.md		//Post creation
+hugo new cards/example.md		#Card creation
+hugo new post/example.md		#Post creation
 ```
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
@@ -122,6 +124,7 @@ Your site should now be locally available at [http://localhost:1313](http://loca
 
 ## Contributing
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
+For more detailed instructions on how to contribute, refer to [**Contributing.md**](/CONTRIBUTING.MD)
 
 ## License 
 This theme is released under the [**MIT**](/LICENSE) license.
