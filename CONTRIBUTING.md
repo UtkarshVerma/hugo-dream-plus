@@ -69,7 +69,7 @@ Explain the problem and include additional details to help maintainers reproduce
 * **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 * **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
 * **Explain which behavior you expected to see instead and why.**
-* **Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem. If you use the keyboard while following the steps, **record the GIF with the [Keybinding Resolver](https://github.com/atom/keybinding-resolver) shown**. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux.
+* **Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem.
 * **If the problem wasn't triggered by a specific action**, describe what you were doing before the problem happened and share more information using the guidelines below.
 
 Provide more context by answering these questions:
@@ -189,12 +189,12 @@ Please open an issue if you have suggestions for new labels, and if you notice s
 | [`bug`][label-bug] | Confirmed bugs or reports that are very likely to be bugs. |
 | [`question`][label-question] | Questions more than bug reports or feature requests (e.g. how do I do X). |
 | [`feedback`][label-feedback] | General feedback more than bug reports or feature requests. |
-| [`help-wanted`][label-help-wanted] | The Atom core team would appreciate help from the community in resolving these issues. |
-| [`beginner`][label-beginner] | Less complex issues which would be good first issues to work on for users who want to contribute to Atom. |
+| [`help-wanted`][label-help-wanted] | Help from the community in resolving these issues is appreciated. |
+| [`beginner`][label-beginner] | Less complex issues which would be good first issues to work on for users who want to contribute to Dream Plus. |
 | [`more-information-needed`][label-more-information-needed] | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce). |
 | [`needs-reproduction`][label-needs-reproduction] | Likely bugs, but haven't been reliably reproduced. |
 | [`duplicate`][label-duplicate] | Issues which are duplicates of other issues, i.e. they have been reported before. |
-| [`wontfix`][label-wontfix] | The Atom core team has decided not to fix these issues for now, either because they're working as intended or for some other reason. |
+| [`wontfix`][label-wontfix] | Issues which won't be worked on for now. |
 | [`invalid`][label-invalid] | Issues which aren't valid (e.g. user errors). |
 
 #### Pull Request Labels
@@ -224,8 +224,8 @@ Please open an issue if you have suggestions for new labels, and if you notice s
 [beginner]:https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+sort%3Acomments-desc
 [help-wanted]:https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+-label%3Abeginner
 
-[label-work-in-progress]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+label%3Awork-in-progress
-[label-needs-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+label%3Aneeds-review
-[label-under-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+label%3Aunder-review
-[label-requires-changes]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+label%3Arequires-changes
-[label-needs-testing]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+repo%3Aatom%2Fatom+label%3Aneeds-testing
+[label-work-in-progress]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Awork-in-progress
+[label-needs-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-review
+[label-under-review]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aunder-review
+[label-requires-changes]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Arequires-changes
+[label-needs-testing]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Apr+label%3Aneeds-testing
