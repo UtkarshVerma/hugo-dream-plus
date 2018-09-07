@@ -19,14 +19,14 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
 
-This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
-
 #### [Live Demo](http://dream-plus.netlify.com)
 
 This theme can be used for two purposes:
 
 1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to card view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
 2. If you're simply making a blog or another website with a bunch of posts, then switch to the post view for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
+
+This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
 ## Installation
 The theme can be installed by running the following commands inside your **Hugo website** folder.
