@@ -1,5 +1,5 @@
-<article class="blog-card none flexbox" style="background-image: url({{ .Site.BaseURL }}{{ if .Params.cover }}{{ .Params.cover }}{{ else }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }});">
-<img class="image" src="{{ .Site.BaseURL }}{{ if .Params.cover }}{{ .Params.cover }}{{ else }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
+<article class="blog-card none flexbox" style="background-image: url({{ $.Site.BaseURL }}{{ if .Params.cover }}{{ .Params.cover }}{{ else }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }});">
+<img class="image" src="{{ $.Site.BaseURL }}{{ if .Params.cover }}{{ .Params.cover }}{{ else }}img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
 <div class="card title-content twemoji">
 	<h3><a class="title" href={{ .Params.link }} target="_blank">{{ .Title }}</a></h3>
 	<div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>

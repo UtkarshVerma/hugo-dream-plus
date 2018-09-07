@@ -4,28 +4,28 @@
 			{{- partial "author.html" . -}}
 		</header>
 		<div class="{{ if not .IsPage }}active{{ end }} title header-title">
-			{{- if or (.Site.Params.enableCategories) (.Site.Params.enableTags) -}}
+			{{- if or $.Site.Params.enableCategories $.Site.Params.enableTags -}}
 			<div id="tag-category-pop" class="ui red right corner label">		
 				<i class="hand point icon {{ if not .IsPage }}up{{ else }}down{{ end }}"title="{{- i18n "clickToPopTagsAndCategories" -}}"></i>		
 			</div>
 			{{- end -}}
 		</div>
 		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
-			{{- if .Site.Params.enableTags -}}
-			{{- if .Site.Taxonomies.tags -}}
-			<section class="ui attached center aligned inverted segment dream-tags none flexbox">
-				{{- partial "tags.html" . -}}
-			</section>
+			{{- if $.Site.Params.enableTags -}}
+				{{- if $.Site.Taxonomies.tags -}}
+					<section class="ui attached center aligned inverted segment dream-tags none flexbox">
+						{{- partial "tags.html" . -}}
+					</section>
+				{{- end -}}
 			{{- end -}}
-			{{- end -}}
-			{{- if .Site.Params.enableCategories -}}
-			{{- if .Site.Taxonomies.categories -}}
-			<section class="ui attached inverted segment dream-categories both flexbox">
-			<div class="inverted accordion">
-				{{- partial "categories.html" . -}}
-			</div>
-			</section>
-			{{- end -}}
+			{{- if $.Site.Params.enableCategories -}}
+				{{- if $.Site.Taxonomies.categories -}}
+					<section class="ui attached inverted segment dream-categories both flexbox">
+						<div class="inverted accordion">
+							{{- partial "categories.html" . -}}
+						</div>
+					</section>
+				{{- end -}}
 			{{- end -}}
 		</div>
 		<footer class="ui bottom attached center aligned inverted segment">

@@ -2,21 +2,17 @@
 	<section id="author" class="ui top attached center aligned inverted segment">
 		{{- partial "author.html" . -}}
 	</section>
-	{{- if .Site.Params.enableTags -}}
-	{{- if .Site.Taxonomies.tags -}}
+	{{- if and $.Site.Params.enableTags $.Site.Taxonomies.tags -}}
 	<section class="ui attached center aligned inverted segment sidebar-dream-tags">		
 		{{- partial "tags.html" . -}}
-	</section>	
+	</section>
 	{{ end }}
-	{{ end }}
-	{{- if .Site.Params.enableCategories -}}
-	{{- if .Site.Taxonomies.categories -}}
+	{{- if and $.Site.Params.enableCategories $.Site.Taxonomies.categories -}}
 	<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
 		<div class="ui inverted accordion">
 			{{- partial "categories.html" . -}}
 		</div>
 	</section>
-	{{ end }}
 	{{ end }}
 	<section id="footer" class="ui bottom attached center aligned inverted segment">
 		{{- partial "footer.html" . -}}
