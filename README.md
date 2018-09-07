@@ -19,7 +19,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
 
-This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.MD). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
+This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
 #### [Live Demo](http://dream-plus.netlify.com)
 
@@ -124,7 +124,7 @@ Your site should now be locally available at [http://localhost:1313](http://loca
 
 ## Contributing
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
-For more detailed instructions on how to contribute, refer to [**Contributing.md**](/CONTRIBUTING.MD)
+For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
 ## License 
 This theme is released under the [**MIT**](/LICENSE) license.
