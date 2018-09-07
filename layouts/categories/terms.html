@@ -10,14 +10,14 @@
 	<div class="item">
 		<a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
 	</div>
-	{{ if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 }}
+	{{ if gt (len (where $.Site.RegularPages "Section" "==" $.Site.Params.contentType)) 0 }}
 	<div class="item">
-		<a href="/{{ .Site.Params.contentType }}">
+		<a href="/{{ $.Site.Params.contentType }}">
 			<i id="ico" class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
 		</a>
 	</div>
   {{ end }}
-	{{ if .Site.Params.enableTags }}
+	{{ if $.Site.Params.enableTags }}
 	<div class="item">
 		<a href="/tags">
 			<i id="ico" class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>

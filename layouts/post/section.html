@@ -11,7 +11,7 @@
 		<a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
 	</div>
 
-	{{ if .Site.Params.enableTags }}
+	{{ if $.Site.Params.enableTags }}
 	<div class="item">
 		<a href="/tags">
 			<i id="ico" class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
@@ -19,7 +19,7 @@
 	</div>
 	{{ end }}
 
-	{{ if .Site.Params.enableCategories }}
+	{{ if $.Site.Params.enableCategories }}
 	<div class="item">
 		<a href="/categories">
 			<i id="ico" class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
