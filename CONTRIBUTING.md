@@ -202,8 +202,8 @@ Please open an issue on `atom/atom` if you have suggestions for new labels, and 
 | Label name | Description
 | --- | --- |
 | [`work-in-progress`][label-work-in-progress] | Pull requests which are still being worked on, more changes will follow. |
-| [`needs-review`][label-needs-review] | Pull requests which need code review, and approval from maintainers or Atom core team. |
-| [`under-review`][label-under-review] | Pull requests being reviewed by maintainers or Atom core team. |
+| [`needs-review`][label-needs-review] | Pull requests which need code review. |
+| [`under-review`][label-under-review] | Pull requests being reviewed. |
 | [`requires-changes`][label-requires-changes] | Pull requests which need to be updated based on review comments and then reviewed again. |
 | [`needs-testing`][label-needs-testing] | Pull requests which need manual testing. |
 
