@@ -202,10 +202,10 @@ Please open an issue on `atom/atom` if you have suggestions for new labels, and 
 | Label name | Description
 | --- | --- |
 | [`work-in-progress`][label-work-in-progress] | Pull requests which are still being worked on, more changes will follow. |
-| [`needs-review`][label-needs-review] | [search][search-atom-org-label-needs-review] | Pull requests which need code review, and approval from maintainers or Atom core team. |
-| [`under-review`][label-under-review] | [search][search-atom-org-label-under-review] | Pull requests being reviewed by maintainers or Atom core team. |
-| [`requires-changes`][label-requires-changes] | [search][search-atom-org-label-requires-changes] | Pull requests which need to be updated based on review comments and then reviewed again. |
-| [`needs-testing`][label-needs-testing] | [search][search-atom-org-label-needs-testing] | Pull requests which need manual testing. |
+| [`needs-review`][label-needs-review] | Pull requests which need code review, and approval from maintainers or Atom core team. |
+| [`under-review`][label-under-review] | Pull requests being reviewed by maintainers or Atom core team. |
+| [`requires-changes`][label-requires-changes] | Pull requests which need to be updated based on review comments and then reviewed again. |
+| [`needs-testing`][label-needs-testing] | Pull requests which need manual testing. |
 
 [label-enhancement]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement
 [label-bug]: https://github.com/UtkarshVerma/hugo-dream-plus/issues?q=is%3Aopen+is%3Aissue+label%3Abug
