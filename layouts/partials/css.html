@@ -10,8 +10,8 @@ body.pushable {
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/css/site.css">
-{{- if and (fileExists "static/css/highlight.css") .IsPage -}}
-	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+{{- if and (or (fileExists "static/css/highlight.css") (ne $.Site.Params.highlight nil)) .IsPage -}}
+	<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.highlight | default `/css/highlight.css` }}">
 {{- end -}}
 {{- range $type, $val:= $.Site.Params.customCSS -}}
 {{- if and ((gt (len $val) 0) (index $val "")) -}}
