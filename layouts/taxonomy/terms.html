@@ -17,7 +17,7 @@
 		</a>
 	</div>
 	{{ end }}
-	{{ if $.Site.Params.enableCategories }}
+	{{ with $.Site.Params.enableCategories }}
 	<div class="item">
 		<a href="/categories">
 			<i id="ico" class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>

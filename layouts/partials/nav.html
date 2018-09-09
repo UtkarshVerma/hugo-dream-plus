@@ -16,14 +16,14 @@
 			</a>
 		</div>
 	{{ end }}
-	{{- if $.Site.Params.enableTags -}}
+	{{- with $.Site.Params.enableTags -}}
 		<div class="item">
 			<a href="/tags">
 				<i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
 			</a>
 		</div>
 	{{ end }}
-	{{- if $.Site.Params.enableCategories -}}
+	{{- with $.Site.Params.enableCategories -}}
 		<div class="item">
 			<a href="/categories">
 				<i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
@@ -58,8 +58,6 @@
 			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
 		</div>
 	</div>
-	{{ end }}
-	{{- if .IsPage -}}
 	<div class="item right">
 		<a href="/posts/index.xml">
 			<i class="inverted big link rss icon" title="RSS Feed"></i>

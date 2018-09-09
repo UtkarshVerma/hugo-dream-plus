@@ -12,7 +12,7 @@ Page Not Found
 		<section class="ui stacked segments">
 			<div class="ui inverted segment">
 				<article class="twemoji">
-					{{ if (fileExists "/content/404.md" ) }}
+					{{ if fileExists "/content/404.md" }}
 						{{ readFile "/content/404.md" | markdownify | emojify }}
 					{{ else }}
 						<h1>Error 404: Page Not Found</h1><hr>
