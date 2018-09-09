@@ -9,7 +9,11 @@
 	</div>
 	<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 		<div class="cards row box">
-			{{ partial "pagination.html" . }}
+			{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
+			{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
+			{{ range $paginator.Pages }}
+				{{ .Render "summary" }}
+			{{ end }}
 		</div>
 	</div>
 </div>

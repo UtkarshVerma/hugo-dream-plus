@@ -10,7 +10,6 @@
 	<div class="item">
 		<a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
 	</div>
-
 	{{ if gt (len (where .Site.RegularPages "Section" "==" $.Site.Params.contentType)) 0 }}
 	<div class="item">
 		<a href="/{{ $.Site.Params.contentType }}">
@@ -18,7 +17,6 @@
 		</a>
 	</div>
 	{{ end }}
-
 	{{ if $.Site.Params.enableCategories }}
 	<div class="item">
 		<a href="/categories">
@@ -26,7 +24,6 @@
 		</a>
 	</div>
 	{{ end }}
-
 </nav>
 {{ end }}
 
