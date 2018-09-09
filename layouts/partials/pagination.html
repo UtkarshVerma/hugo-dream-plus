@@ -1,8 +1,5 @@
-{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
-	{{ range $paginator.Pages }}
-	{{- if eq $.Site.Params.contentType "posts" -}}
-		{{ .Render "summary" }}
-	{{ else }}
-		{{ .Render "card" }}
-	{{ end }}
+{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
+{{ range $paginator.Pages }}
+	{{ .Render "summary" }}
 {{ end }}
