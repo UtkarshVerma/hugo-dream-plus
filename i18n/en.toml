@@ -7,6 +7,12 @@ other = "About"
 [home]
 other = "Home"
 
+[showSidebar]
+other = "Show Sidebar"
+
+[rssFeed]
+other = "RSS Feed"
+
 [prevPage]
 other = "Previous page"
 
@@ -23,7 +29,7 @@ other = "Click this to pop tags and categories"
 other = "Last updated on"
 
 [returnHome]
-other = "Return to Home Page"
+other = "Return to Homepage"
 
 [noTag]
 other = "No Tag"
