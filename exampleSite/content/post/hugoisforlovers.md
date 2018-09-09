@@ -16,7 +16,6 @@ categories:
 - golang
 ---
 
-
 # Step 1. Install Hugo
 
 Goto [hugo releases](https://github.com/spf13/hugo/releases) and download the

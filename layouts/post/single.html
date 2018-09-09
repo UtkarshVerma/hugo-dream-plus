@@ -4,10 +4,10 @@
 
 {{ define "frontmenu" }}
 {{ partial "nav.html" . }}
-{{ end }} 
+{{ end }}
 {{ define "main" }}
 <div class="ui centered grid">
-	<div class="sixteen wide mobile only column">	
+	<div class="sixteen wide mobile only column">
 			{{- partial "header.html" . -}}
 	</div>
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
@@ -34,7 +34,7 @@
 		</section>
 		<section class="ui secondary attached segment dream-tags">
 			{{- if isset .Params "tags" -}}
-				{{- partial "tags.html" . -}}				
+				{{- partial "tags.html" . -}}
 			{{ else }}
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}

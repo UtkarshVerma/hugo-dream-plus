@@ -1,28 +1,28 @@
 <nav class="ui top secondary menu bar">
 	<div class="item">
 		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
-	</div>	
+	</div>
 	{{- if not .IsHome -}}
 		<div class="item">
 			<a href="/">
 				<i class="inverted big link home icon" title="Home"></i>
 			</a>
 		</div>
-	{{ end }}	
+	{{ end }}
 	{{- if gt (len (where $.Site.RegularPages "Section" "==" $.Site.Params.contentType)) 0 -}}
 		<div class="item">
 			<a href="/{{ $.Site.Params.contentType }}">
 				<i class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
 			</a>
 		</div>
-	{{ end }}	
+	{{ end }}
 	{{- if $.Site.Params.enableTags -}}
 		<div class="item">
 			<a href="/tags">
 				<i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
 			</a>
 		</div>
-	{{ end }}	
+	{{ end }}
 	{{- if $.Site.Params.enableCategories -}}
 		<div class="item">
 			<a href="/categories">
@@ -46,11 +46,11 @@
 			<a href="{{ $paginator.Next.URL }}">
 				<i class="inverted big link chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 			</a>
-		{{ else }}	
+		{{ else }}
 			<i class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 		{{ end }}
 		</div>
-	{{ end }}	
+	{{ end }}
 	{{- if .IsPage -}}
 	<div class="ui container tablet computer only grid">
 		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">

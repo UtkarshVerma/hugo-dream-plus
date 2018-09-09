@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Dream Plus theme, which is hosted by [UtkarshVerma](https://www.github.com/UtkarshVerma/hugo-dream-plus) on GitHub. 
+The following is a set of guidelines for contributing to Dream Plus theme, which is hosted by [UtkarshVerma](https://www.github.com/UtkarshVerma/hugo-dream-plus) on GitHub.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 ---
@@ -143,7 +143,7 @@ Therefore, any help in descriptively(using GIFs and images) documenting the feat
     * :memo: `:memo:` when writing docs
     * :bug: `:bug:` when fixing a bug
     * :fire: `:fire:` when removing code or files
-    
+
 ### Hugo Templating Styleguide
 
 * Indentation is important. Use 1 tab or 2 spaces for indentation. It should be done according to the HTML code which contains it.
