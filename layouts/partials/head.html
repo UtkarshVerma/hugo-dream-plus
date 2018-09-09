@@ -15,5 +15,6 @@
 <!--Setting Favicon-->
 <link rel="shortcut icon" href="{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{- else -}}/img/defaultFav.ico{{ end }}">
 <!-- Permalink & RSSlink -->
-<link rel="canonical" href="{{- .Permalink -}}" />
-<link rel="alternative" href="{{- "/index.xml" | relURL -}}" title="{{ $.Site.Title }}" type="application/atom+xml"/>
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
