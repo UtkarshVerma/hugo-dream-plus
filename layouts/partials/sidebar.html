@@ -3,7 +3,7 @@
 		{{- partial "author.html" . -}}
 	</section>
 	{{- if and $.Site.Params.enableTags $.Site.Taxonomies.tags -}}
-	<section class="ui attached center aligned inverted segment sidebar-dream-tags">		
+	<section class="ui attached center aligned inverted segment sidebar-dream-tags">
 		{{- partial "tags.html" . -}}
 	</section>
 	{{ end }}

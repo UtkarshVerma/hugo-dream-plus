@@ -5,7 +5,7 @@
 	var enabledPost = {{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }}
 	{{- if $.Site.Params.enableShortest -}}
 		var shToken = {{ $.Site.Params.shortestToken }}
-		var shDomains = {{ $.Site.Params.shortestDomains }}    
+		var shDomains = {{ $.Site.Params.shortestDomains }}
 	{{ end }}
 	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")

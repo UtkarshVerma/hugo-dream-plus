@@ -11,24 +11,25 @@ categories:
 cover : "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/gci-thumb.png"
 draft: false
 ---
-![GCI](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/gci-wide.png)Recently I've been participating in [Google Code-in](https://codein.withgoogle.com/) which is Google's initiative to introduce young minds to the concept of **FOSS**, that is **Free or Open-Source Softwares**. This post is for sharing my experiences with GCI, as the title suggests. So let's just get on it. 
 
-It all began while I was returning from an outing on **5 December, 2017** and was searching the internet for [Google Science Fair](https://www.googlesciencefair.com/) to check if I could participate in it or not. When I searched it and scrolled down, I saw a link for **Google Code-in**. The very combination of the words *Google* and *Code* had raised my adrenaline levels and so I starting reading about it and after a few moments, I had decided to participate in it. Soon I had my father fill up the **Parental Consent** and I was ready to begin. 
+![GCI](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/gci-wide.png)Recently I've been participating in [Google Code-in](https://codein.withgoogle.com/) which is Google's initiative to introduce young minds to the concept of **FOSS**, that is **Free or Open-Source Softwares**. This post is for sharing my experiences with GCI, as the title suggests. So let's just get on it.
 
-Being a total beginner with this contest and with the concepts of **FOSS**, I had a lot to learn, and I was aware of that. So after a few days of jumping from one organization to the other, I was finally able to settle at [OpenWISP](https://www.openwisp.org). This was thankfully possible due to my chat on their [Gitter room](https://gitter.im/openwisp/general) with one of their mentors. It also gave me the confidence to proceed ahead with my skill-set and so I began doing the tasks provided by this organisation. 
+It all began while I was returning from an outing on **5 December, 2017** and was searching the internet for [Google Science Fair](https://www.googlesciencefair.com/) to check if I could participate in it or not. When I searched it and scrolled down, I saw a link for **Google Code-in**. The very combination of the words *Google* and *Code* had raised my adrenaline levels and so I starting reading about it and after a few moments, I had decided to participate in it. Soon I had my father fill up the **Parental Consent** and I was ready to begin.
+
+Being a total beginner with this contest and with the concepts of **FOSS**, I had a lot to learn, and I was aware of that. So after a few days of jumping from one organization to the other, I was finally able to settle at [OpenWISP](https://www.openwisp.org). This was thankfully possible due to my chat on their [Gitter room](https://gitter.im/openwisp/general) with one of their mentors. It also gave me the confidence to proceed ahead with my skill-set and so I began doing the tasks provided by this organisation.
 
 ---
 
 # The Things I've Learnt:
 Being a participant of GCI, I have learned a lot of things.Here are the few of the many things which I've learn't till date, thanks to **OpenWISP**(I'm still learning more :wink:):
-## 1. Linux Command Line 
+## 1. Linux Command Line
 ![Screenshot of Lubntu](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/linux.png)
 Ever since the beginning of GCI, I've been using **Lubuntu** for doing almost everything. Be it **installing packages**, **setting up a virtual machine**, **creating a webpage**, **using GitHub** or **hosting a local server**, I've got so used to the quick and efficient CLI of Linux now that I've developed a sort of disgust for using the mouse. I've also acquired great details about popularly used **shell commands**.
 
 ## 2. git and GitHub
 ![Pushing commits using git](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/git.png)
 
-GitHub is the basic need of any developer/maker who intends to share his/her work online. I'm also very fond of the working of GitHub. It allows easy sharing, modifications and contributions to projects through the usage of **clones** and **pull requests** . Since **OpenWISP** is also on GitHub(which open-source organisation isn't nowadays? :smile:), there have been a lot of tasks involving GitHub. Doing those tasks has increased my knowledge tenfold and I'm now very comfortable with using **git**. 
+GitHub is the basic need of any developer/maker who intends to share his/her work online. I'm also very fond of the working of GitHub. It allows easy sharing, modifications and contributions to projects through the usage of **clones** and **pull requests** . Since **OpenWISP** is also on GitHub(which open-source organisation isn't nowadays? :smile:), there have been a lot of tasks involving GitHub. Doing those tasks has increased my knowledge tenfold and I'm now very comfortable with using **git**.
 
 ## 3. Virtual Machines
 ![VirtualBox running Ubuntu Server 14.04](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/virtualbox.png)
@@ -37,7 +38,7 @@ There are some times when a software isn't compatible with the OS you've install
 
 ## 4. Python
 ![virtualenv Creation using Python](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/virtualenv.png)
-I had been thinking about learning **Python** since it's getting more and more popular nowadays, but I could never get rid of my hesitation that "Python a whole new language" since I only had exposure to Java. But the tasks that **OpenWISP** provided in Google Code-in rid me of this hesitation of mine. Once I began reading about it, I found out how similar it is to Java and have therefore started practising it now and hope that I might be able to master it someday. I've learnt how to install python modules, how to interpret error messages, and using `virtualenv` for isolated working area. 
+I had been thinking about learning **Python** since it's getting more and more popular nowadays, but I could never get rid of my hesitation that "Python a whole new language" since I only had exposure to Java. But the tasks that **OpenWISP** provided in Google Code-in rid me of this hesitation of mine. Once I began reading about it, I found out how similar it is to Java and have therefore started practising it now and hope that I might be able to master it someday. I've learnt how to install python modules, how to interpret error messages, and using `virtualenv` for isolated working area.
 
 ## 5. Web Programming
 ![The first site I created using Django](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/website.png)
@@ -78,11 +79,11 @@ This task was a bit time consuming due to the outdated tutorial I referred to fo
 - Installing the **django-rest-framework v0.1.0** django module.
 - Adding `fields='__all__'` to the Serializers.
 
-You might think as to why I did the downgrading, which is a correct point. I did so because the skeleton django project which I was using was configured according to the **older django** and django evolves pretty fast, trust me. 
+You might think as to why I did the downgrading, which is a correct point. I did so because the skeleton django project which I was using was configured according to the **older django** and django evolves pretty fast, trust me.
 
 ## 3. Vagrant
-Vagrant is a tool which allows the easy creation of VMs and also the installation of huge projects just by running a single file named `Vagrantfile`. As I've stated earlier, I have a really outdated PC. Vagrant requires **VTI -x** which my PC didn't have. This fact really set me back big-time. Luckily I was able to do one Vagrant task using my college-returned brother's laptop, but wasn't able to do any other Vagrant tasks afterwards since he had returned to his college. 
-I also tried searching for a way to use Vagrant without this feature but had no success. That's why I had to leave a few Vagrant tasks. I also wanted to contribute to a repository by creating a `Vagrantfile` for it, but I was unable to do so since I wasn't able to run Vagrant. 
+Vagrant is a tool which allows the easy creation of VMs and also the installation of huge projects just by running a single file named `Vagrantfile`. As I've stated earlier, I have a really outdated PC. Vagrant requires **VTI -x** which my PC didn't have. This fact really set me back big-time. Luckily I was able to do one Vagrant task using my college-returned brother's laptop, but wasn't able to do any other Vagrant tasks afterwards since he had returned to his college.
+I also tried searching for a way to use Vagrant without this feature but had no success. That's why I had to leave a few Vagrant tasks. I also wanted to contribute to a repository by creating a `Vagrantfile` for it, but I was unable to do so since I wasn't able to run Vagrant.
 
 ---
 
@@ -101,13 +102,11 @@ I've noticed that not all mentors appear on Gitter to answer the queries of the 
 ---
 
 # Ending Note
-Phew, I didn't think that my write-up would be this huge, looks like I still have a long way to go as a writer. 
+Phew, I didn't think that my write-up would be this huge, looks like I still have a long way to go as a writer.
 Anyways, I just wanted to say that I'm really, **whole-heartedly** thankful to **Google Code-in** as well as **OpenWISP** for increasing my skill-set significantly. I never would've thought that I'd be able to learn python, host **my own** website and all the stuff which I've learnt in these **challenging yet fun**  forty days.
 I really appreciate the guidance **OpenWISP** provided since I was a mere beginner at everything when I had planned to enter **Google Code-in**, but now I've leveled up :smile:. I've also made some great friends along the way with whom I love discussing programming-related stuff.
-I really hope that one day I'll be able to improve my skills to that extent at which I'll be able to contribute to OpenWISP **as a mentor**. 
+I really hope that one day I'll be able to improve my skills to that extent at which I'll be able to contribute to OpenWISP **as a mentor**.
 
 That's all that I have to to say. Actually, no :wink: ! I'd like to share a quote before that:
 
 >  Everything seems difficult until and unless you give it a try.
-
-

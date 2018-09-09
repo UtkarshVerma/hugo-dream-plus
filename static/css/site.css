@@ -785,7 +785,7 @@ p > img:not(.emoji), li > img {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
- 
+
 .card.title-content {
   opacity: 0;
   bottom: 0;

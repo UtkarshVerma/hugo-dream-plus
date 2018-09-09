@@ -128,5 +128,5 @@ Your site should now be locally available at [http://localhost:1313](http://loca
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
-## License 
+## License
 This theme is released under the [**MIT**](/LICENSE) license.

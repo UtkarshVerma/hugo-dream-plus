@@ -25,10 +25,10 @@ enableEmoji=true
 	enableShareCard = true
 
 	favicon = "/img/defaultFav.ico"
-  	
-  	#Background settings
+
+  		#Background settings
 	enableColorBG= true
-  
+
 	#Post-displaying Settings
 	enableTags = true
 	enableCategories = true
@@ -47,5 +47,5 @@ enableEmoji=true
 	github = "UtkarshVerma"
 	stackoverflow = "9271608/utkarsh-verma"
 	medium = "UtkarshVerma_"
-	twitter = "UtkarshVerma_" 
+	twitter = "UtkarshVerma_"
 	siteStartYear = 2018
