@@ -11,7 +11,7 @@
 	<meta name="description" content="{{- $.Site.Params.description -}}" />
 {{- end -}}
 <!-- Site Generator -->
-<meta name="generator" content="Hugo {{ $.Hugo.Version }}" />
+{{ .Hugo.Generator }}
 <!--Setting Favicon-->
 <link rel="shortcut icon" href="{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{- else -}}/img/defaultFav.ico{{ end }}">
 <!-- Permalink & RSSlink -->
