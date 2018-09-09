@@ -24,7 +24,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 This theme can be used for two purposes:
 
 1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to card view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
-2. If you're simply making a blog or another website with a bunch of posts, then switch to the post view for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
+2. If you're simply making a blog or another website with a bunch of posts, then switch to the posts view for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
 
 This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
@@ -80,7 +80,7 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable as follows:
 ```toml
 contentType = "cards"    #Enables the card view.
-contentType = "post"     #Enables the post view.
+contentType = "posts"    #Enables the post view.
 ```
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
@@ -88,7 +88,7 @@ You may test them out yourselves by visiting my sites(stated above) which use th
 Also, post/card creation is done differently for both the views. It is as follows:
 ```shell
 hugo new cards/example.md		#Card creation
-hugo new post/example.md		#Post creation
+hugo new posts/example.md		#Post creation
 ```
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.

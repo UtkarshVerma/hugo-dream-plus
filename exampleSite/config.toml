@@ -26,7 +26,7 @@ enableEmoji=true
 
 	favicon = "/img/defaultFav.ico"
 
-  		#Background settings
+  	#Background settings
 	enableColorBG= true
 
 	#Post-displaying Settings
@@ -37,7 +37,7 @@ enableEmoji=true
 	itemsPerPage = 4
 
 	#Set whether you're hosting "cards" or "post"
-	contentType = "post"
+	contentType = "posts"
 
 	#Enable Twitter Emoji
 	twitterEmoji=true
