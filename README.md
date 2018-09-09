@@ -53,7 +53,7 @@ avatar = "<absolute path to avatar>"	//Leaving the avatar variable unset display
 
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
 
-| Social Link | Variable | Example Declaration |
+| Social Link | Variable | Example Initialization |
 |:---:|:---:|:---:|
 | GitHub | *github* | `github = "username"` |
 | Email | *email* | `email = "username@example.com"` |
@@ -65,6 +65,16 @@ After that, fill up the social variables at the end of the config file. This the
 | StackOverflow | *stackoverflow* | `stackoverflow = "number/username"` |
 | CodePen | *codepen* | `codepen = "username"` |
 | Reddit | *reddit* | `reddit = "username"` |
+
+These variables have to be in the `[social]` table of `config.toml` or its equivalent for `YAML` or `JSON`.
+```toml
+[params]
+	...
+
+[social]
+	<variable initialization>
+
+```
 
 ### Toggling the views
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable as follows:
