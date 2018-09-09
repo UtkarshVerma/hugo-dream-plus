@@ -3,28 +3,9 @@
 {{ end }}
 
 {{ define "frontmenu" }}
-<nav class="ui top secondary menu bar">
-	<div id="surrico" class="item">
-		<i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
-	</div>
-	<div class="item">
-		<a href="/"><i id="ico" class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
-	</div>
-	{{ if gt (len (where .Site.RegularPages "Section" "==" $.Site.Params.contentType)) 0 }}
-	<div class="item">
-		<a href="/{{ $.Site.Params.contentType }}">
-			<i id="ico" class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
-		</a>
-	</div>
-	{{ end }}
-	{{ with $.Site.Params.enableCategories }}
-	<div class="item">
-		<a href="/categories">
-			<i id="ico" class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
-		</a>
-	</div>
-	{{ end }}
-</nav>
+{{ $.Scratch.Set "navRSS" true }}
+{{ $.Scratch.Set "type" "tags" }}
+{{ partial "nav.html" . }}
 {{ end }}
 
 {{ define "main"}}

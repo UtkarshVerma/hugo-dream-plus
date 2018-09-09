@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "frontmenu" }}
+{{ $.Scratch.Set "navRSS" true }}
 {{ partial "nav.html" . }}
 {{ end }}
 

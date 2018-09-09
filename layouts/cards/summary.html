@@ -1,4 +1,4 @@
-{{ $randomCover := (print "img/default" (index (shuffle (seq 1 6)) 0) ".jpg") }}
+{{ $randomCover := (print "/img/default" (index (shuffle (seq 1 6)) 0) ".jpg") }}
 {{ $cover := cond (ne .Params.cover nil) .Params.cover $randomCover }}
 <article class="blog-card none flexbox" style="background-image: url({{ $cover }});">
 <img class="image" src="{{ $cover }}"></img>
