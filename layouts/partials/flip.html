@@ -3,11 +3,13 @@
 		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n `flip` }}"></i>
 	</div>
 	{{ partial "social.html" . }}
-	<div class="item right">
-		<a href="/posts/index.xml">
-			<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
-		</a>
-	</div>
+	{{ if ne $.Site.Params.contentType "cards" }}
+		<div class="item right">
+			<a href="/posts/index.xml">
+				<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
+			</a>
+		</div>
+	{{ end }}
 </nav>
 <div class="ui centered grid about">
 	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
