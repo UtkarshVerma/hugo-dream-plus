@@ -15,6 +15,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * About section can be written in MarkDown
 * Custom 404 pages can be written in MarkDown
 * Custom Favicon
+* RSS Button
 * Custom CSS and JS can be used without modifying the theme
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
