@@ -53,21 +53,23 @@ avatar = "<absolute path to avatar>"	//Leaving the avatar variable unset display
 
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
 
-* GitHub    - `github = "<username>"`
-* Email     - `email = "<email id>"`
-* Twitter   - `twitter = "<username>"`
-* Facebook  - `facebook = "<username>"`
-* YouTube   - `youtube = "<username>"`
-* Medium    - `medium = "<username>"`
-* LinkedIn  - `linkedin = "<username>"`
-* StackOverflow - `stackoverflow = "<username with the user number>"`
-* CodePen   - `codepen = "<username>"`
-* Reddit    - `reddit = "<username>"`
+| Social Link | Variable | Example Declaration |
+|:---:|:---:|:---:|
+| GitHub | *github* | `github = "username"` |
+| Email | *email* | `email = "username@example.com"` |
+| Twitter | *twitter* | `twitter = "username"` |
+| Facebook | *facebook* | `facebook = "username"` |
+| YouTube | *youtube* | `youtube = "username"` |
+| Medium | *medium* | `medium = "username"` |
+| LinkedIn | *linkedin* | `linkedin = "username"` |
+| StackOverflow | *stackoverflow* | `stackoverflow = "number/username"` |
+| CodePen | *codepen* | `codepen = "username"` |
+| Reddit | *reddit* | `reddit = "username"` |
 
 ### Toggling the views
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable as follows:
 ```toml
-contentType = "cards"    #Enables the card view.   
+contentType = "cards"    #Enables the card view.
 contentType = "post"     #Enables the post view.
 ```
 
