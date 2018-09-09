@@ -1,3 +1,4 @@
+{{ $colors := slice "red" "orange" "yellow" "olive" "green" "teal" "blue" "violet" "purple" "pink" "brown" }}
 {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-<a class="ui label" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
 {{ end }}
