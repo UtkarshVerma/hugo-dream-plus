@@ -134,6 +134,15 @@ hugo server
 ```
 Your site should now be locally available at [http://localhost:1313](http://localhost:1313) for testing purposes.
 
+For testing the example site, you'll have to explicitly specify the config file to Hugo. This is done as follows:
+```bash
+#For post view demo
+hugo --config posts.toml server
+
+#For card view demo
+hugo --config cards.toml server
+```
+
 ## Contributing
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
