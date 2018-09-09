@@ -19,7 +19,7 @@ $(document).ready(function() {
         target.toggleClass('flip-it')
         setTimeout( function (){
           $('.front').css('display','block')
-        $('.back').css('display','none')
+          $('.back').css('display','none')
       }, 300)
     }
   })

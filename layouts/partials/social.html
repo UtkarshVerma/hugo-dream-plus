@@ -1,60 +1,60 @@
-{{- if $.Site.Social.github -}}
+{{- with $.Site.Social.github -}}
 <div class="item">
 	<a href="https://github.com/{{- $.Site.Social.github -}}" target="_blank">
 		<i id="ico" class="inverted big link github icon" title="GitHub"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.email -}}
+{{- with $.Site.Social.email -}}
 <div class="item">
 	<a href="mailto:{{- $.Site.Social.email -}}">
 		<i id="ico" class="inverted big link mail icon" title="Email"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.twitter -}}
+{{- with $.Site.Social.twitter -}}
 <div class="item">
 	<a href="https://twitter.com/{{- $.Site.Social.twitter -}}" target="_blank">
 		<i id="ico" class="inverted big link twitter icon" title="Twitter"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.youtube -}}
+{{- with $.Site.Social.youtube -}}
 <div class="item">
 	<a href="https://youtube.com/user/{{- $.Site.Social.youtube -}}" target="_blank">
 		<i id="ico" class="inverted big link youtube play icon" title="YouTube"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.medium -}}
+{{- with $.Site.Social.medium -}}
 <div class="item">
 	<a href="https://medium.com/@{{- $.Site.Social.medium -}}" target="_blank">
 		<i id="ico" class="inverted big link medium icon" title="Medium"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.linkedin -}}
+{{- with $.Site.Social.linkedin -}}
 <div class="item">
 	<a href="https://www.linkedin.com/in/{{- $.Site.Social.linkedin -}}" target="_blank">
 		<i id="ico" class="inverted big link linkedin icon" title="LinkedIn"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.stackoverflow -}}
+{{- with $.Site.Social.stackoverflow -}}
 <div class="item">
 	<a href="https://www.stackoverflow.com/users/{{- $.Site.Social.stackoverflow -}}" target="_blank">
 		<i id="ico" class="inverted big link stack overflow icon" title="Stack Overflow"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.codepen -}}
+{{- with $.Site.Social.codepen -}}
 <div class="item">
 	<a href="https://codepen.io/{{- $.Site.Social.codepen -}}" target="_blank">
 		<i id="ico" class="inverted big link codepen icon" title="CodePen"></i>
 	</a>
 </div>
 {{ end }}
-{{- if $.Site.Social.reddit -}}
+{{- with $.Site.Social.reddit -}}
 <div class="item">
 	<a href="https://reddit.com/user/{{- $.Site.Social.reddit -}}" target="_blank">
 		<i id="ico" class="inverted big link reddit icon" title="Reddit"></i>

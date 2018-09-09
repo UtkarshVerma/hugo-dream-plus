@@ -2,7 +2,7 @@
 <!--JS variable initializations-->
 <script>
 	var colorBG = {{ $.Site.Params.enableColorBG }}
-	var enabledPost = {{ if eq $.Site.Params.contentType "post" }}true{{ else }}false{{ end }}
+	var enabledPost = {{ cond (eq $.Site.Params.contentType "post") true false }}
 	{{- if $.Site.Params.enableShortest -}}
 		var shToken = {{ $.Site.Params.shortestToken }}
 		var shDomains = {{ $.Site.Params.shortestDomains }}
