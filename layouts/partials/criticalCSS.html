@@ -2,7 +2,7 @@
 body {
 	display: block;
 	--colorBG: "#40e0d0, #ff8c00, #ff0080";
-	{{- if $.Site.Params.enableColorBG -}}
+	{{- with $.Site.Params.enableColorBG -}}
 		background: linear-gradient(to right, var(--colorBG)) !important;
 	{{ else }}
 		background-image: var(--bgImage) !important;

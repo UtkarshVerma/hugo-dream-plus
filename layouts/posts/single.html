@@ -1,10 +1,10 @@
 {{ define "title" }}
-{{ .Title }}
+	{{ .Title }}
 {{ end }}
 
 {{ define "frontmenu" }}
-{{ $.Scratch.Set "navRSS" true }}
-{{ partial "nav.html" . }}
+	{{ $.Scratch.Set "navRSS" true }}
+	{{ partial "nav.html" . }}
 {{ end }}
 
 {{ define "main" }}

@@ -14,7 +14,15 @@
 <div class="ui centered grid about">
 	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
 		<section class="ui stacked segments">
-			{{- partial "about.html" . -}}
+			<div class="ui inverted segment">
+				<article class="twemoji">
+					{{- readFile "/content/about.md" | markdownify | emojify -}}
+				</article>
+				{{- with $.Site.Params.copyright -}}
+					<br><hr>
+					{{ partial "copyright.html" . }}
+				{{- end }}
+			</div>
 		</section>
 	</div>
 </div>

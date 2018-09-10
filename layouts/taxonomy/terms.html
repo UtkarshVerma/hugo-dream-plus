@@ -1,11 +1,11 @@
 {{ define "title" }}
-{{ i18n "allTags" }}
+	{{ i18n "allTags" }}
 {{ end }}
 
 {{ define "frontmenu" }}
-{{ $.Scratch.Set "navRSS" true }}
-{{ $.Scratch.Set "type" "tags" }}
-{{ partial "nav.html" . }}
+	{{ $.Scratch.Set "navRSS" true }}
+	{{ $.Scratch.Set "type" "tags" }}
+	{{ partial "nav.html" . }}
 {{ end }}
 
 {{ define "main"}}
