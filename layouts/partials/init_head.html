@@ -3,7 +3,7 @@
 <script>
 	var colorBG = {{ $.Site.Params.enableColorBG }}
 	var enabledPost = {{ cond (eq $.Site.Params.contentType "post") true false }}
-	{{- if $.Site.Params.enableShortest -}}
+	{{- with $.Site.Params.enableShortest -}}
 		var shToken = {{ $.Site.Params.shortestToken }}
 		var shDomains = {{ $.Site.Params.shortestDomains }}
 	{{ end }}

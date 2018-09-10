@@ -2,7 +2,7 @@
 <style>
 body.pushable {
 	display: block;
-	{{- if $.Site.Params.enableColorBG -}}
+	{{- with $.Site.Params.enableColorBG -}}
 		background: linear-gradient(to right, var(--colorBG)) !important;
 	{{ else }}
 		background-image: var(--bgImage) !important;
@@ -10,8 +10,8 @@ body.pushable {
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/css/site.css">
-{{- if and (or (fileExists "static/css/highlight.css") (ne $.Site.Params.highlight nil)) .IsPage -}}
-	<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.highlight | default `/css/highlight.css` }}">
+{{- if fileExists "static/css/highlight.css" -}}
+	<link rel="stylesheet" type="text/css" href="{{ `/css/highlight.css` }}">
 {{- end -}}
 {{- range $val := $.Site.Params.customCSS -}}
 	{{- if gt (len $val) 0 -}}

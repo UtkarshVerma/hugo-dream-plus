@@ -1,11 +1,11 @@
 {{ define "title" }}
-{{ i18n "archives" }}
+	{{ i18n "archives" }}
 {{ end }}
 
 {{ define "frontmenu" }}
-{{ $.Scratch.Set "navRSS" true }}
-{{ $.Scratch.Set "type" "posts" }}
-{{ partial "nav.html" . }}
+	{{ $.Scratch.Set "navRSS" true }}
+	{{ $.Scratch.Set "type" "posts" }}
+	{{ partial "nav.html" . }}
 {{ end }}
 
 {{ define "main"}}
