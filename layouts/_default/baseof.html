@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{- .Site.LanguageCode -}}">
+<html lang="{{- $.Site.LanguageCode -}}">
 <head>
+	<title>{{- block "title" . -}}{{ $.Site.Title }}{{- end -}}</title>
 	{{- partial "criticalCSS.html" . -}}
-	<title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
 	{{- partial "head.html" . -}}
 	{{- partial "init_head.html" . -}}
 </head>

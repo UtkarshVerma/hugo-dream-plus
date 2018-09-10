@@ -4,8 +4,8 @@
 {{- with $.Site.Params.twitterEmoji -}}
 	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
-{{- range $val:= $.Site.Params.customJS }}
-	{{- if and ((gt (len $val) 0) (index $val "")) -}}
-		<script src="/{{ index $val }}"></script>
+{{- range $val := $.Site.Params.customJS }}
+	{{- if gt (len $val) 0 -}}
+		<script src="/{{ $val }}"></script>
 	{{ end }}
 {{ end }}

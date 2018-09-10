@@ -8,6 +8,6 @@
 	</script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
 {{ end }}
-{{- if not (eq $.Site.Params.contentType "cards") -}}
+{{- if ne $.Site.Params.contentType "cards" -}}
 	<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
 {{ end }}
