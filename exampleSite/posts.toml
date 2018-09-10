@@ -33,6 +33,8 @@ enableEmoji=true
 	enableTags = true
 	enableCategories = true
 
+	customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
+
 	#Cards or posts shown per page
 	itemsPerPage = 4
 
