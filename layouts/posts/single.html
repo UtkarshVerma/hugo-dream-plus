@@ -31,7 +31,7 @@
 			</div>
 			{{ end }}
 			<article class="post-content twemoji">
-				{{ partial "anchor.html" .Content }}
+				{{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}"><i class="small linkify icon"></i></a> ${3}` | safeHTML }}
 			</article>
 		</section>
 		<section class="ui secondary attached segment dream-tags">
