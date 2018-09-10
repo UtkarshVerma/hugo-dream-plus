@@ -44,7 +44,7 @@ Once the theme has been successfully installed, you'll have to do a bit of tunin
 Within the [`exampleSite`](/exampleSite) folder, you'll find the [`config.toml`](/exampleSite/config.toml) file which can be used to tweak the theme.
 
 ### Describe yourself
-Define yourself through the following variables:
+Define yourself through the following config variables in `params`:
 ```
 author = "<name of the author>"
 description = "Short description of the site"
@@ -70,11 +70,11 @@ After that, fill up the social variables at the end of the config file. This the
 These variables have to be in the `[social]` table of `config.toml` or its equivalent for `YAML` or `JSON`.
 ```toml
 [social]
-	#variable initializations
+	github = "UtkarshVerma"
 ```
 
 ### Toggling the views
-As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable as follows:
+As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
 ```toml
 contentType = "cards"    #Enables the card view.
 contentType = "posts"    #Enables the post view.
@@ -111,7 +111,7 @@ This theme supports total customization of **about** and **error** pages. These 
 ### Custom favicon
 You may also set a custom favicon for your website using the `favicon` config variable. For example,
 ```
-  favicon = "/images/defaultFav.ico"
+favicon = "/images/defaultFav.ico"
 ```
 
 ### Shorte.st website script
