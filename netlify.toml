@@ -1,7 +1,0 @@
-[build]
-  publish = "exampleSite/public"
-  command = "cd exampleSite && hugo --config posts.toml --theme repo"
-
-[context.production]
-  [context.production.environment]
-    HUGO_VERSION = "0.38"
