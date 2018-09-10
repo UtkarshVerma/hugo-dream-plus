@@ -20,7 +20,9 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements.
 
-#### [Live Demo](http://dream-plus.netlify.com)
+### Live Demo
+* **[Cards View](https://dream-plus-cards.netlify.com)**
+* **[Posts View](https://dream-plus-posts.netlify.com)**
 
 This theme can be used for two purposes:
 
