@@ -4,7 +4,7 @@
 <img class="image" src="{{ $cover }}"></img>
 <div class="title-content twemoji">
 	<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
-	<div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
+	<div class="intro twemoji">{{ if .Params.description }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
 </div>
 <div class="utility-info">
 	<ul class="utility-list">
