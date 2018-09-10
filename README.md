@@ -69,12 +69,8 @@ After that, fill up the social variables at the end of the config file. This the
 
 These variables have to be in the `[social]` table of `config.toml` or its equivalent for `YAML` or `JSON`.
 ```toml
-[params]
-	...
-
 [social]
-	<variable initialization>
-
+	#variable initializations
 ```
 
 ### Toggling the views
