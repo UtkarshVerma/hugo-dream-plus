@@ -1,14 +1,14 @@
 {{ define "title" }}
-{{ if eq .Data.Singular "tag" }}
-{{ humanize (i18n "tag") }} | {{ .Data.Term }}
-{{ else if eq .Data.Singular "category" }}
-{{ humanize (i18n "category") }} | {{ .Data.Term }}
-{{ else }}{{ end }}
+	{{ if eq .Data.Singular "tag" }}
+		{{ humanize (i18n "tag") }} | {{ .Data.Term }}
+	{{ else if eq .Data.Singular "category" }}
+		{{ humanize (i18n "category") }} | {{ .Data.Term }}
+	{{ end }}
 {{ end }}
 
 {{ define "frontmenu" }}
-{{ $.Scratch.Set "navRSS" true }}
-{{ partial "nav.html" . }}
+	{{ $.Scratch.Set "navRSS" true }}
+	{{ partial "nav.html" . }}
 {{ end }}
 
 {{ define "main"}}
