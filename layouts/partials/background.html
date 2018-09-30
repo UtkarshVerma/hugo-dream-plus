@@ -12,44 +12,44 @@ var bodyBgSwitchIndex = 0;
 	  ['#fc466b', '#3f5efb'], // Sublime Vivid
 	  ['#c94b4b', '#4b134f'], // Bighead
 	  ['#23074d', '#cc5333'] // Taran Tado
-	]
-	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]))
+	];
+	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]));
 {{- else -}}
 	{{- if $.Site.Params.bgList -}}
-		var images = {{- $.Site.Params.bgList -}}
-		var randomNumber = getRandomInt(0, images.length)
-		bgImage = "url(" + images[randomNumber] + ")"
+		var images = {{- $.Site.Params.bgList -}};
+		var randomNumber = getRandomInt(0, images.length);
+		bgImage = "url(" + images[randomNumber] + ")";
 	{{ else }}
-		var bgImage = "url(" + {{ $.Site.Params.bgImage }} + ")"
+		var bgImage = "url(" + {{ $.Site.Params.bgImage }} + ")";
 	{{ end }}
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
 	document.body.style.setProperty('--blurEff', {{- $.Site.Params.bgBlur -}});
 	document.body.style.setProperty('--bgImage', bgImage);
 {{ end }}
 	function getRandomInt(min, max) {
-	  min = Math.ceil(min)
-	  max = Math.floor(max)
-	  var random
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  var random;
 	  while (1) {
-	    random = Math.floor(Math.random() * (max - min)) + min
+	    random = Math.floor(Math.random() * (max - min)) + min;
 	    if (random !== prevBgIndex) {
-	      prevBgIndex = random
-	      break
+	      prevBgIndex = random;
+	      break;
 	    }
 	  }
-	  return random
+	  return random;
 	}
 
 	function connect(arr) {
-	  var str = ''
+	  var str = '';
 	  for (var i = 0; i < arr.length; i++) {
 	    if (i !== arr.length - 1) {
-	      str += arr[i] + ', '
+	      str += arr[i] + ', ';
 	    } else {
-	      str += arr[i]
+	      str += arr[i];
 	    }
 	  }
-	  return str
+	  return str;
 	}
 </script>
 {{- if not $.Site.Params.enableColorBG -}}
