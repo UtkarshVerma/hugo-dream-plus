@@ -120,7 +120,7 @@ For working on Dream Plus, you can simply clone [this repository](https://github
 * Fill in [the required template](PULL_REQUEST_TEMPLATE.md)
 * Do not include issue numbers in the PR title.
 * Include screenshots and animated GIFs in your pull request whenever possible.
-* Follow the styleguides(#styleguides).
+* Follow the [styleguides](#styleguides).
 * Document new code based on the [Documentation Styleguide](#documentation-styleguide).
 * End all files with a newline.
 
