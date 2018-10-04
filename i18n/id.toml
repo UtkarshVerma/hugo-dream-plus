@@ -1,0 +1,56 @@
+[blogAlias]
+other = "Blog "
+
+[aboutHeader]
+other = "Tentang"
+
+[home]
+other = "Beranda"
+
+[showSidebar]
+other = "Tampilkan Sidebar"
+
+[rssFeed]
+other = "Feed RSS"
+
+[prevPage]
+other = "Halaman sebelumnya"
+
+[nextPage]
+other = "Halaman berikutnya"
+
+[flip]
+other = "Tentang Saya"
+
+[clickToPopTagsAndCategories]
+other = "Klik di sini untuk menampilkan tag dan kategori"
+
+[updateAt]
+other = "Terakhir diperbarui"
+
+[returnHome]
+other = "Kembali ke Beranda"
+
+[noTag]
+other = "Tidak ada Tag"
+
+[archives]
+other = "Arsip"
+
+[tag]
+one = "Tag"
+other = "{{ .Count }} tag"
+
+[category]
+one = "Kategori"
+other = "{{ .Count }} kategori"
+
+[allTags]
+other = "Semua Tag"
+
+[allCategories]
+other = "Semua Kategori"
+
+[article]
+one = "1 artikel"
+other = "{{ .Count }} artikel"
