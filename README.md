@@ -11,14 +11,14 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * Disqus
 * Sidebar
 * Share card below posts
-* Device detection, that is whether the client device is a PC or phone.
+* Device detection, that is whether the client device is a PC or phone
 * About section can be written in MarkDown
 * Custom 404 pages can be written in MarkDown
 * Custom Favicon
 * RSS Button
 * Custom CSS and JS can be used without modifying the theme
 * More social icons
-* Shorte.st website script, and a lot of other minor improvements.
+* Shorte.st website script, and a lot of other minor improvements
 
 ### Live Demo
 * **[Cards View](https://dream-plus-cards.netlify.com)**
@@ -117,7 +117,7 @@ favicon = "/images/defaultFav.ico"
 ```
 
 ### Shorte.st website script
-The [shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll first have to enable this feature by setting `enableShortest` to `true` and then setting the **API Token** you got from Shorte.st to `shortestToken`, and after that, define your domains as a list in the `shortestDomains` config variable.
+The [Shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll first have to enable this feature by setting `enableShortest` to `true` and then setting the **API Token** you got from Shorte.st to `shortestToken`, and after that, define your domains as a list in the `shortestDomains` config variable.
 
 ### Some other configurations
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
