@@ -43,15 +43,19 @@ git submodule update --init --recursive
 Once the theme has been successfully installed, you'll have to do a bit of tuning of the theme to meet your taste.
 
 ### The config file
-Within the [`exampleSite`](/exampleSite) folder, you'll find the [`config.toml`](/exampleSite/config.toml) file which can be used to tweak the theme.
+Within the [`exampleSite`](/exampleSite) folder, you'll find the config files, [`cards.toml`](/exampleSite/cards.toml) and [`posts.toml`](/exampleSite/posts.toml) which can be used to tweak the theme.
+
+You must use these config files as a basis for your site, since they **take care of the necessary variable declarations**, which you may edit according to your needs.
 
 ### Describe yourself
 Define yourself through the following config variables in `params`:
-```
+```toml
 author = "<name of the author>"
 description = "Short description of the site"
 motto = "author's motto or short description"
-avatar = "<absolute path to avatar>"	//Leaving the avatar variable unset displays svg avatars
+
+#Leaving the avatar variable unset displays svg avatars
+avatar = "<absolute path to avatar>"
 ```
 
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
@@ -128,7 +132,7 @@ Wiki contributions are most welcome. Feel free to ask me about this theme's feat
 
 ## Nearly Finished
 After finishing the configurations, you're good to go. So, test your website using:
-```
+```bash
 hugo server
 ```
 Your site should now be locally available at [http://localhost:1313](http://localhost:1313) for testing purposes.
