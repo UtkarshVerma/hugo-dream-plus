@@ -69,7 +69,7 @@
 	{{ end }}
 	{{ $order := slice "GitHub" "Email" "Twitter" "YouTube" "Medium" "LinkedIn" "Stack Overflow" "CodePen" "Reddit" }}
 	{{ $links := slice "https://github.com/" "mailto:" "https://twitter.com/" "https://youtube.com/user/" "https://medium.com/@" "https://www.linkedin.com/in/" "https://www.stackoverflow.com/users/" "https://codepen.io/" "https://reddit.com/user/" }}
-	{{ $icon := slice "github" "mail" "twitter" "youtube play" "medium" "linked" "stack overflow" "codepen" "reddit" }}
+	{{ $icon := slice "github" "mail" "twitter" "youtube play" "medium" "linkedin" "stack overflow" "codepen" "reddit" }}
 	{{ range $index, $val := $order }}
 		{{ $var := replace $val " " "" | lower }}
 		{{ with ($.Scratch.Get $var) }}
