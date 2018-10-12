@@ -79,6 +79,8 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 	github = "UtkarshVerma"
 ```
 
+Once this is done, write up the "**About Me**" section of your website in Markdown as directed here:[Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
+
 ### Toggling the views
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
 ```toml
@@ -111,7 +113,7 @@ You may also add blurring effect to the background image using `bgBlur`.
 ### Device detection
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
-### Error page and about page
+### Error and About pages
 This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. Once finished customizing, copy them in the `/content` directory of your Hugo site.
 
 ### Custom favicon
