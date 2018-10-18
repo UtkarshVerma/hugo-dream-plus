@@ -5,6 +5,8 @@
 The following is a set of guidelines for contributing to Dream Plus theme, which is hosted by [UtkarshVerma](https://www.github.com/UtkarshVerma/hugo-dream-plus) on GitHub.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
+**NOTE: PRs and Issues must be described according to their respective templates while submitting an issue/PR. Fail to do so, and there'll be no response/support from the maintainers whatsoever!**
+
 ---
 
 ### Table of Contents
