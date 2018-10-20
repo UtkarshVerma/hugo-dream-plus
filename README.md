@@ -20,7 +20,21 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements
 
-### Live Demo
+## Table of contents
+1 [Live Demo](#LiveDemo)
+
+2 [Installation](#Installation)
+
+3 [Getting Started](#GettingStarted)
+
+4 [Documentation](#Documentation)
+
+5 [Nearly Finished](#NearlyFinished)
+
+6 [Contributing](#Contributing)
+
+7 [License](#License)
+### <a name="LiveDemo">Live Demo</a>
 * **[Cards View](https://dream-plus-cards.netlify.com)**
 * **[Posts View](https://dream-plus-posts.netlify.com)**
 
@@ -31,7 +45,7 @@ This theme can be used for two purposes:
 
 This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
-## Installation
+## <a name="Installation">Installation</a>
 The theme can be installed by running the following commands inside your **Hugo website** folder.
 ```shell
 cd themes
@@ -39,7 +53,7 @@ git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus
 git submodule update --init --recursive
 ```
 
-## Getting Started
+## <a name="GettingStarted">Getting Started</a>
 Once the theme has been successfully installed, you'll have to do a bit of tuning of the theme to meet your taste.
 
 ### The config file
@@ -128,11 +142,11 @@ The [Shorte.st](https://shorte.st) website script has been implemented in this t
 ### Some other configurations
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
 
-## Documentation
+## <a name="Documentation">Documentation</a>
 The documentation for this repository is currently under work and is added to this repository's [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
 Wiki contributions are most welcome. Feel free to ask me about this theme's features for that.
 
-## Nearly Finished
+## <a name="NearlyFinished">Nearly Finished</a>
 After finishing the configurations, you're good to go. So, test your website using:
 ```bash
 hugo server
@@ -148,9 +162,9 @@ hugo --config posts.toml server
 hugo --config cards.toml server
 ```
 
-## Contributing
+## <a name="Contributing">Contributing</a>
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
-## License
+## <a name="License">License</a>
 This theme is released under the [**MIT**](/LICENSE) license.
