@@ -20,24 +20,6 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * More social icons
 * Shorte.st website script, and a lot of other minor improvements
 
-## Table of contents
-1 [Live Demo](#LiveDemo)
-
-2 [Installation](#Installation)
-
-3 [Getting Started](#GettingStarted)
-
-4 [Documentation](#Documentation)
-
-5 [Nearly Finished](#NearlyFinished)
-
-6 [Contributing](#Contributing)
-
-7 [License](#License)
-### <a name="LiveDemo">Live Demo</a>
-* **[Cards View](https://dream-plus-cards.netlify.com)**
-* **[Posts View](https://dream-plus-posts.netlify.com)**
-
 This theme can be used for two purposes:
 
 1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to card view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
@@ -45,7 +27,29 @@ This theme can be used for two purposes:
 
 This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
-## <a name="Installation">Installation</a>
+
+### Live Demo
+* **[Cards View](https://dream-plus-cards.netlify.com)**
+* **[Posts View](https://dream-plus-posts.netlify.com)**
+
+---
+
+## Table of Contents
+* [Installation](#installation)
+
+* [Getting Started](#getting-started)
+
+* [Documentation](#documentation)
+
+* [Nearly Finished](#nearly-finished)
+
+* [Contributing](#contributing)
+
+* [License](#license)
+
+---
+
+## Installation
 The theme can be installed by running the following commands inside your **Hugo website** folder.
 ```shell
 cd themes
@@ -53,10 +57,10 @@ git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus
 git submodule update --init --recursive
 ```
 
-## <a name="GettingStarted">Getting Started</a>
+## Getting Started
 Once the theme has been successfully installed, you'll have to do a bit of tuning of the theme to meet your taste.
 
-### The config file
+### Configure Dream Plus
 Within the [`exampleSite`](/exampleSite) folder, you'll find the config files, [`cards.toml`](/exampleSite/cards.toml) and [`posts.toml`](/exampleSite/posts.toml) which can be used to tweak the theme.
 
 You must use these config files as a basis for your site, since they **take care of the necessary variable declarations**, which you may edit according to your needs.
@@ -146,7 +150,7 @@ There are some other minor configurations as well. You may set them up by referr
 The documentation for this repository is currently under work and is added to this repository's [wiki](https://github.com/UtkarshVerma/hugo-dream-plus/wiki).
 Wiki contributions are most welcome. Feel free to ask me about this theme's features for that.
 
-## <a name="NearlyFinished">Nearly Finished</a>
+## Nearly Finished
 After finishing the configurations, you're good to go. So, test your website using:
 ```bash
 hugo server
@@ -162,9 +166,9 @@ hugo --config posts.toml server
 hugo --config cards.toml server
 ```
 
-## <a name="Contributing">Contributing</a>
+## Contributing
 Found something interesting to add to this theme or rather a :beetle:bug? Let me know about it through the [issue tracker](https://github.com/UtkarshVerma/hugo-dream-plus/issues). [Pull requests](https://github.com/UtkarshVerma/hugo-dream-plus/pulls) are also welcome.
 For more detailed instructions on how to contribute, refer to [**CONTRIBUTING.md**](/CONTRIBUTING.md)
 
-## <a name="License">License</a>
+## License
 This theme is released under the [**MIT**](/LICENSE) license.
