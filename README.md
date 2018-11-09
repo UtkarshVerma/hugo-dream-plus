@@ -29,23 +29,23 @@ This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_COND
 
 
 ### Live Demo
-* **[Cards View](https://dream-plus-cards.netlify.com)**
-* **[Posts View](https://dream-plus-posts.netlify.com)**
+* [**Cards View**](https://dream-plus-cards.netlify.com)
+* [**Posts View**](https://dream-plus-posts.netlify.com)
 
 ---
 
 ## Table of Contents
-* [Installation](#installation)
+* [**Installation**](#installation)
 
-* [Getting Started](#getting-started)
+* [**Getting Started**](#getting-started)
 
-* [Documentation](#documentation)
+* [**Documentation**](#documentation)
 
-* [Nearly Finished](#nearly-finished)
+* [**Nearly Finished**](#nearly-finished)
 
-* [Contributing](#contributing)
+* [**Contributing**](#contributing)
 
-* [License](#license)
+* [**License**](#license)
 
 ---
 
