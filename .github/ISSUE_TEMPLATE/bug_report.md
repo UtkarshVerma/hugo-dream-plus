@@ -4,23 +4,23 @@ about: Create a report to help us improve
 
 ---
 
-**Describe the bug**
+**Describe the bug**  
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+**To Reproduce**  
 State the steps which are to be followed for reproducing the bug you've encountered.
 
-**Expected behavior**
+**Expected behavior**  
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
+**Screenshots**  
 If applicable, add screenshots to help explain your problem.
 
-**Additional context**
+**Additional context**  
 Add any other context about the problem here.
 
-**Your project**
+**Your project**  
 If possible, give the link to your Hugo site project repository.
 
-**Hugo version**
+**Hugo version**  
 State the version of your Hugo installation.
