@@ -1,9 +1,10 @@
+#This config file is only meant for Hugo Themes website, for testing purposes, refer to the other two.
 baseURL = "https://dream-plus-posts.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
 theme = "dream-plus"
-themesDir = "../.."   #Don't use this, only for exampleSite
+themesDir = "../.."
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
