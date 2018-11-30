@@ -13,7 +13,7 @@
 		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
 		{{- if and $.Site.Params.enableTags $.Site.Taxonomies.tags -}}
 			<section class="ui attached center aligned inverted segment dream-tags none flexbox">
-				{{- partial "tags.html" . -}}
+				{{- partial "tags.html" (dict "Page" . "postTags" false "Tags" $.Site.Taxonomies.tags) -}}
 			</section>
 		{{- end -}}
 		{{- if and $.Site.Params.enableCategories $.Site.Taxonomies.categories -}}
