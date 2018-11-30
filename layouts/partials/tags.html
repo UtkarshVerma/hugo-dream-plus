@@ -1,10 +1,10 @@
 {{ $colors := slice "red" "orange" "yellow" "olive" "green" "teal" "blue" "violet" "purple" "pink" "brown" }}
-{{ if .IsPage }}
-{{ range $name := .Params.tags }}
+{{ if .postTags }}
+{{ range $name := .Page.Params.tags }}
 	<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
 {{ end }}
 {{ else }}
-{{ range $name, $taxonomies := $.Site.Taxonomies.tags }}
+{{ range $name, $taxonomies := .Tags }}
 	<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
 {{ end }}
 {{ end }}
