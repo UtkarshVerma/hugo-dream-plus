@@ -1,20 +1,26 @@
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-<style>
-body.pushable {
-	display: block;
-	{{- with $.Site.Params.enableColorBG -}}
-		background: linear-gradient(to right, var(--colorBG)) !important;
-	{{ else }}
-		background-image: var(--bgImage) !important;
-	{{ end }} ;
-}
-</style>
+{{/*Load basic CSS*/}}
 <link rel="stylesheet" type="text/css" href="/css/site.css">
-{{- if fileExists "static/css/highlight.css" -}}
+
+{{/*Load syntax highlighting CSS, if present*/}}
+{{ if fileExists "static/css/highlight.css" }}
 	<link rel="stylesheet" type="text/css" href="{{ `/css/highlight.css` }}">
-{{- end -}}
-{{- range $val := $.Site.Params.customCSS -}}
-	{{- if gt (len $val) 0 -}}
+{{ end }}
+
+{{/*Load custom CSS*/}}
+{{ range $val := $.Site.Params.customCSS }}
+	{{ if gt (len $val) 0 }}
 		<link rel="stylesheet" type="text/css" href="{{ $val }}">
-	{{- end -}}
-{{- end -}}
+	{{ end }}
+{{ end }}
+
+{{/*Override Semantic UI*/}}
+<style>
+	body.pushable {
+		display: block;
+		{{ with $.Site.Params.enableColorBG }}
+			background: linear-gradient(to right, var(--colorBG)) !important;
+		{{ else }}
+			background-image: var(--bgImage) !important;
+		{{ end }} ;
+	}
+</style>

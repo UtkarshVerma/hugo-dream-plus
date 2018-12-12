@@ -1,9 +1,16 @@
-{{- partial "css.html" . -}}
-<!--JS variable initializations-->
+{{/*Load Semantic UI*/}}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+
+{{/*Load rest of the CSS files*/}}
+{{ partial "css.html" . }}
+
+{{/*JS variable initializations*/}}
 <script>
 	var colorBG = {{ $.Site.Params.enableColorBG }}
 	var enabledPost = {{ cond (eq $.Site.Params.contentType "post") true false }}
-	{{- with $.Site.Params.enableShortest -}}
+	{{ with $.Site.Params.enableShortest }}
 		var shToken = {{ $.Site.Params.shortestToken }}
 		var shDomains = {{ $.Site.Params.shortestDomains }}
 	{{ end }}

@@ -1,6 +1,8 @@
-{{- with $.Site.Params.siteStartYear -}}
+{{/*Copyright statement*/}}
+{{ with $.Site.Params.siteStartYear }}
 	<p>© {{ if eq now.Year $.Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ $.Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ $.Site.Title }}</p>
 {{ else }}
 	<p>© {{ now.Year }} {{ $.Site.Title }}</p>
 {{ end }}
+
 <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>

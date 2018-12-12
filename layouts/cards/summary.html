@@ -1,10 +1,20 @@
 {{ $randomCover := (print "/img/default" (index (shuffle (seq 1 6)) 0) ".jpg") }}
 {{ $cover := cond (ne .Params.cover nil) .Params.cover $randomCover }}
+
+{{/*Card*/}}
 <article class="blog-card none flexbox" style="background-image: url({{ $cover }});">
-<img class="image" src="{{ $cover }}"></img>
-<div class="card title-content twemoji">
-	<h3><a class="title" href="{{ .Params.link }}" target="_blank">{{ .Title }}</a></h3>
-	<div class="intro twemoji">{{ if .Params.description }}{{ .Params.description | emojify | markdownify }}{{ else }}<br><br>{{ end }}</div>
-</div>
-<div class="card color-overlay"></div>
+	<img class="image" src="{{ $cover }}"></img>
+
+	<div class="card title-content twemoji">
+		<h3><a class="title" href="{{ .Params.link }}" target="_blank">{{ .Title }}</a></h3>
+
+		<div class="intro twemoji">
+			{{ if .Params.description }}
+				{{ .Params.description | emojify | markdownify }}
+			{{ else }}
+				<br><br>
+			{{ end }}
+		</div>
+	</div>
+	<div class="card color-overlay"></div>
 </article>

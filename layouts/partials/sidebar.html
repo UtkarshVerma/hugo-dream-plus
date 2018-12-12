@@ -1,20 +1,28 @@
 <div id="sidebar" class="ui sidebar inverted vertical menu">
+	{{/*Author*/}}
 	<section id="author" class="ui top attached center aligned inverted segment">
-		{{- partial "author.html" . -}}
+		{{ partial "author.html" . }}
 	</section>
-	{{- if and $.Site.Params.enableTags $.Site.Taxonomies.tags -}}
-	<section class="ui attached center aligned inverted segment sidebar-dream-tags">
-		{{- partial "tags.html" (dict "Page" . "postTags" false "Tags" $.Site.Taxonomies.tags) -}}
-	</section>
+
+	{{/*Tags*/}}
+	{{ if and $.Site.Params.enableTags $.Site.Taxonomies.tags }}
+		<section class="ui attached center aligned inverted segment sidebar-dream-tags">
+			{{/*Call 'tags' partial and pass parameters*/}}
+			{{ partial "tags.html" (dict "context" . "isPost" false "tags" $.Site.Taxonomies.tags) }}
+		</section>
 	{{ end }}
-	{{- if and $.Site.Params.enableCategories $.Site.Taxonomies.categories -}}
-	<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
-		<div class="ui inverted accordion">
-			{{- partial "categories.html" . -}}
-		</div>
-	</section>
+
+	{{/*Categories*/}}
+	{{ if and $.Site.Params.enableCategories $.Site.Taxonomies.categories }}
+		<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+			<div class="ui inverted accordion">
+				{{ partial "categories.html" . }}
+			</div>
+		</section>
 	{{ end }}
+
+	{{/*Footer*/}}
 	<section id="footer" class="ui bottom attached center aligned inverted segment">
-		{{- partial "footer.html" . -}}
+		{{ partial "footer.html" . }}
 	</section>
 </div>

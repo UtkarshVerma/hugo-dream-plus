@@ -1,42 +1,52 @@
 <nav class="ui top secondary menu bar">
+	{{/*Flip button*/}}
 	<div class="item">
 		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n `flip` }}"></i>
 	</div>
-	{{- if not .IsHome -}}
+
+	{{/*Home button*/}}
+	{{ if not .context.IsHome }}
 		<div class="item">
 			<a href="/">
 				<i class="inverted big link home icon" title="{{ i18n `home` }}"></i>
 			</a>
 		</div>
 	{{ end }}
-	{{- if ne ($.Scratch.Get "type") "posts" -}}
-	{{- if gt (len (where $.Site.RegularPages "Section" "==" $.Site.Params.contentType)) 0 -}}
-		<div class="item">
-			<a href="/{{ $.Site.Params.contentType }}">
-				<i class="inverted big link archive icon" title="{{ i18n `archives` }}"></i>
-			</a>
-		</div>
+
+	{{/*Posts section button*/}}
+	{{ if and (ne .section "posts") }}
+		{{ if gt (len (where .context.Site.RegularPages "Section" "==" .context.Site.Params.contentType)) 0 }}
+			<div class="item">
+				<a href="/{{ .context.Site.Params.contentType }}">
+					<i class="inverted big link archive icon" title="{{ i18n `archives` }}"></i>
+				</a>
+			</div>
+		{{ end }}
 	{{ end }}
-	{{ end }}
-	{{- if and (ne ($.Scratch.Get "type") "tags") $.Site.Params.enableTags -}}
+
+	{{/*Tags section button*/}}
+	{{ if and (ne .section "tags") .context.Site.Params.enableTags }}
 		<div class="item">
 			<a href="/tags">
 				<i class="inverted big link tags icon" title="{{ i18n `allTags` }}"></i>
 			</a>
 		</div>
 	{{ end }}
-	{{- if and (ne ($.Scratch.Get "type") "categories") $.Site.Params.enableCategories -}}
+
+	{{/*Categories section button*/}}
+	{{ if and (ne .section "categories") .context.Site.Params.enableCategories }}
 		<div class="item">
 			<a href="/categories">
 				<i class="inverted big link cubes icon" title="{{ i18n `allCategories` }}"></i>
 			</a>
     	</div>
 	{{ end }}
-	{{ $navArrows := (ne ($.Scratch.Get "type") "posts") }}
-	{{- if and $navArrows (not .IsPage) -}}
-		{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
-		{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
-			<div class="item">
+
+	{{/*Navigation buttons*/}}
+	{{ if and (ne .section "posts") (not .context.IsPage) }}
+		{{ $itemsPerPage := (index .context.Site.Params "paginate" | default .context.Site.Params.itemsPerPage) }}
+		{{ $paginator := .context.Paginate (where .context.Data.Pages "Type" .context.Site.Params.contentType) $itemsPerPage }}
+		<div class="item">
 			{{ if $paginator.HasPrev }}
 				<a href="{{ $paginator.Prev.URL }}">
 					<i class="inverted big link chevron circle left icon" title="{{ i18n `prevPage` }}"></i>
@@ -44,9 +54,9 @@
 			{{ else if $paginator.HasNext }}
 				<i class="disabled inverted big chevron circle left icon" title="{{ i18n `prevPage` }}"></i>
 	  		{{ end }}
-  			</div>
-			<div class="item">
-			{{- if $paginator.HasNext -}}
+			</div>
+		<div class="item">
+			{{ if $paginator.HasNext }}
 				<a href="{{ $paginator.Next.URL }}">
 					<i class="inverted big link chevron circle right icon" title="{{ i18n `nextPage` }}"></i>
 				</a>
@@ -55,18 +65,22 @@
 			{{ end }}
 		</div>
 	{{ end }}
-	{{- if .IsPage -}}
-	<div class="ui container tablet computer only grid">
-		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
-			<i class="inverted big link sidebar icon" title="{{ i18n `showSidebar` }}"></i>
+
+	{{/*Sidebar button*/}}
+	{{ if .context.IsPage }}
+		<div class="ui container tablet computer only grid">
+			<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+				<i class="inverted big link sidebar icon" title="{{ i18n `showSidebar` }}"></i>
+			</div>
 		</div>
-	</div>
 	{{ end }}
-	{{ if and (ne $.Site.Params.contentType "cards") ($.Scratch.Get "navRSS") }}
-	<div class="item right">
-		<a href="/posts/index.xml">
-			<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
-		</a>
-	</div>
+
+	{{/*RSS button*/}}
+	{{ if and (eq .context.Site.Params.contentType "posts") .rssButton }}
+		<div class="item right">
+			<a href="/posts/index.xml">
+				<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
+			</a>
+		</div>
 	{{ end }}
 </nav>

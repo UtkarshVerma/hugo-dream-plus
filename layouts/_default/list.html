@@ -1,3 +1,4 @@
+{{/*Title*/}}
 {{ define "title" }}
 	{{ if eq .Data.Singular "tag" }}
 		{{ humanize (i18n "tag") }} | {{ .Data.Term }}
@@ -6,24 +7,23 @@
 	{{ end }}
 {{ end }}
 
-{{ define "frontmenu" }}
-	{{ $.Scratch.Set "navRSS" true }}
-	{{ partial "nav.html" . }}
-{{ end }}
-
-{{ define "main"}}
-<div class="ui centered grid">
-	<div class="fifteen wide mobile fifteen wide tablet four wide computer column">
-		{{ partial "header.html" . }}
-	</div>
-	<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="cards row box">
-			{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
-			{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
-			{{ range $paginator.Pages }}
-				{{ .Render "summary" }}
-			{{ end }}
+{{/*Content*/}}
+{{ define "content"}}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "") }}
+	
+	<div class="ui centered grid">
+		<div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+			{{ partial "header.html" . }}
+		</div>
+		
+		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+			<div class="cards row box">
+				{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
+				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
+				{{ range $paginator.Pages }}
+					{{ .Render "summary" }}
+				{{ end }}
+			</div>
 		</div>
 	</div>
-</div>
 {{ end }}

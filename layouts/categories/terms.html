@@ -1,37 +1,38 @@
+{{/*Title*/}}
 {{ define "title" }}
 	{{ i18n "allCategories" }}
 {{ end }}
 
-{{ define "frontmenu" }}
-	{{ $.Scratch.Set "navRSS" true }}
-	{{ $.Scratch.Set "type" "categories" }}
-	{{ partial "nav.html" . }}
-{{ end }}
+{{/*Content*/}}
+{{ define "content"}}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "categories") }}
 
-{{ define "main"}}
-<div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
-    {{ partial "header.html" . }}
-	</div>
-	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="ui inverted segment">
-			<h2 class="ui header">
-				{{ i18n "allCategories" }}<hr>
-			</h2>
-			{{ $data := .Data }}
-			{{ range .Data.Terms.Alphabetical }}
-			{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
-			<h3 class="ui header">
-				<a href="{{ $termLink }}">{{ .Term }}</a>
-				-  ({{ i18n "article" .Count }})
-			</h3>
-			<ul>
-				{{ range .Pages }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	<div class="ui centered grid">
+		{{/*Header*/}}
+		<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
+	    	{{ partial "header.html" . }}
+		</div>
+
+		{{/*Categories*/}}
+		<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+			<div class="ui inverted segment">
+				<h2 class="ui header">
+					{{ i18n "allCategories" }}<hr>
+				</h2>
+				
+				{{ $data := .Data }}
+				{{ range .Data.Terms.Alphabetical }}
+					{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}					
+					<h3 class="ui header">
+						<a href="{{ $termLink }}">{{ .Term }}</a> - ({{ i18n "article" .Count }})
+					</h3>
+					<ul>
+						{{ range .Pages }}
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
 				{{ end }}
-			</ul>
-			{{ end }}
+			</div>
 		</div>
 	</div>
-</div>
 {{ end }}

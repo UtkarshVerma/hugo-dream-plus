@@ -5,24 +5,21 @@
 	{{ range $index, $val := $.Site.Social }}
 		{{ $.Scratch.Set $index $val }}
 	{{ end }}
-	{{ $order := slice "GitHub" "Email" "Twitter" "YouTube" "Medium" "LinkedIn" "Stack Overflow" "CodePen" "Reddit" }}
+
+	{{/*slices to loop over*/}}
+	{{ $sites := slice "GitHub" "Email" "Twitter" "YouTube" "Medium" "LinkedIn" "Stack Overflow" "CodePen" "Reddit" }}
 	{{ $links := slice "https://github.com/" "mailto:" "https://twitter.com/" "https://youtube.com/user/" "https://medium.com/@" "https://www.linkedin.com/in/" "https://www.stackoverflow.com/users/" "https://codepen.io/" "https://reddit.com/user/" }}
-	{{ $icon := slice "github" "mail" "twitter" "youtube play" "medium" "linkedin" "stack overflow" "codepen" "reddit" }}
-	{{ range $index, $val := $order }}
+	{{ $icons := slice "github" "mail" "twitter" "youtube play" "medium" "linkedin" "stack overflow" "codepen" "reddit" }}
+	
+	{{/*Generate HTML for each site*/}}
+	{{ range $index, $val := $sites }}
 		{{ $var := replace $val " " "" | lower }}
 		{{ with ($.Scratch.Get $var) }}
-		<div class="item">
-			<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" {{ if ne $var "mail" }}target="	_blank"{{ end }}>
-				<i id="ico" class="inverted big link {{ index $icon $index }} icon" title="{{ $val }}"></i>
-			</a>
-		</div>
+			<div class="item">
+				<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" {{ if ne $var "mail" }}target="	_blank"{{ end }}>
+					<i id="ico" class="inverted big link {{ index $icons $index }} icon" title="{{ $val }}"></i>
+				</a>
+			</div>
 		{{ end }}
-	{{ end }}
-	{{ if and (ne $.Site.Params.contentType "cards") ($.Scratch.Get "navRSS") }}
-	<div class="item right">
-		<a href="/posts/index.xml">
-			<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>
-		</a>
-	</div>
 	{{ end }}
 </nav>
