@@ -1,28 +1,27 @@
-{{/* Override author details if they exist in post's frontmatter */}}
-{{- $authorName := (cond (ne ($.Param "author.name") nil) ($.Param "author.name") $.Site.Params.author) -}}
-{{- $flag := (cond (and ($.Site.Params.avatar) (eq $.Site.Params.author $authorName)) true false) -}}
-{{- $authorAvatar := (cond (ne ($.Param "author.avatar") nil) ($.Param "author.avatar") (cond $flag $.Site.Params.avatar (index (shuffle (seq 1 4)) 0 ))) -}}
-{{- $avatarFlag := (cond (ne ($.Param "author.avatar") nil) false (cond $flag false true)) -}}
-{{- $authorDesc := (cond (ne ($.Param "author.desc") nil) ($.Param "author.desc") $.Site.Params.motto) -}}
-{{- $twitter := (cond (ne ($.Param "author.twitter") nil)  ($.Param "author.twitter") (cond (and (ne $.Site.Social.twitter nil) $flag) $.Site.Social.twitter "")) -}}
+{{/*Override author details if they exist in post's frontmatter*/}}
+{{ $authorName := (cond (ne ($.Param "author.name") nil) ($.Param "author.name") $.Site.Params.author) }}
+{{ $flag := (cond (and ($.Site.Params.avatar) (eq $.Site.Params.author $authorName)) true false) }}
+{{ $authorAvatar := (cond (ne ($.Param "author.avatar") nil) ($.Param "author.avatar") (cond $flag $.Site.Params.avatar (index (shuffle (seq 1 4)) 0 ))) }}
+{{ $avatarFlag := (cond (ne ($.Param "author.avatar") nil) false (cond $flag false true)) }}
+{{ $authorDesc := (cond (ne ($.Param "author.desc") nil) ($.Param "author.desc") $.Site.Params.motto) }}
+{{ $twitter := (cond (ne ($.Param "author.twitter") nil)  ($.Param "author.twitter") (cond (and (ne $.Site.Social.twitter nil) $flag) $.Site.Social.twitter "")) }}
 
+{{/*Author description*/}}
 <div class="author">
-	{{- if $avatarFlag -}}
+	{{ if $avatarFlag }}
 	<img class="avatar" src="/img/avatar{{ $authorAvatar }}.svg">
 	{{ else }}
 	<img class="avatar" src="{{ $authorAvatar }}">
 	{{ end }}
 </div>
 <div class="info grow flexbox">
-	{{- with $twitter -}}
-	<a href="https://twitter.com/{{ $twitter }}">
-	{{ end }}
+	{{ with $twitter }}<a href="https://twitter.com/{{ $twitter }}">{{ end }}
 	<p class="name">{{ $authorName }}</p>
-	{{- with $twitter -}}
-	</a>
-	{{ end }}
+	{{ with $twitter }}</a>{{ end }}
 	<p class="desc">{{ $authorDesc }}</p>
 </div>
+
+{{/*Social buttons*/}}
 <section class="buttons row box">
 	<div class="facebook none flexbox" href="#" onclick="window.open(
 			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),

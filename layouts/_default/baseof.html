@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="{{- $.Site.LanguageCode -}}">
-<head>
-	<title>{{- block "title" . -}}{{ $.Site.Title }}{{- end -}}</title>
-	{{- partial "criticalCSS.html" . -}}
-	{{- partial "head.html" . -}}
-	{{- partial "init_head.html" . -}}
-</head>
-<body>
-	{{- partial "background.html" . -}}
-	{{- partial "sidebar.html" . -}}
-	<div class="pusher">
-		<div class="flipper">
-			<div class="front">
-				{{- block "frontmenu" . -}}{{ end }}{{- block "main" . -}}{{ end }}
-			</div>
-			<div class="back">
-				{{- partial "flip.html" . -}}
+<html lang="{{ $.Site.LanguageCode }}">
+	<head>
+		<title>{{ block "title" . }}{{ $.Site.Title }}{{ end }}</title>
+		{{ partial "criticalCSS.html" . }}
+		{{ partial "head.html" . }}
+		{{ partial "init_head.html" . }}
+	</head>
+
+	<body>
+		{{ partial "background.html" . }}
+		{{ partial "sidebar.html" . }}
+
+		<div class="pusher">
+			<div class="flipper">
+				<div class="front">
+					{{ block "content" . }}{{ end }}
+				</div>
+				<div class="back">
+					{{ partial "back.html" . }}
+				</div>
 			</div>
 		</div>
-	</div>
-	{{- partial "init_body.html" . -}}
-	{{- partial "shortest.html" . -}}
-	{{- partial "twemoji.html" . -}}
-</body>
+
+		{{ partial "init_body.html" . }}
+		{{ partial "shortest.html" . }}
+		{{ partial "twemoji.html" . }}
+	</body>
 </html>

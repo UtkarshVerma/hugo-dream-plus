@@ -1,16 +1,19 @@
-{{- range $name, $taxonomy := $.Site.Taxonomies.categories }}
-<div class="title">
-	<i class="dropdown icon"></i>
-	<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name -}}</a>
-</div>
-<div class="content">
-{{ range $taxonomy.Pages }}
-	<a class="item" href="{{ .Permalink }}">
-		<div>
-			<i class="cocktail icon"></i>
-			<p>{{ .LinkTitle }}</p>
-		</div>
-	</a>
-{{ end }}
-</div>
+{{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+	{{/*Category title*/}}
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="{{- "/categories/" | relLangURL -}}{{- $name | urlize -}}">{{- $name -}}</a>
+	</div>
+
+	{{/*Category articles*/}}
+	<div class="content">
+		{{ range $taxonomy.Pages }}
+			<a class="item" href="{{ .Permalink }}">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>{{ .LinkTitle }}</p>
+				</div>
+			</a>
+		{{ end }}
+	</div>
 {{ end }}

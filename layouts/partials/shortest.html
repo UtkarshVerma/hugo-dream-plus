@@ -1,18 +1,19 @@
-{{- with $.Site.Params.enableShortest -}}
-<script>//<![CDATA[
-	(function() {
-	  var b = {token:"", domains:[], capping:{limit:5, timeout:24}, entryScript:{type:"timeout", timeout:3000, capping:{limit:5, timeout:24}}};
-	  b.token = shToken;
-	  b.domains = shDomains;
-	  var a = document.createElement("script");
-	  a.async = !0;
-	  a.src = "//cdn.shorte.st/link-converter.min.js";
-	  a.onload = a.onreadystatechange = function() {
-		var a = this.readyState;
-		a && "complete" != a && "loaded" != a || shortestMonetization(b);
-	  };
-	  var c = document.getElementsByTagName("script")[0];
-	  c.parentNode.insertBefore(a, c);
-	})();
-//]]></script>
+{{/*Shorte.st script*/}}
+{{ with $.Site.Params.enableShortest }}
+	<script>//<![CDATA[
+		(function() {
+		  var b = {token:"", domains:[], capping:{limit:5, timeout:24}, entryScript:{type:"timeout", timeout:3000, capping:{limit:5, timeout:24}}};
+		  b.token = shToken;
+		  b.domains = shDomains;
+		  var a = document.createElement("script");
+		  a.async = !0;
+		  a.src = "//cdn.shorte.st/link-converter.min.js";
+		  a.onload = a.onreadystatechange = function() {
+			var a = this.readyState;
+			a && "complete" != a && "loaded" != a || shortestMonetization(b);
+		  };
+		  var c = document.getElementsByTagName("script")[0];
+		  c.parentNode.insertBefore(a, c);
+		})();
+	//]]></script>
 {{ end }}

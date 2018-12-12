@@ -1,20 +1,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-{{- if eq .Type $.Site.Params.contentType -}}
-	<!-- Page Author & Description -->
-	<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
-	<meta name="description" content="{{- if isset .Params "description" -}}{{- .Params.description -}}{{- else -}}{{- .Summary | plainify -}}{{- end -}}" />
-{{- else -}}
-	<!-- Site Author & Description -->
-	<meta name="author" content="{{- $.Site.Params.author -}}" />
-	<meta name="description" content="{{- $.Site.Params.description -}}" />
-{{- end -}}
-<!-- Site Generator -->
+
+{{ if eq $.Site.Params.contentType "posts" }}
+	{{/*Page Author & Description*/}}
+	<meta name="author" content="{{ if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end }}" />
+	<meta name="description" content="{{ if isset .Params "description" -}}{{- .Params.description -}}{{- else -}}{{- .Summary | plainify -}}{{- end }}" />
+{{ else }}
+	{{/*Site Author & Description*/}}
+	<meta name="author" content="{{ $.Site.Params.author }}" />
+	<meta name="description" content="{{ $.Site.Params.description }}" />
+{{ end }}
+
+{{/*Site generator*/}}
 {{ .Hugo.Generator }}
-<!--Setting Favicon-->
-<link rel="shortcut icon" href="{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{- else -}}/img/defaultFav.ico{{ end }}">
+
+{{/*Favicon*/}}
+<link rel="shortcut icon" href="{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{- else }}/img/defaultFav.ico{{ end }}">
+
 <!-- Permalink & RSSlink -->
-{{ range .AlternativeOutputFormats -}}
+{{ range .AlternativeOutputFormats }}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end -}}
+{{ end }}

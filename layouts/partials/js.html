@@ -1,9 +1,12 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{{/*Load basic JS*/}}
 <script src="/js/site.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+
+{{/*twemoji JS*/}}
 {{- with $.Site.Params.twitterEmoji -}}
 	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
+
+{{/*Load custom JS*/}}
 {{- range $val := $.Site.Params.customJS }}
 	{{- if gt (len $val) 0 -}}
 		<script src="{{ $val }}"></script>

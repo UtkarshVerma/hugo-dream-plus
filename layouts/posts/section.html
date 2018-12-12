@@ -1,32 +1,34 @@
+{{/*Title*/}}
 {{ define "title" }}
 	{{ i18n "archives" }}
 {{ end }}
 
-{{ define "frontmenu" }}
-	{{ $.Scratch.Set "navRSS" true }}
-	{{ $.Scratch.Set "type" "posts" }}
-	{{ partial "nav.html" . }}
-{{ end }}
+{{/*Content*/}}
+{{ define "content"}}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "section" "posts") }}
 
-{{ define "main"}}
-<div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
-		{{ partial "header.html" . }}
-	</div>
-	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="ui inverted segment">
-			<h2 class="ui header">{{ i18n "archives" }}<hr>
-				<div class="ui grey sub header">{{ .Content }}</div>
-			</h2>
-			{{ range .Data.Pages.GroupByDate "2006" }}
-			<h3 class="ui header">{{ .Key }}</h3>
-			<ul>
-				{{ range .Pages }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	<div class="ui centered grid">
+		{{/*Header*/}}
+		<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
+			{{ partial "header.html" . }}
+		</div>
+
+		{{/*Posts*/}}
+		<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+			<div class="ui inverted segment">
+				<h2 class="ui header">{{ i18n "archives" }}<hr>
+					<div class="ui grey sub header">{{ .Content }}</div>
+				</h2>
+
+				{{ range .Data.Pages.GroupByDate "2006" }}
+					<h3 class="ui header">{{ .Key }}</h3>
+					<ul>
+						{{ range .Pages }}
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
 				{{ end }}
-			</ul>
-			{{ end }}
+			</div>
 		</div>
 	</div>
-</div>
 {{ end }}

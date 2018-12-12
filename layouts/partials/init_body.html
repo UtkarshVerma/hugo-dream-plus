@@ -1,5 +1,13 @@
-{{- partial "js.html" . -}}
-{{- with $.Site.GoogleAnalytics -}}
+{{/*Load JS files*/}}
+{{ partial "js.html" . }}
+
+{{/*Load Disqus JS for Posts*/}}
+{{ if eq $.Site.Params.contentType "posts" }}
+	<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
+{{ end }}
+
+{{/*Google Analytics*/}}
+{{ with $.Site.GoogleAnalytics }}
 	<!-- Google Analytics -->
 	<script>
 		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -7,7 +15,4 @@
 		ga('send', 'pageview');
 	</script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
-{{ end }}
-{{- if ne $.Site.Params.contentType "cards" -}}
-	<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
 {{ end }}

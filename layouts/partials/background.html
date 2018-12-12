@@ -1,7 +1,8 @@
 <script>
 var prevBgIndex = 0;
 var bodyBgSwitchIndex = 0;
-{{- with $.Site.Params.enableColorBG -}}
+
+{{ with $.Site.Params.enableColorBG }}
 	var gradients = [
 	  [],
 	  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
@@ -14,18 +15,20 @@ var bodyBgSwitchIndex = 0;
 	  ['#23074d', '#cc5333'] // Taran Tado
 	];
 	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]));
-{{- else -}}
-	{{- if $.Site.Params.bgList -}}
-		var images = {{- $.Site.Params.bgList -}};
+{{ else }}
+	{{ if $.Site.Params.bgList }}
+		var images = {{ $.Site.Params.bgList }};
 		var randomNumber = getRandomInt(0, images.length);
 		bgImage = "url(" + images[randomNumber] + ")";
 	{{ else }}
 		var bgImage = "url(" + {{ $.Site.Params.bgImage }} + ")";
 	{{ end }}
+
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
-	document.body.style.setProperty('--blurEff', {{- $.Site.Params.bgBlur -}});
+	document.body.style.setProperty('--blurEff', {{ $.Site.Params.bgBlur }});
 	document.body.style.setProperty('--bgImage', bgImage);
 {{ end }}
+
 	function getRandomInt(min, max) {
 	  min = Math.ceil(min);
 	  max = Math.floor(max);
@@ -52,6 +55,8 @@ var bodyBgSwitchIndex = 0;
 	  return str;
 	}
 </script>
-{{- if not $.Site.Params.enableColorBG -}}
+
+{{/*Create blur effect*/}}
+{{ if not $.Site.Params.enableColorBG }}
 	<div class="blur-overlay"></div>
-{{- end -}}
+{{ end }}

@@ -1,59 +1,70 @@
+{{/*Title*/}}
 {{ define "title" }}
 	{{ .Title }}
 {{ end }}
 
-{{ define "frontmenu" }}
-	{{ $.Scratch.Set "navRSS" true }}
-	{{ partial "nav.html" . }}
-{{ end }}
+{{/*Content*/}}
+{{ define "content" }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "") }}
 
-{{ define "main" }}
-<div class="ui centered grid">
-	<div class="sixteen wide mobile only column">
-			{{- partial "header.html" . -}}
-	</div>
-	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-		<section class="ui secondary top attached black segment post-head">
-			<h1 class="post-title">
-				{{ .Title }}
-			</h1>
-			<div class="sub header">
+	<div class="ui centered grid">
+		{{/*Header*/}}
+		<div class="sixteen wide mobile only column">
+				{{ partial "header.html" . }}
+		</div>
+
+		<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+			{{/*Article*/}}
+			<section class="ui secondary top attached black segment post-head">
+				<h1 class="post-title">
+					{{ .Title }}
+				</h1>
+
+				<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
-					{{- if $.Site.DisqusShortname -}}
-					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></a></span></div>{{- end }}
+					{{ if $.Site.DisqusShortname }}
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></a></span></div>{{ end }}
 					<div><span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span></div>
 					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
-			</div>
-			<hr>
-			{{- if and $.Site.Params.enableToc .TableOfContents -}}
-			<div class="toc">
-				{{- .TableOfContents -}}
-			</div>
+				</div>
+				<hr>
+
+				{{ if and $.Site.Params.enableToc .TableOfContents }}
+					<div class="toc">
+						{{ .TableOfContents }}
+					</div>
+				{{ end }}
+
+				<article class="post-content twemoji">
+					{{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}"><i class="small linkify icon"></i></a> ${3}` | safeHTML }}
+				</article>				
+			</section>
+
+			{{/*Tags*/}}
+			<section class="ui secondary attached segment dream-tags">
+				{{ if isset .Params "tags" }}
+					{{ partial "tags.html" (dict "Page" . "postTags" true) }}
+				{{ else }}
+					<span>{{ i18n "noTag" }}</span>
+				{{ end }}
+			</section>
+
+			{{/*Share card*/}}
+			{{ if $.Site.Params.enableShareCard }}
+				<section class="ui secondary {{ if not $.Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
+					{{ partial "share.html" . }}
+				</section>
+				<section class="ui secondary attached segment copyright">
+					{{ partial "copyright.html" . }}
+				</section>
 			{{ end }}
-			<article class="post-content twemoji">
-				{{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}"><i class="small linkify icon"></i></a> ${3}` | safeHTML }}
-			</article>
-		</section>
-		<section class="ui secondary attached segment dream-tags">
-			{{- if isset .Params "tags" -}}
-				{{- partial "tags.html" (dict "Page" . "postTags" true) -}}
-			{{ else }}
-			<span>{{ i18n "noTag" }}</span>
+
+			{{/*Disqus comments*/}}
+			{{ if $.Site.DisqusShortname }}
+				<div class="ui secondary bottom attached stacked segment disqus">
+					{{ partial "disqus.html" . }}
+				</div>
 			{{ end }}
-		</section>
-		{{- if $.Site.Params.enableShareCard -}}
-		<section class="ui secondary {{ if not $.Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
-			{{- partial "share.html" . -}}
-		</section>
-		<section class="ui secondary attached segment copyright">
-			{{ partial "copyright.html" . }}
-		</section>
-		{{ end }}
-		{{- if $.Site.DisqusShortname -}}
-		<div class="ui secondary bottom attached stacked segment disqus">
-			{{- partial "disqus.html" . -}}
 		</div>
-		{{ end }}
 	</div>
-</div>
 {{ end }}
