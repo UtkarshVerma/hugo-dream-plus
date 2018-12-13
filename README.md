@@ -160,10 +160,10 @@ Your site should now be locally available at [http://localhost:1313](http://loca
 For testing the example site, you'll have to explicitly specify the config file to Hugo. This is done as follows:
 ```bash
 #For post view demo
-hugo --config posts.toml server
+hugo server --config posts.toml
 
 #For card view demo
-hugo --config cards.toml server
+hugo server --config cards.toml
 ```
 
 ## Contributing
