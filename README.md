@@ -22,8 +22,8 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 
 This theme can be used for two purposes:
 
-1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to card view for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
-2. If you're simply making a blog or another website with a bunch of posts, then switch to the posts view for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
+1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to "Cards view" for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
+2. If you're simply making a blog or another website with a bunch of posts, then switch to the "Posts view" for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
 
 This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
@@ -102,8 +102,8 @@ Once this is done, write up the "**About Me**" section of your website in Markdo
 ### Toggling the views
 As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
 ```toml
-contentType = "cards"    #Enables the card view.
-contentType = "posts"    #Enables the post view.
+contentType = "cards"    #Enables the cards view.
+contentType = "posts"    #Enables the posts view.
 ```
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
@@ -159,10 +159,10 @@ Your site should now be locally available at [http://localhost:1313](http://loca
 
 For testing the example site, you'll have to explicitly specify the config file to Hugo. This is done as follows:
 ```bash
-#For post view demo
+#For posts view demo
 hugo server --config posts.toml
 
-#For card view demo
+#For cards view demo
 hugo server --config cards.toml
 ```
 
