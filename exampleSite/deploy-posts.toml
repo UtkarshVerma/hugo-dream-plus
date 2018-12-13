@@ -2,7 +2,7 @@ baseURL = "https://dream-plus-posts.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
-theme = "dream-plus"
+theme = "repo"
 themesDir = "../.."   #Don't use this, only for exampleSite
 
 googleAnalytics = "UA-112332904-3"
