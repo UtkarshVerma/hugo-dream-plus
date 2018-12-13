@@ -5,7 +5,7 @@ description = "An upgraded version of the hugo-dream-theme with tons of new feat
 homepage = "https://github.com/UtkarshVerma/hugo-dream-plus"
 tags = ["clean", "blog", "single page", "responsive", "google analytics","disqus", "personal", "syntax highlighting", "single page", "mobile"]
 features = ["randomBackground","favicon","blurBackground","home cards","flip", "colorful", "imagebackground", "i18n", "copyright", "motto"]
-min_version = "0.38"
+min_version = "0.47"
 
 [author]
 	name = "Utkarsh Verma"
