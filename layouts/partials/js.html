@@ -2,13 +2,13 @@
 <script src="/js/site.js"></script>
 
 {{/*twemoji JS*/}}
-{{- with $.Site.Params.twitterEmoji -}}
+{{ with $.Site.Params.twitterEmoji }}
 	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
 {{ end }}
 
 {{/*Load custom JS*/}}
-{{- range $val := $.Site.Params.customJS }}
-	{{- if gt (len $val) 0 -}}
+{{ range $val := $.Site.Params.customJS }}
+	{{ if gt (len $val) 0 }}
 		<script src="{{ $val }}"></script>
 	{{ end }}
 {{ end }}
