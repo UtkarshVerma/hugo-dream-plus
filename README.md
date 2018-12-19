@@ -3,7 +3,7 @@
 ![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/original.png)
 This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
 
-* "Card" and "Post" views for the home page
+* "Cards" and "Posts" views for the home page
 * twemoji rendering
 * Table of contents for posts
 * Random image background
@@ -100,7 +100,7 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 Once this is done, write up the "**About Me**" section of your website in Markdown as directed here:[Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
 
 ### Toggling the views
-As stated earlier, this theme has two views, **Card view** and **Post view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
+As stated earlier, this theme has two views, **Cards view** and **Posts view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
 ```toml
 contentType = "cards"    #Enables the cards view.
 contentType = "posts"    #Enables the posts view.
