@@ -1,11 +1,11 @@
-[blogAlias]
-other = "El blog de "
-
-[aboutHeader]
-other = "Sobre mi"
-
 [home]
 other = "Inicio"
+
+[showSidebar]
+other = "Mostrar barra lateral"
+
+[rssFeed]
+other = "RSS Feed"
 
 [prevPage]
 other = "Página anterior"
@@ -16,34 +16,31 @@ other = "Página siguiente"
 [flip]
 other = "Sobre mi"
 
-[clickToPopTagsAndCategories]
-other = "Haz click para poner tags y categorías"
+[popTagsCategories]
+other = "Mostrar/ocultar tags y categorías"
 
-[updateAt]
+[lastUpdate]
 other = "Actualizado por última vez"
 
 [returnHome]
 other = "Volver a la página inicial"
 
+[allCards]
+other = "Todas las tarjetas"
+
 [noTag]
 other = "No hay tag"
 
-[archives]
+[archive]
 other = "Archivo"
 
 [tag]
-one = "Tag"
-other = "{{ .Count }} tags"
+one = "Todos los Tags"
+other = "Tag"
 
 [category]
-one = "Categoría"
-other = "{{ .Count }} categorías"
-
-[allTags]
-other = "Todos los Tags"
-
-[allCategories]
-other = "Todas las categorías"
+one = "Todas las categorías"
+other = "Categoría"
 
 [article]
 one = "1 artículo"

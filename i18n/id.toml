@@ -1,9 +1,3 @@
-[blogAlias]
-other = "Blog "
-
-[aboutHeader]
-other = "Tentang"
-
 [home]
 other = "Beranda"
 
@@ -22,34 +16,31 @@ other = "Halaman berikutnya"
 [flip]
 other = "Tentang Saya"
 
-[clickToPopTagsAndCategories]
-other = "Klik di sini untuk menampilkan tag dan kategori"
+[popTagsCategories]
+other = "Tampilkan/sembunyikan tag dan kategori"
 
-[updateAt]
+[lastUpdate]
 other = "Terakhir diperbarui"
 
 [returnHome]
 other = "Kembali ke Beranda"
 
+[archive]
+other = "Arsip"
+
+[allCards]
+other = "Semua Kartu"
+
 [noTag]
 other = "Tidak ada Tag"
 
-[archives]
-other = "Arsip"
-
 [tag]
-one = "Tag"
-other = "{{ .Count }} tag"
+one = "Semua Tag"
+other = "Tag"
 
 [category]
-one = "Kategori"
-other = "{{ .Count }} kategori"
-
-[allTags]
-other = "Semua Tag"
-
-[allCategories]
-other = "Semua Kategori"
+one = "Semua Kategori"
+other = "Kategori"
 
 [article]
 one = "1 artikel"
