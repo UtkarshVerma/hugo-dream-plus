@@ -25,7 +25,7 @@
 					{{ if $.Site.DisqusShortname }}
 					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></a></span></div>{{ end }}
 					<div><span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span></div>
-					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
+					<div><span><i class="angle double up icon"></i>{{ i18n "lastUpdate" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
 				</div>
 				<hr>
 
@@ -43,7 +43,7 @@
 			{{/*Tags*/}}
 			<section class="ui secondary attached segment dream-tags">
 				{{ if isset .Params "tags" }}
-					{{ partial "tags.html" (dict "Page" . "postTags" true) }}
+					{{ partial "tags.html" (dict "context" . "isPost" true) }}
 				{{ else }}
 					<span>{{ i18n "noTag" }}</span>
 				{{ end }}
@@ -54,9 +54,13 @@
 				<section class="ui secondary {{ if not $.Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 					{{ partial "share.html" . }}
 				</section>
-				<section class="ui secondary attached segment copyright">
-					{{ partial "copyright.html" . }}
-				</section>
+				{{ with $.Site.Params.copyright }}
+					<section class="ui secondary attached segment copyright">
+						{{ $license := index $.Site.Params.copyright 0 }}
+						{{ $statement := index $.Site.Params.copyright 1 }}
+						{{ partial "copyright.html" (dict "license" $license "statement" $statement) }}
+					</section>
+				{{ end }}
 			{{ end }}
 
 			{{/*Disqus comments*/}}

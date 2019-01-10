@@ -1,4 +1,4 @@
-{{ $randomCover := (print "/img/default" (index (shuffle (seq 1 6)) 0) ".jpg") }}
+{{ $randomCover := (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
 {{ $cover := cond (ne .Params.cover nil) .Params.cover $randomCover }}
 
 {{/*Card*/}}

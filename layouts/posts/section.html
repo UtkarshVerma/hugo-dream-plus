@@ -1,11 +1,11 @@
 {{/*Title*/}}
 {{ define "title" }}
-	{{ i18n "archives" }}
+	{{ i18n "archive" }}
 {{ end }}
 
 {{/*Content*/}}
 {{ define "content"}}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "section" "posts") }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "posts") }}
 
 	<div class="ui centered grid">
 		{{/*Header*/}}
@@ -16,7 +16,7 @@
 		{{/*Posts*/}}
 		<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="ui inverted segment">
-				<h2 class="ui header">{{ i18n "archives" }}<hr>
+				<h2 class="ui header">{{ i18n "archive" }}<hr>
 					<div class="ui grey sub header">{{ .Content }}</div>
 				</h2>
 

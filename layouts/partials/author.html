@@ -3,7 +3,7 @@
 	{{ with $.Site.Params.avatar }}
 		<img src="{{ $.Site.Params.avatar }}">
 	{{ else }}
-		{{ $avatar := (index (shuffle (seq 1 4)) 0 ) }}
+		{{ $avatar := index (seq 1 4 | shuffle ) 0 }}
 		<img src="/img/avatar{{ $avatar }}.svg">
 	{{ end }}
 </div>
