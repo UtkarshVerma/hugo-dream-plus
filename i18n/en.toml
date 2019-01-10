@@ -1,9 +1,3 @@
-[blogAlias]
-other = "'s blog"
-
-[aboutHeader]
-other = "About"
-
 [home]
 other = "Home"
 
@@ -22,34 +16,31 @@ other = "Next page"
 [flip]
 other = "About Me"
 
-[clickToPopTagsAndCategories]
-other = "Click this to pop tags and categories"
+[popTagsCategories]
+other =  "Show/hide tags and categories"
 
-[updateAt]
+[lastUpdate]
 other = "Last updated on"
 
 [returnHome]
 other = "Return to Homepage"
 
-[noTag]
-other = "No Tag"
-
-[archives]
+[archive]
 other = "Archive"
 
+[allCards]
+other = "All Cards"
+
+[noTag]
+other = "No tag"
+
 [tag]
-one = "Tag"
-other = "{{ .Count }} tags"
+one = "All Tags"
+other = "Tag"
 
 [category]
-one = "Category"
-other = "{{ .Count }} categories"
-
-[allTags]
-other = "All Tags"
-
-[allCategories]
-other = "All Categories"
+one = "All Categories"
+other = "Category"
 
 [article]
 one = "1 article"
