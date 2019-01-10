@@ -1,10 +1,6 @@
 {{/*Title*/}}
 {{ define "title" }}
-	{{ if eq .Data.Singular "tag" }}
-		{{ humanize (i18n "tag") }} | {{ .Data.Term }}
-	{{ else if eq .Data.Singular "category" }}
-		{{ humanize (i18n "category") }} | {{ .Data.Term }}
-	{{ end }}
+	{{ i18n .Data.Singular | humanize }} | {{ .Data.Term }}
 {{ end }}
 
 {{/*Content*/}}
@@ -18,7 +14,7 @@
 		
 		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="cards row box">
-				{{ $itemsPerPage := (index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage) }}
+				{{ $itemsPerPage := index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage }}
 				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
 				{{ range $paginator.Pages }}
 					{{ .Render "summary" }}

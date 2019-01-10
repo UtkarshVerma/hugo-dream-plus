@@ -1,4 +1,4 @@
-{{ $randomCover := (print "/img/default" (index (shuffle (seq 1 6)) 0) ".jpg") }}
+{{ $randomCover := (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
 {{ $cover := cond (ne .Params.cover nil) .Params.cover $randomCover }}
 
 <article class="blog-card none flexbox" style="background-image: url({{ $cover }})">
@@ -8,7 +8,7 @@
 		<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
 		<div class="intro twemoji">
 			{{ if .Params.description }}
-				{{ .Params.description | emojify  | markdownify }}
+				{{ .Params.description | emojify | markdownify }}
 			{{ else }}
 				<br><br>
 			{{ end }}

@@ -1,11 +1,11 @@
 {{/*Title*/}}
 {{ define "title" }}
-	{{ i18n "allTags" }}
+	{{ i18n .Data.Singular 1 }}
 {{ end }}
 
 {{/*Content*/}}
 {{ define "content"}}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "tags") }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" .Data.Plural) }}
 	<div class="ui centered grid">
 		{{/*Header*/}}
 		<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
@@ -15,10 +15,13 @@
 		{{/*Tags*/}}
 		<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="ui inverted segment">
-				<h2 class="ui header">{{ i18n "allTags" }}{{ "---" | markdownify }}</h2>
+				<h1 class="ui header">
+					{{ i18n .Data.Singular 1 }}{{ "---" | markdownify }}
+				</h1>
 
+				{{/*Taxonomy terms*/}}
 				{{ $data := .Data }}
-				{{ range .Data.Terms.Alphabetical }}
+				{{ range $data.Terms.Alphabetical }}
 					{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
 					<h3 class="ui header">
 						<a href="{{ $termLink }}">{{ .Term }}</a> - ({{ i18n "article" .Count }})
