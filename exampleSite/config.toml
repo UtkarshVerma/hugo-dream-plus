@@ -5,7 +5,7 @@ defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
 theme = "dream-plus"
 themesDir = "../.."
-paginate = 3
+paginate = 4
 
 #Syntax highlighting
 pygmentsCodeFences = true
@@ -46,14 +46,6 @@ enableEmoji=true
 
 	[params.background]
 		colorBG = true
-		bgList = [""]
-		bgImage = ""
-		bgBlur = ""
-
-	[params.shortest]
-		enabled = false
-		apiToken = ""
-		domains = ""
 	
 	#Tags settings
 	[params.tags]
@@ -69,4 +61,3 @@ enableEmoji=true
 	stackoverflow = "9271608/utkarsh-verma"
 	medium = "UtkarshVerma_"
 	twitter = "UtkarshVerma_"
-	siteStartYear = 2018
