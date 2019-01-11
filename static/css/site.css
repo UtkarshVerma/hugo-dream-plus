@@ -917,3 +917,9 @@ p > img:not(.emoji), li > img {
 .blog-card:hover .color-overlay {
   background: rgba(0, 0, 0, 0.6);
 }
+
+.license.statement {
+  font-size: 1.1em;
+  padding-left: 1em;
+  margin: auto;
+}
