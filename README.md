@@ -160,6 +160,20 @@ The [Shorte.st](https://shorte.st) website script has been implemented in this t
 ```
 
 ### Some other configurations
+If you'd like to control the amount of posts/cards a page has, then you may do so using the `paginate` config variable.
+```
+paginate = 4		#Defaults to 10
+```
+
+Also, the tags, when enabled, won't all be displayed on the header and sidebar by default. Only the top 8 tags(article-count-wise) are displayed there to avoid congestion. However it can be overriden using `tagLimit` variable of `[params.tag]` table.
+```toml
+[params.tag]
+	enabled = true
+	tagLimit = 10		#Top 10 tags will be displayed
+	#or 
+	tagLimit = 0		#Display all tags
+```
+
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
 
 ## Documentation
