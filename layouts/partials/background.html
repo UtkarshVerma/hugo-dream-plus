@@ -2,7 +2,12 @@
 var prevBgIndex = 0;
 var bodyBgSwitchIndex = 0;
 
-{{ with $.Site.Params.enableColorBG }}
+{{ $colorBG := $.Site.Params.background.colorBG }}
+{{ $bgList := $.Site.Params.background.bgList }}
+{{ $bgImage := $.Site.Params.background.bgImage }}
+{{ $bgBlur := $.Site.Params.background.bgBlur }}
+
+{{ with $colorBG }}
 	var gradients = [
 	  [],
 	  ['#40e0d0', '#ff8c00', '#ff0080'], // Wedding Day Blues
@@ -16,16 +21,16 @@ var bodyBgSwitchIndex = 0;
 	];
 	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]));
 {{ else }}
-	{{ if $.Site.Params.bgList }}
-		var images = {{ $.Site.Params.bgList }};
+	{{ if $bgList }}
+		var images = {{ $bgList }};
 		var randomNumber = getRandomInt(0, images.length);
 		bgImage = "url(" + images[randomNumber] + ")";
 	{{ else }}
-		var bgImage = "url(" + {{ $.Site.Params.bgImage }} + ")";
+		var bgImage = "url(" + {{ $bgImage }} + ")";
 	{{ end }}
 
 	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
-	document.body.style.setProperty('--blurEff', {{ $.Site.Params.bgBlur }});
+	document.body.style.setProperty('--blurEff', {{ $bgBlur }});
 	document.body.style.setProperty('--bgImage', bgImage);
 {{ end }}
 
@@ -57,6 +62,6 @@ var bodyBgSwitchIndex = 0;
 </script>
 
 {{/*Create blur effect*/}}
-{{ if not $.Site.Params.enableColorBG }}
+{{ if not $colorBG }}
 	<div class="blur-overlay"></div>
 {{ end }}

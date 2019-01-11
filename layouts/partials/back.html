@@ -9,13 +9,6 @@
 				<article class="twemoji">
 					{{ readFile "/content/about.md" | markdownify | emojify }}
 				</article>
-				
-				{{ with $.Site.Params.copyright }}
-					<br><hr>
-					{{ $license := index $.Site.Params.copyright 0 }}
-					{{ $statement := index $.Site.Params.copyright 1 }}
-					{{ partial "copyright.html" (dict "license" $license "statement" $statement) }}
-				{{ end }}
 			</div>
 		</section>
 	</div>

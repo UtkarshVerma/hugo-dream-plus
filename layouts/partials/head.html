@@ -4,12 +4,12 @@
 
 {{ if eq $.Site.Params.contentType "posts" }}
 	{{/*Page Author & Description*/}}
-	<meta name="author" content="{{ if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end }}" />
+	<meta name="author" content="{{ if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author.name -}}{{- end }}" />
 	<meta name="description" content="{{ if isset .Params "description" -}}{{- .Params.description -}}{{- else -}}{{- .Summary | plainify -}}{{- end }}" />
 {{ else }}
 	{{/*Site Author & Description*/}}
-	<meta name="author" content="{{ $.Site.Params.author }}" />
-	<meta name="description" content="{{ $.Site.Params.description }}" />
+	<meta name="author" content="{{ $.Site.Params.author.name }}" />
+	<meta name="description" content="{{ $.Site.Params.author.description }}" />
 {{ end }}
 
 {{/*Site generator*/}}

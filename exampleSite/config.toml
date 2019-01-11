@@ -5,7 +5,9 @@ defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
 theme = "dream-plus"
 themesDir = "../.."
+paginate = 3
 
+#Syntax highlighting
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
@@ -18,32 +20,48 @@ enableRobotsTXT = true
 enableEmoji=true
 
 [params]
-	author = "Utkarsh Verma"
-	description = "Just a random blog for random stuff, mostly tech-related."
-	avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
-	motto = "A keen maker, programmer and an Instructables author."
-	enableToc = true
-	enableShareCard = true
-
+	#Favicon for site
 	favicon = "/img/defaultFav.ico"
-
-  	#Background settings
-	enableColorBG= true
-
-	#Post-displaying Settings
-	enableTags = true
-	enableCategories = true
-
-	customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
-
-	#Cards or posts shown per page
-	itemsPerPage = 4
 
 	#Set whether you're hosting "cards" or "post"
 	contentType = "posts"
 
-	#Enable Twitter Emoji
-	twitterEmoji = true
+	siteStartYear = "2018"
+
+	[params.author]
+		name = "Utkarsh Verma"
+		description = "Just a random blog for random stuff, mostly tech-related."
+		avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
+		motto = "A keen maker, programmer and an Instructables author."
+
+	[params.features]
+		#Enable Twitter Emoji
+		twitterEmoji = true
+		#Enable Table of Contents
+		toc = true
+		#Enable share card
+		shareCard = true
+		#Use custom CSS
+		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
+
+	[params.background]
+		colorBG = true
+		bgList = [""]
+		bgImage = ""
+		bgBlur = ""
+
+	[params.shortest]
+		enabled = false
+		apiToken = ""
+		domains = ""
+	
+	#Tags settings
+	[params.tags]
+		enabled = true
+
+	#Categories settings
+	[params.categories]
+		enabled = true
 
 [social]
 	email = "utkarshverma@pm.me"

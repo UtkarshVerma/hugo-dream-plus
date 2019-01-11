@@ -29,7 +29,7 @@
 				</div>
 				<hr>
 
-				{{ if and $.Site.Params.enableToc .TableOfContents }}
+				{{ if and $.Site.Params.features.toc .TableOfContents }}
 					<div class="toc">
 						{{ .TableOfContents }}
 					</div>
@@ -43,14 +43,14 @@
 			{{/*Tags*/}}
 			<section class="ui secondary attached segment dream-tags">
 				{{ if isset .Params "tags" }}
-					{{ partial "tags.html" (dict "context" . "isPost" true) }}
+					{{ partial "tags.html" (dict "context" . "isPost" true "limit" 0) }}
 				{{ else }}
 					<span>{{ i18n "noTag" }}</span>
 				{{ end }}
 			</section>
 
 			{{/*Share card*/}}
-			{{ if $.Site.Params.enableShareCard }}
+			{{ if $.Site.Params.features.shareCard }}
 				<section class="ui secondary {{ if not $.Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 					{{ partial "share.html" . }}
 				</section>

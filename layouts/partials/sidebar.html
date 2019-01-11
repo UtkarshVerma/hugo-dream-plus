@@ -5,15 +5,17 @@
 	</section>
 
 	{{/*Tags*/}}
-	{{ if and $.Site.Params.enableTags $.Site.Taxonomies.tags }}
+	{{ if and $.Site.Params.tags.enabled $.Site.Taxonomies.tags }}
 		<section class="ui attached center aligned inverted segment sidebar-dream-tags">
 			{{/*Call 'tags' partial and pass parameters*/}}
-			{{ partial "tags.html" (dict "context" . "isPost" false "tags" $.Site.Taxonomies.tags) }}
+			{{ $limit := $.Site.Params.tags.tagLimit | default 8 }}
+			{{ $args := dict "context" . "isPost" false "tags" $.Site.Taxonomies.tags "limit" $limit }}
+			{{ partial "tags.html" $args }}
 		</section>
 	{{ end }}
 
 	{{/*Categories*/}}
-	{{ if and $.Site.Params.enableCategories $.Site.Taxonomies.categories }}
+	{{ if and $.Site.Params.categories.enabled $.Site.Taxonomies.categories }}
 		<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
 			<div class="ui inverted accordion">
 				{{ partial "categories.html" . }}

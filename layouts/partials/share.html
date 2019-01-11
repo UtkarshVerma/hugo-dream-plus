@@ -1,10 +1,10 @@
 {{/*Override author details if they exist in post's frontmatter*/}}
-{{ $authorName := (cond (ne ($.Param "author.name") nil) ($.Param "author.name") $.Site.Params.author) }}
-{{ $flag := (cond (and ($.Site.Params.avatar) (eq $.Site.Params.author $authorName)) true false) }}
-{{ $authorAvatar := (cond (ne ($.Param "author.avatar") nil) ($.Param "author.avatar") (cond $flag $.Site.Params.avatar (index (shuffle (seq 1 4)) 0 ))) }}
-{{ $avatarFlag := (cond (ne ($.Param "author.avatar") nil) false (cond $flag false true)) }}
-{{ $authorDesc := (cond (ne ($.Param "author.desc") nil) ($.Param "author.desc") $.Site.Params.motto) }}
-{{ $twitter := (cond (ne ($.Param "author.twitter") nil)  ($.Param "author.twitter") (cond (and (ne $.Site.Social.twitter nil) $flag) $.Site.Social.twitter "")) }}
+{{ $authorName := cond (ne .Params.author.name nil) .Params.author.name $.Site.Params.author.name }}
+{{ $flag := cond (and (ne $.Site.Params.author.avatar nil) (eq $.Site.Params.author.name $authorName)) true false }}
+{{ $authorAvatar := cond (ne $.Params.author.avatar nil) .Params.author.avatar (cond $flag $.Site.Params.author.avatar (index (seq 1 4 | shuffle) 0 )) }}
+{{ $avatarFlag := cond (ne .Params.author.avatar nil) false (not $flag) }}
+{{ $authorDesc := cond (ne .Params.author.desc nil) .Params.author.desc $.Site.Params.author.motto }}
+{{ $twitter := cond (ne .Params.author.twitter nil) .Params.author.twitter (cond (and (ne $.Site.Social.twitter nil) $flag) $.Site.Social.twitter "") }}
 
 {{/*Author description*/}}
 <div class="author">

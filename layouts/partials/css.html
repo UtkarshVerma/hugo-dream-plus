@@ -7,7 +7,7 @@
 {{ end }}
 
 {{/*Load custom CSS*/}}
-{{ range $val := $.Site.Params.customCSS }}
+{{ range $val := $.Site.Params.features.customCSS }}
 	{{ if gt (len $val) 0 }}
 		<link rel="stylesheet" type="text/css" href="{{ $val }}">
 	{{ end }}
@@ -17,7 +17,7 @@
 <style>
 	body.pushable {
 		display: block;
-		{{ with $.Site.Params.enableColorBG }}
+		{{ with $.Site.Params.background.colorBG }}
 			background: linear-gradient(to right, var(--colorBG)) !important;
 		{{ else }}
 			background-image: var(--bgImage) !important;

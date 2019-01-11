@@ -15,17 +15,15 @@
 
 	{{/*Posts section button*/}}
 	{{ if and (ne .type "posts") }}
-		{{ if gt (len (where .context.Site.RegularPages "Section" "==" .context.Site.Params.contentType)) 0 }}
-			<div class="item">
-				<a href="/{{ .context.Site.Params.contentType }}">
-					<i class="inverted big link archive icon" title="{{ i18n `archive` }}"></i>
-				</a>
-			</div>
-		{{ end }}
+		<div class="item">
+			<a href="/{{ .context.Site.Params.contentType }}">
+				<i class="inverted big link archive icon" title="{{ i18n `archive` }}"></i>
+			</a>
+		</div>
 	{{ end }}
 
 	{{/*Tags section button*/}}
-	{{ if and (ne .type "tags") .context.Site.Params.enableTags }}
+	{{ if and (ne .type "tags") .context.Site.Params.tags.enabled }}
 		<div class="item">
 			<a href="/tags">
 				<i class="inverted big link tags icon" title="{{ i18n `tag` 1 }}"></i>
@@ -34,7 +32,7 @@
 	{{ end }}
 
 	{{/*Categories section button*/}}
-	{{ if and (ne .type "categories") .context.Site.Params.enableCategories }}
+	{{ if and (ne .type "categories") .context.Site.Params.categories.enabled }}
 		<div class="item">
 			<a href="/categories">
 				<i class="inverted big link cubes icon" title="{{ i18n `category` 1 }}"></i>
@@ -44,8 +42,7 @@
 
 	{{/*Navigation buttons*/}}
 	{{ if and (ne .type "posts") (not .context.IsPage) }}
-		{{ $itemsPerPage := (index .context.Site.Params "paginate" | default .context.Site.Params.itemsPerPage) }}
-		{{ $paginator := .context.Paginate (where .context.Data.Pages "Type" .context.Site.Params.contentType) $itemsPerPage }}
+		{{ $paginator := .context.Paginate (where .context.Data.Pages "Type" .context.Site.Params.contentType) }}
 		<div class="item">
 			{{ if $paginator.HasPrev }}
 				<a href="{{ $paginator.Prev.URL }}">

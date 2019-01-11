@@ -14,8 +14,7 @@
 		
 		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="cards row box">
-				{{ $itemsPerPage := index $.Site.Params "paginate" | default $.Site.Params.itemsPerPage }}
-				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) $itemsPerPage }}
+				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) }}
 				{{ range $paginator.Pages }}
 					{{ .Render "summary" }}
 				{{ end }}
