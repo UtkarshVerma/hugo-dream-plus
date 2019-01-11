@@ -66,14 +66,15 @@ Within the [`exampleSite`](/exampleSite) folder, you'll find the config files, [
 You must use these config files as a basis for your site, since they **take care of the necessary variable declarations**, which you may edit according to your needs.
 
 ### Describe yourself
-Define yourself through the following config variables in `params`:
+Define yourself through the following config variables in `params` under the `author` table as shown:
 ```toml
-author = "<name of the author>"
-description = "Short description of the site"
-motto = "author's motto or short description"
+[params.author]
+	author = "<name of the author>"
+	description = "Short description of the site"
+	motto = "author's motto or short description"
 
-#Leaving the avatar variable unset displays svg avatars
-avatar = "<absolute path to avatar>"
+	#Leaving the avatar variable unset displays svg avatars
+	avatar = "<absolute path to avatar>"
 ```
 
 After that, fill up the social variables at the end of the config file. This theme suports the following social sites: (The examples are given)
@@ -117,16 +118,24 @@ hugo new posts/example.md		#Post creation
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
 
 ### Image background
-To enable setting images as background, you'll have to disable **random colour background** first by setting `enableColorBG` to false.
-Also, enabling image background feature requires the modification of two variables, namely `bgImage` and `bgList`. If you prefer a single image background, then simply set the value of `bgImage` as the absolute path of your image. For example,
+To enable setting images as background, you'll have to disable **random colour background** first by setting `colorBG` in `background` table to `false`.
+Also, enabling image background feature requires the modification of `bgList` array. If you prefer a single image background, then simply give a single value to the array. For example:
 ```
-bgImage = "/images/bg1.jpeg"
+bgList = ["/images/bg1.jpeg"]
 ```
-You can also enable random background feature which switches the background between a provided images list(stored in `bgList`), every time the site is reloaded. For example,
+
+Providing multiple images to the `bgList` array enables the random background feature of Dream Plus, which cycles the background within the given array every time the site is reloaded.
+You may also blur the background to a certain extent through the `bgBlur` variable.
+
+> All the background-configuring variables are to be placed inside the `backround` table under `params`
+
+```toml
+[params.background]
+	#Random backgrounds
+	bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
+	#Blur the background
+	bgBlur = "0.2"
 ```
-bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
-```
-You may also add blurring effect to the background image using `bgBlur`.
 
 ### Device detection
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
@@ -135,13 +144,20 @@ You may configure your website based on the client device by using the `isMobile
 This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. Once finished customizing, copy them in the `/content` directory of your Hugo site.
 
 ### Custom favicon
-You may also set a custom favicon for your website using the `favicon` config variable. For example,
+You may also set a custom favicon for your website through the `favicon` config variable under `params`. For example,
 ```
-favicon = "/images/defaultFav.ico"
+[params]
+	favicon = "/images/defaultFav.ico"
 ```
 
 ### Shorte.st website script
-The [Shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll first have to enable this feature by setting `enableShortest` to `true` and then setting the **API Token** you got from Shorte.st to `shortestToken`, and after that, define your domains as a list in the `shortestDomains` config variable.
+The [Shorte.st](https://shorte.st) website script has been implemented in this theme. To use it, you'll have to configure it through the `shortest` table under `params`.
+```toml
+[params.shortest]
+	enabled = true		#Enable shorte.st
+	apiToken = ""		#The API Token you received from shorte.st
+	domains = [""]		#The domains you want to define
+```
 
 ### Some other configurations
 There are some other minor configurations as well. You may set them up by referring to the comments inside the config file.
