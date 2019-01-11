@@ -6,6 +6,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * "Cards" and "Posts" views for the home page
 * twemoji rendering
 * Table of contents for posts
+* Hugo image processing for faster loading
 * Random image background
 * Multiple author support
 * Disqus
@@ -135,6 +136,19 @@ You may also blur the background to a certain extent through the `bgBlur` variab
 	bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 	#Blur the background
 	bgBlur = "0.2"
+```
+
+### Card covers
+The covers for each post-card or card are processed by Dream Plus using [Hugo Image Processing](https://gohugo.io/content-management/image-processing) for faster website loading times. The lookup paths for the cover file are as stated below:
+- Cards: In the bundle. For example, `/content/cards/<card>/cover.<any-extension>`
+- Posts: In the images folder inside the bundle. For example, `/content/posts/<post>/images/cover.<any-extension>`
+
+> **Specifying the cover image through the frontmatter has now been deprecated**.
+
+You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Dream Plus utilizes. For example,
+```toml
+[params.features]
+	coverArgs = "400x300 q50"		#Specify resolution and quality of output image
 ```
 
 ### Device detection

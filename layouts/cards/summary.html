@@ -1,7 +1,7 @@
 {{ $image := .Resources.GetMatch "cover.*" }}
 {{ with $image }}
-	{{ with $.Site.Params.features.coverDimensions }}
-		{{ $.Scratch.Set "args" $.Site.Params.features.coverDimensions }}
+	{{ with $.Site.Params.features.coverArgs }}
+		{{ $.Scratch.Set "args" $.Site.Params.features.coverArgs }}
 	{{ else }}
 		{{ $.Scratch.Set "args" "420x270" }}
 	{{ end }}
