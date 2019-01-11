@@ -769,7 +769,6 @@ p > img:not(.emoji), li > img {
 }
 
 .blog-card .image {
-  visibility: hidden;
   width: 100%;
   height: 100%;
 }

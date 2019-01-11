@@ -1,7 +1,18 @@
-{{ $randomCover := (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
-{{ $cover := cond (ne .Params.cover nil) .Params.cover $randomCover }}
+{{ $image := .Resources.GetMatch "images/cover.*" }}
+{{ with $image }}
+	{{ with $.Site.Params.features.coverDimensions }}
+		{{ $.Scratch.Set "args" $.Site.Params.features.coverDimensions }}
+	{{ else }}
+		{{ $.Scratch.Set "args" "420x270" }}
+	{{ end }}
+	{{ $image := $image.Resize ($.Scratch.Get "args") }}
+	{{ $.Scratch.Set "cover" $image.RelPermalink }}
+{{ else }}
+	{{ $.Scratch.Set "cover" (print "/img/default" (index (seq 1 6 | shuffle) 0) ".jpg") }}
+{{ end }}
+{{ $cover := $.Scratch.Get "cover" }}
 
-<article class="blog-card none flexbox" style="background-image: url({{ $cover }})">
+<article class="blog-card none flexbox">
 	{{/*Card*/}}
 	<img class="image" src="{{ $cover }}"></img>
 	<div class="title-content twemoji">
