@@ -12,6 +12,7 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 * Disqus
 * Sidebar
 * Share card below posts
+* Licenses for posts
 * Device detection, that is whether the client device is a PC or phone
 * About section can be written in MarkDown
 * Custom 404 pages can be written in MarkDown
