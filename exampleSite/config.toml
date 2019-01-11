@@ -43,7 +43,7 @@ enableEmoji=true
 	contentType = "posts"
 
 	#Enable Twitter Emoji
-	twitterEmoji=true
+	twitterEmoji = true
 
 [social]
 	email = "utkarshverma@pm.me"
