@@ -6,17 +6,10 @@ theme = "repo"
 themesDir = "../.."   #Don't use this, only for exampleSite
 paginate = 4
 
-#Syntax highlighting
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-pygmentsOptions = "linenos=table"
-
-disqusShortname = "dream-plus"
-
 enableRobotsTXT = true
 
 #Enable Hugo Emoji Conversion
-enableEmoji=true
+enableEmoji = true
 
 [params]
   #Favicon for site

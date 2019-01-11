@@ -16,7 +16,7 @@ disqusShortname = "dream-plus"
 enableRobotsTXT = true
 
 #Enable Hugo Emoji Conversion
-enableEmoji=true
+enableEmoji = true
 
 [params]
 	#Favicon for site

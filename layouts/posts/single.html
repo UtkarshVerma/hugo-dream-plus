@@ -57,7 +57,7 @@
 			{{ end }}
 
 			{{/*Licensing*/}}
-			{{ $license := .Params.license | lower }}
+			{{ $license := lower .Params.license }}
 			{{ with $license }}					
 				<section class="ui secondary attached segment copyright">
 					{{ partial "license.html" (dict "license" $license ) }}
