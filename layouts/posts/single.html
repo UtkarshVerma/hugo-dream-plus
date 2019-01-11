@@ -54,11 +54,10 @@
 				<section class="ui secondary {{ if not $.Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 					{{ partial "share.html" . }}
 				</section>
-				{{ with $.Site.Params.copyright }}
+				{{ $license := .Params.license | lower }}
+				{{ with $license }}					
 					<section class="ui secondary attached segment copyright">
-						{{ $license := index $.Site.Params.copyright 0 }}
-						{{ $statement := index $.Site.Params.copyright 1 }}
-						{{ partial "copyright.html" (dict "license" $license "statement" $statement) }}
+						{{ partial "copyright.html" (dict "license" $license ) }}
 					</section>
 				{{ end }}
 			{{ end }}

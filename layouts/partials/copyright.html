@@ -1,29 +1,14 @@
-{{ if eq .license "BY" }}
-	<a class="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Attribution" src="https://licensebuttons.net/l/by/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
-
-{{ if eq .license "BY-SA" }}
-	<a class="license" href="https://creativecommons.org/licenses/by-sa/4.0"><img alt="Attribution Share-Alike" src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
-
-{{ if eq .license "BY-ND" }}
-	<a class="license" href="https://creativecommons.org/licenses/by-nd/4.0/"><img alt="Attribution No-Derivs" src="https://licensebuttons.net/l/by-nd/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
-
-{{ if eq .license "BY-NC" }}
-	<a class="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Attribution Non-Commercial" src="https://licensebuttons.net/l/by-nc/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
-
-{{ if eq .license "BY-NC-SA" }}
-	<a class="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Attribution Non-Commercial-Share-Alike" src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
-
-{{ if eq .license "BY-NC-ND" }}
-	<a class="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Attribution Non-Commercial-No-Derivs" src="https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png"></img></a>
-	<span>{{ .statement }}</span>
-{{ end }}
+{{ $fullForms := dict "by" "" "by-sa" "ShareAlike" " by-nd" "NoDerivs" "by-nc" "NonCommercial" "by-nc-sa" "NonCommercial-ShareAlike" "by-nc-nd" " NonCommercial-NoDerivs" }}
+{{/*License link*/}}
+{{ $link := printf "https://creativecommons.org/licenses/%s/4.0/" .license }}
+{{/*Image link*/}}
+{{ $image := printf "https://licensebuttons.net/l/%s/3.0/88x31.png" .license }}
+<div class="row box">
+	<a rel="license" class="license image none flexbox" target="_blank" href="{{ $link }}">
+		<img alt="Creative Commons License" src="{{ $image }}" style="border-width: 0"></img>
+	</a>
+	<span class="license statement both flexbox">
+		This work is licensed under a
+		<a rel="license" href="{{ $link }}">Creative Commons Attribution-{{ index $fullForms .license }} 4.0 International License</a>.
+	</span>
+</div>
