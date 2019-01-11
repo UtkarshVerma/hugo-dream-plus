@@ -10,6 +10,7 @@ categories:
 - blogging
 cover: "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/gci-thumb.png"
 draft: false
+license: "BY-NC-SA"
 ---
 
 ![GCI](https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/gci/gci-wide.png)Recently I've been participating in [Google Code-in](https://codein.withgoogle.com/) which is Google's initiative to introduce young minds to the concept of **FOSS**, that is **Free or Open-Source Softwares**. This post is for sharing my experiences with GCI, as the title suggests. So let's just get on it.
