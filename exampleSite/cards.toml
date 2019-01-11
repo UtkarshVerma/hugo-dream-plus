@@ -3,9 +3,15 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "UtkarshVerma's Site"
 theme = "dream-plus"
-themesDir = "../.."   #Don't use this, only for exampleSite
+themesDir = "../.."		#Don't use this, only for exampleSite
+paginate = 4
 
-googleAnalytics = "UA-112332904-3"
+#Syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
+
+disqusShortname = "dream-plus"
 
 enableRobotsTXT = true
 
@@ -13,29 +19,36 @@ enableRobotsTXT = true
 enableEmoji=true
 
 [params]
-  author = "Utkarsh Verma"
-  description = "A hub for my works."
-  avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
-  motto = "A keen maker, programmer and an Instructables author."
+	#Favicon for site
+	favicon = "/img/defaultFav.ico"
 
-  favicon = "/img/defaultFav.ico"
+	#Set whether you're hosting "cards" or "post"
+	contentType = "cards"
+	
+	siteStartYear = 2018
 
-  #Background Settings
-  enableColorBG = true
+	[params.author]
+		name = "Utkarsh Verma"
+		description = "Just a random blog for random stuff, mostly tech-related."
+		avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
+		motto = "A keen maker, programmer and an Instructables author."
 
-  #Cards shown per page
-  itemsPerPage = 4
+	[params.features]
+		#Enable Twitter Emoji
+		twitterEmoji = true
+		#Enable Table of Contents
+		toc = true
+		#Enable share card
+		shareCard = true
+		#Use custom CSS
+		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
 
-  #Enable card view
-  contentType = "cards"
-
-  #Enable Twitter Emoji
-  twitterEmoji=true
+	[params.background]
+		colorBG = true
 
 [social]
-  email = "utkarshverma@pm.me"
-  github = "UtkarshVerma"
-  stackoverflow = "9271608/utkarsh-verma"
-  medium = "UtkarshVerma_"
-  twitter = "UtkarshVerma_"
-  siteStartYear = 2018
+	email = "utkarshverma@pm.me"
+	github = "UtkarshVerma"
+	stackoverflow = "9271608/utkarsh-verma"
+	medium = "UtkarshVerma_"
+	twitter = "UtkarshVerma_"
