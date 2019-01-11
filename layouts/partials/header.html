@@ -7,7 +7,7 @@
 
 		{{/*Dropdown button*/}}
 		<div class="{{ cond .IsPage `` `active` }} title header-title">
-			{{ if or $.Site.Params.enableCategories $.Site.Params.enableTags }}
+			{{ if or $.Site.Params.categories.enabled $.Site.Params.tags.enabled }}
 				<div id="tag-category-pop" class="ui red right corner label">
 					<i class="hand point icon {{ cond .IsPage `down` `up` }}" title="{{ i18n "popTagsCategories" }}"></i>
 				</div>
@@ -16,13 +16,15 @@
 		
 		{{/*Tags and categories*/}}
 		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
-			{{ if and $.Site.Params.enableTags $.Site.Taxonomies.tags }}
+			{{ if and $.Site.Params.tags.enabled $.Site.Taxonomies.tags }}
 				<section class="ui attached center aligned inverted segment dream-tags none flexbox">
-					{{ partial "tags.html" (dict "context" . "isPost" false "tags" $.Site.Taxonomies.tags) }}
+					{{ $limit := $.Site.Params.tags.tagLimit | default 8 }}
+					{{ $args := dict "context" . "isPost" false "tags" $.Site.Taxonomies.tags "limit" $limit }}
+					{{ partial "tags.html" $args }}
 				</section>
 			{{ end }}
 
-			{{ if and $.Site.Params.enableCategories $.Site.Taxonomies.categories }}
+			{{ if and $.Site.Params.categories.enabled $.Site.Taxonomies.categories }}
 				<section class="ui attached inverted segment dream-categories both flexbox">
 					<div class="inverted accordion">
 						{{ partial "categories.html" . }}

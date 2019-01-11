@@ -12,11 +12,11 @@
 
 {{/*JS variable initializations*/}}
 <script>
-	var colorBG = {{ $.Site.Params.enableColorBG }}
+	var colorBG = {{ $.Site.Params.background.colorBG }}
 	var enabledPost = {{ cond (eq $.Site.Params.contentType "post") true false }}
-	{{ with $.Site.Params.enableShortest }}
-		var shToken = {{ $.Site.Params.shortestToken }}
-		var shDomains = {{ $.Site.Params.shortestDomains }}
+	{{ with $.Site.Params.shortest.enabled }}
+		var shToken = {{ $.Site.Params.shortest.apiToken }}
+		var shDomains = {{ $.Site.Params.shortest.domains }}
 	{{ end }}
 	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")

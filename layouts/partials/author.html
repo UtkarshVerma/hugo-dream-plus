@@ -1,7 +1,7 @@
 {{/*Avatar*/}}
 <div class="ui small circular image">
-	{{ with $.Site.Params.avatar }}
-		<img src="{{ $.Site.Params.avatar }}">
+	{{ with $.Site.Params.author.avatar }}
+		<img src="{{ $.Site.Params.author.avatar }}">
 	{{ else }}
 		{{ $avatar := index (seq 1 4 | shuffle ) 0 }}
 		<img src="/img/avatar{{ $avatar }}.svg">
@@ -10,6 +10,6 @@
 
 {{/*Motto*/}}
 <h3 class="ui header">
-	{{ $.Site.Params.author }}
-	<div class="sub header">{{ $.Site.Params.motto }}</div>
+	{{ $.Site.Params.author.name }}
+	<div class="sub header">{{ $.Site.Params.author.motto }}</div>
 </h3>

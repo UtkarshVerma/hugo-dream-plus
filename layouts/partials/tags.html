@@ -7,7 +7,15 @@
 		<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
 	{{ end }}
 {{ else }}
-	{{ range $name, $taxonomies := .tags }}
-		<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+	{{ $limit := int .limit }}
+	{{ if eq $limit 0 }}
+		{{ range $name, $taxonomies := .tags }}
+			<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+		{{ end }}
+	{{ else }}
+		{{ range $name, $taxonomies := first $limit .tags.ByCount }}
+			{{ $name := .Name }}
+			<a class="ui label {{ index (shuffle $colors) 0 }} " href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+		{{ end }}
 	{{ end }}
 {{ end }}
