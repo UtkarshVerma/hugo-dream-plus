@@ -1,4 +1,5 @@
 # Dream Plus Theme for Hugo
+[![Build Status](https://travis-ci.org/UtkarshVerma/hugo-dream-plus.svg?branch=master)](https://travis-ci.org/UtkarshVerma/hugo-dream-plus)
 
 ![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/original.png)
 This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
