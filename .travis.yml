@@ -19,7 +19,7 @@ matrix:
 
 env:
   global:
-    - minVer=0.47
+    - minVer=0.48
 
 install:
   - rm -rf public || exit 0
