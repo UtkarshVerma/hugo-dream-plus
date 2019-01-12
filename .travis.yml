@@ -1,0 +1,41 @@
+matrix:
+  include:
+    - name: "Hugo Min Cards"
+      env:
+        - latest=false
+        - config=deploy-cards.toml
+    - name: "Hugo Min Posts"
+      env:
+        - latest=false
+        - config=deploy-posts.toml
+    - name: "Hugo Latest Cards"
+      env:
+        - latest=true
+        - config=deploy-cards.toml
+    - name: "Hugo Latest Posts"
+      env:
+        - latest=true
+        - config=deploy-posts.toml
+
+env:
+  global:
+    - minVer=0.47
+
+install:
+  - rm -rf public || exit 0
+  - mkdir ~/_bin
+  - |
+    if [ $latest ]; then
+      link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4)
+    else 
+      link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
+    fi
+  - wget $link -O hugo.tgz
+  - tar xfv hugo.tgz -C ~/_bin
+  - rm hugo.tgz ~/_bin/*.md
+  - export PATH=$HOME/_bin:$PATH
+
+script:
+  - hugo version
+  - cd exampleSite
+  - hugo --config $config --theme hugo-dream-plus

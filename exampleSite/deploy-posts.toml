@@ -2,7 +2,6 @@ baseURL = "https://dream-plus-posts.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "UtkarshVerma's Blog"
-theme = "repo"
 themesDir = "../.."		#Don't use this, only for exampleSite
 paginate = 4
 
