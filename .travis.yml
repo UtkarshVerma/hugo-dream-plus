@@ -3,23 +3,24 @@ matrix:
     - name: "Hugo Min Cards"
       env:
         - latest=false
-        - config=deploy-cards.toml
+        - config=cards.toml
     - name: "Hugo Min Posts"
       env:
         - latest=false
-        - config=deploy-posts.toml
+        - config=posts.toml
     - name: "Hugo Latest Cards"
       env:
         - latest=true
-        - config=deploy-cards.toml
+        - config=cards.toml
     - name: "Hugo Latest Posts"
       env:
         - latest=true
-        - config=deploy-posts.toml
+        - config=posts.toml
 
 env:
   global:
     - minVer=0.48
+    - HUGO_THEME=hugo-dream-plus
 
 install:
   - rm -rf public || exit 0
@@ -38,4 +39,4 @@ install:
 script:
   - hugo version
   - cd exampleSite
-  - hugo --config $config --theme hugo-dream-plus
+  - hugo --config $config
