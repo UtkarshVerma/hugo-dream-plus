@@ -145,7 +145,8 @@ The covers for each post-card or card are processed by Dream Plus using [Hugo Im
 - Cards: In the bundle. For example, `/content/cards/<card>/cover.<any-extension>`
 - Posts: In the images folder inside the bundle. For example, `/content/posts/<post>/images/cover.<any-extension>`
 
-> **Specifying the cover image through the frontmatter has now been deprecated**.
+> ~~**Specifying the cover image through the frontmatter has now been deprecated**~~.  
+Card covers can now be defined through the frontmatter through `cover` key. However image processing won't be applicable on such covers. Also, **frontmatter covers are prioritized over image resources**, therefore, to make the image resource covers render, you'll have to remove the cover key from the frontmatter first.
 
 You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Dream Plus utilizes. For example,
 ```toml
