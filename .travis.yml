@@ -1,42 +1,39 @@
 matrix:
   include:
-    - name: "Hugo Min Cards"
-      env:
-        - latest=false
-        - config=cards.toml
-    - name: "Hugo Min Posts"
-      env:
-        - latest=false
-        - config=posts.toml
-    - name: "Hugo Latest Cards"
-      env:
-        - latest=true
-        - config=cards.toml
-    - name: "Hugo Latest Posts"
-      env:
-        - latest=true
-        - config=posts.toml
+  - name: Hugo Min Cards
+    env:
+    - latest=false
+    - config=cards.toml
+  - name: Hugo Min Posts
+    env:
+    - latest=false
+    - config=posts.toml
+  - name: Hugo Latest Cards
+    env:
+    - latest=true
+    - config=cards.toml
+  - name: Hugo Latest Posts
+    env:
+    - latest=true
+    - config=posts.toml
 
 env:
   global:
-    - minVer=0.48
-    - HUGO_THEME=hugo-dream-plus
+  - minVer=0.48
+  - HUGO_THEME=hugo-dream-plus
+  - secure: KXZYlgzb9oZYWCqOJMiwT6taln8H2qwV3I/2nwLzFOb6J4tHcnRsUgHsf3SjlnBM2NBn7CTxI2U04ztmxs8EOZG0wEh3/YLv2wmtdHx1az9/DxPQF256LCe/DTIxqnwNXKzHZa7v3YPaVjBvp0NIRd+ydAuAt5+jSEZ/wDHZtFs1yOSXgtx33XVWUDqeu2zXRoiK+nvz78Zcofbp0u/+WEKGBmS10cVHk+GZ5xstNv4VR+tdn4NA9Jg1HP/vGYQNZN5oe+27E6ZTmLiSXSYfjBJl7UXq2LJsqi1gLWL77vKsYpDwEOSXTkX6eAsWd0i2I+be+aeG5IffmkUQB5OEv7YugTQX9NNsrQSy70kW8oLbT/FBAguxFx+Re6gXKgOcKKFvoOoEWFqdPB9pelL18X7vgqcBQSqFPx38Dvzj/fDRInlw5W2dC5OxowHPYmn/082huSBnbWiiggetI5hhBI/W5+F724Aq8evA2i+ifDz+37+EPUMmMYKbJinS/fgCkhWC/fgXjIjO8Wzd0aJfN9KdxU6e0mpm8YBGXzFSuTHn++v34V58/G5WjggwBp1p9gqa9cTI2Nf+9xNnSTQFvP3wWezzGQQKJwyHCukktJP6TPewRGsqTOc2a3SCRXb36ScghOBoP3VlVJycduM6zZnbHANx4uX/BnfNKmiycvo=
 
 install:
-  - rm -rf public || exit 0
-  - mkdir ~/_bin
-  - |
-    if [ $latest ]; then
-      link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "/hugo_[0-9]\.[0-9]*_Linux-64bit.tar.gz" | cut -d\" -f4)
-    else 
-      link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
-    fi
-  - wget $link -O hugo.tgz
-  - tar xfv hugo.tgz -C ~/_bin
-  - rm hugo.tgz ~/_bin/*.md
-  - export PATH=$HOME/_bin:$PATH
+- rm -rf public || exit 0
+- mkdir ~/_bin
+- "if [ $latest == 'true' ]; then\n  link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest
+  | grep \"/hugo_[0-9]\\.[0-9]*_Linux-64bit.tar.gz\" | cut -d\\\" -f4)\nelse \n  link=\"https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz\"\nfi\n"
+- wget $link -O hugo.tgz
+- tar xfv hugo.tgz -C ~/_bin
+- rm hugo.tgz ~/_bin/*.md
+- export PATH=$HOME/_bin:$PATH
 
 script:
-  - hugo version
-  - cd exampleSite
-  - hugo --config $config
+- hugo version
+- cd exampleSite
+- hugo --config $config
