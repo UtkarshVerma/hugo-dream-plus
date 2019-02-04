@@ -178,7 +178,7 @@ The [Shorte.st](https://shorte.st) website script has been implemented in this t
 
 ### Some other configurations
 If you'd like to control the amount of posts/cards a page has, then you may do so using the `paginate` config variable.
-```
+```toml
 paginate = 4		#Defaults to 10
 ```
 
