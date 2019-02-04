@@ -26,8 +26,8 @@ env:
 install:
 - rm -rf public || exit 0
 - mkdir ~/_bin
-- "if [ $latest == 'true' ]; then\n  link=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest
-  | grep \"/hugo_[0-9]\\.[0-9]*_Linux-64bit.tar.gz\" | cut -d\\\" -f4)\nelse \n  link=\"https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz\"\nfi\n"
+- "if [ $latest == 'true' ]; then\n  link=$(curl -s -u UtkarshVerma:\"$GITHUB_TOKEN\" https://api.github.com/repos/gohugoio/hugo/releases/latest
+  | grep \"/hugo_[0-9]\\.[0-9]*\\.*[0-9]_Linux-64bit.tar.gz\" | cut -d\\\" -f4)\nelse \n  link=\"https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz\"\nfi\n"
 - wget $link -O hugo.tgz
 - tar xfv hugo.tgz -C ~/_bin
 - rm hugo.tgz ~/_bin/*.md
