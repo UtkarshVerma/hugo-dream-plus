@@ -9,13 +9,18 @@ matrix:
     - latest=false
     - config=posts.toml
   - name: Hugo Latest Cards
+    if: type=push
     env:
     - latest=true
     - config=cards.toml
   - name: Hugo Latest Posts
+    if: type=push
     env:
     - latest=true
     - config=posts.toml
+  exclude:
+  - env: latest=true
+    if: type=pull_request
 
 env:
   global:
@@ -26,8 +31,15 @@ env:
 install:
 - rm -rf public || exit 0
 - mkdir ~/_bin
-- "if [ $latest == 'true' ]; then\n  link=$(curl -s -u UtkarshVerma:\"$GITHUB_TOKEN\" https://api.github.com/repos/gohugoio/hugo/releases/latest
-  | grep \"/hugo_[0-9]\\.[0-9]*\\.*[0-9]_Linux-64bit.tar.gz\" | cut -d\\\" -f4)\nelse \n  link=\"https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz\"\nfi\n"
+- hugoLink="https://api.github.com/repos/gohugoio/hugo/releases"
+- regex="/hugo_[0-9].[0-9]*.*[0-9]_Linux-64bit.tar.gz"
+- >
+  if [ $latest == 'true' ]; then
+    link=$(curl -s -u UtkarshVerma:"$GITHUB_TOKEN" "${hugoLink}/latest" | grep "$regex" | cut -d\" -f4)
+  else
+    link="https://github.com/gohugoio/hugo/releases/download/v${minVer}/hugo_${minVer}_Linux-64bit.tar.gz"
+  fi
+- echo $link
 - wget $link -O hugo.tgz
 - tar xfv hugo.tgz -C ~/_bin
 - rm hugo.tgz ~/_bin/*.md
