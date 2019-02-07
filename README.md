@@ -160,7 +160,11 @@ You may also modify the image processing process through `coverArgs` variable in
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
 ### Error and About pages
-This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. Once finished customizing, copy them in the `/content` directory of your Hugo site.
+This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. *Dream Plus reads the above stated files as plain Markdown text* and then renders them. Once you've finished writing the files and modifying them according to your needs, paste them in the `content` folder of your Hugo site.  
+If you don't want these pages to be built by Hugo and served with their own links such as `<website>.<domain>/about` or `<website>.<domain>/404`. Then you can tell Hugo to ignore these through [`ignoreFiles`](https://gohugo.io/getting-started/configuration/#ignore-files-when-rendering) variable in your `config.toml` file as follows:  
+```toml
+ignoreFiles = ["content/404.md", "content/about.md"]
+```
 
 ### Custom favicon
 You may also set a custom favicon for your website through the `favicon` config variable under `params`. For example,

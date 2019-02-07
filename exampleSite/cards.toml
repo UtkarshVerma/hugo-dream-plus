@@ -5,6 +5,7 @@ title = "UtkarshVerma's Site"
 theme = "dream-plus"
 themesDir = "../.."		#Don't use this, only for exampleSite
 paginate = 4
+ignoreFiles = ["content/404.md", "content/about.md"]
 
 enableRobotsTXT = true
 
