@@ -1,10 +1,10 @@
-baseURL = "https://dream-plus-posts.netlify.com/"
-languageCode = "en-us"
-defaultContentLanguage = "en"
+baseURL = "https://dream-plus-posts.netlify.com"
 title = "UtkarshVerma's Blog"
 theme = "dream-plus"
 themesDir = "../.."		#Don't use this, only for exampleSite
 paginate = 4
+enableRobotsTXT = true
+disqusShortname = "dream-plus"
 
 #Skip building these files
 ignoreFiles = ["content/404.md", "content/about.md", "content/cards/\\.*"]
@@ -13,10 +13,6 @@ ignoreFiles = ["content/404.md", "content/about.md", "content/cards/\\.*"]
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
-
-disqusShortname = "dream-plus"
-
-enableRobotsTXT = true
 
 #Enable Hugo Emoji Conversion
 enableEmoji=true

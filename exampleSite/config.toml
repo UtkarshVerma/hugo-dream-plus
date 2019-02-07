@@ -1,1 +1,40 @@
-./posts.toml
+#This config file is only for Hugo Themes. If you're looking for examples, refer to `cards.toml`
+#or `posts.toml` which are alongside this file.
+
+title = "Dream Plus Demo"
+theme = "dream-plus"
+themesDir = "../.."
+paginate = 4
+ignoreFiles = ["content/404.md", "content/about.md", "content/cards/\\.*"]
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
+disqusShortname = "dream-plus"
+enableEmoji=true
+
+[params]
+	contentType = "posts"
+	siteStartYear = 2018
+	[params.author]
+		name = "Utkarsh Verma"
+		description = "Just a random blog for random stuff, mostly tech-related."
+		avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
+		motto = "A keen maker, programmer and an Instructables author."
+	[params.features]
+		twitterEmoji = true
+		toc = true
+		shareCard = true
+		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
+	[params.background]
+		colorBG = true
+	[params.tags]
+		enabled = true
+	[params.categories]
+		enabled = true
+
+[social]
+	email = "utkarshverma@pm.me"
+	github = "UtkarshVerma"
+	stackoverflow = "9271608/utkarsh-verma"
+	medium = "UtkarshVerma_"
+	twitter = "UtkarshVerma_"

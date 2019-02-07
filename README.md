@@ -1,7 +1,7 @@
 # Dream Plus Theme for Hugo
 [![Build Status](https://travis-ci.org/UtkarshVerma/hugo-dream-plus.svg?branch=master)](https://travis-ci.org/UtkarshVerma/hugo-dream-plus)
-[![Dream Plus - Cards](https://api.netlify.com/api/v1/badges/8588f660-afc1-4446-8db4-9dc5d87c4c79/deploy-status)](https://app.netlify.com/sites/dream-plus-cards/deploys)
-[![Dream Plus - Posts](https://api.netlify.com/api/v1/badges/6ef6f16b-9f2b-4d4a-9c35-8ef5a28783df/deploy-status)](https://app.netlify.com/sites/dream-plus-posts/deploys)
+[![Posts View Demo](https://api.netlify.com/api/v1/badges/6ef6f16b-9f2b-4d4a-9c35-8ef5a28783df/deploy-status)](https://app.netlify.com/sites/dream-plus-posts/deploys)
+[![Cards View Demo](https://api.netlify.com/api/v1/badges/8588f660-afc1-4446-8db4-9dc5d87c4c79/deploy-status)](https://app.netlify.com/sites/dream-plus-cards/deploys)
 
 ![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/original.png)
 This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
@@ -27,8 +27,8 @@ This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0
 
 This theme can be used for two purposes:
 
-1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to "Cards view" for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.me)
-2. If you're simply making a blog or another website with a bunch of posts, then switch to the "Posts view" for that. I use this view for my blog: [UtkarshVerma's Blog](https://blog.utkarshverma.me)
+1. If you're making a site which links to other sites and your stuff all around the internet, then you can switch to "Cards view" for that. I use this view for my home page here: [UtkarshVerma's Site](https://utkarshverma.github.io)
+2. If you're simply making a blog or another website with a bunch of posts, then switch to the "Posts view" for that. I use this view for my blog: [UtkarshVerma's Blog](https://utkarshverma.github.io/blog)
 
 This project adheres to the Contributor Covenant [code of conduct](/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [utkarshverma@pm.me](mailto:utkarshverma@pm.me).
 
