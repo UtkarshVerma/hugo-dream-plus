@@ -1,6 +1,9 @@
 {{/*Content*/}}
 {{ define "content"}}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "section" "") }}
+	{{ $cardCount := where $.Site.RegularPages "Section" "cards" | len }}
+	{{ $contentType := cond (gt $cardCount 0) "cards" "posts" }}
+	{{ $.Scratch.Set "contentType" $contentType }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" $contentType) }}
 
 	<div class="ui centered grid">
 		{{/*Header*/}}
@@ -11,11 +14,19 @@
 		{{/*Cards*/}}
 		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="cards row box">
-				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) }}
-				{{ range $paginator.Pages }}
-					{{ .Render "summary" }}
+				{{ range .Paginator.Pages }}
+					{{ .Render "card" }}
 				{{ end }}
 			</div>
 		</div>
 	</div>
+{{ end }}
+
+{{ define "bodyEnd" }}
+	{{/*Load Disqus Count JS*/}}
+	{{ with $.Site.DisqusShortname }}
+		{{ if eq ($.Scratch.Get "contentType") "posts" }}
+			<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
+		{{ end }}
+	{{ end }}
 {{ end }}

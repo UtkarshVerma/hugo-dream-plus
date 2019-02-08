@@ -16,7 +16,6 @@
 {{/*JS variable initializations*/}}
 <script>
 	var colorBG = {{ $.Site.Params.background.colorBG }}
-	var enabledPost = {{ cond (eq $.Site.Params.contentType "post") true false }}
 	{{ with $.Site.Params.shortest.enabled }}
 		var shToken = {{ $.Site.Params.shortest.apiToken }}
 		var shDomains = {{ $.Site.Params.shortest.domains }}

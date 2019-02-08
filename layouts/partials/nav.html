@@ -1,3 +1,5 @@
+{{ $contentType := $.Scratch.Get "contentType" }}
+
 <nav class="ui top secondary menu bar">
 	{{/*Flip button*/}}
 	<div class="item">
@@ -13,17 +15,17 @@
 		</div>
 	{{ end }}
 
-	{{/*Posts section button*/}}
-	{{ if and (ne .type "posts") }}
+	{{/*Archive section button*/}}
+	{{ if ne .context.Section .type }}
 		<div class="item">
-			<a href="/{{ .context.Site.Params.contentType }}">
+			<a href="/{{ $contentType }}">
 				<i class="inverted big link archive icon" title="{{ i18n `archive` }}"></i>
 			</a>
 		</div>
 	{{ end }}
 
 	{{/*Tags section button*/}}
-	{{ if and (ne .type "tags") .context.Site.Params.tags.enabled }}
+	{{ if and (ne .context.Data.Plural "tags") .context.Site.Params.tags.enabled }}
 		<div class="item">
 			<a href="/tags">
 				<i class="inverted big link tags icon" title="{{ i18n `tag` 1 }}"></i>
@@ -32,7 +34,7 @@
 	{{ end }}
 
 	{{/*Categories section button*/}}
-	{{ if and (ne .type "categories") .context.Site.Params.categories.enabled }}
+	{{ if and (ne .context.Data.Plural "categories") .context.Site.Params.categories.enabled }}
 		<div class="item">
 			<a href="/categories">
 				<i class="inverted big link cubes icon" title="{{ i18n `category` 1 }}"></i>
@@ -41,23 +43,23 @@
 	{{ end }}
 
 	{{/*Navigation buttons*/}}
-	{{ if and (ne .type "posts") (not .context.IsPage) }}
-		{{ $paginator := .context.Paginate (where .context.Data.Pages "Type" .context.Site.Params.contentType) }}
+	{{ if or .context.IsHome (eq .context.Kind "taxonomyTerm") }}
+		{{ $paginator := .context.Paginate (where .context.Data.Pages "Section" .type) }}
 		<div class="item">
-			{{ if $paginator.HasPrev }}
+			{{ if .context.Paginator.HasPrev }}
 				<a href="{{ $paginator.Prev.URL }}">
 					<i class="inverted big link chevron circle left icon" title="{{ i18n `prevPage` }}"></i>
 				</a>
-			{{ else if $paginator.HasNext }}
+			{{ else if .context.Paginator.HasNext }}
 				<i class="disabled inverted big chevron circle left icon" title="{{ i18n `prevPage` }}"></i>
 	  		{{ end }}
 			</div>
 		<div class="item">
-			{{ if $paginator.HasNext }}
+			{{ if .context.Paginator.HasNext }}
 				<a href="{{ $paginator.Next.URL }}">
 					<i class="inverted big link chevron circle right icon" title="{{ i18n `nextPage` }}"></i>
 				</a>
-			{{ else if $paginator.HasPrev }}
+			{{ else if .context.Paginator.HasPrev }}
 				<i class="disabled inverted big chevron circle right icon" title="{{ i18n `nextPage` }}"></i>
 			{{ end }}
 		</div>
@@ -73,7 +75,7 @@
 	{{ end }}
 
 	{{/*RSS button*/}}
-	{{ if and (eq .context.Site.Params.contentType "posts") .rssButton }}
+	{{ if and (eq $contentType "posts") .rssButton }}
 		<div class="item right">
 			<a href="/posts/index.xml">
 				<i class="inverted big link rss icon" title="{{ i18n `rssFeed` }}"></i>

@@ -5,7 +5,9 @@
 
 {{/*Content*/}}
 {{ define "content"}}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "type" "") }}
+	{{ $cardCount := where $.Site.RegularPages "Section" "cards" | len }}
+	{{ $contentType := cond (gt $cardCount 0) "cards" "posts" }}	
+	{{ partial "nav.html" (dict "context" . "rssButton" true "type" $contentType) }}
 	
 	<div class="ui centered grid">
 		<div class="fifteen wide mobile fifteen wide tablet four wide computer column">
@@ -14,11 +16,19 @@
 		
 		<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
 			<div class="cards row box">
-				{{ $paginator := .Paginate (where .Data.Pages "Type" $.Site.Params.contentType) }}
-				{{ range $paginator.Pages }}
-					{{ .Render "summary" }}
+				{{ range .Paginator.Pages }}
+					{{ .Render "card" }}
 				{{ end }}
 			</div>
 		</div>
 	</div>
+{{ end }}
+
+{{ define "bodyEnd" }}
+	{{/*Load Disqus Count JS*/}}
+	{{ with $.Site.DisqusShortname }}
+		{{ if gt (where $.Site.RegularPages "Section" "posts" | len) 0  }}
+			<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
+		{{ end }}
+	{{ end }}
 {{ end }}

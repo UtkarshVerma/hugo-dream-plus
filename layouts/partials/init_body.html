@@ -1,13 +1,6 @@
 {{/*Load JS files*/}}
 {{ partial "js.html" . }}
 
-{{/*Load Disqus JS for Posts*/}}
-{{ with $.Site.DisqusShortname }}
-	{{ if eq $.Site.Params.contentType "posts" }}
-		<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
-	{{ end }}
-{{ end }}
-
 {{/*Google Analytics*/}}
 {{ with $.Site.GoogleAnalytics }}
 	<!-- Google Analytics -->

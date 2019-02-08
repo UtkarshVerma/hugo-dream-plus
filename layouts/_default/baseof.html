@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</div>
-
+		{{ block "bodyEnd" . }}{{ end }}
 		{{ partial "init_body.html" . }}
 		{{ partial "shortest.html" . }}
 		{{ partial "twemoji.html" . }}
