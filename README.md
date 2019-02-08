@@ -3,7 +3,7 @@
 [![Posts View Demo](https://api.netlify.com/api/v1/badges/6ef6f16b-9f2b-4d4a-9c35-8ef5a28783df/deploy-status)](https://app.netlify.com/sites/dream-plus-posts/deploys)
 [![Cards View Demo](https://api.netlify.com/api/v1/badges/8588f660-afc1-4446-8db4-9dc5d87c4c79/deploy-status)](https://app.netlify.com/sites/dream-plus-cards/deploys)
 
-![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/original.png)
+![Dream Plus Theme](https://github.com/UtkarshVerma/hugo-dream-plus/blob/master/images/screenshot.png)
 This theme is an upgraded version of the [Dream Theme](https://github.com/g1eny0ung/hugo-theme-dream) by [Yue Yang](https://github.com/g1eny0ung) and contains tons of new features such as:
 
 * "Cards" and "Posts" views for the home page

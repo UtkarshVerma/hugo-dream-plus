@@ -1,12 +1,7 @@
 /*Fonts*/
 @font-face {
-  font-family: 'Abril Fatface';
-     src: url('../fonts/AbrilFatface-Regular.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'Bebas Neue';
-     src: url('../fonts/BebasNeue Regular.otf') format('opentype'), url('../fonts/BebasNeue Regular.ttf') format('truetype');
+     src: url('../fonts/BebasNeue Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -14,10 +9,6 @@
      src: url('../fonts/DroidSerif-Italic.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Inconsolata';
-     src: url('../fonts/Inconsolata.otf') format('opentype');
-}
 /*Computer view*/
 @media screen and (min-width: 991px) {
   .blog-card {
@@ -368,7 +359,7 @@ ul > li {
 }
 
 .post-content pre code {
-  font-family: 'Inconsolata';
+  font-family: 'Inconsolata', monospace;
   font-size: 1.2em;
   background-color: unset;
   padding: initial;
@@ -804,7 +795,7 @@ p > img:not(.emoji), li > img {
 
 .blog-card .title {
   color: #fff;
-  font: 400 2rem 'Abril Fatface';
+  font: 400 2rem 'Abril Fatface', cursive;
   letter-spacing: 1px;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.4s;
