@@ -8,7 +8,7 @@ tags:
 - openwisp
 categories:
 - blogging
-cover: "https://raw.githubusercontent.com/UtkarshVerma/blog/source/content/posts/gci/images/gci-thumb.png"
+cover: "https://raw.githubusercontent.com/UtkarshVerma/utkarshverma.github.io/source/content/posts/gci/images/gci-thumb.png"
 draft: false
 license: "BY-NC-SA"
 ---

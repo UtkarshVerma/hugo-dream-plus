@@ -23,7 +23,7 @@ enableEmoji=true
 	[params.author]
 		name = "Utkarsh Verma"
 		description = "Just a random blog for random stuff, mostly tech-related."
-		avatar = "https://raw.githubusercontent.com/UtkarshVerma/blog/source/static/images/myavatar.jpg"
+		avatar = "https://raw.githubusercontent.com/UtkarshVerma/utkarshverma.github.io/source/static/images/avatar.jpg"
 		motto = "A keen maker, programmer and an Instructables author."
 
 	[params.features]
