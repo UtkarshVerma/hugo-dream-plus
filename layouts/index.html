@@ -3,7 +3,7 @@
 	{{ $cardCount := where $.Site.RegularPages "Section" "cards" | len }}
 	{{ $contentType := cond (gt $cardCount 0) "cards" "posts" }}
 	{{ $.Scratch.Set "contentType" $contentType }}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "type" $contentType) }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "contentType" $contentType) }}
 
 	<div class="ui centered grid">
 		{{/*Header*/}}

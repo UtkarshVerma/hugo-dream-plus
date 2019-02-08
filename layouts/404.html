@@ -5,7 +5,9 @@
 
 {{/*Content*/}}
 {{ define "content" }}
-	{{ partial "nav.html" (dict "context" . "rssButton" true "section" "") }}
+	{{ $cardCount := where $.Site.RegularPages "Section" "cards" | len }}
+	{{ $contentType := cond (gt $cardCount 0) "cards" "posts" }}
+	{{ partial "nav.html" (dict "context" . "rssButton" true "contentType" $contentType) }}
 
 	<div class="ui centered grid four-o-four">
 		<div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
