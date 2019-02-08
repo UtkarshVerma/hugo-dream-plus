@@ -106,11 +106,12 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 Once this is done, write up the "**About Me**" section of your website in Markdown as directed here:[Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
 
 ### Toggling the views
-As stated earlier, this theme has two views, **Cards view** and **Posts view**. To define your desired view, modify the `contentType` variable in `params` in the config file as follows:
-```toml
-contentType = "cards"    #Enables the cards view.
-contentType = "posts"    #Enables the posts view.
-```
+As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.  
+Therefore:
+* Having `cards` folder in `/content` folder activates *Card view*.
+* Having `posts` folder in `/content` folder activates *Post view*.
+
+> The `contentType` variable has now been deprecated.
 
 One clear distinction between both the view is that **Card** view doesn't support posts, instead it redirects to the specified link, while **Post** view does.
 You may test them out yourselves by visiting my sites(stated above) which use them.
