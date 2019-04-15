@@ -17,7 +17,7 @@ enableEmoji=true
 
 	#Set whether you're hosting "cards" or "post"
 	contentType = "cards"
-	
+
 	siteStartYear = 2018
 
 	[params.author]
@@ -35,9 +35,6 @@ enableEmoji=true
 		shareCard = true
 		#Use custom CSS
 		customCSS = ["https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css"]
-
-	[params.background]
-		colorBG = true
 
 [social]
 	email = "utkarshverma@pm.me"

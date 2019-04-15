@@ -106,7 +106,7 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 Once this is done, write up the "**About Me**" section of your website in Markdown as directed here:[Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
 
 ### Toggling the views
-As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.  
+As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.
 Therefore:
 * Having `cards` folder in `/content` folder activates *Card view*.
 * Having `posts` folder in `/content` folder activates *Post view*.
@@ -123,24 +123,35 @@ hugo new posts/example.md		#Post creation
 
 After this, just open your MarkDown card/post and provide the parameters for the card/post.
 
-### Image background
-To enable setting images as background, you'll have to disable **random colour background** first by setting `colorBG` in `background` table to `false`.
-Also, enabling image background feature requires the modification of `bgList` array. If you prefer a single image background, then simply give a single value to the array. For example:
-```
-bgList = ["/images/bg1.jpeg"]
+### The background
+There are two different ways to configure the background of this theme. These settings are mutually exclusive to each other.
+
+#### Colors as background
+To set a specific background color, do it through the `color` variable. If you want to set a random combination of colours as your background instead, just leave the color variable **unset**.
+```toml
+[params.background]
+	color = "#13547A"			#Provide a color as hex or rgb equivalent
 ```
 
-Providing multiple images to the `bgList` array enables the random background feature of Dream Plus, which cycles the background within the given array every time the site is reloaded.
-You may also blur the background to a certain extent through the `bgBlur` variable.
+#### Images as background
+Specify the image which you want to set as the background through the `images` array. If you prefer a single image background, then simply give a single value to the array. For example:
+```toml
+[params.background]
+	images = ["/images/bg1.jpeg"]							#Single image as background
+	images = ["/images/bg1.jpeg", "<some other image>"] 	#Multiple images as background
+```
+
+Providing multiple images to the `images` array enables the random image background feature of Dream Plus, which cycles the background within the given array every time the site is reloaded.
+You may also blur the background to a certain extent through the `blur` variable.
 
 > All the background-configuring variables are to be placed inside the `backround` table under `params`
 
 ```toml
 [params.background]
 	#Random backgrounds
-	bgList = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
+	images = ["/images/bg1.jpeg", "/images/bg2.jpeg", "/images/bg3.jpeg"]
 	#Blur the background
-	bgBlur = "0.2"
+	blur = "0.2"
 ```
 
 ### Card covers
@@ -148,7 +159,7 @@ The covers for each post-card or card are processed by Dream Plus using [Hugo Im
 - Cards: In the bundle. For example, `/content/cards/<card>/cover.<any-extension>`
 - Posts: In the images folder inside the bundle. For example, `/content/posts/<post>/images/cover.<any-extension>`
 
-> ~~**Specifying the cover image through the frontmatter has now been deprecated**~~.  
+> ~~**Specifying the cover image through the frontmatter has now been deprecated**~~.
 Card covers can now be defined through the frontmatter through `cover` key. However image processing won't be applicable on such covers. Also, **frontmatter covers are prioritized over image resources**, therefore, to make the image resource covers render, you'll have to remove the cover key from the frontmatter first.
 
 You may also modify the image processing process through `coverArgs` variable in `[params.features]`. The arguments passed must be for the `.Resize` function since that's what Dream Plus utilizes. For example,
@@ -161,8 +172,8 @@ You may also modify the image processing process through `coverArgs` variable in
 You may configure your website based on the client device by using the `isMobile` JS variable. It is `true` when the client device is a mobile and vice versa.
 
 ### Error and About pages
-This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. *Dream Plus reads the above stated files as plain Markdown text* and then renders them. Once you've finished writing the files and modifying them according to your needs, paste them in the `content` folder of your Hugo site.  
-If you don't want these pages to be built by Hugo and served with their own links such as `<website>.<domain>/about` or `<website>.<domain>/404`. Then you can tell Hugo to ignore these through [`ignoreFiles`](https://gohugo.io/getting-started/configuration/#ignore-files-when-rendering) variable in your `config.toml` file as follows:  
+This theme supports total customization of **about** and **error** pages. These pages may be customized through the [`about.md`](/exampleSite/content/about.md) and [`404.md`](/exampleSite/content/404.md) files. *Dream Plus reads the above stated files as plain Markdown text* and then renders them. Once you've finished writing the files and modifying them according to your needs, paste them in the `content` folder of your Hugo site.
+If you don't want these pages to be built by Hugo and served with their own links such as `<website>.<domain>/about` or `<website>.<domain>/404`. Then you can tell Hugo to ignore these through [`ignoreFiles`](https://gohugo.io/getting-started/configuration/#ignore-files-when-rendering) variable in your `config.toml` file as follows:
 ```toml
 ignoreFiles = ["content/404.md", "content/about.md"]
 ```
@@ -194,7 +205,7 @@ Also, the tags, when enabled, won't all be displayed on the header and sidebar b
 [params.tag]
 	enabled = true
 	tagLimit = 10		#Top 10 tags will be displayed
-	#or 
+	#or
 	tagLimit = 0		#Display all tags
 ```
 

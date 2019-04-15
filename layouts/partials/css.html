@@ -17,8 +17,8 @@
 <style>
 	body.pushable {
 		display: block;
-		{{ with $.Site.Params.background.colorBG }}
-			background: linear-gradient(to right, var(--colorBG)) !important;
+		{{ if or ($.Site.Params.background.bgColor) ($.Site.Params.background.randomizeBgColor) }}
+			background: var(--background) !important;
 		{{ else }}
 			background-image: var(--bgImage) !important;
 		{{ end }} ;

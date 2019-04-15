@@ -1,14 +1,4 @@
 <style>
-	body {
-		display: block;
-		--colorBG: "#40e0d0, #ff8c00, #ff0080";
-		{{ with $.Site.Params.background.colorBG }}
-			background: linear-gradient(to right, var(--colorBG)) !important;
-		{{ else }}
-			background-image: var(--bgImage) !important;
-		{{ end }}
-	}
-
 	body, body.pushable {
 		background-repeat: no-repeat;
 	  	background-attachment: fixed;
