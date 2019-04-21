@@ -16,7 +16,7 @@
 		{{ $var := replace $val " " "" | lower }}
 		{{ with ($.Scratch.Get $var) }}
 			<div class="item">
-				<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" {{ if ne $var "mail" }}target="	_blank"{{ end }}>
+				<a href="{{ index $links $index }}{{ $.Scratch.Get $var }}" rel="me" {{ if ne $var "mail" }}target="	_blank"{{ end }}>
 					<i id="ico" class="inverted big link {{ index $icons $index }} icon" title="{{ $val }}"></i>
 				</a>
 			</div>
