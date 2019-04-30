@@ -15,7 +15,7 @@
 {{ end }}
 
 {{/*Site generator*/}}
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 
 {{/*Favicon*/}}
 <link rel="shortcut icon" href="{{ if $.Site.Params.favicon }}{{ $.Site.Params.favicon }}{{- else }}/img/defaultFav.ico{{ end }}">
