@@ -24,7 +24,7 @@ matrix:
 
 env:
   global:
-  - minVer=0.48
+  - minVer=0.55.0
   - HUGO_THEME=hugo-dream-plus
   - secure: IusPAufa/6b4s3ALbBHKWrY7S0P/u+9R0HjGl9Ta9sue3DIgVtxM9AQWVnfWN3Pf9WKSRDfGsR4X8KN5DrcLe2grt1k9N2ecUSFoHuAdJCP4MKiW0Y+COEb779LFS8t/wzXwoN1chbUXjdwhQQTq6WxG2mvP20KIaRmXQdpwxj1bTmtVlekeybOfn6HSohJzoCkwviGiTTIT7g0hDwafErid2kWFToEZdhYO0clbKb/H/QElyPdHhBUw/a51+4nTpgJvuahNDuvegPobcJcVukj1xYL7OExdYq8HEhIZDLkZe8GnmHaxIfdfmdEJLoQgU7QBCH/Sw8+5Vz7QLbwIgYG+gYpjTLxAidCZmzt6uH/Z4xu8eNWw+EzpVzqR53kbalLv1MatqYfLOhev8KZ7i4MvEeDJS7nl847Dhnv034q7Ua25QfdRnR3Z17PigwWk3Vqdw6s8RxQN5uEm+z0dzwRkijNnBxyqas7NCggPS5pD01GhflH/QyX9XA40LspPGGLlhWimIXd+ckeDbqBETGjUiebFjCeDHSMTNev+iQNoF+4cF9Z3NqXObR0zaobu1rLHjROWvKb0XuhZBijTzfpTBqAQW0Xvj/NYXVa9aF471lAm51qPSQLcIKnjT9g1F++cRBn90lY0QrqqDmWZxAGztlm7ugzPmpWQKo/wVUs=
 
