@@ -103,7 +103,7 @@ These variables have to be in the `[social]` table of `config.toml` or its equiv
 	github = "UtkarshVerma"
 ```
 
-Once this is done, write up the "**About Me**" section of your website in Markdown as directed here:[Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
+Once this is done, write up the "**About Me**" section of your website in Markdown as directed here: [Error and About Pages](https://github.com/UtkarshVerma/hugo-dream-plus#error-and-about-pages).
 
 ### Toggling the views
 As stated earlier, this theme has two views, **Cards view** and **Posts view**. The type of view rendering depends on the type of content you feed to **Dream Plus**.
