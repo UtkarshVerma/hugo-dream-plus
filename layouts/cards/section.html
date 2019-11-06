@@ -18,7 +18,7 @@
 			<div class="ui inverted segment">
 				<h2 class="ui header">{{ i18n "allCards" }}<hr><div class="ui grey sub header">{{ .Content }}</div></h2>
 				
-				{{ range .Data.Pages.GroupByDate "2006" }}
+				{{ range .Site.RegularPages.GroupByDate "2006" }}
 					<h3 class="ui header">{{ .Key }}</h3>
 					<ul>
 						{{ range .Pages }}
