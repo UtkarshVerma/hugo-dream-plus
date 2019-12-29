@@ -675,7 +675,7 @@ $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  {{ range first 10 .Data.Pages }}
+  {{ range first 10 .Site.RegularPages }}
     <h1>{{ .Title }}</h1>
   {{ end }}
 </body>
@@ -838,7 +838,7 @@ $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  {{ range first 10 .Data.Pages }}
+  {{ range first 10 .Site.RegularPages }}
     <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   {{ end }}
 </body>
@@ -956,14 +956,14 @@ $ vi themes/zafta/layouts/index.html
 <html>
 <body>
   <h1>posts</h1>
-  {{ range first 10 .Data.Pages }}
+  {{ range first 10 .Site.RegularPages }}
     {{ if eq .Type "post"}}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ end }}
   {{ end }}
 
   <h1>pages</h1>
-  {{ range .Data.Pages }}
+  {{ range .Site.RegularPages }}
     {{ if eq .Type "page" }}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ end }}
@@ -1043,14 +1043,14 @@ $ vi themes/zafta/layouts/index.html
 {{ partial "header.html" . }}
 
   <h1>posts</h1>
-  {{ range first 10 .Data.Pages }}
+  {{ range first 10 .Site.RegularPages }}
     {{ if eq .Type "post"}}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ end }}
   {{ end }}
 
   <h1>pages</h1>
-  {{ range .Data.Pages }}
+  {{ range .Site.RegularPages }}
     {{ if or (eq .Type "page") (eq .Type "about") }}
       <h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
     {{ end }}
