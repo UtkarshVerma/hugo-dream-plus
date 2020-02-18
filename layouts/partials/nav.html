@@ -42,7 +42,7 @@
 
 	{{/*Navigation buttons*/}}
 	{{ if or .context.IsHome (eq .context.Kind "taxonomyTerm") }}
-		{{ $paginator := .context.Paginate (where .context.Data.Pages "Section" .contentType) }}
+		{{ $paginator := .context.Paginate (where .context.Site.RegularPages "Section" .contentType) }}
 		<div class="item">
 			{{ if .context.Paginator.HasPrev }}
 				<a href="{{ $paginator.Prev.URL }}">
