@@ -23,7 +23,7 @@
 				<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
 					{{ if $.Site.DisqusShortname }}
-					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></a></span></div>{{ end }}
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .File.UniqueID }}"></a></span></div>{{ end }}
 					<div><span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span></div>
 					<div><span><i class="angle double up icon"></i>{{ i18n "lastUpdate" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
 				</div>

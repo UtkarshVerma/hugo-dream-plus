@@ -36,7 +36,7 @@
 	<div class="utility-info">
 		<ul class="utility-list">
 			{{ if $.Site.DisqusShortname }}
-				<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></div>
+				<div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .File.UniqueID }}"></span></div>
 			{{ end }}
 			<div><span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
 			<div><span><i class="clock icon"></i>{{ .ReadingTime }} min read</span></div>
